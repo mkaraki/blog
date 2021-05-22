@@ -338,4 +338,45 @@
 &lt;ul>
 &lt;li>Ubuntu 20.04 LTS Server を Raspberry Pi 4 にインストール - Qiita, &lt;a href="https://qiita.com/azumabashi/items/182f365cf7405156788c">https://qiita.com/azumabashi/items/182f365cf7405156788c&lt;/a> 2020.10.10 参照.&lt;/li>
 &lt;li>How To: Ubuntu / Debian Linux Regenerate OpenSSH Host Keys - nixCraft, &lt;a href="https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/">https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/&lt;/a> 2020.10.10 参照.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>PowerShellを使ってMinecraftのリソースを正式名でエクスポートする</title><link>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</link><pubDate>Thu, 06 Aug 2020 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</guid><description>&lt;h1 id="最初に">最初に&lt;/h1>
+&lt;p>Minecraftはデフォルトリソースをハッシュ名にして保存しています。実際のリソース名とはJSONファイルを使用して関連付けています。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;objects&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;resource1.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1234&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;resource2.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5678&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>このような形でハッシュとリソース名を対応付けています。これをリソース名にしてエクスポートしようという試みです。&lt;/p>
+&lt;h1 id="対応環境">対応環境&lt;/h1>
+&lt;p>Minecraft 1.16とPowerShell 5.1で実行できることを確認しました。また、オープンソース版のPowerShellでも実行できると思われます。&lt;/p>
+&lt;p>&lt;strong>最低限の検証しかしていません。&lt;/strong>&lt;/p>
+&lt;h1 id="実際のコード">実際のコード&lt;/h1>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\objects&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/objectsまでのフルパス&lt;/span>
+&lt;span class="nv">$listjson&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\indexes\1.16.json&amp;#34;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/indexes内の任意のバージョン名のJSONファイルまでのフルパス&lt;/span>
+&lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\extracted&amp;#34;&lt;/span> &lt;span class="c"># エクスポート先フォルダのフルパス&lt;/span>
+&lt;span class="c"># ===================&lt;/span>
+&lt;span class="nv">$json&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Get-Content&lt;/span> &lt;span class="nv">$listjson&lt;/span>
+&lt;span class="nv">$list&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">ConvertFrom-Json&lt;/span> &lt;span class="n">-InputObject&lt;/span> &lt;span class="nv">$json&lt;/span>
+&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$r&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">psobject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Properties&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nv">$fname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Name&lt;/span>
+&lt;span class="nv">$afname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nv">$fname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">hash&lt;/span>
+&lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nv">$from&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nv">$to&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$fname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nv">$destdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Split-Path&lt;/span> &lt;span class="nv">$to&lt;/span> &lt;span class="n">-Parent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(!(&lt;/span>&lt;span class="nb">Test-Path&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$destdir&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nv">$0_&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">New-Item&lt;/span> &lt;span class="nv">$destdir&lt;/span> &lt;span class="n">-Type&lt;/span> &lt;span class="n">Directory&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="nb">Copy-Item&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$from&lt;/span> &lt;span class="n">-Destination&lt;/span> &lt;span class="nv">$to&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>汚いコードですが概ねこのような形です。先頭の３行(改行含め４行)を書き換えて利用してください。&lt;/p>
+&lt;h1 id="注意点解説">注意点・解説&lt;/h1>
+&lt;p>　先ほども説明した通り、JSONでリストが作られています。そのため、&lt;code>ConvertFrom-Json&lt;/code>で簡単に読み込むことができました。しかし、いくつか注意点があります。&lt;/p>
+&lt;h2 id="powershell-51ではjsonをhashtableにできない">PowerShell 5.1ではJSONをHashtableにできない&lt;/h2>
+&lt;p>　Windows 10に標準搭載されているPowerShellは&lt;code>-AsHashtable&lt;/code>オプションに対応していません。そのため、&lt;code>PSCustomObject&lt;/code>で出力されたオブジェクト名をそのまま取得することができません。
+　これを解決するために、foreach文では&lt;code>psobject.Properties&lt;/code>を取得したいオブジェクトにつけることによって、プロパティのデータをforeachにかけています。
+　これによって取得したオブジェクト名をそのまま埋め込み、&lt;code>$list.objects.$fname.hash&lt;/code>とすることによってPSCustomObjectのままでデータを取得しています。&lt;/p>
+&lt;h2 id="ファイルコピー時に親ディレクトリがない">ファイルコピー時に親ディレクトリがない&lt;/h2>
+&lt;p>　PowerShellの&lt;code>Copy-Item&lt;/code>コマンドレットは親ディレクトリを自動的に作ることはできません。そのため、&lt;code>Split-Path $to -Parent&lt;/code>で親ディレクトリを取得し、当該ディレクトリがなかった場合は、新しくディレクトリを作成しています。&lt;/p>
+&lt;h2 id="ディレクトリ作成時のログ">ディレクトリ作成時のログ&lt;/h2>
+&lt;p>&lt;code>New-Item&lt;/code>コマンドレットを使用すると、実行時に結果としてディレクトリの詳細データを出力します。しかし、今回は邪魔なだけなので、&lt;code>$0_&lt;/code>変数に結果を代入させることによって表示をなくしています。&lt;/p></description></item></channel></rss>
