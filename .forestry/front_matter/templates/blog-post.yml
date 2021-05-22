@@ -12,8 +12,5 @@ fields:
   name: date
   label: date
 - type: text
-  name: author
-  label: author
-- type: text
   name: slug
   label: slug
