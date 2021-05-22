@@ -4,6 +4,7 @@ tags:
 - docomo
 - Android
 date: 2020-11-13T00:00:00+09:00
+slug: 'docomo-f02j-button-keycodes'
 ---
 メモ用です
 
