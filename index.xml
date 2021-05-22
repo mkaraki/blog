@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 22 May 2021 13:57:09 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>First Post</title><link>https://blog.mkarakiapps.com/p/first-post/</link><pubDate>Sat, 22 May 2021 13:57:09 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/first-post/</guid><description>&lt;p>文字通りブログ環境を構築しました。 過去にQiitaに上げた記事のうちいくつかのコピーして上げています。&lt;/p></description></item><item><title>Windows 10をUSBメモリなどに手動でインストールする方法</title><link>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</guid><description>&lt;h1 id="まえがき">まえがき&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 22 May 2021 13:57:09 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>First Post</title><link>https://blog.mkarakiapps.com/p/first-post/</link><pubDate>Sat, 22 May 2021 13:57:09 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/first-post/</guid><description>&lt;p>文字通りブログ環境を構築しました。 過去にQiitaに上げた記事のうちいくつかのコピーして上げています。&lt;/p></description></item><item><title>Oracle Cloudのminimal UbuntuのInstanceで外からつながらない問題</title><link>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</link><pubDate>Fri, 05 Feb 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</guid><description>&lt;p>自分用のメモです。&lt;/p>
+&lt;h1 id="環境">環境&lt;/h1>
+&lt;ul>
+&lt;li>Oracle Cloudインスタンス&lt;/li>
+&lt;li>Image: Canonical-Ubuntu-20.04-Minimal-2020.12.10-0&lt;/li>
+&lt;li>Shape: VM.Standard.E2.1.Micro&lt;/li>
+&lt;/ul>
+&lt;h1 id="原因">原因&lt;/h1>
+&lt;p>iptablesのルールである&lt;/p>
+&lt;pre>&lt;code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
+&lt;/code>&lt;/pre>&lt;h1 id="解決策">解決策&lt;/h1>
+&lt;pre>&lt;code>/etc/iptables/rules.v4
+&lt;/code>&lt;/pre>&lt;p>の17行目にある&lt;/p>
+&lt;pre>&lt;code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
+&lt;/code>&lt;/pre>&lt;p>をコメントアウトして再起動。（すべてのポートが晒されるので注意）&lt;/p></description></item><item><title>Windows 10をUSBメモリなどに手動でインストールする方法</title><link>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</guid><description>&lt;h1 id="まえがき">まえがき&lt;/h1>
 &lt;p>かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」という製品を作っていました。
 この製品は、WindowsをUSBに入れる事ができることを売りにしていたソフトで、私は全く使いませんでしたが一応持ってはいました。
 今回、SSDの代わりに低容量のUSBメモリを臨時で使いたいという問い合わせがあり、私なりに方法を探ったのでメモとして残します。&lt;/p>
