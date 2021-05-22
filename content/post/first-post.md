@@ -1,7 +1,7 @@
 ---
 title: "First Post"
 date: 2021-05-22T13:57:09+09:00
-draft: true
+draft: false
 slug: 'first-post'
 ---
 
