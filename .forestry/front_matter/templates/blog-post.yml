@@ -15,4 +15,5 @@ fields:
   name: slug
   label: slug
 pages:
+- content/post/oracle-cloud-minimal-ubuntu-instance.md
 - content/post/powershell-minecraft.md
