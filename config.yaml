@@ -55,7 +55,7 @@ params:
             - tag-cloud
 
         archives:
-            limit: 5
+            limit: 15
 
         tagCloud:
             limit: 10
