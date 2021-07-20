@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 22 May 2021 13:57:09 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>（今更）ブログをはじめました</title><link>https://blog.mkarakiapps.com/p/first-post/</link><pubDate>Sat, 22 May 2021 13:57:09 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/first-post/</guid><description>&lt;p>文字通りブログ環境を構築しました。 過去にQiitaに上げた記事のうちいくつかのコピーして上げています。&lt;/p></description></item><item><title>Oracle Cloudのminimal UbuntuのInstanceで外からつながらない問題</title><link>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</link><pubDate>Fri, 05 Feb 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</guid><description>&lt;p>自分用のメモです。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 19 Jul 2021 15:00:00 +0000</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>無料で使えるインターネット関連サービス一覧</title><link>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</link><pubDate>Mon, 19 Jul 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</guid><description>&lt;p>この記事は別のサイトと連携している記事です。&lt;/p>
+&lt;p>常に金欠な私が見つけた無料でいい感じのサービスをメモがてら書いていきます。&lt;/p>
+&lt;h2 id="認証系">認証系&lt;/h2>
+&lt;h3 id="jumpcloudhttpsjumpcloudcom">&lt;a class="link" href="https://jumpcloud.com/" target="_blank" rel="noopener"
+>JumpCloud&lt;/a>&lt;/h3>
+&lt;p>　認証系サービスとしてかなり優秀で、10ユーザまでLDAPやRADIUSが使え、独自の認証連携ソフトウェア上で10デバイスまで無料でほぼフル機能がついています。おまけに最初の10日間は24時間365日チャットサポートが有るという素晴らしい待遇。&lt;/p>
+&lt;p>　サポートを実際に私も受けましたが、画面共有をしながら状況の確認を行っていただき、かなり親切で丁寧な印象を受けました。また、どうやら10日を超えてもフォームでサポートを受けれる気がします。（未確認）&lt;/p>
+&lt;p>　ご自宅 WPA2 EnterpriseやZabbix LDAPなどをやってみたい方は一度試してみてもいいと思います。&lt;/p>
+&lt;h3 id="azure-active-directoryhttpsazuremicrosoftcomja-jpservicesactive-directory">&lt;a class="link" href="https://azure.microsoft.com/ja-jp/services/active-directory/" target="_blank" rel="noopener"
+>Azure Active Directory&lt;/a>&lt;/h3>
+&lt;p>　こちらはSSOとActive Directoryにおいてかなり優秀なシステムです。ローカルのActive Directoryと連携できるAzure AD Connectも無料で使える上、Windows 10 Proなどで使えるAzure ADログインに対応しています（当たり前の話ですが）。いつの間にかSSOも無制限になっており、ユーザもある程度入れられたと記憶しています（具体的な数を調べられなかった）&lt;/p>
+&lt;p>　JumpCloudと連携することでJumpCloud側の制限である10ユーザまでRadiusやLDAPを利用できるようになります。&lt;/p>
+&lt;h3 id="cloudflare-accesshttpswwwcloudflarecomja-jpteamsaccess">&lt;a class="link" href="https://www.cloudflare.com/ja-jp/teams/access/" target="_blank" rel="noopener"
+>Cloudflare Access&lt;/a>&lt;/h3>
+&lt;p>　自分がホストしているWebサービスなどにアクセスする際にメールアドレス認証やSSOをかませる事ができるサービスです。&lt;/p>
+&lt;p>　例えばGrafanaのWebコンソールにアクセスできるユーザを先に紹介しているAzure ADなどで制限することが出来ます。アクセス元はCloudflareのIP扱いになるので、それだけをファイアウォールで許可することである程度安全な環境を作ることが出来ます（ただし、監視などの通信についてはよく考える必要性がありますが）&lt;/p>
+&lt;h2 id="cdn">CDN&lt;/h2>
+&lt;h3 id="cloudflarehttpswwwcloudflarecom">&lt;a class="link" href="https://www.cloudflare.com/" target="_blank" rel="noopener"
+>Cloudflare&lt;/a>&lt;/h3>
+&lt;p>　定番ですが一応紹介しておきます。CDNとして使えますし、IPv6やIPv4非対応ホストにそれぞれのIPを作ってあげる用途で使うことも一応可能です。また、SSL非対応のホストに外見だけSSLを渡すことも出来ます（Cloudflareとホスト間の通信は暗号化されないので注意）&lt;/p>
+&lt;h2 id="vps">VPS&lt;/h2>
+&lt;h3 id="oracle-cloud-free-tier---compute-vmhttpswwworaclecomjpcloudfree">&lt;a class="link" href="https://www.oracle.com/jp/cloud/free/" target="_blank" rel="noopener"
+>Oracle Cloud Free Tier - Compute VM&lt;/a>&lt;/h3>
+&lt;p>　1/8 OCPUと1GBメモリを搭載している2つのVMを使えます。私はここにVPNとZabbixを置いています。かなり快適ですし、これが無料なのは信じられないレベルです。&lt;/p>
+&lt;h2 id="web-server">Web Server&lt;/h2>
+&lt;h3 id="github-pageshttpspagesgithubcom">&lt;a class="link" href="https://pages.github.com/" target="_blank" rel="noopener"
+>GitHub Pages&lt;/a>&lt;/h3>
+&lt;p>　GitHubが提供する静的サイト限定のサービスです。標準でJekyllに対応している他、GitHub Actionsと合わせることでHugoなどのビルドも自動化出来ます。&lt;/p>
+&lt;p>　SSLや独自ドメイン（サブドメイン含む）に対応していますが、ホストするコンテンツが1GB以内である、1ヶ月に100GBまで、1時間に10ビルドまでなどの制限があるそうです。（&lt;a class="link" href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#usage-limits" target="_blank" rel="noopener"
+>About GitHub Pages - GitHub Docs&lt;/a>）&lt;/p>
+&lt;h3 id="xreahttpswwwxreacom">&lt;a class="link" href="https://www.xrea.com/" target="_blank" rel="noopener"
+>XREA&lt;/a>&lt;/h3>
+&lt;p>　GMOが提供するレンタルサーバです。スペックは下記の通り。&lt;/p>
+&lt;ul>
+&lt;li>1GB のストレージ&lt;/li>
+&lt;li>マルチドメイン（10個）&lt;/li>
+&lt;li>1GB/Day の転送量&lt;/li>
+&lt;li>WordPress利用可能&lt;/li>
+&lt;li>チャットサポート&lt;/li>
+&lt;li>CGI/SSI/Perl/PHP/Ruby対応&lt;/li>
+&lt;li>SSL対応（独自、Let&amp;rsquo;s encrypt）&lt;/li>
+&lt;li>&lt;strong>広告が表示されます&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>　また、メインではないのでしょうが、一応100個までメールアドレスを発行できるため、メールサーバとしても使えます。一日あたり1,000通もメールをメールを送ることは無いでしょうから十分だと思っています。&lt;/p>
+&lt;h3 id="starserver-freehttpswwwstarnejpfree">&lt;a class="link" href="https://www.star.ne.jp/free/" target="_blank" rel="noopener"
+>StarServer Free&lt;/a>&lt;/h3>
+&lt;p>　Netowlの提供するレンタルサーバです。プランは下記のとおりです。&lt;/p>
+&lt;ul>
+&lt;li>2GB 広告無し&lt;/li>
+&lt;li>4GB&lt;/li>
+&lt;li>2GB PHP, MySQL(50MB)&lt;/li>
+&lt;/ul>
+&lt;p>　一番上のプラン以外はスマートフォンアクセス時にのみ広告が表示されます。難点として、SSL非対応です。また、ドメインを1つ追加できると謳っていますが、TLDにかなり厳しい制限があり、それ以外を利用するには有料プランにしなければならないとのこと。&lt;/p>
+&lt;p>　個人的には静的なサイトを2GBプランを使ってCloudflareを噛ませて公開するのに丁度いいと思っています。&lt;/p>
+&lt;h3 id="xfreehttpswwwxfreenejp">&lt;a class="link" href="https://www.xfree.ne.jp/" target="_blank" rel="noopener"
+>XFREE&lt;/a>&lt;/h3>
+&lt;p>　Xserverが提供するレンタルサーバです。プランは下記の通り。&lt;/p>
+&lt;ul>
+&lt;li>1GB 広告無し（条件付き）&lt;/li>
+&lt;li>1GB PHP, MySQL(50MB)&lt;/li>
+&lt;li>2GB WordPress (DB: 100MB)&lt;/li>
+&lt;/ul>
+&lt;p>　一番上のプランは3ヶ月以上ファイルを変更する動作をしていない場合に広告表示、それ以外は常時のようです。独自のドメインは10個とのことですが、私が試した限りStarServer Freeと同じようにリストに無いTLDを持つドメインは追加できません。こちらもSSL非対応です。&lt;/p>
+&lt;p>　使い道としてはStarServer Freeと同じ感じになると思います。&lt;/p>
+&lt;h2 id="dns">DNS&lt;/h2>
+&lt;h3 id="cloudflarehttpswwwcloudflarecom-1">&lt;a class="link" href="https://www.cloudflare.com/" target="_blank" rel="noopener"
+>Cloudflare&lt;/a>&lt;/h3>
+&lt;p>　Webが関連するところにはだいたい現れるであろうCloudflareです。DNSツールとしてかなり使いやすく、対応しているサービスをホストするのであればIPを隠す事もできます。&lt;/p>
+&lt;p>　アカウントの共有機能を使って大きなプロジェクトのDNSを複数人で管理したり、APIを使って動作を自動化したりも可能です（応用してDDNSのような使い方もできます）&lt;/p>
+&lt;p>　対応しているドメインであればDNSSECなどのセキュリティ機能もありますし、格安の&lt;a class="link" href="https://www.cloudflare.com/ja-jp/products/registrar/" target="_blank" rel="noopener"
+>Cloudflare Registrar&lt;/a>が利用可能な場合は、何も考えずにここに載せてもいいと思っています。&lt;/p>
+&lt;h3 id="hurricane-electric-free-dns-managementhttpsdnshenet">&lt;a class="link" href="https://dns.he.net/" target="_blank" rel="noopener"
+>Hurricane Electric Free DNS Management&lt;/a>&lt;/h3>
+&lt;p>　Hurricane Electricが提供しているDNSです。DDNSに対応しているサービスで、かなりわかりやすい部類だと思います。DNS機能としては細かい制限がありますがクリティカルなものは無かったと思います。&lt;/p>
+&lt;h2 id="email-forward">Email Forward&lt;/h2>
+&lt;h3 id="improvmxhttpsimprovmxcom">&lt;a class="link" href="https://improvmx.com/" target="_blank" rel="noopener"
+>ImprovMX&lt;/a>&lt;/h3>
+&lt;p>　特定のドメインに来たメールすべてを特定のアドレスに転送できる凄い奴です。制限として、独自に転送先を変更できるアドレスは25個までであることと、10Mbまでの添付ファイルまでしか受け付けてくれないことがあります。&lt;/p>
+&lt;h2 id="email-delivery">Email Delivery&lt;/h2>
+&lt;h3 id="mailjethttpswwwmailjetcom">&lt;a class="link" href="https://www.mailjet.com/" target="_blank" rel="noopener"
+>Mailjet&lt;/a>&lt;/h3>
+&lt;p>　メールの送信サービスです。独自ドメインなどからメールを送信したい場合にとても重宝します（私はZabbixのアラートに使っています）。1日に200通までしか送れませんが、そこまで使うことはないと思います。（というか、1日にアラート200件来たら諦めてサーバの電源引っこ抜く）&lt;/p>
+&lt;p>　APIを使ってメール送信もできるので、様々なサービスと連携ができそうです。&lt;/p>
+&lt;h2 id="vpn">VPN&lt;/h2>
+&lt;h3 id="tailscalehttpstailscalecom">&lt;a class="link" href="https://tailscale.com/" target="_blank" rel="noopener"
+>Tailscale&lt;/a>&lt;/h3>
+&lt;p>　外向きの通信が通れば大体使えるすごいやつです。無料版だと20デバイスまで接続できるとのこと。（私が初めて見たときには100だった気がする）サブネットルーティングなどが使えるためかなり便利なサービスです。（しかし、現在無料で使えるサービスにかなりの制限がかかっているので、Oracle CloudにSoftEther VPN置いたほうが良さそうと思ったり…）&lt;/p>
+&lt;h3 id="vpn-azurehttpwwwvpnazurenetja">&lt;a class="link" href="http://www.vpnazure.net/ja/" target="_blank" rel="noopener"
+>VPN Azure&lt;/a>&lt;/h3>
+&lt;p>　SoftEther VPNに置いて、NAPTやファイアウォール超えをするときにとても重宝するサービスです。前提としてSoftEther VPN Serverを建てる必要がありますが、Oracle Cloudの無料枠などに置くと完全無料でいい感じのVPNが作れます。注意点として、内部に用意する仮想ネットワークはv6非対応です。L2 VPNではv6をつかうことが出来ます。&lt;/p></description></item><item><title>（今更）ブログをはじめました</title><link>https://blog.mkarakiapps.com/p/first-post/</link><pubDate>Sat, 22 May 2021 13:57:09 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/first-post/</guid><description>&lt;p>文字通りブログ環境を構築しました。 過去にQiitaに上げた記事のうちいくつかのコピーして上げています。&lt;/p></description></item><item><title>Oracle Cloudのminimal UbuntuのInstanceで外からつながらない問題</title><link>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</link><pubDate>Fri, 05 Feb 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</guid><description>&lt;p>自分用のメモです。&lt;/p>
 &lt;h1 id="環境">環境&lt;/h1>
 &lt;ul>
 &lt;li>Oracle Cloudインスタンス&lt;/li>
