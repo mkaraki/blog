@@ -11,11 +11,11 @@
 &lt;p>&lt;strong>注意:&lt;/strong> この記事ではSuffixなどの書き換え指示を書きません。ご自身で読み替えてください。&lt;/p>
 &lt;h2 id="ホスト名の設定">ホスト名の設定&lt;/h2>
 &lt;p>この手順はスキップすることも出来ますが、統合認証システムのみを動かすホストであれば設定しておいて損はないと思います。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo hostnamectl set-hostname hoge.example.com
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo hostnamectl set-hostname hoge.example.com
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>また、&lt;code>/etc/hosts&lt;/code>にある旧ホスト名も設定し直してください。&lt;/p>
 &lt;h2 id="slapd-ldap-utilsのインストール">slapd, ldap-utilsのインストール&lt;/h2>
 &lt;p>必要に応じて&lt;code>sudo apt update&lt;/code>を行ってください。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt -y install slapd ldap-utils
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install slapd ldap-utils
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>途中で管理者パスワードを設定するように言われるので、思うがままにパスワードを設定してください。&lt;/p>
 &lt;blockquote>
 &lt;p>管理者アカウントは初期状態で &lt;code>cn=admin,dc=example,dc=com&lt;/code> となります。&lt;br>
@@ -60,20 +60,20 @@ ou: people
 dn: ou=groups,dc=example,dc=com
 objectClass: organizationalUnit
 ou: groups
-&lt;/code>&lt;/pre>&lt;pre>&lt;code># ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif&lt;/span>
 Enter LDAP Password: &amp;lt;管理者パスワードを入力&amp;gt;
-&lt;/code>&lt;/pre>&lt;h2 id="ldap-account-managerのインストール">LDAP Account Managerのインストール&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ldap-account-managerのインストール">LDAP Account Managerのインストール&lt;/h2>
 &lt;p>まず、Apache2とPHPをインストールします。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>PHPを有効化します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo a2enconf php7.4-cgi
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo a2enconf php7.4-cgi
 $ sudo systemctl reload apache2
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>LDAP Account Managerをインストールします。&lt;/p>
 &lt;pre>&lt;code>$ sudo apt -y install ldap-account-manager
 &lt;/code>&lt;/pre>&lt;p>&lt;strong>注意:&lt;/strong> インストール時はすべてのホストからの通信を受けるようになっています。
 &lt;code>/etc/apache2/conf-enabled/ldap-account-manager.conf&lt;/code>を編集し、アクセス可能ホストを絞ることを強く推奨します。&lt;/p>
 &lt;p>関連の設定が終わったらApache2を再起動します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo systemctl restart apache2
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo systemctl restart apache2
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ldap-account-managerの初期設定">LDAP Account Managerの初期設定&lt;/h2>
 &lt;p>画像無しでは解説がとても難しいので別の解説サイトを提示します。&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=8" target="_blank" rel="noopener"
@@ -88,7 +88,7 @@ $ sudo systemctl reload apache2
 &lt;h2 id="freeradiusのインストール">FreeRADIUSのインストール&lt;/h2>
 &lt;p>ここではLDAPと連携したRADIUSに必要なパッケージをインストールします。
 利用状況や課金管理は別の項で解説します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt -y install freeradius freeradius-ldap freeradius-utils
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install freeradius freeradius-ldap freeradius-utils
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="freeradiusとldapの連携設定">FreeRADIUSとLDAPの連携設定&lt;/h2>
 &lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
 &lt;p>まず、&lt;code>users&lt;/code>を編集し、LDAP認証に対応させます。
@@ -159,7 +159,7 @@ Tunnel-Private-Group-Id = 100
 &lt;/code>&lt;/pre>&lt;p>を&lt;code>DEFAULT&lt;/code>行の下に挿入してください。&lt;/p>
 &lt;h2 id="radiusで課金管理-accounting-を行う">RADIUSで課金管理 (Accounting) を行う&lt;/h2>
 &lt;h3 id="mysqlを設定する">MySQLを設定する&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt -y install mysql-server
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install mysql-server
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>必要に応じて&lt;code>sudo mysql_secure_installation&lt;/code>を使い設定を行ってください。
 今回は完全に閉鎖された空間で利用することを前提にこの設定を行いません。&lt;/p>
 &lt;p>もし、rootパスワードを設定した場合、記事内の&lt;code>mysql -u root&lt;/code>を&lt;code>mysql -u root -p&lt;/code>に読み替えてください。&lt;/p>
@@ -171,8 +171,8 @@ Tunnel-Private-Group-Id = 100
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意:&lt;/strong> 今回のインストール例ではRADIUS用アカウントのパスワードを&lt;code>radius&lt;/code>に設定しています。
 これは非常に脆弱なパスワードであり、強固なパスワードに設定し直すことを強く推奨します。&lt;/p>
 &lt;p>Root権限で下記のコマンドを実行します。&lt;/p>
-&lt;pre>&lt;code># mysql -u root radius &amp;lt; /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql
-&lt;/code>&lt;/pre>&lt;p>下記の内容でsqlファイルを作成し、上記の方法でradiusデータベースに適応させてください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># mysql -u root radius &amp;lt; /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>下記の内容でsqlファイルを作成し、上記の方法でradiusデータベースに適応させてください。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="k">DROP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
 &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacctid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">auto_increment&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
@@ -229,9 +229,9 @@ Tunnel-Private-Group-Id = 100
 &lt;h3 id="freeradiusをmysqlに対応させる">FreeRADIUSをMySQLに対応させる&lt;/h3>
 &lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
 &lt;p>sql関係のパッケージをインストールします。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo apt -y install freeradius-mysql
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install freeradius-mysql
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>次に、sqlのmodを有効化します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-enabled/
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-enabled/
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>mods-enabled/sql&lt;/code>を編集し、SQL接続情報を記述します。&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>sql&lt;/code>セクションの&lt;code>dialect&lt;/code>を&lt;code>mysql&lt;/code>に設定&lt;/li>
@@ -247,13 +247,13 @@ Tunnel-Private-Group-Id = 100
 &lt;h3 id="daloradiusをインストールする">daloRADIUSをインストールする&lt;/h3>
 &lt;p>今回daloRADIUSは課金情報確認の為だけにインストールします。&lt;/p>
 &lt;p>前提パッケージをインストールします。&lt;/p>
-&lt;pre>&lt;code>$ sudo apt -y install php libapache2-mod-php php-{gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl} unzip
-&lt;/code>&lt;/pre>&lt;p>daloRADIUSをダウンロードし、&lt;code>/var/www/html&lt;/code>に展開します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ wget https://github.com/lirantal/daloradius/archive/master.zip
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install php libapache2-mod-php php-&lt;span class="o">{&lt;/span>gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl&lt;span class="o">}&lt;/span> unzip
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>daloRADIUSをダウンロードし、&lt;code>/var/www/html&lt;/code>に展開します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ wget https://github.com/lirantal/daloradius/archive/master.zip
 $ unzip master.zip
 $ sudo mv daloradius-master /var/www/html/daloradius
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>MySQLに必要なテーブルを挿入します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/fr2-mysql-daloradius-and-freeradius.sql
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/fr2-mysql-daloradius-and-freeradius.sql
 $ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/mysql-daloradius.sql
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/var/www/html/daloradius/library/daloradius.conf.php&lt;/code>を編集し、MySQLへのアクセス情報を設定します。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_HOST&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;localhost&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># MySQLのホストを設定
@@ -277,7 +277,7 @@ objectClass: olcSyncProvConfig
 olcOverlay: syncprov
 olcSpSessionLog: 100
 &lt;/code>&lt;/pre>&lt;p>下記のコマンドで適用します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="コンシューマーサーバ-スレーブの設定">コンシューマーサーバ (スレーブ)の設定&lt;/h3>
 &lt;p>&lt;a class="link" href="#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a" >ホスト名の設定&lt;/a>と&lt;a class="link" href="#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" >slapd, ldap-utilsのインストール&lt;/a>まで行ってください。&lt;/p>
 &lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）&lt;/p>
@@ -307,7 +307,7 @@ interval=00:00:01:00
 &lt;p>詳細は&lt;a class="link" href="https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl" target="_blank" rel="noopener"
 >LDAP Administrator&amp;rsquo;s Guide&lt;/a>を参照&lt;/p>
 &lt;p>下記のコマンドで適用します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/" target="_blank" rel="noopener"
