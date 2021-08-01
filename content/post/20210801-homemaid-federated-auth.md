@@ -21,7 +21,7 @@ title = "ご自宅統合認証システムを作った話"
 ## ホスト名の設定
 この手順はスキップすることも出来ますが、統合認証システムのみを動かすホストであれば設定しておいて損はないと思います。
 
-```bash
+```shell
 $ sudo hostnamectl set-hostname hoge.example.com
 ```
 
@@ -30,7 +30,7 @@ $ sudo hostnamectl set-hostname hoge.example.com
 ## slapd, ldap-utilsのインストール
 必要に応じて`sudo apt update`を行ってください。
 
-```bash
+```shell
 $ sudo apt -y install slapd ldap-utils
 ```
 
@@ -69,7 +69,7 @@ objectClass: organizationalUnit
 ou: groups 
 ```
 
-```
+```shell
 # ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif
 Enter LDAP Password: <管理者パスワードを入力>
 ```
@@ -77,12 +77,12 @@ Enter LDAP Password: <管理者パスワードを入力>
 ## LDAP Account Managerのインストール
 まず、Apache2とPHPをインストールします。
 
-```bash
+```shell
 $ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
 ```
 
 PHPを有効化します。
-```bash
+```shell
 $ sudo a2enconf php7.4-cgi
 $ sudo systemctl reload apache2
 ```
@@ -96,7 +96,7 @@ $ sudo apt -y install ldap-account-manager
 `/etc/apache2/conf-enabled/ldap-account-manager.conf`を編集し、アクセス可能ホストを絞ることを強く推奨します。
 
 関連の設定が終わったらApache2を再起動します。
-```bash
+```shell
 $ sudo systemctl restart apache2
 ```
 
@@ -118,7 +118,7 @@ $ sudo systemctl restart apache2
 ここではLDAPと連携したRADIUSに必要なパッケージをインストールします。
 利用状況や課金管理は別の項で解説します。
 
-```bash
+```shell
 $ sudo apt -y install freeradius freeradius-ldap freeradius-utils
 ```
 
@@ -208,7 +208,7 @@ DEFAULT User-Name == "user@hoge.fuga"
 ## RADIUSで課金管理 (Accounting) を行う
 
 ### MySQLを設定する
-```bash
+```shell
 $ sudo apt -y install mysql-server
 ```
 必要に応じて`sudo mysql_secure_installation`を使い設定を行ってください。
@@ -228,7 +228,7 @@ QUIT
 これは非常に脆弱なパスワードであり、強固なパスワードに設定し直すことを強く推奨します。
 
 Root権限で下記のコマンドを実行します。
-```
+```shell
 # mysql -u root radius < /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql
 ```
 
@@ -293,12 +293,12 @@ CREATE TABLE radacct (
 この項ではファイル名先頭の`/etc/freeradius/3.0/`を省略して記述します。
 
 sql関係のパッケージをインストールします。
-```bash
+```shell
 $ sudo apt -y install freeradius-mysql
 ```
 
 次に、sqlのmodを有効化します。
-```bash
+```shell
 $ sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-enabled/
 ```
 
@@ -317,19 +317,19 @@ $ sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-ena
 今回daloRADIUSは課金情報確認の為だけにインストールします。
 
 前提パッケージをインストールします。
-```
+```shell
 $ sudo apt -y install php libapache2-mod-php php-{gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl} unzip
 ```
 
 daloRADIUSをダウンロードし、`/var/www/html`に展開します。
-```bash
+```shell
 $ wget https://github.com/lirantal/daloradius/archive/master.zip
 $ unzip master.zip
 $ sudo mv daloradius-master /var/www/html/daloradius
 ```
 
 MySQLに必要なテーブルを挿入します。
-```bash
+```shell
 $ sudo mysql -u root radius < /var/www/html/daloradius/contrib/db/fr2-mysql-daloradius-and-freeradius.sql
 $ sudo mysql -u root radius < /var/www/html/daloradius/contrib/db/mysql-daloradius.sql
 ```
@@ -365,7 +365,7 @@ olcSpSessionLog: 100
 ```
 
 下記のコマンドで適用します。
-```bash
+```shell
 $ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
 ```
 
@@ -401,7 +401,7 @@ olcSyncRepl: rid=001
 詳細は[LDAP Administrator's Guide](https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl)を参照
 
 下記のコマンドで適用します。
-```bash
+```shell
 $ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
 ```
 
