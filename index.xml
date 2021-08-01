@@ -63,19 +63,6 @@ objectClass: organizationalUnit
 ou: groups
 &lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif&lt;/span>
 Enter LDAP Password: &amp;lt;管理者パスワードを入力&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ldap-account-manager">LDAP Account Manager&lt;/h2>
-&lt;h3 id="ldap-account-managerのインストール">LDAP Account Managerのインストール&lt;/h3>
-&lt;p>まず、Apache2とPHPをインストールします。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>PHPを有効化します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo a2enconf php7.4-cgi
-$ sudo systemctl reload apache2
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>LDAP Account Managerをインストールします。&lt;/p>
-&lt;pre>&lt;code>$ sudo apt -y install ldap-account-manager
-&lt;/code>&lt;/pre>&lt;p>&lt;strong>注意:&lt;/strong> インストール時はすべてのホストからの通信を受けるようになっています。
-&lt;code>/etc/apache2/conf-enabled/ldap-account-manager.conf&lt;/code>を編集し、アクセス可能ホストを絞ることを強く推奨します。&lt;/p>
-&lt;p>関連の設定が終わったらApache2を再起動します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo systemctl restart apache2
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="openldapでレプリケーションを設定する">OpenLDAPでレプリケーションを設定する。&lt;/h3>
 &lt;h4 id="プロバイダーサーバ-マスターの設定">プロバイダーサーバ (マスター)の設定&lt;/h4>
 &lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述します。&lt;/p>
@@ -121,6 +108,19 @@ interval=00:00:01:00
 >LDAP Administrator&amp;rsquo;s Guide&lt;/a>を参照&lt;/p>
 &lt;p>下記のコマンドで適用します。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ldap-account-manager">LDAP Account Manager&lt;/h2>
+&lt;h3 id="ldap-account-managerのインストール">LDAP Account Managerのインストール&lt;/h3>
+&lt;p>まず、Apache2とPHPをインストールします。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>PHPを有効化します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo a2enconf php7.4-cgi
+$ sudo systemctl reload apache2
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>LDAP Account Managerをインストールします。&lt;/p>
+&lt;pre>&lt;code>$ sudo apt -y install ldap-account-manager
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>注意:&lt;/strong> インストール時はすべてのホストからの通信を受けるようになっています。
+&lt;code>/etc/apache2/conf-enabled/ldap-account-manager.conf&lt;/code>を編集し、アクセス可能ホストを絞ることを強く推奨します。&lt;/p>
+&lt;p>関連の設定が終わったらApache2を再起動します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo systemctl restart apache2
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ldap-account-managerの初期設定">LDAP Account Managerの初期設定&lt;/h3>
 &lt;p>画像無しでは解説がとても難しいので別の解説サイトを提示します。&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=8" target="_blank" rel="noopener"
