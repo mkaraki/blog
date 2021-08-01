@@ -346,6 +346,65 @@ $configValues['CONFIG_DB_NAME'] = 'radius'; # データベース名を設定
 これでdaloRADIUSのインストールは終了です。
 初期パスワードは`radius`です。
 
+## OpenLDAPでレプリケーションを設定する。
+
+### プロバイダーサーバ (マスター)の設定
+`sync.ldif`のようなファイルを作り、下記の内容を記述します。
+```ldif
+dn: cn=module,cn=config
+objectClass: olcModuleList
+cn: module
+olcModulePath: /usr/lib/ldap
+olcModuleLoad: syncprov.la
+
+dn: olcOverlay=syncprov,olcDatabase={1}mdb,cn=config
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpSessionLog: 100
+```
+
+下記のコマンドで適用します。
+```bash
+$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+```
+
+### コンシューマーサーバ (スレーブ)の設定
+[ホスト名の設定](#ホスト名の設定)と[slapd, ldap-utilsのインストール](#slapd,-ldap-utilsのインストール)まで行ってください。
+
+`sync.ldif`のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）
+```ldif
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001
+  provider=ldap://hoge.example.com:389/
+  bindmethod=simple
+  binddn="cn=admin,dc=example,dc=com"
+  credentials=adminpassword
+  searchbase="dc=example,dc=com"
+  scope=sub
+  schemachecking=on
+  type=refreshAndPersist
+  retry="30 5 300 3"
+  interval=00:00:01:00
+```
+
+`olcSyncRepl`の詳細
+- `provider` 同期先LDAP
+- `binddn` 管理者ユーザ名
+- `credentials` 管理者パスワード
+- `searchbase` 同期するDN (ドメイン名が良いと思われる)
+- `retry` 失敗時のリトライ動作 (`[<retry interval> <# of retries>]+`)
+- `interval` 同期間隔 (`dd:hh:mm:ss`)
+
+詳細は[LDAP Administrator's Guide](https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl)を参照
+
+下記のコマンドで適用します。
+```bash
+$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+```
+
 ## 参考
 - https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/
 - https://qiita.com/cffnpwr/items/be903005e291d0ece514
@@ -359,3 +418,5 @@ $configValues['CONFIG_DB_NAME'] = 'radius'; # データベース名を設定
 - https://www.nii.ac.jp/openforum/upload/20190529PM_Auth_03_Suenaga.pdf
 - https://techexpert.tips/ja/freeradius-ja/ubuntu-linux%E3%81%A7%E3%81%AEmysql%E7%B5%B1%E5%90%88%E3%81%A8freeradius%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/
 - https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql
+- https://www.server-world.info/query?os=Ubuntu_20.04&p=openldap&f=6
+- https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl
