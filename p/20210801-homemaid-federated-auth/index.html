@@ -326,7 +326,52 @@ $ sudo mysql -u root radius &lt; /var/www/html/daloradius/contrib/db/mysql-dalor
 </span><span class=c1></span><span class=nv>$configValues</span><span class=p>[</span><span class=s1>&#39;CONFIG_DB_NAME&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;radius&#39;</span><span class=p>;</span> <span class=c1># データベース名を設定
 </span></code></pre></div><p>これでdaloRADIUSのインストールは終了です。
 初期パスワードは<code>radius</code>です。</p>
-<h2 id=参考>参考</h2>
+<h2 id=openldapでレプリケーションを設定する>OpenLDAPでレプリケーションを設定する。</h2>
+<h3 id=プロバイダーサーバ-マスターの設定>プロバイダーサーバ (マスター)の設定</h3>
+<p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述します。</p>
+<pre><code class=language-ldif data-lang=ldif>dn: cn=module,cn=config
+objectClass: olcModuleList
+cn: module
+olcModulePath: /usr/lib/ldap
+olcModuleLoad: syncprov.la
+
+dn: olcOverlay=syncprov,olcDatabase={1}mdb,cn=config
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpSessionLog: 100
+</code></pre><p>下記のコマンドで適用します。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+</code></pre></div><h3 id=コンシューマーサーバ-スレーブの設定>コンシューマーサーバ (スレーブ)の設定</h3>
+<p><a class=link href=#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a>ホスト名の設定</a>と<a class=link href=#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab>slapd, ldap-utilsのインストール</a>まで行ってください。</p>
+<p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）</p>
+<pre><code class=language-ldif data-lang=ldif>dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001
+  provider=ldap://hoge.example.com:389/
+  bindmethod=simple
+  binddn=&quot;cn=admin,dc=example,dc=com&quot;
+  credentials=adminpassword
+  searchbase=&quot;dc=example,dc=com&quot;
+  scope=sub
+  schemachecking=on
+  type=refreshAndPersist
+  retry=&quot;30 5 300 3&quot;
+  interval=00:00:01:00
+</code></pre><p><code>olcSyncRepl</code>の詳細</p>
+<ul>
+<li><code>provider</code> 同期先LDAP</li>
+<li><code>binddn</code> 管理者ユーザ名</li>
+<li><code>credentials</code> 管理者パスワード</li>
+<li><code>searchbase</code> 同期するDN (ドメイン名が良いと思われる)</li>
+<li><code>retry</code> 失敗時のリトライ動作 (<code>[&lt;retry interval> &lt;# of retries>]+</code>)</li>
+<li><code>interval</code> 同期間隔 (<code>dd:hh:mm:ss</code>)</li>
+</ul>
+<p>詳細は<a class=link href=https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl target=_blank rel=noopener>LDAP Administrator&rsquo;s Guide</a>を参照</p>
+<p>下記のコマンドで適用します。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+</code></pre></div><h2 id=参考>参考</h2>
 <ul>
 <li><a class=link href=https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/ target=_blank rel=noopener>https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/</a></li>
 <li><a class=link href=https://qiita.com/cffnpwr/items/be903005e291d0ece514 target=_blank rel=noopener>https://qiita.com/cffnpwr/items/be903005e291d0ece514</a></li>
@@ -340,6 +385,8 @@ $ sudo mysql -u root radius &lt; /var/www/html/daloradius/contrib/db/mysql-dalor
 <li><a class=link href=https://www.nii.ac.jp/openforum/upload/20190529PM_Auth_03_Suenaga.pdf target=_blank rel=noopener>https://www.nii.ac.jp/openforum/upload/20190529PM_Auth_03_Suenaga.pdf</a></li>
 <li><a class=link href=https://techexpert.tips/ja/freeradius-ja/ubuntu-linux%E3%81%A7%E3%81%AEmysql%E7%B5%B1%E5%90%88%E3%81%A8freeradius%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/ target=_blank rel=noopener>https://techexpert.tips/ja/freeradius-ja/ubuntu-linux%E3%81%A7%E3%81%AEmysql%E7%B5%B1%E5%90%88%E3%81%A8freeradius%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</a></li>
 <li><a class=link href=https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql target=_blank rel=noopener>https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql</a></li>
+<li><a class=link href="https://www.server-world.info/query?os=Ubuntu_20.04&p=openldap&f=6" target=_blank rel=noopener>https://www.server-world.info/query?os=Ubuntu_20.04&p=openldap&f=6</a></li>
+<li><a class=link href=https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl target=_blank rel=noopener>https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl</a></li>
 </ul>
 </section>
 <footer class=article-footer>

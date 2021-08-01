@@ -263,7 +263,52 @@ $ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/mysql-d
 &lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_NAME&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># データベース名を設定
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>これでdaloRADIUSのインストールは終了です。
 初期パスワードは&lt;code>radius&lt;/code>です。&lt;/p>
-&lt;h2 id="参考">参考&lt;/h2>
+&lt;h2 id="openldapでレプリケーションを設定する">OpenLDAPでレプリケーションを設定する。&lt;/h2>
+&lt;h3 id="プロバイダーサーバ-マスターの設定">プロバイダーサーバ (マスター)の設定&lt;/h3>
+&lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述します。&lt;/p>
+&lt;pre>&lt;code class="language-ldif" data-lang="ldif">dn: cn=module,cn=config
+objectClass: olcModuleList
+cn: module
+olcModulePath: /usr/lib/ldap
+olcModuleLoad: syncprov.la
+dn: olcOverlay=syncprov,olcDatabase={1}mdb,cn=config
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpSessionLog: 100
+&lt;/code>&lt;/pre>&lt;p>下記のコマンドで適用します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="コンシューマーサーバ-スレーブの設定">コンシューマーサーバ (スレーブ)の設定&lt;/h3>
+&lt;p>&lt;a class="link" href="#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a" >ホスト名の設定&lt;/a>と&lt;a class="link" href="#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" >slapd, ldap-utilsのインストール&lt;/a>まで行ってください。&lt;/p>
+&lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）&lt;/p>
+&lt;pre>&lt;code class="language-ldif" data-lang="ldif">dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001
+provider=ldap://hoge.example.com:389/
+bindmethod=simple
+binddn=&amp;quot;cn=admin,dc=example,dc=com&amp;quot;
+credentials=adminpassword
+searchbase=&amp;quot;dc=example,dc=com&amp;quot;
+scope=sub
+schemachecking=on
+type=refreshAndPersist
+retry=&amp;quot;30 5 300 3&amp;quot;
+interval=00:00:01:00
+&lt;/code>&lt;/pre>&lt;p>&lt;code>olcSyncRepl&lt;/code>の詳細&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>provider&lt;/code> 同期先LDAP&lt;/li>
+&lt;li>&lt;code>binddn&lt;/code> 管理者ユーザ名&lt;/li>
+&lt;li>&lt;code>credentials&lt;/code> 管理者パスワード&lt;/li>
+&lt;li>&lt;code>searchbase&lt;/code> 同期するDN (ドメイン名が良いと思われる)&lt;/li>
+&lt;li>&lt;code>retry&lt;/code> 失敗時のリトライ動作 (&lt;code>[&amp;lt;retry interval&amp;gt; &amp;lt;# of retries&amp;gt;]+&lt;/code>)&lt;/li>
+&lt;li>&lt;code>interval&lt;/code> 同期間隔 (&lt;code>dd:hh:mm:ss&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;p>詳細は&lt;a class="link" href="https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl" target="_blank" rel="noopener"
+>LDAP Administrator&amp;rsquo;s Guide&lt;/a>を参照&lt;/p>
+&lt;p>下記のコマンドで適用します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/" target="_blank" rel="noopener"
 >https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/&lt;/a>&lt;/li>
@@ -289,6 +334,10 @@ $ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/mysql-d
 >https://techexpert.tips/ja/freeradius-ja/ubuntu-linux%E3%81%A7%E3%81%AEmysql%E7%B5%B1%E5%90%88%E3%81%A8freeradius%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql" target="_blank" rel="noopener"
 >https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=6" target="_blank" rel="noopener"
+>https://www.server-world.info/query?os=Ubuntu_20.04&amp;p=openldap&amp;f=6&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl" target="_blank" rel="noopener"
+>https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>無料で使えるインターネット関連サービス一覧</title><link>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</link><pubDate>Mon, 19 Jul 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</guid><description>&lt;p>この記事は別のサイトと連携している記事です。&lt;/p>
 &lt;p>常に金欠な私が見つけた無料でいい感じのサービスをメモがてら書いていきます。&lt;/p>
 &lt;h2 id="認証系">認証系&lt;/h2>
