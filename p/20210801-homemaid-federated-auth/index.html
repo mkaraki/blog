@@ -74,11 +74,12 @@
 <li>example.com をドメインとして利用</li>
 </ul>
 <p><strong>注意:</strong> この記事ではSuffixなどの書き換え指示を書きません。ご自身で読み替えてください。</p>
-<h2 id=ホスト名の設定>ホスト名の設定</h2>
+<h2 id=ldap>LDAP</h2>
+<h3 id=ホスト名の設定>ホスト名の設定</h3>
 <p>この手順はスキップすることも出来ますが、統合認証システムのみを動かすホストであれば設定しておいて損はないと思います。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo hostnamectl set-hostname hoge.example.com
 </code></pre></div><p>また、<code>/etc/hosts</code>にある旧ホスト名も設定し直してください。</p>
-<h2 id=slapd-ldap-utilsのインストール>slapd, ldap-utilsのインストール</h2>
+<h3 id=slapd-ldap-utilsのインストール>slapd, ldap-utilsのインストール</h3>
 <p>必要に応じて<code>sudo apt update</code>を行ってください。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo apt -y install slapd ldap-utils
 </code></pre></div><p>途中で管理者パスワードを設定するように言われるので、思うがままにパスワードを設定してください。</p>
@@ -86,7 +87,7 @@
 <p>管理者アカウントは初期状態で <code>cn=admin,dc=example,dc=com</code> となります。<br>
 ドメイン名を読み替え、メモをしておくことを推奨します</p>
 </blockquote>
-<h3 id=ホスト名の設定をスキップした場合>ホスト名の設定をスキップした場合。</h3>
+<h4 id=ホスト名の設定をスキップした場合>ホスト名の設定をスキップした場合。</h4>
 <p>ホスト名の設定を行わなかった場合、下記のコマンドを使うことにより手動でドメインの設定を行うことが出来ます。</p>
 <pre><code>sudo dpkg-reconfigure slapd
 </code></pre><p>設定値は下記の通りです</p>
@@ -117,7 +118,7 @@
 </tbody>
 </table>
 <p>以降の設定はデフォルト値を利用してください。</p>
-<h2 id=ldapにユーザグループ用のouを追加>LDAPにユーザ・グループ用のOUを追加</h2>
+<h3 id=ldapにユーザグループ用のouを追加>LDAPにユーザ・グループ用のOUを追加</h3>
 <p><code>base.ldif</code>ファイルを作り、下記の内容を書き込んでください。</p>
 <pre><code class=language-ldif data-lang=ldif>dn: ou=people,dc=example,dc=com
 objectClass: organizationalUnit
@@ -128,7 +129,8 @@ objectClass: organizationalUnit
 ou: groups 
 </code></pre><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=c1># ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif</span>
 Enter LDAP Password: &lt;管理者パスワードを入力&gt;
-</code></pre></div><h2 id=ldap-account-managerのインストール>LDAP Account Managerのインストール</h2>
+</code></pre></div><h2 id=ldap-account-manager>LDAP Account Manager</h2>
+<h3 id=ldap-account-managerのインストール>LDAP Account Managerのインストール</h3>
 <p>まず、Apache2とPHPをインストールします。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
 </code></pre></div><p>PHPを有効化します。</p>
@@ -140,7 +142,52 @@ $ sudo systemctl reload apache2
 <code>/etc/apache2/conf-enabled/ldap-account-manager.conf</code>を編集し、アクセス可能ホストを絞ることを強く推奨します。</p>
 <p>関連の設定が終わったらApache2を再起動します。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo systemctl restart apache2
-</code></pre></div><h2 id=ldap-account-managerの初期設定>LDAP Account Managerの初期設定</h2>
+</code></pre></div><h3 id=openldapでレプリケーションを設定する>OpenLDAPでレプリケーションを設定する。</h3>
+<h4 id=プロバイダーサーバ-マスターの設定>プロバイダーサーバ (マスター)の設定</h4>
+<p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述します。</p>
+<pre><code class=language-ldif data-lang=ldif>dn: cn=module,cn=config
+objectClass: olcModuleList
+cn: module
+olcModulePath: /usr/lib/ldap
+olcModuleLoad: syncprov.la
+
+dn: olcOverlay=syncprov,olcDatabase={1}mdb,cn=config
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpSessionLog: 100
+</code></pre><p>下記のコマンドで適用します。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+</code></pre></div><h4 id=コンシューマーサーバ-スレーブの設定>コンシューマーサーバ (スレーブ)の設定</h4>
+<p><a class=link href=#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a>ホスト名の設定</a>と<a class=link href=#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab>slapd, ldap-utilsのインストール</a>まで行ってください。</p>
+<p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）</p>
+<pre><code class=language-ldif data-lang=ldif>dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001
+  provider=ldap://hoge.example.com:389/
+  bindmethod=simple
+  binddn=&quot;cn=admin,dc=example,dc=com&quot;
+  credentials=adminpassword
+  searchbase=&quot;dc=example,dc=com&quot;
+  scope=sub
+  schemachecking=on
+  type=refreshAndPersist
+  retry=&quot;30 5 300 3&quot;
+  interval=00:00:01:00
+</code></pre><p><code>olcSyncRepl</code>の詳細</p>
+<ul>
+<li><code>provider</code> 同期先LDAP</li>
+<li><code>binddn</code> 管理者ユーザ名</li>
+<li><code>credentials</code> 管理者パスワード</li>
+<li><code>searchbase</code> 同期するDN (ドメイン名が良いと思われる)</li>
+<li><code>retry</code> 失敗時のリトライ動作 (<code>[&lt;retry interval> &lt;# of retries>]+</code>)</li>
+<li><code>interval</code> 同期間隔 (<code>dd:hh:mm:ss</code>)</li>
+</ul>
+<p>詳細は<a class=link href=https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl target=_blank rel=noopener>LDAP Administrator&rsquo;s Guide</a>を参照</p>
+<p>下記のコマンドで適用します。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+</code></pre></div><h3 id=ldap-account-managerの初期設定>LDAP Account Managerの初期設定</h3>
 <p>画像無しでは解説がとても難しいので別の解説サイトを提示します。</p>
 <p><a class=link href="https://www.server-world.info/query?os=Ubuntu_20.04&p=openldap&f=8" target=_blank rel=noopener>Ubuntu 20.04 LTS : OpenLDAP : LDAP Account Manager 設定 : Server World</a></p>
 <p><a class=link href=https://www.server-world.info target=_blank rel=noopener>Server World</a> はOS毎に様々なサービスの設定方法を提示しているサイトです。
@@ -149,11 +196,12 @@ $ sudo systemctl reload apache2
 <p><strong>本来設定すべきではありませんが</strong>、MS-CHAP認証を利用したい場合はパスワードを平文で保管する必要があります。</p>
 <p><code>Server Settings > Module settings > Unix > Options > Password hash type</code>
 を<code>PLAIN</code>に設定してください。</p>
-<h2 id=freeradiusのインストール>FreeRADIUSのインストール</h2>
+<h2 id=freeradius>FreeRADIUS</h2>
+<h3 id=freeradiusのインストール>FreeRADIUSのインストール</h3>
 <p>ここではLDAPと連携したRADIUSに必要なパッケージをインストールします。
 利用状況や課金管理は別の項で解説します。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo apt -y install freeradius freeradius-ldap freeradius-utils
-</code></pre></div><h2 id=freeradiusとldapの連携設定>FreeRADIUSとLDAPの連携設定</h2>
+</code></pre></div><h3 id=freeradiusとldapの連携設定>FreeRADIUSとLDAPの連携設定</h3>
 <p>この項ではファイル名先頭の<code>/etc/freeradius/3.0/</code>を省略して記述します。</p>
 <p>まず、<code>users</code>を編集し、LDAP認証に対応させます。
 下のコードを追記してください。
@@ -179,12 +227,12 @@ $ sudo systemctl reload apache2
 <p>以上で連携設定は完了です。
 必要に応じてClientを設定してください。
 すべての設定が終わったらFreeRADIUSを再起動して設定を読み込ませてください。</p>
-<h2 id=freeradiusでeap-peapms-chapv2を設定する>FreeRADIUSでEAP-PEAP/MS-CHAPv2を設定する</h2>
+<h3 id=freeradiusでeap-peapms-chapv2を設定する>FreeRADIUSでEAP-PEAP/MS-CHAPv2を設定する</h3>
 <p>この項ではファイル名先頭の<code>/etc/freeradius/3.0/</code>を省略して記述します。</p>
-<h3 id=eap用の証明書を生成>EAP用の証明書を生成</h3>
+<h4 id=eap用の証明書を生成>EAP用の証明書を生成</h4>
 <p>私は<a class=link href=https://letsencrypt.org/ target=_blank rel=noopener>Let&rsquo;s Encrypt</a>を利用しました。
 注意点として、証明書ファイルの所有者を<code>freerad:freerad</code>に設定しておかないとFreeRADIUSから読み込めなくなります。</p>
-<h3 id=freeradiusの設定>FreeRADIUSの設定</h3>
+<h4 id=freeradiusの設定>FreeRADIUSの設定</h4>
 <p><code>mods-enabled/eap</code>を編集します。</p>
 <ul>
 <li><code>eap</code>セクション<code>default_eap_type</code>を<code>peap</code>に設定</li>
@@ -196,10 +244,10 @@ $ sudo systemctl reload apache2
 </ul>
 </li>
 </ul>
-<h3 id=注意事項>注意事項</h3>
+<h4 id=注意事項>注意事項</h4>
 <p>MS-CHAPv2で認証をする際は、LDAP側に平文でパスワードが保管されている必要があります。
 パスワードの取り扱いには十分注意してください。</p>
-<h2 id=freeradius側でrealmに応じてvlanを切り替える>FreeRADIUS側でRealmに応じてVlanを切り替える</h2>
+<h3 id=freeradius側でrealmに応じてvlanを切り替える>FreeRADIUS側でRealmに応じてVlanを切り替える</h3>
 <p>この項ではファイル名先頭の<code>/etc/freeradius/3.0/</code>を省略して記述します。</p>
 <p><code>proxy.conf</code>にRealmを設定します。
 設定値にstripを付けることで、LDAP側に問い合わせるユーザ名からRealm部を削除します。</p>
@@ -218,11 +266,11 @@ DEFAULT User-Name == &quot;user@hoge.fuga&quot;
         Tunnel-Type = 13,
         Tunnel-Medium-Type = 6,
         Tunnel-Private-Group-Id = 100
-</code></pre><h3 id=課金システムで表示されるユーザ名を一致させたい>課金システムで表示されるユーザ名を一致させたい</h3>
+</code></pre><h4 id=課金システムで表示されるユーザ名を一致させたい>課金システムで表示されるユーザ名を一致させたい</h4>
 <pre><code class=language-conf data-lang=conf>        User-Name = &quot;user&quot;,
 </code></pre><p>を<code>DEFAULT</code>行の下に挿入してください。</p>
-<h2 id=radiusで課金管理-accounting-を行う>RADIUSで課金管理 (Accounting) を行う</h2>
-<h3 id=mysqlを設定する>MySQLを設定する</h3>
+<h3 id=radiusで課金管理-accounting-を行う>RADIUSで課金管理 (Accounting) を行う</h3>
+<h4 id=mysqlを設定する>MySQLを設定する</h4>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo apt -y install mysql-server
 </code></pre></div><p>必要に応じて<code>sudo mysql_secure_installation</code>を使い設定を行ってください。
 今回は完全に閉鎖された空間で利用することを前提にこの設定を行いません。</p>
@@ -289,7 +337,7 @@ DEFAULT User-Name == &quot;user@hoge.fuga&quot;
 この不具合は一時的なものであると考えられるため、記事の閲覧時にこの手順が必要ない可能性が高いです。
 また、今回修正したのは最低限課金情報取得に必要なテーブルであり、その他のテーブルにも不具合がある可能性があります。<br>
 不具合があった場合はFreeRADIUSを終了させ、<code>sudo freeradius -X</code>を実行し、エラーを確認してください。</p>
-<h3 id=freeradiusをmysqlに対応させる>FreeRADIUSをMySQLに対応させる</h3>
+<h4 id=freeradiusをmysqlに対応させる>FreeRADIUSをMySQLに対応させる</h4>
 <p>この項ではファイル名先頭の<code>/etc/freeradius/3.0/</code>を省略して記述します。</p>
 <p>sql関係のパッケージをインストールします。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo apt -y install freeradius-mysql
@@ -307,7 +355,7 @@ DEFAULT User-Name == &quot;user@hoge.fuga&quot;
 <ul>
 <li><code>accounting</code>セクション内の<code>sql</code>をコメントアウトします</li>
 </ul>
-<h3 id=daloradiusをインストールする>daloRADIUSをインストールする</h3>
+<h4 id=daloradiusをインストールする>daloRADIUSをインストールする</h4>
 <p>今回daloRADIUSは課金情報確認の為だけにインストールします。</p>
 <p>前提パッケージをインストールします。</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo apt -y install php libapache2-mod-php php-<span class=o>{</span>gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl<span class=o>}</span> unzip
@@ -326,52 +374,70 @@ $ sudo mysql -u root radius &lt; /var/www/html/daloradius/contrib/db/mysql-dalor
 </span><span class=c1></span><span class=nv>$configValues</span><span class=p>[</span><span class=s1>&#39;CONFIG_DB_NAME&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;radius&#39;</span><span class=p>;</span> <span class=c1># データベース名を設定
 </span></code></pre></div><p>これでdaloRADIUSのインストールは終了です。
 初期パスワードは<code>radius</code>です。</p>
-<h2 id=openldapでレプリケーションを設定する>OpenLDAPでレプリケーションを設定する。</h2>
-<h3 id=プロバイダーサーバ-マスターの設定>プロバイダーサーバ (マスター)の設定</h3>
-<p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述します。</p>
-<pre><code class=language-ldif data-lang=ldif>dn: cn=module,cn=config
-objectClass: olcModuleList
-cn: module
-olcModulePath: /usr/lib/ldap
-olcModuleLoad: syncprov.la
+<h2 id=saml-idp>SAML IdP</h2>
+<p>SimpleSAMLphpを利用し、SAML IdPを行います。<br>
+RSAのSSL証明書が必要になります。私は<a class=link href=https://letsencrypt.org/ target=_blank rel=noopener>Let&rsquo;s encrypt</a>を使いました。</p>
+<h3 id=simplesamlidpをインストール>SimpleSAMLIdPをインストール</h3>
+<p>下記のコマンドでインストールと有効化を行います。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo apt -y install simplesamlphp
+$ sudo a2enconf simplesamlphp
+$ sudo service apache2 restart
+</code></pre></div><h3 id=simplesamlidpを設定>SimpleSAMLIdPを設定</h3>
+<p><code>/var/lib/simplesamlphp/secrets.inc.php</code>を編集し、管理者パスワードを設定します。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=o>&lt;?</span><span class=nx>php</span>
+<span class=nv>$config</span><span class=p>[</span><span class=s1>&#39;auth.adminpassword&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;password&#39;</span><span class=p>;</span>
+<span class=nv>$config</span><span class=p>[</span><span class=s1>&#39;secretsalt&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=s1>&#39;SALT&#39;</span><span class=p>;</span> <span class=c1>// この項目は初期状態にしておくべきです。
+</span></code></pre></div><p><code>/usr/share/simplesamlphp/config/config.php</code>を編集し、設定を行います。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-php data-lang=php>    <span class=c1>// 前略
+</span><span class=c1></span>    <span class=s1>&#39;admin.protectindexpage&#39;</span> <span class=o>=&gt;</span> <span class=k>true</span><span class=p>,</span> <span class=c1>// ログインしていないとサーバ情報が見れないようにする
+</span><span class=c1></span>    <span class=s1>&#39;admin.protectmetadata&#39;</span> <span class=o>=&gt;</span> <span class=k>true</span><span class=p>,</span> <span class=c1>// 同上
+</span><span class=c1></span>    <span class=c1>// 中略
+</span><span class=c1></span>    <span class=s1>&#39;enable.saml20-idp&#39;</span> <span class=o>=&gt;</span> <span class=k>true</span><span class=p>,</span> <span class=c1>// SAML2.0 IdPを有効化
+</span><span class=c1></span>    <span class=c1>// 後略
+</span></code></pre></div><p><code>/usr/share/simplesamlphp/config/authsources.php</code>を編集し、LDAPへの接続情報を記述します。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-php data-lang=php>  <span class=c1>// 前略
+</span><span class=c1></span>  <span class=s1>&#39;example-ldap&#39;</span> <span class=o>=&gt;</span> <span class=k>array</span><span class=p>(</span> <span class=c1>// `example-ldap` はお好みで変更可能です
+</span><span class=c1></span>      <span class=s1>&#39;ldap:LDAP&#39;</span><span class=p>,</span>
+      <span class=s1>&#39;hostname&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;ldap://hoge.example.com&#39;</span><span class=p>,</span>
+      <span class=s1>&#39;enable_tls&#39;</span> <span class=o>=&gt;</span> <span class=k>false</span><span class=p>,</span>
+      <span class=s1>&#39;timeout&#39;</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span>
+      <span class=s1>&#39;port&#39;</span> <span class=o>=</span> <span class=mi>389</span><span class=p>,</span>
+      <span class=s1>&#39;attributes&#39;</span> <span class=o>=&gt;</span> <span class=k>null</span><span class=p>,</span>
+      <span class=s1>&#39;dnpattern&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;uid=%username%,ou=people,dc=example,dc=com&#39;</span><span class=p>,</span> <span class=c1>// 検索対象のDNと検索パターンを指定
+</span><span class=c1></span>      <span class=c1>// 入力されたユーザ名が`%username%`に入る。uid=やcn=として検索パターンを指定できる。
+</span><span class=c1></span>      <span class=s1>&#39;search.enable&#39;</span> <span class=o>=&gt;</span> <span class=k>true</span><span class=p>,</span>
+      <span class=s1>&#39;search.base&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;ou=people,dc=example,dc=com&#39;</span><span class=p>,</span> <span class=c1>// 検索対象DN
+</span><span class=c1></span>      <span class=s1>&#39;search.attributes&#39;</span> <span class=o>=&gt;</span> <span class=k>array</span><span class=p>(</span><span class=s1>&#39;uid&#39;</span><span class=p>,</span> <span class=s1>&#39;mail&#39;</span><span class=p>),</span> <span class=c1>// 検索対象の属性
+</span><span class=c1></span>      <span class=s1>&#39;search.username&#39;</span> <span class=o>=&gt;</span> <span class=k>null</span><span class=p>,</span>
+      <span class=s1>&#39;search.password&#39;</span> <span class=o>=&gt;</span> <span class=k>null</span><span class=p>,</span>
+  <span class=p>),</span>
+  <span class=c1>// 後略
+</span></code></pre></div><p>かなりコンフィグを省略しましたが、概ねこの様になっていれば大丈夫です。</p>
+<p>次に<code>/usr/share/simplesamlphp/config/metadata/saml20-idp-hosted.php</code>を編集してIdPの設定を行います。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-php data-lang=php><span class=o>&lt;?</span><span class=nx>php</span>
+<span class=nv>$metadata</span><span class=p>[</span><span class=s1>&#39;__DYNAMIC:1__&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=p>[</span>
+  <span class=cm>/*
+</span><span class=cm>   *  * The hostname for this IdP. This makes it possible to run multiple
+</span><span class=cm>   *   * IdPs from the same configuration. &#39;__DEFAULT__&#39; means that this one
+</span><span class=cm>   *    * should be used by default.
+</span><span class=cm>   *     */</span>
+  <span class=s1>&#39;host&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;__DEFAULT__&#39;</span><span class=p>,</span>
 
-dn: olcOverlay=syncprov,olcDatabase={1}mdb,cn=config
-objectClass: olcOverlayConfig
-objectClass: olcSyncProvConfig
-olcOverlay: syncprov
-olcSpSessionLog: 100
-</code></pre><p>下記のコマンドで適用します。</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
-</code></pre></div><h3 id=コンシューマーサーバ-スレーブの設定>コンシューマーサーバ (スレーブ)の設定</h3>
-<p><a class=link href=#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a>ホスト名の設定</a>と<a class=link href=#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab>slapd, ldap-utilsのインストール</a>まで行ってください。</p>
-<p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）</p>
-<pre><code class=language-ldif data-lang=ldif>dn: olcDatabase={1}mdb,cn=config
-changetype: modify
-add: olcSyncRepl
-olcSyncRepl: rid=001
-  provider=ldap://hoge.example.com:389/
-  bindmethod=simple
-  binddn=&quot;cn=admin,dc=example,dc=com&quot;
-  credentials=adminpassword
-  searchbase=&quot;dc=example,dc=com&quot;
-  scope=sub
-  schemachecking=on
-  type=refreshAndPersist
-  retry=&quot;30 5 300 3&quot;
-  interval=00:00:01:00
-</code></pre><p><code>olcSyncRepl</code>の詳細</p>
-<ul>
-<li><code>provider</code> 同期先LDAP</li>
-<li><code>binddn</code> 管理者ユーザ名</li>
-<li><code>credentials</code> 管理者パスワード</li>
-<li><code>searchbase</code> 同期するDN (ドメイン名が良いと思われる)</li>
-<li><code>retry</code> 失敗時のリトライ動作 (<code>[&lt;retry interval> &lt;# of retries>]+</code>)</li>
-<li><code>interval</code> 同期間隔 (<code>dd:hh:mm:ss</code>)</li>
-</ul>
-<p>詳細は<a class=link href=https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl target=_blank rel=noopener>LDAP Administrator&rsquo;s Guide</a>を参照</p>
-<p>下記のコマンドで適用します。</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
-</code></pre></div><h2 id=参考>参考</h2>
+  <span class=cm>/*
+</span><span class=cm>   *  * The private key and certificate to use when signing responses.
+</span><span class=cm>   *   * These are stored in the cert-directory.
+</span><span class=cm>   *    */</span>
+  <span class=s1>&#39;privatekey&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;/usr/share/simplesamlphp/config/privkey.pem&#39;</span><span class=p>,</span> <span class=c1>// SSL秘密鍵
+</span><span class=c1></span>  <span class=s1>&#39;certificate&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;/usr/share/simplesamlphp/config/fullchain.pem&#39;</span><span class=p>,</span> <span class=c1>// SSL証明書
+</span><span class=c1></span>
+  <span class=cm>/*
+</span><span class=cm>   *  * The authentication source which should be used to authenticate the
+</span><span class=cm>   *   * user. This must match one of the entries in config/authsources.php.
+</span><span class=cm>   *    */</span>
+  <span class=s1>&#39;auth&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;example-ldap&#39;</span><span class=p>,</span> <span class=c1>// 先程`example-ldap`を書き換えた場合はこちらも書き換えてください。
+</span><span class=c1></span><span class=p>];</span>
+</code></pre></div><p>この後はSPを<code>/usr/share/simplesamlphp/config/metadata/saml20-sp-remote.php</code>に記述し、IdPの情報をSPに登録する処理になりますが、この記事では取り扱いません。</p>
+<h2 id=参考>参考</h2>
 <ul>
 <li><a class=link href=https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/ target=_blank rel=noopener>https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/</a></li>
 <li><a class=link href=https://qiita.com/cffnpwr/items/be903005e291d0ece514 target=_blank rel=noopener>https://qiita.com/cffnpwr/items/be903005e291d0ece514</a></li>
@@ -387,6 +453,9 @@ olcSyncRepl: rid=001
 <li><a class=link href=https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql target=_blank rel=noopener>https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql</a></li>
 <li><a class=link href="https://www.server-world.info/query?os=Ubuntu_20.04&p=openldap&f=6" target=_blank rel=noopener>https://www.server-world.info/query?os=Ubuntu_20.04&p=openldap&f=6</a></li>
 <li><a class=link href=https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl target=_blank rel=noopener>https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl</a></li>
+<li><a class=link href=https://www.secioss.co.jp/simplesamlphp%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6ad%E8%AA%8D%E8%A8%BC%E3%81%99%E3%82%8Bsaml-idp%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/ target=_blank rel=noopener>https://www.secioss.co.jp/simplesamlphp%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6ad%E8%AA%8D%E8%A8%BC%E3%81%99%E3%82%8Bsaml-idp%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/</a></li>
+<li><a class=link href=https://simplesamlphp.org/docs/stable/ldap:ldap target=_blank rel=noopener>https://simplesamlphp.org/docs/stable/ldap:ldap</a></li>
+<li><a class=link href=https://simplesamlphp.org/docs/stable/simplesamlphp-idp target=_blank rel=noopener>https://simplesamlphp.org/docs/stable/simplesamlphp-idp</a></li>
 </ul>
 </section>
 <footer class=article-footer>
