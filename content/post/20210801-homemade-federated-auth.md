@@ -1,6 +1,6 @@
 +++
 date = 2021-08-01T03:00:00Z
-slug = "20210801-homemaid-federated-auth"
+slug = "20210801-homemade-federated-auth"
 tags = [ 'FreeRADIUS', 'daloRADIUS', 'OpenLDAP', 'LDAP Account Manager', 'SimpleSAMLphp' ]
 title = "ご自宅統合認証システムを作った話"
 
@@ -229,6 +229,7 @@ $ sudo ln -s /etc/freeradius/3.0/mods-available/ldap /etc/freeradius/3.0/mods-en
 #### FreeRADIUSの設定
 `mods-enabled/eap`を編集します。
 - `eap`セクション`default_eap_type`を`peap`に設定
+- `eap`セクション内`peap`セクションの`use_tunneled_reply`を`yes`に
 - `eap`セクション内`tls-config til-common`セクションの下記の項目を変更してください。
   - `private_key_password` 秘密鍵のパスワードを指定します。Let's encryptの場合は無視して大丈夫です。
   - `private_key_file` 秘密鍵のファイルを指定してください。Let's encryptでは`privkey.pem`が該当します。
