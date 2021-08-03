@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 01 Aug 2021 03:00:00 +0000</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>ご自宅統合認証システムを作った話</title><link>https://blog.mkarakiapps.com/p/20210801-homemaid-federated-auth/</link><pubDate>Sun, 01 Aug 2021 03:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210801-homemaid-federated-auth/</guid><description>&lt;p>この記事では自宅でLDAP, RADIUS, SAML IdPからなるかんたんな認証システムを作った話をします。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 01 Aug 2021 03:00:00 +0000</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>ご自宅統合認証システムを作った話</title><link>https://blog.mkarakiapps.com/p/20210801-homemade-federated-auth/</link><pubDate>Sun, 01 Aug 2021 03:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210801-homemade-federated-auth/</guid><description>&lt;p>この記事では自宅でLDAP, RADIUS, SAML IdPからなるかんたんな認証システムを作った話をします。
 また、おまけとしてRADIUSでインターネット利用状況の取得をした話も書きます。&lt;/p>
 &lt;p>今回もメモ要素が強いです。
 間違いなどは報告いただけると助かります。&lt;/p>
@@ -173,6 +173,7 @@ Fall-Through = 1
 &lt;p>&lt;code>mods-enabled/eap&lt;/code>を編集します。&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>eap&lt;/code>セクション&lt;code>default_eap_type&lt;/code>を&lt;code>peap&lt;/code>に設定&lt;/li>
+&lt;li>&lt;code>eap&lt;/code>セクション内&lt;code>peap&lt;/code>セクションの&lt;code>use_tunneled_reply&lt;/code>を&lt;code>yes&lt;/code>に&lt;/li>
 &lt;li>&lt;code>eap&lt;/code>セクション内&lt;code>tls-config til-common&lt;/code>セクションの下記の項目を変更してください。
 &lt;ul>
 &lt;li>&lt;code>private_key_password&lt;/code> 秘密鍵のパスワードを指定します。Let&amp;rsquo;s encryptの場合は無視して大丈夫です。&lt;/li>
