@@ -76,34 +76,6 @@ ou: groups
 Enter LDAP Password: <管理者パスワードを入力>
 ```
 
-## LDAP Account Manager
-
-### LDAP Account Managerのインストール
-まず、Apache2とPHPをインストールします。
-
-```shell
-$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
-```
-
-PHPを有効化します。
-```shell
-$ sudo a2enconf php7.4-cgi
-$ sudo systemctl reload apache2
-```
-
-LDAP Account Managerをインストールします。
-```
-$ sudo apt -y install ldap-account-manager
-```
-
-**注意:** インストール時はすべてのホストからの通信を受けるようになっています。
-`/etc/apache2/conf-enabled/ldap-account-manager.conf`を編集し、アクセス可能ホストを絞ることを強く推奨します。
-
-関連の設定が終わったらApache2を再起動します。
-```shell
-$ sudo systemctl restart apache2
-```
-
 ### OpenLDAPでレプリケーションを設定する。
 
 #### プロバイダーサーバ (マスター)の設定
@@ -161,6 +133,34 @@ olcSyncRepl: rid=001
 下記のコマンドで適用します。
 ```shell
 $ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+```
+
+## LDAP Account Manager
+
+### LDAP Account Managerのインストール
+まず、Apache2とPHPをインストールします。
+
+```shell
+$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
+```
+
+PHPを有効化します。
+```shell
+$ sudo a2enconf php7.4-cgi
+$ sudo systemctl reload apache2
+```
+
+LDAP Account Managerをインストールします。
+```
+$ sudo apt -y install ldap-account-manager
+```
+
+**注意:** インストール時はすべてのホストからの通信を受けるようになっています。
+`/etc/apache2/conf-enabled/ldap-account-manager.conf`を編集し、アクセス可能ホストを絞ることを強く推奨します。
+
+関連の設定が終わったらApache2を再起動します。
+```shell
+$ sudo systemctl restart apache2
 ```
 
 ### LDAP Account Managerの初期設定
