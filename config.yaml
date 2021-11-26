@@ -3,6 +3,7 @@ languageCode: ja-jp
 theme: hugo-theme-stack
 paginate: 5
 title: mkarakiのブログ
+description: 素人が書くただのブログ
 
 hasCJKLanguage: true
 summaryLength: 50
