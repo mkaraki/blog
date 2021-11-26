@@ -89,7 +89,7 @@
 </blockquote>
 <h4 id=ホスト名の設定をスキップした場合>ホスト名の設定をスキップした場合。</h4>
 <p>ホスト名の設定を行わなかった場合、下記のコマンドを使うことにより手動でドメインの設定を行うことが出来ます。</p>
-<pre><code>sudo dpkg-reconfigure slapd
+<pre tabindex=0><code>sudo dpkg-reconfigure slapd
 </code></pre><p>設定値は下記の通りです</p>
 <table>
 <thead>
@@ -120,7 +120,7 @@
 <p>以降の設定はデフォルト値を利用してください。</p>
 <h3 id=ldapにユーザグループ用のouを追加>LDAPにユーザ・グループ用のOUを追加</h3>
 <p><code>base.ldif</code>ファイルを作り、下記の内容を書き込んでください。</p>
-<pre><code class=language-ldif data-lang=ldif>dn: ou=people,dc=example,dc=com
+<pre tabindex=0><code class=language-ldif data-lang=ldif>dn: ou=people,dc=example,dc=com
 objectClass: organizationalUnit
 ou: people
 
@@ -132,7 +132,7 @@ Enter LDAP Password: &lt;管理者パスワードを入力&gt;
 </code></pre></div><h3 id=openldapでレプリケーションを設定する>OpenLDAPでレプリケーションを設定する。</h3>
 <h4 id=プロバイダーサーバ-マスターの設定>プロバイダーサーバ (マスター)の設定</h4>
 <p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述します。</p>
-<pre><code class=language-ldif data-lang=ldif>dn: cn=module,cn=config
+<pre tabindex=0><code class=language-ldif data-lang=ldif>dn: cn=module,cn=config
 objectClass: olcModuleList
 cn: module
 olcModulePath: /usr/lib/ldap
@@ -148,7 +148,7 @@ olcSpSessionLog: 100
 </code></pre></div><h4 id=コンシューマーサーバ-スレーブの設定>コンシューマーサーバ (スレーブ)の設定</h4>
 <p><a class=link href=#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a>ホスト名の設定</a>と<a class=link href=#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab>slapd, ldap-utilsのインストール</a>まで行ってください。</p>
 <p><code>sync.ldif</code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）</p>
-<pre><code class=language-ldif data-lang=ldif>dn: olcDatabase={1}mdb,cn=config
+<pre tabindex=0><code class=language-ldif data-lang=ldif>dn: olcDatabase={1}mdb,cn=config
 changetype: modify
 add: olcSyncRepl
 olcSyncRepl: rid=001
@@ -182,7 +182,7 @@ olcSyncRepl: rid=001
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ sudo a2enconf php7.4-cgi
 $ sudo systemctl reload apache2
 </code></pre></div><p>LDAP Account Managerをインストールします。</p>
-<pre><code>$ sudo apt -y install ldap-account-manager
+<pre tabindex=0><code>$ sudo apt -y install ldap-account-manager
 </code></pre><p><strong>注意:</strong> インストール時はすべてのホストからの通信を受けるようになっています。
 <code>/etc/apache2/conf-enabled/ldap-account-manager.conf</code>を編集し、アクセス可能ホストを絞ることを強く推奨します。</p>
 <p>関連の設定が終わったらApache2を再起動します。</p>
@@ -206,10 +206,10 @@ $ sudo systemctl reload apache2
 <p>まず、<code>users</code>を編集し、LDAP認証に対応させます。
 下のコードを追記してください。
 また、それ以外のコードはコメントアウトしても構いません。</p>
-<pre><code>DEFAULT Auth-Type = LDAP
+<pre tabindex=0><code>DEFAULT Auth-Type = LDAP
         Fall-Through = 1
 </code></pre><p>次にldapのmodを有効化します。</p>
-<pre><code>$ sudo ln -s /etc/freeradius/3.0/mods-available/ldap /etc/freeradius/3.0/mods-enabled/ldap
+<pre tabindex=0><code>$ sudo ln -s /etc/freeradius/3.0/mods-available/ldap /etc/freeradius/3.0/mods-enabled/ldap
 </code></pre><p><code>mods-enabled/ldap</code>を編集し、LDAP接続先を設定します。</p>
 <ul>
 <li>19行目あたり <code>server = ''</code>でサーバを設定します</li>
@@ -252,11 +252,11 @@ $ sudo systemctl reload apache2
 <p>この項ではファイル名先頭の<code>/etc/freeradius/3.0/</code>を省略して記述します。</p>
 <p><code>proxy.conf</code>にRealmを設定します。
 設定値にstripを付けることで、LDAP側に問い合わせるユーザ名からRealm部を削除します。</p>
-<pre><code>realm hoge.fuga {
+<pre tabindex=0><code>realm hoge.fuga {
     strip
 }
 </code></pre><p><code>users</code>に付与したいVLANを記述します。同じ方法でその他のAttributeも付与できます。</p>
-<pre><code class=language-conf data-lang=conf># Realmが一致している場合にVLANを割り振る
+<pre tabindex=0><code class=language-conf data-lang=conf># Realmが一致している場合にVLANを割り振る
 DEFAULT Realm == &quot;hoge.fuga&quot;
         Tunnel-Type = 13,
         Tunnel-Medium-Type = 6,
@@ -268,7 +268,7 @@ DEFAULT User-Name == &quot;user@hoge.fuga&quot;
         Tunnel-Medium-Type = 6,
         Tunnel-Private-Group-Id = 100
 </code></pre><h4 id=課金システムで表示されるユーザ名を一致させたい>課金システムで表示されるユーザ名を一致させたい</h4>
-<pre><code class=language-conf data-lang=conf>        User-Name = &quot;user&quot;,
+<pre tabindex=0><code class=language-conf data-lang=conf>        User-Name = &quot;user&quot;,
 </code></pre><p>を<code>DEFAULT</code>行の下に挿入してください。</p>
 <h3 id=radiusで課金管理-accounting-を行う>RADIUSで課金管理 (Accounting) を行う</h3>
 <h4 id=mysqlを設定する>MySQLを設定する</h4>

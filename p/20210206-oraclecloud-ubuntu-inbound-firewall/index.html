@@ -72,11 +72,11 @@
 </ul>
 <h1 id=原因>原因</h1>
 <p>iptablesのルールである</p>
-<pre><code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
+<pre tabindex=0><code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
 </code></pre><h1 id=解決策>解決策</h1>
-<pre><code>/etc/iptables/rules.v4
+<pre tabindex=0><code>/etc/iptables/rules.v4
 </code></pre><p>の17行目にある</p>
-<pre><code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
+<pre tabindex=0><code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
 </code></pre><p>をコメントアウトして再起動。（すべてのポートが晒されるので注意）</p>
 </section>
 <footer class=article-footer>

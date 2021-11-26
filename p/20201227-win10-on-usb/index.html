@@ -91,16 +91,16 @@
 此処から先の工程では、作業ディレクトリ内に抽出した<code>install.esd</code>が存在し、アクセス権がある状態を想定し記載します。</p>
 <h3 id=イメージidを調べる>イメージIDを調べる</h3>
 <p>管理者権限のPowerShellもしくはコマンドプロンプトで次のコマンドを入力します。</p>
-<pre><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Get-WimInfo /WimFile:install.esd
+<pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Get-WimInfo /WimFile:install.esd
 </code></pre><p>希望するエディションのインデックスを覚えておいてください。
 此処から先では、<code>Windows 10 Home（インデックス: 1）</code>をインストールする前提で記載していきます。</p>
 <h3 id=イメージを展開する>イメージを展開する</h3>
 <p>イメージを展開します。<code>/Index:</code>と<code>/ApplyDir:</code>は各自の環境に応じて変更してください。</p>
-<pre><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Apply-Image /ImageFile:install.esd /Index:1 /ApplyDir:F:\
+<pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Apply-Image /ImageFile:install.esd /Index:1 /ApplyDir:F:\
 </code></pre><h3 id=ブートローダーの設定>ブートローダーの設定</h3>
 <p><code>bcdboot</code>を使用し、ブートローダーを設定します。各自で<code>E:\Windows</code>、<code>/l ja-JP</code>、<code>/s E:</code>については読み替えてください。
 また、<code>/l ja-JP</code>はなくても動くはずです。</p>
-<pre><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; bcdboot F:\Windows /l ja-JP /s E: /f ALL
+<pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; bcdboot F:\Windows /l ja-JP /s E: /f ALL
 </code></pre><h3 id=設定oobe>設定（OOBE）</h3>
 <p>あとはUSBメモリからブートし、普通に設定をしていくだけです。</p>
 <h1 id=参考>参考</h1>
