@@ -3,7 +3,6 @@ languageCode: ja-jp
 theme: hugo-theme-stack
 paginate: 5
 title: mkarakiのブログ
-description: 素人が書くただのブログ
 
 hasCJKLanguage: true
 summaryLength: 50
@@ -38,7 +37,7 @@ params:
         lastUpdated: Jan 02, 2006 15:04 PM JST
 
     sidebar:
-        subtitle: 気まぐれで書いていきます。
+        subtitle: 主にコンピュータ関係で躓いたことなとを気まぐれで書いていきます。
 
     article:
         math: false
