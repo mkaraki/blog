@@ -8,7 +8,7 @@ hasCJKLanguage: true
 summaryLength: 50
 
 # Change it to your Disqus shortname before using
-disqusShortname: mkarakiblog
+# disqusShortname: mkarakiblog
 
 # GA Tracking ID
 googleAnalytics: UA-145365019-1
