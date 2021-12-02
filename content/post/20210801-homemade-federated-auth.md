@@ -3,7 +3,7 @@ date = 2021-08-01T03:00:00Z
 slug = "20210801-homemade-federated-auth"
 tags = [ 'FreeRADIUS', 'daloRADIUS', 'OpenLDAP', 'LDAP Account Manager', 'SimpleSAMLphp' ]
 title = "ご自宅統合認証システムを作った話"
-
+tableOfContents = true
 +++
 この記事では自宅でLDAP, RADIUS, SAML IdPからなるかんたんな認証システムを作った話をします。
 また、おまけとしてRADIUSでインターネット利用状況の取得をした話も書きます。
