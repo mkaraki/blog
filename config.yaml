@@ -7,6 +7,8 @@ title: mkarakiのブログ
 hasCJKLanguage: true
 summaryLength: 50
 
+enableGitInfo: true
+
 # Change it to your Disqus shortname before using
 # disqusShortname: mkarakiblog
 
