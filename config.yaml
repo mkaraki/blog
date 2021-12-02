@@ -1,7 +1,7 @@
 baseurl: https://blog.mkarakiapps.com
 languageCode: ja-jp
 theme: hugo-theme-stack
-paginate: 5
+paginate: 15
 title: mkarakiのブログ
 
 hasCJKLanguage: true
