@@ -40,6 +40,8 @@ params:
 
     sidebar:
         subtitle: 主にコンピュータ関係で躓いたことなとを気まぐれで書いていきます。
+        avatar:
+            enabled: false
 
     article:
         math: false
