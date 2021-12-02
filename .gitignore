@@ -24,3 +24,6 @@ _testmain.go
 
 /public
 .DS_Store
+
+/plugins/netlify-plugin-hugo-cache-resources
+/resources/_gen
