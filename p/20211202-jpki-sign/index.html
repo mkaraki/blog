@@ -8,52 +8,22 @@
 <meta property="og:description" content="初めに 公的個人認証サービス(JPKI)は国および地方公共団体が共同で運営する地方公共団体情報システム">
 <meta property="og:url" content="https://blog.mkarakiapps.com/p/20211202-jpki-sign/">
 <meta property="og:site_name" content="mkarakiのブログ">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="JPKI"><meta property="article:tag" content="マイナンバー"><meta property="article:tag" content="PDF"><meta property="article:tag" content="署名"><meta property="article:published_time" content="2021-12-02T00:00:00+09:00"><meta property="article:modified_time" content="2021-12-03T00:49:55+09:00">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="JPKI"><meta property="article:tag" content="マイナンバー"><meta property="article:tag" content="PDF"><meta property="article:tag" content="署名"><meta property="article:published_time" content="2021-12-02T00:00:00+09:00"><meta property="article:modified_time" content="2021-12-03T01:18:59+09:00">
 <meta name=twitter:site content="@arakimk">
 <meta name=twitter:creator content="@arakimk"><meta name=twitter:title content="日本国の公的個人認証サービスを利用したPDF署名とその受け入れ">
 <meta name=twitter:description content="初めに 公的個人認証サービス(JPKI)は国および地方公共団体が共同で運営する地方公共団体情報システム">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-145365019-1','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-145365019-1','auto'),ga('send','pageview'))</script>
 </head>
-<body>
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.body.dataset.scheme='dark':document.body.dataset.scheme='light'})()</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-<aside class="sidebar left-sidebar sticky">
-<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=メニューを開く・閉じる>
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-<header class=site-info>
-<h1 class=site-name><a href=https://blog.mkarakiapps.com>mkarakiのブログ</a></h1>
-<h2 class=site-description>主にコンピュータ関係で躓いたことなとを気まぐれで書いていきます。</h2>
-</header>
-<ol class=menu id=main-menu>
-<li>
-<a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
-<span>Home</span>
-</a>
-</li>
-<li>
-<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-<span>Archives</span>
-</a>
-</li>
-<li>
-<a href=/contacts/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
-<span>Contacts</span>
-</a>
-</li>
-<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>ダークモード</span>
-</li>
-</ol>
-</aside>
-<main class="main full-width">
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
 <div id=article-toolbar>
-<a href=https://blog.mkarakiapps.com class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>Back</span>
+<a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>前のページ</span>
 </a>
 </div>
+<main class="main full-width">
 <article class=main-article>
 <header class=article-header>
 <div class=article-details>
@@ -127,14 +97,24 @@ WindowsのロケールはJapaneseである必要性がある。この設定が�
 <li>設定画面左側のメニューから<code>署名</code>を選択</li>
 <li><code>IDと信頼済み証明書</code>メニューを開く</li>
 <li>ウィンドウ左メニューから<code>信頼済み証明書</code>を選択</li>
-<li>画面上部の<img src=https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png alt=取り込み>を選択</li>
+<li>画面上部の<figure>
+<a href=https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png>
+<img src=https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png loading=lazy alt=取り込み>
+</a>
+<figcaption>取り込み</figcaption>
+</figure>を選択</li>
 <li>新規ウィンドウ上側リスト右の参照を選択</li>
 <li>ダウンロードしたルート証明書を選択</li>
 <li>複数のルート証明書をダウンロードした場合は手順<code>6.</code>から別の証明書を読み込む</li>
 <li>ウィンドウ下の取り込みボタンを選択</li>
 <li>Acrobat Readerを再起動する</li>
 <li>再度手順<code>4.</code>まで進める</li>
-<li><code>公的個人認証サービス署名用, 地方公共団体情報システム機構</code>から始まる証明書を1つずつ選択し、<img src=https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png alt=信頼性を編集>ボタンを選択する</li>
+<li><code>公的個人認証サービス署名用, 地方公共団体情報システム機構</code>から始まる証明書を1つずつ選択し、<figure>
+<a href=https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png>
+<img src=https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png loading=lazy alt=信頼性を編集>
+</a>
+<figcaption>信頼性を編集</figcaption>
+</figure>ボタンを選択する</li>
 <li><code>この証明書を信頼済みのルートとして使用</code>にチェックを入れ、画面下<code>OK</code>をクリックする</li>
 <li>2つ以上追加した場合は手順<code>12.</code>に戻りすべての証明書に実施する</li>
 <li>再度Acrobat Readerを再起動する</li>
@@ -142,7 +122,12 @@ WindowsのロケールはJapaneseである必要性がある。この設定が�
 <p>以上でルート証明書が信頼リストに追加される。</p>
 <h3 id=署名を検証する>署名を検証する</h3>
 <p>Acrobat Readerで検証したいファイルを開く。</p>
-<p><img src=https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png alt=署名済みであり、すべての署名が有効です。><br>
+<p><figure>
+<a href=https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png>
+<img src=https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png loading=lazy alt=署名済みであり、すべての署名が有効です。>
+</a>
+<figcaption>署名済みであり、すべての署名が有効です。</figcaption>
+</figure><br>
 の表示が出れば問題ない。</p>
 <h4 id=署名者を確認する>署名者を確認する</h4>
 <p><a class=link href=#%e7%bd%b2%e5%90%8d%e3%82%92%e6%a4%9c%e8%a8%bc%e3%81%99%e3%82%8b>署名を検証する</a>セクションで出たアラートにある<code>署名パネル</code>ボタンを選択する</p>
@@ -158,9 +143,9 @@ WindowsのロケールはJapaneseである必要性がある。この設定が�
 <a href=/tags/pdf/>PDF</a>
 <a href=/tags/%E7%BD%B2%E5%90%8D/>署名</a>
 </section>
-<section class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<span class=article-time--modified>
-最終更新 Dec 03, 2021 00:49 AM JST
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
+最終更新 Dec 03, 2021 01:18 AM JST
 </span>
 </section></footer>
 </article>
@@ -174,7 +159,7 @@ WindowsのロケールはJapaneseである必要性がある。この設定が�
 </section>
 <section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=2.3.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
 </section>
 </footer>
 <div class=pswp tabindex=-1 role=dialog aria-hidden=true>
@@ -214,6 +199,37 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 </div>
 </div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
 </main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目次</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#初めに>初めに</a></li>
+<li><a href=#署名により記録される情報>署名により記録される情報</a></li>
+<li><a href=#サードパーティ製のソフトウェアを利用して署名する>サードパーティ製のソフトウェアを利用して署名する</a>
+<ul>
+<li><a href=#事前準備>事前準備</a></li>
+<li><a href=#利用者クライアントソフトのインストール>利用者クライアントソフトのインストール</a></li>
+<li><a href=#jpki-pdf-signerのダウンロード>JPKI PDF SIGNERのダウンロード</a></li>
+<li><a href=#署名を行う>署名を行う</a></li>
+</ul>
+</li>
+<li><a href=#署名された文章の受け入れ>署名された文章の受け入れ</a>
+<ul>
+<li><a href=#adobe-acrobat-readerのインストール>Adobe Acrobat Readerのインストール</a></li>
+<li><a href=#ルート証明書のダウンロード>ルート証明書のダウンロード</a></li>
+<li><a href=#ルート証明書の追加>ルート証明書の追加</a></li>
+<li><a href=#署名を検証する>署名を検証する</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</section>
+</aside>
 </div>
 <script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
 <script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
