@@ -8,7 +8,7 @@
 <meta property="og:description" content="MAASには複数の単位(Fabricなど)があります。 本体にも説明は記述されているのですが、自分があ">
 <meta property="og:url" content="https://blog.mkarakiapps.com/p/20211204-maas-word/">
 <meta property="og:site_name" content="mkarakiのブログ">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="MAAS"><meta property="article:modified_time" content="2021-12-04T21:32:20+09:00">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="MAAS"><meta property="article:modified_time" content="2021-12-05T12:38:49+09:00">
 <meta name=twitter:site content="@arakimk">
 <meta name=twitter:creator content="@arakimk"><meta name=twitter:title content="MAASの用語と設定のメモ">
 <meta name=twitter:description content="MAASには複数の単位(Fabricなど)があります。 本体にも説明は記述されているのですが、自分があ">
@@ -59,6 +59,15 @@ extended">
 <p>よくわからない</p>
 <h2 id=resource-pool>Resource Pool</h2>
 <p>リソースを管理する際に利用する単位</p>
+<h2 id=controller>Controller</h2>
+<p><a href=https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg>
+<img src=https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg loading=lazy alt=システム図>
+</a><br>
+Image from: <a class=link href=https://maas.io/docs/snap/2.9/ui/controllers target=_blank rel=noopener>https://maas.io/docs/snap/2.9/ui/controllers</a></p>
+<h3 id=rack-controller>Rack Controller</h3>
+<p>DHCPやPXE、IPMI管理などを提供するサーバ</p>
+<h3 id=region-controller>Region Controller</h3>
+<p>DNSやWebUIなどを提供するサーバ</p>
 </section>
 <footer class=article-footer>
 <section class=article-tags>
@@ -66,7 +75,7 @@ extended">
 </section>
 <section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <span>
-最終更新 Dec 04, 2021 21:32 PM JST
+最終更新 Dec 05, 2021 12:38 PM JST
 </span>
 </section></footer>
 </article>
@@ -133,6 +142,12 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#subnet---space>Subnet -> Space</a></li>
 <li><a href=#subnet---fabric>Subnet -> Fabric</a></li>
 <li><a href=#resource-pool>Resource Pool</a></li>
+<li><a href=#controller>Controller</a>
+<ul>
+<li><a href=#rack-controller>Rack Controller</a></li>
+<li><a href=#region-controller>Region Controller</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 </div>

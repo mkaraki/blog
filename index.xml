@@ -1033,4 +1033,15 @@ $ sudo service apache2 restart
 &lt;h2 id="subnet---fabric">Subnet -&amp;gt; Fabric&lt;/h2>
 &lt;p>よくわからない&lt;/p>
 &lt;h2 id="resource-pool">Resource Pool&lt;/h2>
-&lt;p>リソースを管理する際に利用する単位&lt;/p></description></item></channel></rss>
+&lt;p>リソースを管理する際に利用する単位&lt;/p>
+&lt;h2 id="controller">Controller&lt;/h2>
+&lt;p>&lt;a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" >
+&lt;img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"
+loading="lazy" alt="システム図" >
+&lt;/a>&lt;br>
+Image from: &lt;a class="link" href="https://maas.io/docs/snap/2.9/ui/controllers" target="_blank" rel="noopener"
+>https://maas.io/docs/snap/2.9/ui/controllers&lt;/a>&lt;/p>
+&lt;h3 id="rack-controller">Rack Controller&lt;/h3>
+&lt;p>DHCPやPXE、IPMI管理などを提供するサーバ&lt;/p>
+&lt;h3 id="region-controller">Region Controller&lt;/h3>
+&lt;p>DNSやWebUIなどを提供するサーバ&lt;/p></description></item></channel></rss>
