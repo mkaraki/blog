@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>日本の公的個人認証サービスを利用したPDF署名とその受け入れ</title><link>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</link><pubDate>Thu, 02 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 04 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>MAASの用語と設定のメモ</title><link>https://blog.mkarakiapps.com/p/20211204-maas-word/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211204-maas-word/</guid><description>&lt;p>MAASには複数の単位(&lt;code>Fabric&lt;/code>など)があります。
+本体にも説明は記述されているのですが、自分があとで見返しやすい様にメモにします。&lt;/p>
+&lt;p>ここで書いていることはすべて私の想像です。&lt;/p>
+&lt;h2 id="availability-zones">Availability zones&lt;/h2>
+&lt;p>場所で区切った単位。&lt;/p>
+&lt;p>例:&lt;/p>
+&lt;ul>
+&lt;li>東京データセンター&lt;/li>
+&lt;li>大阪データセンター&lt;/li>
+&lt;/ul>
+&lt;p>など?&lt;/p>
+&lt;h2 id="subnet---space">Subnet -&amp;gt; Space&lt;/h2>
+&lt;p>SpaceはphpIPAMでいうL2 Domainを指します。&lt;/p>
+&lt;p>Spaceが違う場合、普通はVLANは通せません。&lt;/p>
+&lt;p>同一のインテリジェントスイッチにつながっていないLANケーブルの集合体であると思います。&lt;/p>
+&lt;h2 id="subnet---fabric">Subnet -&amp;gt; Fabric&lt;/h2>
+&lt;p>よくわからない&lt;/p>
+&lt;h2 id="resource-pool">Resource Pool&lt;/h2>
+&lt;p>リソースを管理する際に利用する単位&lt;/p>
+&lt;h2 id="controller">Controller&lt;/h2>
+&lt;p>&lt;a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" >
+&lt;img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"
+loading="lazy" alt="システム図" >
+&lt;/a>&lt;br>
+Image from: &lt;a class="link" href="https://maas.io/docs/snap/2.9/ui/controllers" target="_blank" rel="noopener"
+>https://maas.io/docs/snap/2.9/ui/controllers&lt;/a>&lt;/p>
+&lt;h3 id="rack-controller">Rack Controller&lt;/h3>
+&lt;p>DHCPやPXE、IPMI管理などを提供するサーバ&lt;/p>
+&lt;h3 id="region-controller">Region Controller&lt;/h3>
+&lt;p>DNSやWebUIなどを提供するサーバ&lt;/p></description></item><item><title>日本の公的個人認証サービスを利用したPDF署名とその受け入れ</title><link>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</link><pubDate>Thu, 02 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
 &lt;p>&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
 >公的個人認証サービス(JPKI)&lt;/a>は国および地方公共団体が共同で運営する&lt;a class="link" href="https://www.j-lis.go.jp/" target="_blank" rel="noopener"
 >地方公共団体情報システム機構&lt;/a>の提供するサービスである。&lt;/p>
@@ -1015,33 +1044,4 @@ $ sudo service apache2 restart
 &lt;h2 id="ファイルコピー時に親ディレクトリがない">ファイルコピー時に親ディレクトリがない&lt;/h2>
 &lt;p>　PowerShellの&lt;code>Copy-Item&lt;/code>コマンドレットは親ディレクトリを自動的に作ることはできません。そのため、&lt;code>Split-Path $to -Parent&lt;/code>で親ディレクトリを取得し、当該ディレクトリがなかった場合は、新しくディレクトリを作成しています。&lt;/p>
 &lt;h2 id="ディレクトリ作成時のログ">ディレクトリ作成時のログ&lt;/h2>
-&lt;p>&lt;code>New-Item&lt;/code>コマンドレットを使用すると、実行時に結果としてディレクトリの詳細データを出力します。しかし、今回は邪魔なだけなので、&lt;code>$0_&lt;/code>変数に結果を代入させることによって表示をなくしています。&lt;/p></description></item><item><title>MAASの用語と設定のメモ</title><link>https://blog.mkarakiapps.com/p/20211204-maas-word/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20211204-maas-word/</guid><description>&lt;p>MAASには複数の単位(&lt;code>Fabric&lt;/code>など)があります。
-本体にも説明は記述されているのですが、自分があとで見返しやすい様にメモにします。&lt;/p>
-&lt;p>ここで書いていることはすべて私の想像です。&lt;/p>
-&lt;h2 id="availability-zones">Availability zones&lt;/h2>
-&lt;p>場所で区切った単位。&lt;/p>
-&lt;p>例:&lt;/p>
-&lt;ul>
-&lt;li>東京データセンター&lt;/li>
-&lt;li>大阪データセンター&lt;/li>
-&lt;/ul>
-&lt;p>など?&lt;/p>
-&lt;h2 id="subnet---space">Subnet -&amp;gt; Space&lt;/h2>
-&lt;p>SpaceはphpIPAMでいうL2 Domainを指します。&lt;/p>
-&lt;p>Spaceが違う場合、普通はVLANは通せません。&lt;/p>
-&lt;p>同一のインテリジェントスイッチにつながっていないLANケーブルの集合体であると思います。&lt;/p>
-&lt;h2 id="subnet---fabric">Subnet -&amp;gt; Fabric&lt;/h2>
-&lt;p>よくわからない&lt;/p>
-&lt;h2 id="resource-pool">Resource Pool&lt;/h2>
-&lt;p>リソースを管理する際に利用する単位&lt;/p>
-&lt;h2 id="controller">Controller&lt;/h2>
-&lt;p>&lt;a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" >
-&lt;img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"
-loading="lazy" alt="システム図" >
-&lt;/a>&lt;br>
-Image from: &lt;a class="link" href="https://maas.io/docs/snap/2.9/ui/controllers" target="_blank" rel="noopener"
->https://maas.io/docs/snap/2.9/ui/controllers&lt;/a>&lt;/p>
-&lt;h3 id="rack-controller">Rack Controller&lt;/h3>
-&lt;p>DHCPやPXE、IPMI管理などを提供するサーバ&lt;/p>
-&lt;h3 id="region-controller">Region Controller&lt;/h3>
-&lt;p>DNSやWebUIなどを提供するサーバ&lt;/p></description></item></channel></rss>
+&lt;p>&lt;code>New-Item&lt;/code>コマンドレットを使用すると、実行時に結果としてディレクトリの詳細データを出力します。しかし、今回は邪魔なだけなので、&lt;code>$0_&lt;/code>変数に結果を代入させることによって表示をなくしています。&lt;/p></description></item></channel></rss>
