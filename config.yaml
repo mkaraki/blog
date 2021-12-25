@@ -9,6 +9,8 @@ summaryLength: 50
 
 enableGitInfo: true
 
+disqusShortname: mkarakiblog
+
 # GA Tracking ID
 googleAnalytics: UA-145365019-1
 
@@ -48,15 +50,7 @@ params:
 
     comments:
         enabled: true
-        provider: giscus
-        giscus:
-            repo: mkaraki/blog
-            repoID: MDEwOlJlcG9zaXRvcnkzNjk3MjYxODc=
-            category: Comment
-            categoryID: DIC_kwDOFgmS684CAHES
-            mapping: pathname
-            reactionsEnabled: 1
-            emitMetadata: 0
+        provider: disqus
 
     widgets:
         enabled:
