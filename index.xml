@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>簡単なサービス紹介用のページテンプレートを作った話</title><link>https://blog.mkarakiapps.com/p/20211221-webtemplate/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211221-webtemplate/</guid><description>&lt;p>何かしらのサービス向けの簡単なテンプレートを作ったので紹介ページを書きます。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 25 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>謎の l.instagram.com ドメインが含まれているDMについて</title><link>https://blog.mkarakiapps.com/p/20211225-instagram-link/</link><pubDate>Sat, 25 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211225-instagram-link/</guid><description>&lt;p>今Twitterを騒がしている&lt;code>l.instagram.com&lt;/code>ドメインのメッセージですが、
+先日このメッセージが来たので、これの正体について少し探ろうと思います。&lt;/p>
+&lt;p>この記事内では無害化した複数のリンクを記述しているがもし除く場合は自己責任でどうぞ。&lt;/p>
+&lt;h2 id="届いたメッセージ">届いたメッセージ&lt;/h2>
+&lt;p>&lt;a href="https://user-images.githubusercontent.com/26180919/147385322-6fca6ec3-89bd-46df-ae4a-24e863c63b5b.png" >
+&lt;img src="https://user-images.githubusercontent.com/26180919/147385322-6fca6ec3-89bd-46df-ae4a-24e863c63b5b.png"
+loading="lazy" alt="image" >
+&lt;/a>&lt;/p>
+&lt;p>リンク(無害化済み): &lt;code>https:// l [dot] instagram [dot] com /?[My Twitter ID]_41_4559965334=e208e6be6eb9bf297853619e7cbeeeb5&amp;amp;e=ATO57b9Db1Mn3Ux88bPC-yAhRTW3Y4c9jBdUr86_sREpA1AL0RtYnjrvhw3WWJked-hV2C2V&amp;amp;s=1&amp;amp;s=1&amp;amp;u=http:// business [dot] instagram [dot] com /micro_site/url/?event_type=click&amp;amp;site=igb&amp;amp;destination=https%3A%2F%2Fwww.facebook.com%2Fads%2Fig_redirect%2F%3Fd%3DAd-9UUpXVqVLNUx_LYaKZeKek5oYlWjoEdXwzKgPbUE9qRpf4p77ahkKJVJ0kuzPpFtsCo6iNW3tiZLDTY2LPR4xCa63d0ycYdTB4uq9n11GSU2h81N4csFuuiw8b0crQB08jWUYW08n1cc2LujG0j00JXW6R7_-_xEeAwWPs56HHv7PQhgj6ktkhSEU5AhwI8vAMSgikxz8VtJ4JiQRzIjL%26a%3D1%26hash%3DAd9_0TyBjc1n8sHe&lt;/code>&lt;/p>
+&lt;p>わかる人にはわかると思いますが、&lt;code>l.instagram.com&lt;/code>ドメインはTwitterなどで使われているような&lt;code>t.co&lt;/code>ドメインのような役割を持っています。&lt;/p>
+&lt;p>&lt;a class="link" href="https://web-omusubi.com/blog/omusubi79.html" target="_blank" rel="noopener"
+>ソース&lt;/a>&lt;/p>
+&lt;h2 id="このメッセージのリンク先">このメッセージのリンク先&lt;/h2>
+&lt;p>最終的には&lt;code>https:// m [dot] ztney [dot] com /#BST&lt;/code>に飛ばされます。&lt;/p>
+&lt;p>流れとしては&lt;/p>
+&lt;ol>
+&lt;li>t.coからLocationヘッダで&lt;code>http://l.instagram.com&lt;/code>に飛ぶ&lt;/li>
+&lt;li>そのまま307, Locationヘッダで&lt;code>https://l.instagram.com&lt;/code>に飛ぶ&lt;/li>
+&lt;li>JavaScriptまたはrefreshタグで&lt;code>https:// business [dot] instagram [dot] com /micro_site/url/?event_type=click&amp;amp;site=igb&amp;amp;destination=https://www.facebook.com/ads/ig_redirect/?d=Ad-9UUpXVqVLNUx_LYaKZeKek5oYlWjoEdXwzKgPbUE9qRpf4p77ahkKJVJ0kuzPpFtsCo6iNW3tiZLDTY2LPR4xCa63d0ycYdTB4uq9n11GSU2h81N4csFuuiw8b0crQB08jWUYW08n1cc2LujG0j00JXW6R7_-_xEeAwWPs56HHv7PQhgj6ktkhSEU5AhwI8vAMSgikxz8VtJ4JiQRzIjL&amp;amp;a=1&amp;amp;hash=Ad9_0TyBjc1n8sHe&lt;/code>に飛ぶ&lt;/li>
+&lt;li>302, Locationタグで&lt;code>https:// www [dot] facebook [dot] com /ads/ig_redirect/?d=Ad-9UUpXVqVLNUx_LYaKZeKek5oYlWjoEdXwzKgPbUE9qRpf4p77ahkKJVJ0kuzPpFtsCo6iNW3tiZLDTY2LPR4xCa63d0ycYdTB4uq9n11GSU2h81N4csFuuiw8b0crQB08jWUYW08n1cc2LujG0j00JXW6R7_-_xEeAwWPs56HHv7PQhgj6ktkhSEU5AhwI8vAMSgikxz8VtJ4JiQRzIjL&amp;amp;a=1&amp;amp;hash=Ad9_0TyBjc1n8sHe&lt;/code>に飛ぶ&lt;/li>
+&lt;li>302, Locationタグで&lt;code>http:// bartinkizogrenciyurdu [dot] com /STALK&lt;/code>に飛ぶ&lt;/li>
+&lt;li>307, Locationタグで&lt;code>https&lt;/code>に飛ぶ&lt;/li>
+&lt;li>5,6の流れをURL末端に&lt;code>/&lt;/code>を入れて実施&lt;/li>
+&lt;li>302, Locationで&lt;code>https://m [dot] ztney [dot] com/_BST_&lt;/code>に飛ぶ&lt;/li>
+&lt;li>いろいろあって&lt;code>https:// m [dot] ztney [dot] com /#BST&lt;/code>に飛ぶ（理由がわからんかった）&lt;/li>
+&lt;/ol>
+&lt;p>このリンクはよくできていて、&lt;code>t.co&lt;/code>を経由していないと(ほかにも条件はありそうですが)&lt;a class="link" href="https://business.instagram.com/" target="_blank" rel="noopener"
+>Instagram business&lt;/a>に飛ばされます。&lt;/p>
+&lt;h2 id="log-in-with-twitterの挙動">LOG IN WITH TWITTERの挙動&lt;/h2>
+&lt;p>最終的にはTwitterのアプリケーション連携に行くが、途中の流れは下記のようになる。&lt;/p>
+&lt;ol>
+&lt;li>ボタンは&lt;code>https://m [dot] ztney [dot] com/gir&lt;/code>に飛ぶ&lt;/li>
+&lt;li>302, Locationで&lt;code>https://www [dot] twitbu [dot] com/web/bridge.php?ref=ztney&lt;/code>に飛ぶ&lt;/li>
+&lt;li>ランダムなトークンを設定した状態で、302でTwitterの連携画面に&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>oauth_token&lt;/code>の値が毎回変更されているのが個人的には面白かった。
+連携アプリケーション名はランダムで変更されているようだ。&lt;/p>
+&lt;p>連携画面はこんな感じ。
+&lt;a href="https://user-images.githubusercontent.com/26180919/147386075-4a528ae5-6673-4326-a715-a28b857eccff.png" >
+&lt;img src="https://user-images.githubusercontent.com/26180919/147386075-4a528ae5-6673-4326-a715-a28b857eccff.png"
+loading="lazy" alt="image" >
+&lt;/a>&lt;/p>
+&lt;p>&lt;del>たれか暇な人API制限かかるまでアカウント登録してみてくれないかな…&lt;/del>&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>こういうの調べるの楽しい！&lt;/p></description></item><item><title>簡単なサービス紹介用のページテンプレートを作った話</title><link>https://blog.mkarakiapps.com/p/20211221-webtemplate/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211221-webtemplate/</guid><description>&lt;p>何かしらのサービス向けの簡単なテンプレートを作ったので紹介ページを書きます。&lt;/p>
 &lt;p>ライセンスは未定です
 （多分MITにしてHTMLとCSSに書くと思う）&lt;/p>
 &lt;h2 id="見た目">見た目&lt;/h2>
