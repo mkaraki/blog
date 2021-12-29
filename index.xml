@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 25 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>謎の l.instagram.com ドメインが含まれているDMについて</title><link>https://blog.mkarakiapps.com/p/20211225-instagram-link/</link><pubDate>Sat, 25 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211225-instagram-link/</guid><description>&lt;p>今Twitterを騒がしている&lt;code>l.instagram.com&lt;/code>ドメインのメッセージですが、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 27 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Google Pixel Buds A-Seriesを買った話</title><link>https://blog.mkarakiapps.com/p/20211227-pixel-buds-a/</link><pubDate>Mon, 27 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211227-pixel-buds-a/</guid><description>&lt;p>初めてレビュー記事みたいなものを書きますが、
+&lt;a class="link" href="https://store.google.com/jp/product/pixel_buds_a_series" target="_blank" rel="noopener"
+>Pixel Buds A-Series&lt;/a>を手に入れたので軽く使い勝手を書き連ねていきます。&lt;/p>
+&lt;h2 id="もともとは乗り換え用">もともとは乗り換え用&lt;/h2>
+&lt;p>もともとは&lt;a class="link" href="https://www.sony.jp/xperia-smart-products/products/XEA20/" target="_blank" rel="noopener"
+>Xperia Ear Duo&lt;/a>と
+&lt;a class="link" href="https://www.bose.co.jp/ja_jp/support/products/bose_headphones_support/bose_in_ear_headphones_support/soundsport-free-wireless.html" target="_blank" rel="noopener"
+>SoundSport Free wireless headphones&lt;/a>
+の乗り換え用で買ったものです。&lt;/p>
+&lt;p>ついでに、&lt;a class="link" href="https://www.sony.jp/headphone/products/MDR-EX750BT/" target="_blank" rel="noopener"
+>h.ear in Wireless&lt;/a>の代替として使えたらいいなという考えでした。&lt;/p>
+&lt;p>値段差が3分の1くらいのものなので正直期待はしていませんでしたが、
+結論から言うと１万円でこれはかなりありな製品だったのではと思います。&lt;/p>
+&lt;h2 id="音の感じ方">音の感じ方&lt;/h2>
+&lt;p>私の耳は音質の差を聞き取れるほど良い耳ではないので感じ方だけ。&lt;/p>
+&lt;p>SoundSport Freeや初代h.ear in Wirelessでは「音楽に包まれている」という感覚でしたが、
+こちらは「音楽を聴いている」という感覚です。&lt;/p>
+&lt;p>悪いことではないですが音楽に浸りたいのであればBoseやSonyのお高めのイヤホンを買うべきでしょう。&lt;/p>
+&lt;p>雰囲気はXperia Ear Duoの音をもっといい感じにしたものです。&lt;/p>
+&lt;h2 id="遮音性">遮音性&lt;/h2>
+&lt;p>ノイズキャンセリングや外音取り込みはついていません。&lt;/p>
+&lt;p>しかし、音として入ってくるのは大まかな音で会話内容はわからないレベルには遮音性はあります。&lt;/p>
+&lt;p>個人的には遮音性が高すぎるため、
+会話がイヤホンを取り外さずにできるように外音取り込み機能はあったほうがよかったかなと思いました。
+別に音質求めないので通話用のマイクで適当に実装してほしかったと思います。&lt;/p>
+&lt;h2 id="通知アシスタント機能">通知・アシスタント機能&lt;/h2>
+&lt;p>通知機能はとても便利です。&lt;/p>
+&lt;p>しかし、Xperia Earシリーズと違い、特定アプリからの通知が来た際にベルが鳴る形です。&lt;/p>
+&lt;p>この状態で本体のタッチパネルを長押しすると通知を読み上げてくれます。&lt;/p>
+&lt;h2 id="音量の自動調整">音量の自動調整&lt;/h2>
+&lt;p>音量調整機能ですが、Xperia Earの場合、相対的に現在の音量から調整してきますが、
+Pixel Budsは絶対値で合わせているのではないかと思うほど音量を上げてきます。&lt;/p>
+&lt;h2 id="pixelとの連携">Pixelとの連携&lt;/h2>
+&lt;p>Pixelシリーズとの連携は最強です。&lt;/p>
+&lt;p>端末設定から本体の設定をできるので普通に便利です。&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>Androidユーザでしたら、普通にありな選択だと思いました。&lt;/p>
+&lt;p>個人的には片耳利用の際にどっちの耳でも聞けるのはよかったです。&lt;/p></description></item><item><title>謎の l.instagram.com ドメインが含まれているDMについて</title><link>https://blog.mkarakiapps.com/p/20211225-instagram-link/</link><pubDate>Sat, 25 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211225-instagram-link/</guid><description>&lt;p>今Twitterを騒がしている&lt;code>l.instagram.com&lt;/code>ドメインのメッセージですが、
 先日このメッセージが来たので、これの正体について少し探ろうと思います。&lt;/p>
 &lt;p>この記事内では無害化した複数のリンクを記述しているがもし除く場合は自己責任でどうぞ。&lt;/p>
 &lt;h2 id="届いたメッセージ">届いたメッセージ&lt;/h2>
