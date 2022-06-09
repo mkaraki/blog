@@ -1,188 +1,21 @@
-<!doctype html><html lang=ja-jp>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と"><title>Windows 10をUSBメモリなどに手動でインストールする方法</title>
-<link rel=canonical href=https://blog.mkarakiapps.com/p/20201227-win10-on-usb/>
-<link rel=stylesheet href=/scss/style.min.css><script type=text/javascript>(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},c=e.createElement(f),c.async=1,c.src="https://www.clarity.ms/tag/"+g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","8ruafub4am")</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7860713879668057" crossorigin=anonymous></script>
-<meta property="og:title" content="Windows 10をUSBメモリなどに手動でインストールする方法">
-<meta property="og:description" content="まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と">
-<meta property="og:url" content="https://blog.mkarakiapps.com/p/20201227-win10-on-usb/">
-<meta property="og:site_name" content="mkarakiのブログ">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Windows"><meta property="article:tag" content="Windows10"><meta property="article:tag" content="USBメモリ"><meta property="article:published_time" content="2020-12-27T00:00:00+09:00"><meta property="article:modified_time" content="2021-05-22T15:20:53+09:00">
-<meta name=twitter:site content="@arakimk">
-<meta name=twitter:creator content="@arakimk"><meta name=twitter:title content="Windows 10をUSBメモリなどに手動でインストールする方法">
-<meta name=twitter:description content="まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-145365019-1','auto'),ga('send','pageview'))</script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>前のページ</span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<h2 class=article-title>
-<a href=/p/20201227-win10-on-usb/>Windows 10をUSBメモリなどに手動でインストールする方法</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Dec 27, 2020</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-読了時間: 3分
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=まえがき>まえがき</h1>
-<p>かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」という製品を作っていました。
+<!doctype html><html lang=ja-jp><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と"><title>Windows 10をUSBメモリなどに手動でインストールする方法</title><link rel=canonical href=https://blog.mkarakiapps.com/p/20201227-win10-on-usb/><link rel=stylesheet href=/scss/style.min.css><script type=text/javascript>(function(e,o,t,i,a,n,s){e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},n=o.createElement(i),n.async=1,n.src="https://www.clarity.ms/tag/"+a,s=o.getElementsByTagName(i)[0],s.parentNode.insertBefore(n,s)})(window,document,"clarity","script","8ruafub4am")</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7860713879668057" crossorigin=anonymous></script><meta property="og:title" content="Windows 10をUSBメモリなどに手動でインストールする方法"><meta property="og:description" content="まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と"><meta property="og:url" content="https://blog.mkarakiapps.com/p/20201227-win10-on-usb/"><meta property="og:site_name" content="mkarakiのブログ"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Windows"><meta property="article:tag" content="Windows10"><meta property="article:tag" content="USBメモリ"><meta property="article:published_time" content="2020-12-27T00:00:00+09:00"><meta property="article:modified_time" content="2021-05-22T15:20:53+09:00"><meta name=twitter:site content="@arakimk"><meta name=twitter:creator content="@arakimk"><meta name=twitter:title content="Windows 10をUSBメモリなどに手動でインストールする方法"><meta name=twitter:description content="まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-145365019-1','auto'),ga('send','pageview'))</script></head><body class="article-page has-toc"><script>(function(){const e='StackColorScheme';localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t='StackColorScheme',e=localStorage.getItem(t),n=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;e=='dark'||e==='auto'&&n?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>前のページ</span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><h2 class=article-title><a href=/p/20201227-win10-on-usb/>Windows 10をUSBメモリなどに手動でインストールする方法</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Dec 27, 2020</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>読了時間: 3分</time></div></footer></div></header><section class=article-content><h1 id=まえがき>まえがき</h1><p>かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」という製品を作っていました。
 この製品は、WindowsをUSBに入れる事ができることを売りにしていたソフトで、私は全く使いませんでしたが一応持ってはいました。
-今回、SSDの代わりに低容量のUSBメモリを臨時で使いたいという問い合わせがあり、私なりに方法を探ったのでメモとして残します。</p>
-<h1 id=注意>注意</h1>
-<p>この記事で紹介する動作について、一切の責任を負いませんので予めご了承ください。
-もし、この記事を参考にし作業する際は、自己責任でお願いします。</p>
-<h1 id=検証環境>検証環境</h1>
-<ul>
-<li>Windows 10 Home x64 (ビルド不明)</li>
-<li>VMWare Workstation 16 Player</li>
-</ul>
-<h1 id=手順>手順</h1>
-<h2 id=パーティションの設定>パーティションの設定</h2>
-<p>Windows 10の場合、基本的にパーティションは3つ生成されます。
-しかし、1つは回復領域であるため無視し、EFI用とシステム用の2つのみで構成しようと思います。</p>
-<p>パーティションは以下のようになります。</p>
-<ol>
-<li>200MB-500MB程度 FAT32 Active</li>
-<li>残りの容量 NTFS</li>
-</ol>
-<p>設定方法は解説しませんがActiveにする方法として、<code>diskpart</code>でパーティションを選択し<code>active</code>コマンドを打つ方法があります。</p>
-<p>設定する上で2つのパーティションにドライブレターが割り当てられている必要があります。ここから先の手順では、上からそれぞれ<code>E:</code>と<code>F:</code>が割り当てられているとします。</p>
-<h2 id=イメージの展開>イメージの展開</h2>
-<p>一般のキッティングにも使われているであろう<code>Dism</code>を使います。事前にWindows 10のインストールメディア内の<code>sources/install.esd</code>を抽出してください。
-此処から先の工程では、作業ディレクトリ内に抽出した<code>install.esd</code>が存在し、アクセス権がある状態を想定し記載します。</p>
-<h3 id=イメージidを調べる>イメージIDを調べる</h3>
-<p>管理者権限のPowerShellもしくはコマンドプロンプトで次のコマンドを入力します。</p>
-<pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Get-WimInfo /WimFile:install.esd
+今回、SSDの代わりに低容量のUSBメモリを臨時で使いたいという問い合わせがあり、私なりに方法を探ったのでメモとして残します。</p><h1 id=注意>注意</h1><p>この記事で紹介する動作について、一切の責任を負いませんので予めご了承ください。
+もし、この記事を参考にし作業する際は、自己責任でお願いします。</p><h1 id=検証環境>検証環境</h1><ul><li>Windows 10 Home x64 (ビルド不明)</li><li>VMWare Workstation 16 Player</li></ul><h1 id=手順>手順</h1><h2 id=パーティションの設定>パーティションの設定</h2><p>Windows 10の場合、基本的にパーティションは3つ生成されます。
+しかし、1つは回復領域であるため無視し、EFI用とシステム用の2つのみで構成しようと思います。</p><p>パーティションは以下のようになります。</p><ol><li>200MB-500MB程度 FAT32 Active</li><li>残りの容量 NTFS</li></ol><p>設定方法は解説しませんがActiveにする方法として、<code>diskpart</code>でパーティションを選択し<code>active</code>コマンドを打つ方法があります。</p><p>設定する上で2つのパーティションにドライブレターが割り当てられている必要があります。ここから先の手順では、上からそれぞれ<code>E:</code>と<code>F:</code>が割り当てられているとします。</p><h2 id=イメージの展開>イメージの展開</h2><p>一般のキッティングにも使われているであろう<code>Dism</code>を使います。事前にWindows 10のインストールメディア内の<code>sources/install.esd</code>を抽出してください。
+此処から先の工程では、作業ディレクトリ内に抽出した<code>install.esd</code>が存在し、アクセス権がある状態を想定し記載します。</p><h3 id=イメージidを調べる>イメージIDを調べる</h3><p>管理者権限のPowerShellもしくはコマンドプロンプトで次のコマンドを入力します。</p><pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Get-WimInfo /WimFile:install.esd
 </code></pre><p>希望するエディションのインデックスを覚えておいてください。
-此処から先では、<code>Windows 10 Home（インデックス: 1）</code>をインストールする前提で記載していきます。</p>
-<h3 id=イメージを展開する>イメージを展開する</h3>
-<p>イメージを展開します。<code>/Index:</code>と<code>/ApplyDir:</code>は各自の環境に応じて変更してください。</p>
-<pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Apply-Image /ImageFile:install.esd /Index:1 /ApplyDir:F:\
-</code></pre><h3 id=ブートローダーの設定>ブートローダーの設定</h3>
-<p><code>bcdboot</code>を使用し、ブートローダーを設定します。各自で<code>E:\Windows</code>、<code>/l ja-JP</code>、<code>/s E:</code>については読み替えてください。
-また、<code>/l ja-JP</code>はなくても動くはずです。</p>
-<pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; bcdboot F:\Windows /l ja-JP /s E: /f ALL
-</code></pre><h3 id=設定oobe>設定（OOBE）</h3>
-<p>あとはUSBメモリからブートし、普通に設定をしていくだけです。</p>
-<h1 id=参考>参考</h1>
-<ul>
-<li><a class=link href=http://ohaohaoha.cocolog-nifty.com/blog/2015/08/windows-to-go-f.html target=_blank rel=noopener>Windows To Goを作る: おはのおはなし</a></li>
-<li><a class=link href=https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di target=_blank rel=noopener>BCDBoot のコマンド ライン オプション | Microsoft Docs</a></li>
-</ul>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/windows/>Windows</a>
+此処から先では、<code>Windows 10 Home（インデックス: 1）</code>をインストールする前提で記載していきます。</p><h3 id=イメージを展開する>イメージを展開する</h3><p>イメージを展開します。<code>/Index:</code>と<code>/ApplyDir:</code>は各自の環境に応じて変更してください。</p><pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; Dism /Apply-Image /ImageFile:install.esd /Index:1 /ApplyDir:F:\
+</code></pre><h3 id=ブートローダーの設定>ブートローダーの設定</h3><p><code>bcdboot</code>を使用し、ブートローダーを設定します。各自で<code>E:\Windows</code>、<code>/l ja-JP</code>、<code>/s E:</code>については読み替えてください。
+また、<code>/l ja-JP</code>はなくても動くはずです。</p><pre tabindex=0><code class=language-plaintext:PowerShell（管理者） data-lang=plaintext:PowerShell（管理者）>&gt; bcdboot F:\Windows /l ja-JP /s E: /f ALL
+</code></pre><h3 id=設定oobe>設定（OOBE）</h3><p>あとはUSBメモリからブートし、普通に設定をしていくだけです。</p><h1 id=参考>参考</h1><ul><li><a class=link href=http://ohaohaoha.cocolog-nifty.com/blog/2015/08/windows-to-go-f.html target=_blank rel=noopener>Windows To Goを作る: おはのおはなし</a></li><li><a class=link href=https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di target=_blank rel=noopener>BCDBoot のコマンド ライン オプション | Microsoft Docs</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/windows/>Windows</a>
 <a href=/tags/windows10/>Windows10</a>
-<a href=/tags/usb%E3%83%A1%E3%83%A2%E3%83%AA/>USBメモリ</a>
-</section>
-<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<span>
-最終更新 May 22, 2021 15:20 PM JST
-</span>
-</section></footer>
-</article>
-<aside class=related-contents--wrapper>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//mkarakiblog.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<a href=/tags/usb%E3%83%A1%E3%83%A2%E3%83%AA/>USBメモリ</a></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>最終更新 May 22, 2021 15:20 PM JST</span></section></footer></article><aside class=related-contents--wrapper></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var t=document,e=t.createElement('script');e.async=!0,e.src='//mkarakiblog.disqus.com/embed.js',e.setAttribute('data-timestamp',+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener('onColorSchemeChange',e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2021 -
-2022 mkarakiのブログ
-</section>
-<section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 mkarakiのブログ</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目次</h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#パーティションの設定>パーティションの設定</a></li>
-<li><a href=#イメージの展開>イメージの展開</a>
-<ul>
-<li><a href=#イメージidを調べる>イメージIDを調べる</a></li>
-<li><a href=#イメージを展開する>イメージを展開する</a></li>
-<li><a href=#ブートローダーの設定>ブートローダーの設定</a></li>
-<li><a href=#設定oobe>設定（OOBE）</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目次</h2><div class=widget--toc><nav id=TableOfContents><ul><li><a href=#パーティションの設定>パーティションの設定</a></li><li><a href=#イメージの展開>イメージの展開</a><ul><li><a href=#イメージidを調べる>イメージIDを調べる</a></li><li><a href=#イメージを展開する>イメージを展開する</a></li><li><a href=#ブートローダーの設定>ブートローダーの設定</a></li><li><a href=#設定oobe>設定（OOBE）</a></li></ul></li></ul></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement('link');e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

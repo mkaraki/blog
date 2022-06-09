@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 08 Feb 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>日本国内に蔓延る営業ワードとしてのIPoEを撲滅したい話</title><link>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</guid><description>&lt;p>そもそも私もよく分かっていないが「IPoEは早い」などと洗脳されている友人を救うために書きました。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>令和の世界でVAIO type Pを使う話</title><link>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</link><pubDate>Thu, 09 Jun 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</guid><description>&lt;p>&lt;a class="link" href="https://www.sony.jp/vaio/products/P/" target="_blank" rel="noopener"
+>VAIO type P (VGN-P70H)&lt;/a>という謎のUMPCを買ったので令和の世界でまともに使えるようにいろいろと頑張った話。&lt;/p>
+&lt;h2 id="os">OS&lt;/h2>
+&lt;p>さすがにWindows VistaやWindows 7を使うわけにはいかないのでWindows 10を入れるかLinuxを入れようと思います。&lt;/p>
+&lt;p>今回は&lt;a class="link" href="https://www.debian.org/" target="_blank" rel="noopener"
+>Debian&lt;/a> 11とXfceを入れました。&lt;/p>
+&lt;p>&lt;a class="link" href="https://gihyo.jp/admin/serial/01/ubuntu-recipe/0057?page=1" target="_blank" rel="noopener"
+>gihyo.jpの記事&lt;/a>を見てめんどくさい作業が必要かとおびえていましたが、
+標準のままでも特に問題なく動くようです。&lt;/p>
+&lt;h3 id="xfceを入れた理由">Xfceを入れた理由&lt;/h3>
+&lt;p>最初はLXDEを入れようとしましたが、ソフトウェアでrfkillが働き、
+rfkillをインストールして毎回unblockしないといけないという謎の現象が起きたのでその次に軽そうなXfceを入れました。&lt;/p>
+&lt;h3 id="pulseaudio問題">PulseAudio問題&lt;/h3>
+&lt;p>様々な記事においてDebian系OSでPulse Audioを使うと音飛びするという現象が報告されており、
+私も同じ現象に悩まされたのでPulseAudioをアンインストールしました。&lt;/p>
+&lt;h3 id="バックライト問題">バックライト問題&lt;/h3>
+&lt;p>Xfceの問題なのかVAIO type Pとの相性問題なのかバックライト系があまりいい感じに動きません。&lt;/p>
+&lt;p>今のところ&lt;/p>
+&lt;ul>
+&lt;li>しばらく放置して画面が暗転した後の操作でバックライトが設定値ではなく最大になる&lt;/li>
+&lt;li>再起動のたびにバックライト最大になる&lt;/li>
+&lt;li>定期的にXfceが再起動してバックライトが最大になる&lt;/li>
+&lt;/ul>
+&lt;p>これらの問題があります。
+また、Xfce側ではどうやらバックライトの設定はもとのままというように認識しているらしく、
+バックライトの明るさバーと実際の設定値が一致しません。&lt;/p>
+&lt;p>多分Xfce側がVAIO type Pに対応できてないだけだと思います。&lt;/p>
+&lt;h3 id="xfceが勝手に再起動する問題">Xfceが勝手に再起動する問題&lt;/h3>
+&lt;p>その名の通りです。
+セッションは引き継がれるのでそう見えてるだけかもしれませんが、
+毎回画面ロック＋バックライト最大になるのでつらいところです。&lt;/p>
+&lt;h2 id="ハードウェアのアップグレード">ハードウェアのアップグレード&lt;/h2>
+&lt;h3 id="ssd">SSD&lt;/h3>
+&lt;p>私はまだ換装していませんが、SSD化（フラッシュ化）するのはかなりありだと思います。&lt;/p>
+&lt;p>そもそも、フラッシュ化しないと安心して持ち運びできないですよね。&lt;/p>
+&lt;h3 id="バッテリ">バッテリ&lt;/h3>
+&lt;p>VGP-VPL15という純正のLサイズバッテリがあります。&lt;/p>
+&lt;p>今いい感じの出品がないので買えませんが、近日中に手に入れたいですね。&lt;/p>
+&lt;h2 id="用途">用途&lt;/h2>
+&lt;p>もともとRDPクライアント用として買いましたが、かなりいい感じです。&lt;/p>
+&lt;p>今のところWireGuardでVPNを張ってFreeRDPでリモート接続してます。
+FreeRDPだとalsaを直接呼び出せるので&lt;a class="link" href="#PulseAudio%e5%95%8f%e9%a1%8c" >PulseAudio問題&lt;/a>も回避できます。&lt;/p>
+&lt;p>USBシリアルケーブルと&lt;code>cu&lt;/code>コマンドでシリアル通信で管理するタイプのルータの設定用マシンとしても使えます。&lt;/p>
+&lt;p>個人的には大満足です。&lt;/p>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://lovely910.com/2019/12/30/%E4%BB%A4%E5%92%8C%E5%85%83%E5%B9%B4%E5%8D%81%E4%BA%8C%E6%9C%88%E3%80%80manjaro-linux%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9Fvaio-typep%E3%81%AE%E3%81%9D/" target="_blank" rel="noopener"
+>https://lovely910.com/2019/12/30/%E4%BB%A4%E5%92%8C%E5%85%83%E5%B9%B4%E5%8D%81%E4%BA%8C%E6%9C%88%E3%80%80manjaro-linux%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9Fvaio-typep%E3%81%AE%E3%81%9D/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gihyo.jp/admin/serial/01/ubuntu-recipe/0057?page=1" target="_blank" rel="noopener"
+>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0057?page=1&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>日本国内に蔓延る営業ワードとしてのIPoEを撲滅したい話</title><link>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</guid><description>&lt;p>そもそも私もよく分かっていないが「IPoEは早い」などと洗脳されている友人を救うために書きました。&lt;/p>
 &lt;p>訂正等ありましたら&lt;a class="link" href="https://github.com/mkaraki/blog/blob/main/content/post/20220208-ipoe-is-not-ipoe.md" target="_blank" rel="noopener"
 >ここ&lt;/a>からお気軽にIssueやPull Request送ってください。&lt;/p>
 &lt;h2 id="本来のipoe">本来のIPoE&lt;/h2>
@@ -404,12 +454,12 @@ loading="lazy" alt="署名済みであり、すべての署名が有効です。
 &lt;h2 id="ldap">LDAP&lt;/h2>
 &lt;h3 id="ホスト名の設定">ホスト名の設定&lt;/h3>
 &lt;p>この手順はスキップすることも出来ますが、統合認証システムのみを動かすホストであれば設定しておいて損はないと思います。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo hostnamectl set-hostname hoge.example.com
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>また、&lt;code>/etc/hosts&lt;/code>にある旧ホスト名も設定し直してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo hostnamectl set-hostname hoge.example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>また、&lt;code>/etc/hosts&lt;/code>にある旧ホスト名も設定し直してください。&lt;/p>
 &lt;h3 id="slapd-ldap-utilsのインストール">slapd, ldap-utilsのインストール&lt;/h3>
 &lt;p>必要に応じて&lt;code>sudo apt update&lt;/code>を行ってください。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install slapd ldap-utils
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>途中で管理者パスワードを設定するように言われるので、思うがままにパスワードを設定してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install slapd ldap-utils
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>途中で管理者パスワードを設定するように言われるので、思うがままにパスワードを設定してください。&lt;/p>
 &lt;blockquote>
 &lt;p>管理者アカウントは初期状態で &lt;code>cn=admin,dc=example,dc=com&lt;/code> となります。&lt;br>
 ドメイン名を読み替え、メモをしておくことを推奨します&lt;/p>
@@ -453,9 +503,9 @@ ou: people
 dn: ou=groups,dc=example,dc=com
 objectClass: organizationalUnit
 ou: groups
-&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif&lt;/span>
-Enter LDAP Password: &amp;lt;管理者パスワードを入力&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="openldapでレプリケーションを設定する">OpenLDAPでレプリケーションを設定する。&lt;/h3>
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Enter LDAP Password: &amp;lt;管理者パスワードを入力&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="openldapでレプリケーションを設定する">OpenLDAPでレプリケーションを設定する。&lt;/h3>
 &lt;h4 id="プロバイダーサーバ-マスターの設定">プロバイダーサーバ (マスター)の設定&lt;/h4>
 &lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述します。&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-ldif" data-lang="ldif">dn: cn=module,cn=config
@@ -469,8 +519,8 @@ objectClass: olcSyncProvConfig
 olcOverlay: syncprov
 olcSpSessionLog: 100
 &lt;/code>&lt;/pre>&lt;p>下記のコマンドで適用します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
-&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="コンシューマーサーバ-スレーブの設定">コンシューマーサーバ (スレーブ)の設定&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="コンシューマーサーバ-スレーブの設定">コンシューマーサーバ (スレーブ)の設定&lt;/h4>
 &lt;p>&lt;a class="link" href="#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a" >ホスト名の設定&lt;/a>と&lt;a class="link" href="#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" >slapd, ldap-utilsのインストール&lt;/a>まで行ってください。&lt;/p>
 &lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-ldif" data-lang="ldif">dn: olcDatabase={1}mdb,cn=config
@@ -479,13 +529,13 @@ add: olcSyncRepl
 olcSyncRepl: rid=001
 provider=ldap://hoge.example.com:389/
 bindmethod=simple
-binddn=&amp;quot;cn=admin,dc=example,dc=com&amp;quot;
+binddn=&amp;#34;cn=admin,dc=example,dc=com&amp;#34;
 credentials=adminpassword
-searchbase=&amp;quot;dc=example,dc=com&amp;quot;
+searchbase=&amp;#34;dc=example,dc=com&amp;#34;
 scope=sub
 schemachecking=on
 type=refreshAndPersist
-retry=&amp;quot;30 5 300 3&amp;quot;
+retry=&amp;#34;30 5 300 3&amp;#34;
 interval=00:00:01:00
 &lt;/code>&lt;/pre>&lt;p>&lt;code>olcSyncRepl&lt;/code>の詳細&lt;/p>
 &lt;ul>
@@ -499,21 +549,21 @@ interval=00:00:01:00
 &lt;p>詳細は&lt;a class="link" href="https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl" target="_blank" rel="noopener"
 >LDAP Administrator&amp;rsquo;s Guide&lt;/a>を参照&lt;/p>
 &lt;p>下記のコマンドで適用します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ldap-account-manager">LDAP Account Manager&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ldap-account-manager">LDAP Account Manager&lt;/h2>
 &lt;h3 id="ldap-account-managerのインストール">LDAP Account Managerのインストール&lt;/h3>
 &lt;p>まず、Apache2とPHPをインストールします。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>PHPを有効化します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo a2enconf php7.4-cgi
-$ sudo systemctl reload apache2
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>LDAP Account Managerをインストールします。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>PHPを有効化します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo a2enconf php7.4-cgi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo systemctl reload apache2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>LDAP Account Managerをインストールします。&lt;/p>
 &lt;pre tabindex="0">&lt;code>$ sudo apt -y install ldap-account-manager
 &lt;/code>&lt;/pre>&lt;p>&lt;strong>注意:&lt;/strong> インストール時はすべてのホストからの通信を受けるようになっています。
 &lt;code>/etc/apache2/conf-enabled/ldap-account-manager.conf&lt;/code>を編集し、アクセス可能ホストを絞ることを強く推奨します。&lt;/p>
 &lt;p>関連の設定が終わったらApache2を再起動します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo systemctl restart apache2
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ldap-account-managerの初期設定">LDAP Account Managerの初期設定&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo systemctl restart apache2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ldap-account-managerの初期設定">LDAP Account Managerの初期設定&lt;/h3>
 &lt;p>画像無しでは解説がとても難しいので別の解説サイトを提示します。&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=8" target="_blank" rel="noopener"
 >Ubuntu 20.04 LTS : OpenLDAP : LDAP Account Manager 設定 : Server World&lt;/a>&lt;/p>
@@ -528,8 +578,8 @@ $ sudo systemctl reload apache2
 &lt;h3 id="freeradiusのインストール">FreeRADIUSのインストール&lt;/h3>
 &lt;p>ここではLDAPと連携したRADIUSに必要なパッケージをインストールします。
 利用状況や課金管理は別の項で解説します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install freeradius freeradius-ldap freeradius-utils
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="freeradiusとldapの連携設定">FreeRADIUSとLDAPの連携設定&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install freeradius freeradius-ldap freeradius-utils
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="freeradiusとldapの連携設定">FreeRADIUSとLDAPの連携設定&lt;/h3>
 &lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
 &lt;p>まず、&lt;code>users&lt;/code>を編集し、LDAP認証に対応させます。
 下のコードを追記してください。
@@ -586,83 +636,83 @@ strip
 }
 &lt;/code>&lt;/pre>&lt;p>&lt;code>users&lt;/code>に付与したいVLANを記述します。同じ方法でその他のAttributeも付与できます。&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"># Realmが一致している場合にVLANを割り振る
-DEFAULT Realm == &amp;quot;hoge.fuga&amp;quot;
+DEFAULT Realm == &amp;#34;hoge.fuga&amp;#34;
 Tunnel-Type = 13,
 Tunnel-Medium-Type = 6,
 Tunnel-Private-Group-Id = 100
 # ユーザ名とRealmが一致している場合にVLANを割り振る
-DEFAULT User-Name == &amp;quot;user@hoge.fuga&amp;quot;
+DEFAULT User-Name == &amp;#34;user@hoge.fuga&amp;#34;
 Tunnel-Type = 13,
 Tunnel-Medium-Type = 6,
 Tunnel-Private-Group-Id = 100
 &lt;/code>&lt;/pre>&lt;h4 id="課金システムで表示されるユーザ名を一致させたい">課金システムで表示されるユーザ名を一致させたい&lt;/h4>
-&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"> User-Name = &amp;quot;user&amp;quot;,
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"> User-Name = &amp;#34;user&amp;#34;,
 &lt;/code>&lt;/pre>&lt;p>を&lt;code>DEFAULT&lt;/code>行の下に挿入してください。&lt;/p>
 &lt;h3 id="radiusで課金管理-accounting-を行う">RADIUSで課金管理 (Accounting) を行う&lt;/h3>
 &lt;h4 id="mysqlを設定する">MySQLを設定する&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install mysql-server
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>必要に応じて&lt;code>sudo mysql_secure_installation&lt;/code>を使い設定を行ってください。
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install mysql-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>必要に応じて&lt;code>sudo mysql_secure_installation&lt;/code>を使い設定を行ってください。
 今回は完全に閉鎖された空間で利用することを前提にこの設定を行いません。&lt;/p>
 &lt;p>もし、rootパスワードを設定した場合、記事内の&lt;code>mysql -u root&lt;/code>を&lt;code>mysql -u root -p&lt;/code>に読み替えてください。&lt;/p>
 &lt;p>&lt;code>sudo mysql -u root&lt;/code>でMySQLに入り以下のSQLを投入してください。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DATABASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">GRANT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ALL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">localhost&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">IDENTIFIED&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;radius&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="n">FLUSH&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">PRIVILEGES&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="n">QUIT&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意:&lt;/strong> 今回のインストール例ではRADIUS用アカウントのパスワードを&lt;code>radius&lt;/code>に設定しています。
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DATABASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GRANT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ALL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">localhost&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">IDENTIFIED&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;radius&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">FLUSH&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">PRIVILEGES&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">QUIT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意:&lt;/strong> 今回のインストール例ではRADIUS用アカウントのパスワードを&lt;code>radius&lt;/code>に設定しています。
 これは非常に脆弱なパスワードであり、強固なパスワードに設定し直すことを強く推奨します。&lt;/p>
 &lt;p>Root権限で下記のコマンドを実行します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># mysql -u root radius &amp;lt; /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>下記の内容でsqlファイルを作成し、上記の方法でradiusデータベースに適応させてください。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="k">DROP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacctid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">auto_increment&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">groupname&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">realm&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasportid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasporttype&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctupdatetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">unsigned&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctauthentic&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">connectinfo_start&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">connectinfo_stop&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctinputoctets&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctoutputoctets&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">calledstationid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">callingstationid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctterminatecause&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">servicetype&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedprotocol&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">44&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">PRIMARY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">radacctid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">UNIQUE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">INDEX&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">bulk_close&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
-&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ENGINE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">INNODB&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>情報:&lt;/strong> 私がインストールを試みた際は、&lt;code>/etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql&lt;/code>に不具合があり、&lt;a class="link" href="https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql" target="_blank" rel="noopener"
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># mysql -u root radius &amp;lt; /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>下記の内容でsqlファイルを作成し、上記の方法でradiusデータベースに適応させてください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">DROP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">radacctid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">auto_increment&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">groupname&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">realm&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">nasportid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">nasporttype&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctupdatetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">unsigned&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctauthentic&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">connectinfo_start&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">connectinfo_stop&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctinputoctets&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctoutputoctets&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">calledstationid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">callingstationid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctterminatecause&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">servicetype&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedprotocol&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">44&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">PRIMARY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">radacctid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">UNIQUE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">INDEX&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">bulk_close&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ENGINE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">INNODB&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>情報:&lt;/strong> 私がインストールを試みた際は、&lt;code>/etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql&lt;/code>に不具合があり、&lt;a class="link" href="https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql" target="_blank" rel="noopener"
 >GitHubに存在する正しいスキーマ&lt;/a>を適用し、間違っているテーブルを削除しました。&lt;br>
 この不具合は一時的なものであると考えられるため、記事の閲覧時にこの手順が必要ない可能性が高いです。
 また、今回修正したのは最低限課金情報取得に必要なテーブルであり、その他のテーブルにも不具合がある可能性があります。&lt;br>
@@ -670,10 +720,10 @@ Tunnel-Private-Group-Id = 100
 &lt;h4 id="freeradiusをmysqlに対応させる">FreeRADIUSをMySQLに対応させる&lt;/h4>
 &lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
 &lt;p>sql関係のパッケージをインストールします。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install freeradius-mysql
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>次に、sqlのmodを有効化します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-enabled/
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>mods-enabled/sql&lt;/code>を編集し、SQL接続情報を記述します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install freeradius-mysql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>次に、sqlのmodを有効化します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-enabled/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>mods-enabled/sql&lt;/code>を編集し、SQL接続情報を記述します。&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>sql&lt;/code>セクションの&lt;code>dialect&lt;/code>を&lt;code>mysql&lt;/code>に設定&lt;/li>
 &lt;li>&lt;code>sql&lt;/code>セクションの&lt;code>driver&lt;/code>を&lt;code>rlm_sql_${dialect}&lt;/code>に設定&lt;/li>
@@ -688,21 +738,21 @@ Tunnel-Private-Group-Id = 100
 &lt;h4 id="daloradiusをインストールする">daloRADIUSをインストールする&lt;/h4>
 &lt;p>今回daloRADIUSは課金情報確認の為だけにインストールします。&lt;/p>
 &lt;p>前提パッケージをインストールします。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install php libapache2-mod-php php-&lt;span class="o">{&lt;/span>gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl&lt;span class="o">}&lt;/span> unzip
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>daloRADIUSをダウンロードし、&lt;code>/var/www/html&lt;/code>に展開します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ wget https://github.com/lirantal/daloradius/archive/master.zip
-$ unzip master.zip
-$ sudo mv daloradius-master /var/www/html/daloradius
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>MySQLに必要なテーブルを挿入します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/fr2-mysql-daloradius-and-freeradius.sql
-$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/mysql-daloradius.sql
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/var/www/html/daloradius/library/daloradius.conf.php&lt;/code>を編集し、MySQLへのアクセス情報を設定します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_HOST&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;localhost&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># MySQLのホストを設定
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_PORT&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;3306&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># MySQLのポートを設定
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_USER&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># ユーザ名を設定
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_PASS&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># パスワードを設定
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_NAME&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># データベース名を設定
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>これでdaloRADIUSのインストールは終了です。
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install php libapache2-mod-php php-&lt;span class="o">{&lt;/span>gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl&lt;span class="o">}&lt;/span> unzip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>daloRADIUSをダウンロードし、&lt;code>/var/www/html&lt;/code>に展開します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ wget https://github.com/lirantal/daloradius/archive/master.zip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ unzip master.zip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo mv daloradius-master /var/www/html/daloradius
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>MySQLに必要なテーブルを挿入します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/fr2-mysql-daloradius-and-freeradius.sql
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/mysql-daloradius.sql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/var/www/html/daloradius/library/daloradius.conf.php&lt;/code>を編集し、MySQLへのアクセス情報を設定します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_HOST&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;localhost&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># MySQLのホストを設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_PORT&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;3306&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># MySQLのポートを設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_USER&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># ユーザ名を設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_PASS&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># パスワードを設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_NAME&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># データベース名を設定
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>これでdaloRADIUSのインストールは終了です。
 初期パスワードは&lt;code>radius&lt;/code>です。&lt;/p>
 &lt;h2 id="saml-idp">SAML IdP&lt;/h2>
 &lt;p>SimpleSAMLphpを利用し、SAML IdPを行います。&lt;br>
@@ -710,63 +760,64 @@ RSAのSSL証明書が必要になります。私は&lt;a class="link" href="http
 >Let&amp;rsquo;s encrypt&lt;/a>を使いました。&lt;/p>
 &lt;h3 id="simplesamlidpをインストール">SimpleSAMLIdPをインストール&lt;/h3>
 &lt;p>下記のコマンドでインストールと有効化を行います。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo apt -y install simplesamlphp
-$ sudo a2enconf simplesamlphp
-$ sudo service apache2 restart
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="simplesamlidpを設定">SimpleSAMLIdPを設定&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install simplesamlphp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo a2enconf simplesamlphp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo service apache2 restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="simplesamlidpを設定">SimpleSAMLIdPを設定&lt;/h3>
 &lt;p>&lt;code>/var/lib/simplesamlphp/secrets.inc.php&lt;/code>を編集し、管理者パスワードを設定します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
-&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;auth.adminpassword&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;password&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;secretsalt&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;SALT&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// この項目は初期状態にしておくべきです。
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/usr/share/simplesamlphp/config/config.php&lt;/code>を編集し、設定を行います。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php"> &lt;span class="c1">// 前略
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;admin.protectindexpage&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// ログインしていないとサーバ情報が見れないようにする
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;admin.protectmetadata&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 同上
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 中略
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;enable.saml20-idp&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SAML2.0 IdPを有効化
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 後略
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/usr/share/simplesamlphp/config/authsources.php&lt;/code>を編集し、LDAPへの接続情報を記述します。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php"> &lt;span class="c1">// 前略
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;example-ldap&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span> &lt;span class="c1">// `example-ldap` はお好みで変更可能です
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;ldap:LDAP&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;hostname&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;ldap://hoge.example.com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;enable_tls&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">false&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;timeout&amp;#39;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;port&amp;#39;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">389&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;attributes&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;dnpattern&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;uid=%username%,ou=people,dc=example,dc=com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 検索対象のDNと検索パターンを指定
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 入力されたユーザ名が`%username%`に入る。uid=やcn=として検索パターンを指定できる。
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.enable&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;search.base&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;ou=people,dc=example,dc=com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 検索対象DN
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.attributes&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;uid&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;mail&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="c1">// 検索対象の属性
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.username&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;search.password&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="p">),&lt;/span>
-&lt;span class="c1">// 後略
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>かなりコンフィグを省略しましたが、概ねこの様になっていれば大丈夫です。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;auth.adminpassword&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;password&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;secretsalt&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;SALT&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// この項目は初期状態にしておくべきです。
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/usr/share/simplesamlphp/config/config.php&lt;/code>を編集し、設定を行います。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 前略
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;admin.protectindexpage&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// ログインしていないとサーバ情報が見れないようにする
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;admin.protectmetadata&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 同上
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 中略
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;enable.saml20-idp&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SAML2.0 IdPを有効化
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 後略
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/usr/share/simplesamlphp/config/authsources.php&lt;/code>を編集し、LDAPへの接続情報を記述します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 前略
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;example-ldap&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span> &lt;span class="c1">// `example-ldap` はお好みで変更可能です
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;ldap:LDAP&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;hostname&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;ldap://hoge.example.com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;enable_tls&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;timeout&amp;#39;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;port&amp;#39;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">389&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;attributes&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;dnpattern&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;uid=%username%,ou=people,dc=example,dc=com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 検索対象のDNと検索パターンを指定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 入力されたユーザ名が`%username%`に入る。uid=やcn=として検索パターンを指定できる。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.enable&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;search.base&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;ou=people,dc=example,dc=com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 検索対象DN
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.attributes&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;uid&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;mail&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="c1">// 検索対象の属性
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.username&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;search.password&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 後略
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>かなりコンフィグを省略しましたが、概ねこの様になっていれば大丈夫です。&lt;/p>
 &lt;p>次に&lt;code>/usr/share/simplesamlphp/config/metadata/saml20-idp-hosted.php&lt;/code>を編集してIdPの設定を行います。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
-&lt;span class="nv">$metadata&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;__DYNAMIC:1__&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;span class="cm">/*
-&lt;/span>&lt;span class="cm"> * * The hostname for this IdP. This makes it possible to run multiple
-&lt;/span>&lt;span class="cm"> * * IdPs from the same configuration. &amp;#39;__DEFAULT__&amp;#39; means that this one
-&lt;/span>&lt;span class="cm"> * * should be used by default.
-&lt;/span>&lt;span class="cm"> * */&lt;/span>
-&lt;span class="s1">&amp;#39;host&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;__DEFAULT__&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="cm">/*
-&lt;/span>&lt;span class="cm"> * * The private key and certificate to use when signing responses.
-&lt;/span>&lt;span class="cm"> * * These are stored in the cert-directory.
-&lt;/span>&lt;span class="cm"> * */&lt;/span>
-&lt;span class="s1">&amp;#39;privatekey&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;/usr/share/simplesamlphp/config/privkey.pem&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SSL秘密鍵
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;certificate&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;/usr/share/simplesamlphp/config/fullchain.pem&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SSL証明書
-&lt;/span>&lt;span class="c1">&lt;/span>
-&lt;span class="cm">/*
-&lt;/span>&lt;span class="cm"> * * The authentication source which should be used to authenticate the
-&lt;/span>&lt;span class="cm"> * * user. This must match one of the entries in config/authsources.php.
-&lt;/span>&lt;span class="cm"> * */&lt;/span>
-&lt;span class="s1">&amp;#39;auth&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;example-ldap&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 先程`example-ldap`を書き換えた場合はこちらも書き換えてください。
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">];&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>この後はSPを&lt;code>/usr/share/simplesamlphp/config/metadata/saml20-sp-remote.php&lt;/code>に記述し、IdPの情報をSPに登録する処理になりますが、この記事では取り扱いません。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$metadata&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;__DYNAMIC:1__&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * The hostname for this IdP. This makes it possible to run multiple
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * IdPs from the same configuration. &amp;#39;__DEFAULT__&amp;#39; means that this one
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * should be used by default.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;host&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;__DEFAULT__&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * The private key and certificate to use when signing responses.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * These are stored in the cert-directory.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;privatekey&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;/usr/share/simplesamlphp/config/privkey.pem&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SSL秘密鍵
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;certificate&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;/usr/share/simplesamlphp/config/fullchain.pem&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SSL証明書
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * The authentication source which should be used to authenticate the
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * user. This must match one of the entries in config/authsources.php.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;auth&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;example-ldap&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 先程`example-ldap`を書き換えた場合はこちらも書き換えてください。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>この後はSPを&lt;code>/usr/share/simplesamlphp/config/metadata/saml20-sp-remote.php&lt;/code>に記述し、IdPの情報をSPに登録する処理になりますが、この記事では取り扱いません。&lt;/p>
 &lt;h2 id="参考">参考&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/" target="_blank" rel="noopener"
@@ -1239,10 +1290,10 @@ $ sudo service apache2 restart
 &lt;h1 id="openssh-serverの設定">openssh-serverの設定&lt;/h1>
 &lt;p>openssh-serverはインストールされていますが、hostkeyが設定されていません。
 次のコマンドを使ってhostkeyを自動生成させてください。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo dpkg-reconfigure openssh-server
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>生成出来たらopenssh-serverを再起動してください。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ sudo service ssh restart
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="参考">参考&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo dpkg-reconfigure openssh-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>生成出来たらopenssh-serverを再起動してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo service ssh restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="参考">参考&lt;/h1>
 &lt;ul>
 &lt;li>Ubuntu 20.04 LTS Server を Raspberry Pi 4 にインストール - Qiita, &lt;a class="link" href="https://qiita.com/azumabashi/items/182f365cf7405156788c" target="_blank" rel="noopener"
 >https://qiita.com/azumabashi/items/182f365cf7405156788c&lt;/a> 2020.10.10 参照.&lt;/li>
@@ -1250,36 +1301,45 @@ $ sudo service apache2 restart
 >https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/&lt;/a> 2020.10.10 参照.&lt;/li>
 &lt;/ul></description></item><item><title>PowerShellを使ってMinecraftのリソースを正式名でエクスポートする</title><link>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</link><pubDate>Thu, 06 Aug 2020 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</guid><description>&lt;h1 id="最初に">最初に&lt;/h1>
 &lt;p>Minecraftはデフォルトリソースをハッシュ名にして保存しています。実際のリソース名とはJSONファイルを使用して関連付けています。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;objects&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="p">{&lt;/span>
-&lt;span class="nt">&amp;#34;resource1.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1234&lt;/span>&lt;span class="p">},&lt;/span>
-&lt;span class="nt">&amp;#34;resource2.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5678&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>このような形でハッシュとリソース名を対応付けています。これをリソース名にしてエクスポートしようという試みです。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;objects&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;resource1.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1234&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;resource2.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5678&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>このような形でハッシュとリソース名を対応付けています。これをリソース名にしてエクスポートしようという試みです。&lt;/p>
 &lt;h1 id="対応環境">対応環境&lt;/h1>
 &lt;p>Minecraft 1.16とPowerShell 5.1で実行できることを確認しました。また、オープンソース版のPowerShellでも実行できると思われます。&lt;/p>
 &lt;p>&lt;strong>最低限の検証しかしていません。&lt;/strong>&lt;/p>
 &lt;h1 id="実際のコード">実際のコード&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\objects&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/objectsまでのフルパス&lt;/span>
-&lt;span class="nv">$listjson&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\indexes\1.16.json&amp;#34;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/indexes内の任意のバージョン名のJSONファイルまでのフルパス&lt;/span>
-&lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\extracted&amp;#34;&lt;/span> &lt;span class="c"># エクスポート先フォルダのフルパス&lt;/span>
-&lt;span class="c"># ===================&lt;/span>
-&lt;span class="nv">$json&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Get-Content&lt;/span> &lt;span class="nv">$listjson&lt;/span>
-&lt;span class="nv">$list&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">ConvertFrom-Json&lt;/span> &lt;span class="n">-InputObject&lt;/span> &lt;span class="nv">$json&lt;/span>
-&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$r&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">psobject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Properties&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nv">$fname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Name&lt;/span>
-&lt;span class="nv">$afname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nv">$fname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">hash&lt;/span>
-&lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">2&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="nv">$from&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="nv">$to&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$fname&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="nv">$destdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Split-Path&lt;/span> &lt;span class="nv">$to&lt;/span> &lt;span class="n">-Parent&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="p">(!(&lt;/span>&lt;span class="nb">Test-Path&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$destdir&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nv">$0_&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">New-Item&lt;/span> &lt;span class="nv">$destdir&lt;/span> &lt;span class="n">-Type&lt;/span> &lt;span class="n">Directory&lt;/span> &lt;span class="p">}&lt;/span>
-&lt;span class="nb">Copy-Item&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$from&lt;/span> &lt;span class="n">-Destination&lt;/span> &lt;span class="nv">$to&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>汚いコードですが概ねこのような形です。先頭の３行(改行含め４行)を書き換えて利用してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\objects&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/objectsまでのフルパス&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$listjson&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\indexes\1.16.json&amp;#34;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/indexes内の任意のバージョン名のJSONファイルまでのフルパス&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\extracted&amp;#34;&lt;/span> &lt;span class="c"># エクスポート先フォルダのフルパス&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># ===================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$json&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Get-Content&lt;/span> &lt;span class="nv">$listjson&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$list&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">ConvertFrom-Json&lt;/span> &lt;span class="n">-InputObject&lt;/span> &lt;span class="nv">$json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$r&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">psobject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Properties&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$fname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$afname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nv">$fname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">hash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$from&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$to&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$fname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$destdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Split-Path&lt;/span> &lt;span class="nv">$to&lt;/span> &lt;span class="n">-Parent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(!(&lt;/span>&lt;span class="nb">Test-Path&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$destdir&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nv">$0_&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">New-Item&lt;/span> &lt;span class="nv">$destdir&lt;/span> &lt;span class="n">-Type&lt;/span> &lt;span class="n">Directory&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Copy-Item&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$from&lt;/span> &lt;span class="n">-Destination&lt;/span> &lt;span class="nv">$to&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>汚いコードですが概ねこのような形です。先頭の３行(改行含め４行)を書き換えて利用してください。&lt;/p>
 &lt;h1 id="注意点解説">注意点・解説&lt;/h1>
 &lt;p>　先ほども説明した通り、JSONでリストが作られています。そのため、&lt;code>ConvertFrom-Json&lt;/code>で簡単に読み込むことができました。しかし、いくつか注意点があります。&lt;/p>
 &lt;h2 id="powershell-51ではjsonをhashtableにできない">PowerShell 5.1ではJSONをHashtableにできない&lt;/h2>
