@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>令和の世界でVAIO type Pを使う話</title><link>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</link><pubDate>Thu, 09 Jun 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</guid><description>&lt;p>&lt;a class="link" href="https://www.sony.jp/vaio/products/P/" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 17 Oct 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>分散化についていろいろ</title><link>https://blog.mkarakiapps.com/p/20221017-decentralized/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221017-decentralized/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong> Decentralizedを完全に誤解してそうな人の記事です。娯楽としてどうぞ&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="分散化インターネット初期">分散化＝インターネット初期&lt;/h2>
+&lt;p>そもそも、インターネット初期にはインターネットサービスの覇権企業など存在せず、
+各大学や一部の企業・個人が自らサーバを構築して運用していた。&lt;/p>
+&lt;p>これは、中央集権から遠く離れたものだと考えられる。&lt;/p>
+&lt;h2 id="現代のインターネットに必須な中央集権">現代のインターネットに必須な中央集権&lt;/h2>
+&lt;p>現在のインターネットの運用に必要な企業・団体は多く存在する。&lt;/p>
+&lt;p>Tier 1プロバイダは各国との接続においてファイバーなどの維持を業務にしていたりするし、
+ICANNなどはDNSの実運用上の必須団体といっても差支えないであろう。&lt;/p>
+&lt;p>ほかにも、RIPE NCCなどのIPアドレス・ASN管理団体も、
+インターネットをインターネットとして運用するうえで必須の団体・企業といえるであろう。&lt;/p>
+&lt;h2 id="self-hostedとfoss">Self-hostedとFOSS&lt;/h2>
+&lt;p>もし中央集権的なインターネットから脱出したいなら、
+Self-hostedとFOSSが重要なキーワードになるかもしれない。&lt;/p>
+&lt;p>Self-hostedとは自らサーバや環境を用意しサービスを提供することを指す。&lt;/p>
+&lt;p>FOSSは無料でオープンなソフトウェアを指し、
+多くの場合オープンソースソフトウェアを指すワードである。&lt;/p>
+&lt;h3 id="なぜfossがリストにいるのか">なぜFOSSがリストにいるのか&lt;/h3>
+&lt;p>正直、Self-hostedだけあれば十分である。
+しかし、そのサービスを長く使いたいのであれば、
+特定の個人・法人に開発が一任されるプロプライエタリなソフトウェアではなく、
+やる気さえあれば自分でプログラムをより良い方向へ持っていけるOSSを使うとよいだろう。&lt;/p>
+&lt;h2 id="self-hostedで中央集権から脱出する">Self-hostedで中央集権から脱出する&lt;/h2>
+&lt;p>Self-hostedなサービスで中央集権から脱出するには次の点を考える必要がある。&lt;/p>
+&lt;ul>
+&lt;li>2台以上のサーバを複数の国にまたいで設置する
+&lt;ul>
+&lt;li>特定の国の予測不能なインターネット障害・遮断への対抗&lt;/li>
+&lt;li>ISP・IP管理団体の分散&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://ja.wikipedia.org/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%AC%E3%83%99%E3%83%AB%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3" target="_blank" rel="noopener"
+>gTLD&lt;/a>を購入する
+&lt;ul>
+&lt;li>gTLDを取得することによって当該ドメインの管理団体がICANNのみになる&lt;/li>
+&lt;li>ここを一般ユーザを置いていかずに中央集権から分離させることはできなさそう？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>できるだけSSL/TLSなどで暗号化する
+&lt;ul>
+&lt;li>現代でサービスを運用する場合は必須です&lt;/li>
+&lt;li>できるだけバージョンが新しいものを利用しましょう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>ソフトウェアはLTSもしくは最新のものを利用する
+&lt;ul>
+&lt;li>LTSが好ましい&lt;/li>
+&lt;li>決して古いソフトウェアを使い続けないようにしましょう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ソフトウェアの例">ソフトウェアの例&lt;/h2>
+&lt;h3 id="メール">メール&lt;/h3>
+&lt;h4 id="modoboa">Modoboa&lt;/h4>
+&lt;p>&lt;a class="link" href="https://modoboa.org" target="_blank" rel="noopener"
+>Modoboa&lt;/a>はオールインワンのメールサーバソリューションである。&lt;/p>
+&lt;p>オープンソースであり、ある程度のセキュリティ設定もやってくれるらしい。&lt;/p>
+&lt;p>実際に運用する際には&lt;a class="link" href="https://www.postfix.org/" target="_blank" rel="noopener"
+>Postfix&lt;/a>などでModoboaホストと接続できなくてもメールがDropしない仕組みを作るのは必須である。&lt;/p>
+&lt;h3 id="オンラインファイルストレージ">オンラインファイルストレージ&lt;/h3>
+&lt;h4 id="nextcloud">Nextcloud&lt;/h4>
+&lt;p>&lt;a class="link" href="https://nextcloud.com/" target="_blank" rel="noopener"
+>Nextcloud&lt;/a>は何でもありのグループウェアである。&lt;/p>
+&lt;p>先に紹介した&lt;a class="link" href="#modoboa" >Modoboa&lt;/a>のメールをこのソフトウェアから閲覧することもできる。&lt;/p>
+&lt;p>また、カレンダーや連絡先も共有できるほか、チャットや通話も可能である。&lt;/p>
+&lt;h3 id="連絡先カレンダー">連絡先・カレンダー&lt;/h3>
+&lt;h4 id="nextcloud-別で紹介">Nextcloud (別で紹介)&lt;/h4>
+&lt;p>&lt;a class="link" href="#nextcloud" >Nextcloud&lt;/a>で紹介している。&lt;/p>
+&lt;h3 id="チャット">チャット&lt;/h3>
+&lt;h4 id="element">Element&lt;/h4>
+&lt;p>&lt;a class="link" href="https://element.io/" target="_blank" rel="noopener"
+>Element&lt;/a>はチャットソフトウェアとして&lt;a class="link" href="https://matrix.org/" target="_blank" rel="noopener"
+>Matrix&lt;/a>という公開されたプロトコルを使用しているソフトウェア。&lt;/p>
+&lt;p>詳しいわけではないので詳しい紹介はしないが、いかにもDecentralizedな感じの設計だと思う。&lt;/p>
+&lt;h4 id="mattermost">Mattermost&lt;/h4>
+&lt;p>&lt;a class="link" href="https://mattermost.com/" target="_blank" rel="noopener"
+>Mattermost&lt;/a>は完全なオープンソース製品ではないが、
+最低限チャットソフトウェアに欲しい機能は無料で提供してくれる。&lt;/p>
+&lt;p>UIはSlackに近く、Teamという概念でSlackのように複数ワークスペース作ることもでき、
+個人・企業問わず便利なソフトウェアである。&lt;/p>
+&lt;h3 id="通話">通話&lt;/h3>
+&lt;h4 id="jitsi">Jitsi&lt;/h4>
+&lt;p>&lt;a class="link" href="https://jitsi.org/jitsi-meet/" target="_blank" rel="noopener"
+>Jitsi&lt;/a>はオープンソースのビデオ通話ソフト。&lt;/p>
+&lt;p>有名なWebで完結するビデオ通話ソフトウェアと同じように利用できる。&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>ここに書いてあるようなサービスを社内だけでも運用すると、
+インターネットが発展するにあたってなぜ中央集権が必須となっていったのかよくわかる。&lt;/p></description></item><item><title>令和の世界でVAIO type Pを使う話</title><link>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</link><pubDate>Thu, 09 Jun 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</guid><description>&lt;p>&lt;a class="link" href="https://www.sony.jp/vaio/products/P/" target="_blank" rel="noopener"
 >VAIO type P (VGN-P70H)&lt;/a>という謎のUMPCを買ったので令和の世界でまともに使えるようにいろいろと頑張った話。&lt;/p>
 &lt;h2 id="os">OS&lt;/h2>
 &lt;p>さすがにWindows VistaやWindows 7を使うわけにはいかないのでWindows 10を入れるかLinuxを入れようと思います。&lt;/p>
