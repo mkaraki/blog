@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 29 Dec 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>マインクラフトにて観測されたUpdater.classマルウェアの検証</title><link>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</link><pubDate>Thu, 29 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</guid><description>&lt;p>当記事内には実際に攻撃者が利用したURLなどが無毒化した状態で記述されている。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 29 Dec 2022 03:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Kea DHCPをSamba ADDCのDDNSとHot-standby HAで構築した話</title><link>https://blog.mkarakiapps.com/p/20221229-keadhcp/</link><pubDate>Thu, 29 Dec 2022 03:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-keadhcp/</guid><description>&lt;h2 id="前提">前提&lt;/h2>
+&lt;ul>
+&lt;li>Ubuntu 22.04&lt;/li>
+&lt;li>Kea 2.2.0&lt;/li>
+&lt;/ul>
+&lt;h2 id="kea-dhcpをインストールする">Kea DHCPをインストールする&lt;/h2>
+&lt;p>ISC公式が用意しているリポジトリからKeaをインストールしてください。&lt;/p>
+&lt;p>2022/12/26日時点で、
+&lt;a class="link" href="https://cloudsmith.io/~isc/repos/" target="_blank" rel="noopener"
+>https://cloudsmith.io/~isc/repos/&lt;/a>
+で公開されており、
+最新バージョンである2.2.0は&lt;a class="link" href="https://cloudsmith.io/~isc/repos/kea-2-2/setup/#formats-deb" target="_blank" rel="noopener"
+>こちら&lt;/a>からアクセスできます。&lt;/p>
+&lt;h2 id="samba-ad-dcと連携させる">Samba AD DCと連携させる&lt;/h2>
+&lt;p>Samba AD DCのDNS機能を使い、DDNS風の動作をさせる例です。&lt;/p>
+&lt;h3 id="設定スクリプトの準備">設定スクリプトの準備&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/mkaraki/kea-dhcp-and-samba-ad-dns/blob/master/dhcp-dyndns.sh" target="_blank" rel="noopener"
+>dhcp-dyndns.sh&lt;/a>
+を
+&lt;code>/etc/kea/kea-dhcp-dyndns.sh&lt;/code>
+に保存してください。&lt;/p>
+&lt;p>また、スクリプト内の設定を必要に応じて変更してください。&lt;/p>
+&lt;h3 id="hooks-librariesの設定をする">hooks librariesの設定をする&lt;/h3>
+&lt;p>下記のような設定を投入してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;hooks-libraries&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;library&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/usr/lib/x86_64-linux-gnu/kea/hooks/libdhcp_run_script.so&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;parameters&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/etc/kea/kea-dhcp-dyndns.sh&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;sync&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ドメインに参加させる">ドメインに参加させる&lt;/h3>
+&lt;h4 id="必要パッケージをインストールする">必要パッケージをインストールする&lt;/h4>
+&lt;pre tabindex="0">&lt;code>apt install winbind krb5-user samba
+&lt;/code>&lt;/pre>&lt;p>&lt;code>net&lt;/code>コマンドが実行できれば成功です。&lt;/p>
+&lt;h4 id="smbconfを記述する">&lt;code>smb.conf&lt;/code>を記述する&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[global]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">kerberos method&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">secrets and keytab
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> realm = YOUR.DOMAIN.EXAMPLE.COM
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> workgroup = YOUR
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> security = ads&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="参加コマンドを打つ">参加コマンドを打つ&lt;/h4>
+&lt;p>Administratorユーザで参加する場合は下記のコマンドで参加できます。&lt;/p>
+&lt;pre tabindex="0">&lt;code>net ads join -U Administrators
+&lt;/code>&lt;/pre>&lt;h4 id="dns編集ユーザを作る">DNS編集ユーザを作る&lt;/h4>
+&lt;p>パスワードは利用しないのでランダムで設定。&lt;/p>
+&lt;p>ユーザ名と説明文はお好みで。&lt;/p>
+&lt;pre tabindex="0">&lt;code>samba-tool user create dhcpduser --random-password --description=&amp;#39;Unprivileged user for DNS updates via ISC DHCP server&amp;#39;
+samba-tool user setexpiry dhcpduser --noexpiry
+samba-tool group addmembers DnsAdmins dhcpduser
+&lt;/code>&lt;/pre>&lt;h4 id="keytabを出力">keytabを出力&lt;/h4>
+&lt;p>Samba AD DCが動いているマシン上で下記のコマンドを実行し、
+&lt;code>dhcpduser.keytab&lt;/code>
+を入手します。&lt;/p>
+&lt;pre tabindex="0">&lt;code>samba-tool domain exportkeytab --principal=dhcpduser@YOUR.DOMAIN.EXAMPLE.COM dhcpduser.keytab
+&lt;/code>&lt;/pre>&lt;p>入手したkeytabファイルはDHCPサーバの&lt;code>/etc/dhcpduser.keytab&lt;/code>にコピーしてください。&lt;/p>
+&lt;p>権限の設定を忘れずに行ってください。&lt;/p>
+&lt;h2 id="ha構成を作る">HA構成を作る&lt;/h2>
+&lt;h3 id="前提パッケージをインストールする">前提パッケージをインストールする&lt;/h3>
+&lt;pre tabindex="0">&lt;code>apt install isc-kea-ctrl-agent
+&lt;/code>&lt;/pre>&lt;h3 id="リモート接続設定を変更する">リモート接続設定を変更する&lt;/h3>
+&lt;p>&lt;code>/etc/kea/kea-ctrl-agent.conf&lt;/code>を編集します。&lt;/p>
+&lt;p>&lt;code>http-host&lt;/code>を&lt;code>0.0.0.0&lt;/code>（もしくは適切な値）に変更してください。&lt;/p>
+&lt;h3 id="ha設定を追加する">HA設定を追加する&lt;/h3>
+&lt;p>下記の設定を適宜変更して投入する。&lt;/p>
+&lt;p>&lt;code>libdhcp_lease_cmds&lt;/code>を入れないと正常に動かない（リース情報を共有できない）ので注意。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;hooks-libraries&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;library&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/usr/lib/x86_64-linux-gnu/kea/hooks/libdhcp_lease_cmds.so&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;parameters&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;library&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/usr/lib/x86_64-linux-gnu/kea/hooks/libdhcp_ha.so&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;parameters&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;high-availability&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;this-server-name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;dhcp01&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;mode&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;load-balancing&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;heartbeat-delay&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;max-response-delay&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;max-ack-delay&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;max-unacked-clients&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;peers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;dhcp01&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://17.0.1.1:8000/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;role&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;primary&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;auto-failover&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;dhcp02&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://17.0.2.1:8000/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;role&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;secondary&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;auto-failover&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>マインクラフトにて観測されたUpdater.classマルウェアの検証</title><link>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</link><pubDate>Thu, 29 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</guid><description>&lt;p>当記事内には実際に攻撃者が利用したURLなどが無毒化した状態で記述されている。
 もし開く場合は自己責任で。&lt;/p>
 &lt;h2 id="時系列">時系列&lt;/h2>
 &lt;ul>
