@@ -61,13 +61,24 @@
 &lt;p>Whoisの最終変更は下記のとおりである。&lt;/p>
 &lt;pre tabindex="0">&lt;code>Changed: 2021-07-12T21:50:02+02:00
 &lt;/code>&lt;/pre>&lt;p>また、ネームサーバはCloudflareの物が利用されていたようだ。&lt;/p>
-&lt;h2 id="本マルウェアについて本チームの考察">本マルウェアについて本チームの考察&lt;/h2>
+&lt;h2 id="当該マルウェアについて本チームの考察">当該マルウェアについて本チームの考察&lt;/h2>
 &lt;p>共同で研究を行った のふれむ氏 の調べたところによると、
 当該マルウェアは2022年の8月ごろから発見されていると見て良いのではないかと思われる。&lt;/p>
 &lt;p>当チームが観測したバージョンは、
 おそらく2022/12/27日時点でCloudflare側が規約違反もしくはFreeプランの制限超過で
 Proxyを解除し、それによりCloudflare以外からの通信を拒否していたサーバにアクセスできなくなったことで
 &lt;code>No route to host&lt;/code>がエラーとして出るようになり、発覚に至ったと考えられる。&lt;/p>
+&lt;p>また、今回感染したファイルは
+&lt;a class="link" href="https://github.com/OpticFusion1/MCAntiMalware" target="_blank" rel="noopener"
+>MCAntiMalware&lt;/a>
+と
+&lt;a class="link" href="https://www.virustotal.com/gui/file/20559b330a363cbb4246c7376575319eae926b28801b1d815e5ec7ed24385e90" target="_blank" rel="noopener"
+>Kasperskyのウイルス対策ソフトウェアで検出が可能だった&lt;/a>
+ようである。&lt;/p>
+&lt;p>Pluginを導入する前に
+&lt;a class="link" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener"
+>Virus Total&lt;/a>
+などで検査するだけでも十分防げた可能性は高い。&lt;/p>
 &lt;h2 id="当該のマルウェアに関する他の記事">当該のマルウェアに関する他の記事&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://ljskatt.no/analysis/updater_class/" target="_blank" rel="noopener"
