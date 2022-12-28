@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 17 Oct 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>分散化についていろいろ</title><link>https://blog.mkarakiapps.com/p/20221017-decentralized/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221017-decentralized/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 29 Dec 2022 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>マインクラフトにて観測されたUpdater.classマルウェアの検証</title><link>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</link><pubDate>Thu, 29 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</guid><description>&lt;p>当記事内には実際に攻撃者が利用したURLなどが無毒化した状態で記述されている。
+もし開く場合は自己責任で。&lt;/p>
+&lt;h2 id="時系列">時系列&lt;/h2>
+&lt;ul>
+&lt;li>2022/12/27 10:18: サーバが正常に起動していない現象を観測&lt;/li>
+&lt;li>サーバ管理担当者がサーバを再起動&lt;/li>
+&lt;li>&lt;code>java.net.NoRouteToHostException: No route to host&lt;/code>エラーを観測&lt;/li>
+&lt;li>レンタルサーバ事業者にネットワーク設備の点検を依頼&lt;/li>
+&lt;li>2022/12/27 10:30: レンタルサーバ事業者から、障害が発生していない報告を受ける&lt;/li>
+&lt;li>マルウェア検査アプリケーションでマルウェアを発見&lt;/li>
+&lt;li>2022/12/28 10:35: 障害の復旧作業に筆者が合流&lt;/li>
+&lt;li>2022/12/29 02:00: 当該障害がクリティカルなセキュリティ事故であることが判明&lt;/li>
+&lt;/ul>
+&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>本記事ではプラグインファイル・Paperバイナリに対して感染した&lt;code>Updater.class&lt;/code>について取り扱う。&lt;/p>
+&lt;p>それ以外の項目については、
+&lt;a class="link" href="https://ljskatt.no/analysis/updater_class/" target="_blank" rel="noopener"
+>こちらの記事(英語)&lt;/a>が参考になると思われる。&lt;/p>
+&lt;h2 id="エントリーポイントの汚染">エントリーポイントの汚染&lt;/h2>
+&lt;p>複数の&lt;code>main&lt;/code>メソッドにおいて&lt;code>Updater.init()&lt;/code>を呼び出すコードが発見されている。&lt;/p>
+&lt;p>また、コードとして&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">arrstring&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Updater&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">init&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>のように変更されており、
+引数が編集されていることで書き換え済みか認識しているのではないかと考察した。&lt;/p>
+&lt;p>また、CFRでの解析において&lt;code>Updater&lt;/code>クラスが認識出来ていなかったが、
+おそらく&lt;code>Updater.class&lt;/code>ファイルに不正な値を入力することで、
+解析アプリケーションをまともに動かせなくする目的があったのではないかと考える。&lt;/p>
+&lt;h2 id="updaterinitの挙動">&lt;code>Updater.init()&lt;/code>の挙動&lt;/h2>
+&lt;p>リバースエンジニアリングした全文は
+&lt;a class="link" href="https://gist.github.com/mkaraki/ea7c4a483cdb78bbdf0dd2cff8cac54a#file-00_updateclass-malware-decompiled-20221229-java" target="_blank" rel="noopener"
+>こちら&lt;/a>
+を参照していただきたい。&lt;/p>
+&lt;p>また、筆者が必要に応じてアノテーションを付けたファイルは
+&lt;a class="link" href="https://gist.github.com/mkaraki/ea7c4a483cdb78bbdf0dd2cff8cac54a#file-01_updateclass-malware-decompiled-annotated-20221229-java" target="_blank" rel="noopener"
+>こちら&lt;/a>
+から利用できる。&lt;/p>
+&lt;h3 id="前提バイナリのロード">前提バイナリのロード&lt;/h3>
+&lt;p>&lt;code>Updater.class&lt;/code>では
+最初に&lt;code>java.io.tmpdir&lt;/code>内の
+&lt;code>kernel-certs-debug4917.log&lt;/code>というファイルに対して
+&lt;code>File&lt;/code>オブジェクトを生成する。&lt;/p>
+&lt;p>もし、すでに&lt;code>kernel-certs-debug4917.log&lt;/code>ファイルが存在しているのであれば、
+当該ファイルを&lt;code>java&lt;/code>もしくは&lt;code>javaw.exe&lt;/code>で実行する。&lt;/p>
+&lt;p>拡張子は&lt;code>.log&lt;/code>であり、いかにも一般的なファイルに擬態させているが、中身は&lt;code>jar&lt;/code>ファイルである。&lt;/p>
+&lt;h3 id="バイナリのダウンロード">バイナリのダウンロード&lt;/h3>
+&lt;p>もし&lt;code>kernel-certs-debug4917.log&lt;/code>が存在しない場合、次の動作が行われる。&lt;/p>
+&lt;ol>
+&lt;li>初期値として&lt;code>0Prpx2ekKWc=&lt;/code>をロード&lt;/li>
+&lt;li>リソース内の&lt;code>/plugin-config.bin&lt;/code>から&lt;code>IJMZR7mQs8faH0sBuSYr8g==&lt;/code>をロード&lt;/li>
+&lt;li>&lt;code>ttp:// files &amp;lt;dot&amp;gt; skyrage &amp;lt;dot&amp;gt; de/mvd&lt;/code>から&lt;code>jar&lt;/code>ファイルをを&lt;code>.log&lt;/code>として保存&lt;/li>
+&lt;li>&lt;code>ttp:// files &amp;lt;dot&amp;gt; skyrage &amp;lt;dot&amp;gt; de/update&lt;/code>からzip形式のファイルをダウンロード&lt;/li>
+&lt;li>ダウンロードしたファイルを加工（詳細は割愛）&lt;/li>
+&lt;li>1もしくは2でロードした値を&lt;code>-Dgnu&lt;/code>に代入し、ダウンロードしたバイナリを実行&lt;/li>
+&lt;/ol>
+&lt;h2 id="追跡">追跡&lt;/h2>
+&lt;h3 id="whois">Whois&lt;/h3>
+&lt;p>Whoisの最終変更は下記のとおりである。&lt;/p>
+&lt;pre tabindex="0">&lt;code>Changed: 2021-07-12T21:50:02+02:00
+&lt;/code>&lt;/pre>&lt;p>また、ネームサーバはCloudflareの物が利用されていたようだ。&lt;/p>
+&lt;h2 id="本マルウェアについて本チームの考察">本マルウェアについて本チームの考察&lt;/h2>
+&lt;p>共同で研究を行った のふれむ氏 の調べたところによると、
+当該マルウェアは2022年の8月ごろから発見されていると見て良いのではないかと思われる。&lt;/p>
+&lt;p>当チームが観測したバージョンは、
+おそらく2022/12/27日時点でCloudflare側が規約違反もしくはFreeプランの制限超過で
+Proxyを解除し、それによりCloudflare以外からの通信を拒否していたサーバにアクセスできなくなったことで
+&lt;code>No route to host&lt;/code>がエラーとして出るようになり、発覚に至ったと考えられる。&lt;/p>
+&lt;h2 id="当該のマルウェアに関する他の記事">当該のマルウェアに関する他の記事&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://ljskatt.no/analysis/updater_class/" target="_blank" rel="noopener"
+>https://ljskatt.no/analysis/updater_class/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.spigotmc.org/threads/1-19-1-fatal-error-converting-plugin-updater-class.567801/" target="_blank" rel="noopener"
+>https://www.spigotmc.org/threads/1-19-1-fatal-error-converting-plugin-updater-class.567801/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://goli-carft.com/minecraft-malware-announcement/" target="_blank" rel="noopener"
+>https://goli-carft.com/minecraft-malware-announcement/&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>分散化についていろいろ</title><link>https://blog.mkarakiapps.com/p/20221017-decentralized/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221017-decentralized/</guid><description>&lt;blockquote>
 &lt;p>&lt;strong>注意:&lt;/strong> Decentralizedを完全に誤解してそうな人の記事です。娯楽としてどうぞ&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="分散化インターネット初期">分散化＝インターネット初期&lt;/h2>
@@ -1414,11 +1492,11 @@ RSAのSSL証明書が必要になります。私は&lt;a class="link" href="http
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$list&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">ConvertFrom-Json&lt;/span> &lt;span class="n">-InputObject&lt;/span> &lt;span class="nv">$json&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$r&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">psobject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Properties&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$fname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Name&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$afname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nv">$fname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">hash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$r&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">psobject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Properties&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$fname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$afname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nv">$fname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">hash&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">2&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$from&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$to&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$fname&lt;/span>&lt;span class="p">;&lt;/span>
