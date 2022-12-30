@@ -109,7 +109,7 @@ samba-tool group addmembers DnsAdmins dhcpduser
 &lt;li>2022/12/28 10:35: 障害の復旧作業に筆者が合流&lt;/li>
 &lt;li>2022/12/29 02:00: 当該障害がクリティカルなセキュリティ事故であることが判明&lt;/li>
 &lt;li>2022/12/30 10:56: 当該サーバが復活し、当初のエラーが出なくなっている可能性があることが発覚&lt;br>
-これに伴い、VirusTotalの結果を記事内に追記&lt;/li>
+これに伴い、VirusTotal, Any.Runの結果を記事内に追記&lt;/li>
 &lt;/ul>
 &lt;h2 id="はじめに">はじめに&lt;/h2>
 &lt;p>本記事ではプラグインファイル・Paperバイナリに対して感染した&lt;code>Updater.class&lt;/code>について取り扱う。&lt;/p>
@@ -155,8 +155,12 @@ samba-tool group addmembers DnsAdmins dhcpduser
 (&lt;a class="link" href="https://www.virustotal.com/gui/file/a98cb11c4779fa8b5d81986b2b8e22b1b03e3cce579c2b7b209814cb7e446bfe" target="_blank" rel="noopener"
 >VirusTotal&lt;/a>)&lt;/li>
 &lt;li>&lt;code>ttp:// files &amp;lt;dot&amp;gt; skyrage &amp;lt;dot&amp;gt; de/update&lt;/code>からzip形式のファイルをダウンロード
-(&lt;a class="link" href="https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7" target="_blank" rel="noopener"
->VirusTotal&lt;/a>)&lt;/li>
+(
+&lt;a class="link" href="https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7" target="_blank" rel="noopener"
+>VirusTotal&lt;/a>,
+&lt;a class="link" href="https://app.any.run/tasks/7accb28d-a771-4353-bbc6-bf7647c59c47" target="_blank" rel="noopener"
+>Any.Run&lt;/a>
+)&lt;/li>
 &lt;li>ダウンロードしたファイルを加工（詳細は割愛）&lt;/li>
 &lt;li>1もしくは2でロードした値を&lt;code>-Dgnu&lt;/code>に代入し、ダウンロードしたバイナリを実行&lt;/li>
 &lt;/ol>
