@@ -1,0 +1,83 @@
+<!doctype html><html lang=ja-jp><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="この記事はUpdater.classファイルがダウンロードする kernel-certs-debug4"><title>Updater.classマルウェアの本体部分の考察</title><link rel=canonical href=https://blog.mkarakiapps.com/p/20221231-updater-class-update/><link rel=stylesheet href=/scss/style.min.css><script type=text/javascript>(function(e,t,n,s,o,i,a){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},i=t.createElement(s),i.async=1,i.src="https://www.clarity.ms/tag/"+o,a=t.getElementsByTagName(s)[0],a.parentNode.insertBefore(i,a)})(window,document,"clarity","script","8ruafub4am")</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7860713879668057" crossorigin=anonymous></script><meta property="og:title" content="Updater.classマルウェアの本体部分の考察"><meta property="og:description" content="この記事はUpdater.classファイルがダウンロードする kernel-certs-debug4"><meta property="og:url" content="https://blog.mkarakiapps.com/p/20221231-updater-class-update/"><meta property="og:site_name" content="mkarakiのブログ"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-12-31T16:00:00+09:00"><meta property="article:modified_time" content="2022-12-31T16:52:58+09:00"><meta name=twitter:site content="@arakimk"><meta name=twitter:creator content="@arakimk"><meta name=twitter:title content="Updater.classマルウェアの本体部分の考察"><meta name=twitter:description content="この記事はUpdater.classファイルがダウンロードする kernel-certs-debug4"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-145365019-1","auto"),ga("send","pageview"))</script></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>前のページ</span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><h2 class=article-title><a href=/p/20221231-updater-class-update/>Updater.classマルウェアの本体部分の考察</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Dec 31, 2022</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>読了時間: 2分</time></div></footer></div></header><section class=article-content><p>この記事は<code>Updater.class</code>ファイルがダウンロードする
+<code>kernel-certs-debug4917.log</code>ファイルを簡単にのぞき見を行い、
+考察を行った。</p><h2 id=はじめに>はじめに</h2><p>筆者は専門家では無く、
+リバースエンジニアリングを隅々まで行ったわけではない。
+本記事内には見当違いな場所もあると思われる。</p><h2 id=外部との通信>外部との通信</h2><p>URLは踏めないようにしているが無害化は行っていない。
+間違ってアクセスしないように十分注意すること。</p><p>このプログラムは下記と接続を行う:</p><ul><li><code>http://t23e7v6uz8idz87ehugwq.skyrage.de/version</code></li><li><code>http://t23e7v6uz8idz87ehugwq.skyrage.de/qqqqqqqqq</code></li><li><code>ssl://qw3e1ee12e9hzheu9h1912hew1sh12uw9.skyrage.de:17929</code></li></ul><p>実際の通信内容は<a class=link href=https://app.any.run/tasks/7accb28d-a771-4353-bbc6-bf7647c59c47 target=_blank rel=noopener>Any.Run</a>から
+pcap
+をダウンロードできるためそれを見ていただいたほうが良いとは思うが、
+<code>qqqqqqqqq</code>はjarファイル
+(<a class=link href=https://www.virustotal.com/gui/file/9cf6f6698d6e5d7f2c97bedfb67429422269e0dfe677f3b10c99919e81d7642a target=_blank rel=noopener>VirusTotal</a>)
+で、<code>version</code>は数値データ
+(<code>921</code>)
+の入ったテキストファイルであった。</p><h3 id=ssl通信について>ssl通信について</h3><p>SSL通信であるため中の通信は覗けなかったが、
+プログラムを確認した知人がいうには独自仕様の通信ではないかとの意見があった。</p><p>サーバ側の証明書は下記のものが利用されていた。</p><pre tabindex=0><code>&gt; openssl x509 -in key.crt -text -noout
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            26:aa:65:34:32:16:cf:c8:08:16:02:73:56:b8:4f:13:d8:73:77:7f
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = AU, ST = Some-State, O = Internet Widgits Pty Ltd
+        Validity
+            Not Before: Jul 18 16:25:40 2022 GMT
+            Not After : Jul 15 16:25:40 2032 GMT
+        Subject: C = AU, ST = Some-State, O = Internet Widgits Pty Ltd
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:ab:5a:5d:ae:36:ed:5f:21:43:a3:32:c3:a7:66:
+                    4b:43:97:4a:ee:61:c2:d2:30:2d:13:4e:02:a3:8d:
+                    1b:89:4e:13:15:be:4b:d6:82:7f:44:ae:3d:4a:a7:
+                    b1:50:5a:f2:6a:76:a6:55:f9:1a:1e:84:de:e5:a8:
+                    56:60:8b:40:11:21:bb:dc:79:56:f9:fc:b7:7b:28:
+                    ca:16:a6:37:cf:a4:4e:a6:de:d6:07:6c:8b:88:20:
+                    df:b0:3b:69:70:43:a2:46:fe:2d:76:63:bb:2b:bf:
+                    97:bb:03:1f:1c:a3:46:3e:9d:40:c8:21:61:98:4f:
+                    ce:95:84:b0:35:f2:da:8d:1d:ef:7c:9d:ec:a9:61:
+                    ce:8d:b0:f8:50:bd:8a:69:b3:66:80:e6:31:10:b1:
+                    b4:00:c2:51:0e:e7:30:d9:34:c7:26:38:07:50:50:
+                    75:82:a3:e6:97:56:e6:26:ef:5f:0d:d3:bc:7c:61:
+                    2f:f4:d6:55:96:3e:a0:ed:c4:19:ee:42:aa:7d:f1:
+                    2b:43:e2:20:4a:5c:31:99:d0:84:a5:82:30:3f:ca:
+                    42:84:94:3d:ac:3f:eb:a1:ac:81:c5:02:d0:cd:ee:
+                    83:99:a8:7d:26:74:a6:65:e0:16:6f:81:5d:f7:64:
+                    8a:fe:ed:3f:cc:08:06:4c:a7:b3:1b:b4:7d:da:7b:
+                    17:33
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier:
+                50:D7:07:2A:09:4A:78:A7:FF:88:45:84:6F:B5:42:BC:DF:C1:51:6C
+            X509v3 Authority Key Identifier:
+                keyid:50:D7:07:2A:09:4A:78:A7:FF:88:45:84:6F:B5:42:BC:DF:C1:51:6C
+
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+    Signature Algorithm: sha256WithRSAEncryption
+         0a:d3:f9:c6:20:ad:69:c7:44:42:ae:95:5c:bb:4a:b5:47:ba:
+         98:03:e2:20:a0:8c:cc:fb:77:15:dc:ac:4d:be:f4:5c:05:38:
+         ed:a3:87:b5:15:2d:8d:b6:a6:00:8b:76:f7:82:71:ae:af:7e:
+         01:36:cf:6b:27:cd:f5:06:3e:c3:54:13:a4:a0:07:50:00:e6:
+         46:98:20:41:bf:32:ae:c9:42:56:81:f5:e2:07:e1:d7:7d:52:
+         20:e4:81:a6:df:f9:4c:06:ef:a0:fd:7e:0a:ec:a6:4e:bc:ed:
+         03:42:1f:d4:cb:e9:79:b9:b4:d3:9f:8d:1b:58:52:d2:b1:d2:
+         94:02:8b:ed:07:43:18:3e:c8:65:c5:dd:cc:64:a5:23:99:a9:
+         44:f8:5f:3f:6e:2a:fe:9f:4c:e3:26:d5:19:27:51:a7:7a:d6:
+         77:9d:11:b3:4f:a0:90:1a:6b:c6:de:c8:6f:f6:33:83:4c:3b:
+         11:8f:1b:11:3e:0a:07:15:5e:5e:43:ce:4e:70:e5:90:cf:84:
+         b7:43:ff:03:fe:fd:6e:fb:ee:fb:1a:ec:7e:17:ec:20:36:cc:
+         87:5c:a3:57:21:5b:29:9e:71:d9:aa:50:f6:a7:ed:57:97:7b:
+         8b:34:2a:8d:64:79:9b:eb:f7:89:52:39:95:17:8c:f1:3a:a9:
+         46:da:a0:a7
+</code></pre><p>自己署名されたものであり、CAが設定されていない。</p><p><code>ST = Some-State</code>となっているところはおそらく詰めが甘かった部分ではないかと思う。</p><p>そして、おそらくこの通信がこのプログラムのキーとなる部分ではないかと考える。</p><h2 id=被害を抑える方法>被害を抑える方法</h2><p>今回のプログラムが実行された際の被害を抑える方法としては、</p><ul><li>サーバがアクセスするFQDN, IPをホワイトリスト制にする<ul><li>DNSなどでそもそも引っかからないようにする</li><li>指定されたDNS以外への通信をリジェクトする</li></ul></li><li>SSL通信をすべてInspectし、CA証明書のチェックも強制する<ul><li>FortiGateのライセンスがない機材でも、
+当該の設定を導入したところ通信がクローズされるようになった</li></ul></li></ul><p>などが考えられる。</p><p>また、現状<a class=link href=https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7/detection target=_blank rel=noopener>主要な商用エンドポイントセキュリティソフトでの検知が可能</a>であるため、
+サーバ上に商用のエンドポイントセキュリティを入れ、定期的なスキャンを掛けることでも早期発見につながった可能性がある。</p></section><footer class=article-footer><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>最終更新 Dec 31, 2022 16:52 PM JST</span></section></footer></article><aside class=related-contents--wrapper></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//mkarakiblog.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2021 -
+2022 mkarakiのブログ</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目次</h2><div class=widget--toc><nav id=TableOfContents><ul><li><a href=#はじめに>はじめに</a></li><li><a href=#外部との通信>外部との通信</a><ul><li><a href=#ssl通信について>ssl通信について</a></li></ul></li><li><a href=#被害を抑える方法>被害を抑える方法</a></li></ul></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

@@ -1,4 +1,165 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 29 Dec 2022 03:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Kea DHCPをSamba ADDCのDDNSとHot-standby HAで構築した話</title><link>https://blog.mkarakiapps.com/p/20221229-keadhcp/</link><pubDate>Thu, 29 Dec 2022 03:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-keadhcp/</guid><description>&lt;h2 id="前提">前提&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 31 Dec 2022 16:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Updater.classマルウェアの本体部分の考察</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</link><pubDate>Sat, 31 Dec 2022 16:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</guid><description>&lt;p>この記事は&lt;code>Updater.class&lt;/code>ファイルがダウンロードする
+&lt;code>kernel-certs-debug4917.log&lt;/code>ファイルを簡単にのぞき見を行い、
+考察を行った。&lt;/p>
+&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>筆者は専門家では無く、
+リバースエンジニアリングを隅々まで行ったわけではない。
+本記事内には見当違いな場所もあると思われる。&lt;/p>
+&lt;h2 id="外部との通信">外部との通信&lt;/h2>
+&lt;p>URLは踏めないようにしているが無害化は行っていない。
+間違ってアクセスしないように十分注意すること。&lt;/p>
+&lt;p>このプログラムは下記と接続を行う:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>http://t23e7v6uz8idz87ehugwq.skyrage.de/version&lt;/code>&lt;/li>
+&lt;li>&lt;code>http://t23e7v6uz8idz87ehugwq.skyrage.de/qqqqqqqqq&lt;/code>&lt;/li>
+&lt;li>&lt;code>ssl://qw3e1ee12e9hzheu9h1912hew1sh12uw9.skyrage.de:17929&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>実際の通信内容は&lt;a class="link" href="https://app.any.run/tasks/7accb28d-a771-4353-bbc6-bf7647c59c47" target="_blank" rel="noopener"
+>Any.Run&lt;/a>から
+pcap
+をダウンロードできるためそれを見ていただいたほうが良いとは思うが、
+&lt;code>qqqqqqqqq&lt;/code>はjarファイル
+(&lt;a class="link" href="https://www.virustotal.com/gui/file/9cf6f6698d6e5d7f2c97bedfb67429422269e0dfe677f3b10c99919e81d7642a" target="_blank" rel="noopener"
+>VirusTotal&lt;/a>)
+で、&lt;code>version&lt;/code>は数値データ
+(&lt;code>921&lt;/code>)
+の入ったテキストファイルであった。&lt;/p>
+&lt;h3 id="ssl通信について">ssl通信について&lt;/h3>
+&lt;p>SSL通信であるため中の通信は覗けなかったが、
+プログラムを確認した知人がいうには独自仕様の通信ではないかとの意見があった。&lt;/p>
+&lt;p>サーバ側の証明書は下記のものが利用されていた。&lt;/p>
+&lt;pre tabindex="0">&lt;code>&amp;gt; openssl x509 -in key.crt -text -noout
+Certificate:
+Data:
+Version: 3 (0x2)
+Serial Number:
+26:aa:65:34:32:16:cf:c8:08:16:02:73:56:b8:4f:13:d8:73:77:7f
+Signature Algorithm: sha256WithRSAEncryption
+Issuer: C = AU, ST = Some-State, O = Internet Widgits Pty Ltd
+Validity
+Not Before: Jul 18 16:25:40 2022 GMT
+Not After : Jul 15 16:25:40 2032 GMT
+Subject: C = AU, ST = Some-State, O = Internet Widgits Pty Ltd
+Subject Public Key Info:
+Public Key Algorithm: rsaEncryption
+RSA Public-Key: (2048 bit)
+Modulus:
+00:ab:5a:5d:ae:36:ed:5f:21:43:a3:32:c3:a7:66:
+4b:43:97:4a:ee:61:c2:d2:30:2d:13:4e:02:a3:8d:
+1b:89:4e:13:15:be:4b:d6:82:7f:44:ae:3d:4a:a7:
+b1:50:5a:f2:6a:76:a6:55:f9:1a:1e:84:de:e5:a8:
+56:60:8b:40:11:21:bb:dc:79:56:f9:fc:b7:7b:28:
+ca:16:a6:37:cf:a4:4e:a6:de:d6:07:6c:8b:88:20:
+df:b0:3b:69:70:43:a2:46:fe:2d:76:63:bb:2b:bf:
+97:bb:03:1f:1c:a3:46:3e:9d:40:c8:21:61:98:4f:
+ce:95:84:b0:35:f2:da:8d:1d:ef:7c:9d:ec:a9:61:
+ce:8d:b0:f8:50:bd:8a:69:b3:66:80:e6:31:10:b1:
+b4:00:c2:51:0e:e7:30:d9:34:c7:26:38:07:50:50:
+75:82:a3:e6:97:56:e6:26:ef:5f:0d:d3:bc:7c:61:
+2f:f4:d6:55:96:3e:a0:ed:c4:19:ee:42:aa:7d:f1:
+2b:43:e2:20:4a:5c:31:99:d0:84:a5:82:30:3f:ca:
+42:84:94:3d:ac:3f:eb:a1:ac:81:c5:02:d0:cd:ee:
+83:99:a8:7d:26:74:a6:65:e0:16:6f:81:5d:f7:64:
+8a:fe:ed:3f:cc:08:06:4c:a7:b3:1b:b4:7d:da:7b:
+17:33
+Exponent: 65537 (0x10001)
+X509v3 extensions:
+X509v3 Subject Key Identifier:
+50:D7:07:2A:09:4A:78:A7:FF:88:45:84:6F:B5:42:BC:DF:C1:51:6C
+X509v3 Authority Key Identifier:
+keyid:50:D7:07:2A:09:4A:78:A7:FF:88:45:84:6F:B5:42:BC:DF:C1:51:6C
+X509v3 Basic Constraints: critical
+CA:TRUE
+Signature Algorithm: sha256WithRSAEncryption
+0a:d3:f9:c6:20:ad:69:c7:44:42:ae:95:5c:bb:4a:b5:47:ba:
+98:03:e2:20:a0:8c:cc:fb:77:15:dc:ac:4d:be:f4:5c:05:38:
+ed:a3:87:b5:15:2d:8d:b6:a6:00:8b:76:f7:82:71:ae:af:7e:
+01:36:cf:6b:27:cd:f5:06:3e:c3:54:13:a4:a0:07:50:00:e6:
+46:98:20:41:bf:32:ae:c9:42:56:81:f5:e2:07:e1:d7:7d:52:
+20:e4:81:a6:df:f9:4c:06:ef:a0:fd:7e:0a:ec:a6:4e:bc:ed:
+03:42:1f:d4:cb:e9:79:b9:b4:d3:9f:8d:1b:58:52:d2:b1:d2:
+94:02:8b:ed:07:43:18:3e:c8:65:c5:dd:cc:64:a5:23:99:a9:
+44:f8:5f:3f:6e:2a:fe:9f:4c:e3:26:d5:19:27:51:a7:7a:d6:
+77:9d:11:b3:4f:a0:90:1a:6b:c6:de:c8:6f:f6:33:83:4c:3b:
+11:8f:1b:11:3e:0a:07:15:5e:5e:43:ce:4e:70:e5:90:cf:84:
+b7:43:ff:03:fe:fd:6e:fb:ee:fb:1a:ec:7e:17:ec:20:36:cc:
+87:5c:a3:57:21:5b:29:9e:71:d9:aa:50:f6:a7:ed:57:97:7b:
+8b:34:2a:8d:64:79:9b:eb:f7:89:52:39:95:17:8c:f1:3a:a9:
+46:da:a0:a7
+&lt;/code>&lt;/pre>&lt;p>自己署名されたものであり、CAが設定されていない。&lt;/p>
+&lt;p>&lt;code>ST = Some-State&lt;/code>となっているところはおそらく詰めが甘かった部分ではないかと思う。&lt;/p>
+&lt;p>そして、おそらくこの通信がこのプログラムのキーとなる部分ではないかと考える。&lt;/p>
+&lt;h2 id="被害を抑える方法">被害を抑える方法&lt;/h2>
+&lt;p>今回のプログラムが実行された際の被害を抑える方法としては、&lt;/p>
+&lt;ul>
+&lt;li>サーバがアクセスするFQDN, IPをホワイトリスト制にする
+&lt;ul>
+&lt;li>DNSなどでそもそも引っかからないようにする&lt;/li>
+&lt;li>指定されたDNS以外への通信をリジェクトする&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>SSL通信をすべてInspectし、CA証明書のチェックも強制する
+&lt;ul>
+&lt;li>FortiGateのライセンスがない機材でも、
+当該の設定を導入したところ通信がクローズされるようになった&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>などが考えられる。&lt;/p>
+&lt;p>また、現状&lt;a class="link" href="https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7/detection" target="_blank" rel="noopener"
+>主要な商用エンドポイントセキュリティソフトでの検知が可能&lt;/a>であるため、
+サーバ上に商用のエンドポイントセキュリティを入れ、定期的なスキャンを掛けることでも早期発見につながった可能性がある。&lt;/p></description></item><item><title>Updater.classマルウェアの自己増殖について</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-dotlog/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-dotlog/</guid><description>&lt;p>この記事ではリバースエンジニアリングというより自己増殖の過程をお見せします。&lt;/p>
+&lt;p>ここでいう&lt;code>.log&lt;/code>ファイルは
+&lt;a class="link" href="https://www.virustotal.com/gui/file/a98cb11c4779fa8b5d81986b2b8e22b1b03e3cce579c2b7b209814cb7e446bfe" target="_blank" rel="noopener"
+>VirusTotal上のこちら&lt;/a>のファイルの事を指します。&lt;/p>
+&lt;h2 id="検証環境">検証環境&lt;/h2>
+&lt;ul>
+&lt;li>Docker&lt;/li>
+&lt;li>mcr.microsoft.com/openjdk/jdk:17-ubuntu&lt;/li>
+&lt;/ul>
+&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>実際にサーバアプリケーションを使いプラグインを感染させた挙動は、
+&lt;a class="link" href="https://app.any.run/tasks/4ce2e325-fff6-48c3-8a3f-04e59e998137" target="_blank" rel="noopener"
+>Any.Run&lt;/a>でご確認いただけます。&lt;/p>
+&lt;p>&lt;a class="link" href="https://gist.github.com/mkaraki/15edaf485ec215d3e2ebd6b60559c52d" target="_blank" rel="noopener"
+>実際に実行した際のログ&lt;/a>
+はGistに張っておきます。
+空のZipファイルを入れていた関係でエラーだらけですが、
+書き換え対象のファイルは判別できるかと思います。&lt;/p>
+&lt;p>筆者はセキュリティ専門家ではありません。
+見当違いなことを言っている箇所が多いと思います。&lt;/p>
+&lt;h2 id="挙動">挙動&lt;/h2>
+&lt;p>挙動はとてもシンプルです。
+HDD内のすべての&lt;code>jar&lt;/code>ファイルに対して、変更を試みます。
+ファイルを直接writeでオープンするのではなく、
+同じディレクトリ内に&lt;code>.tmp&lt;/code>で終わるファイルを作ってからそれを上書きコピーして保存を行うため、Any.Run上では上書き扱いの警告が出ていません。&lt;/p>
+&lt;h3 id="プラグイン別の実装">プラグイン別の実装&lt;/h3>
+&lt;p>完全にコードを読んだわけではありませんが、
+少なくとも下記をincludeしているものに対しては特殊な書き換えを行うようです。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>net/labymod/api/LabyModAddon&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>onEnable&lt;/code>に対し、書き換えを実施&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>net/md_5/bungee/api/plugin/Plugin&lt;/code>,&lt;br>
+&lt;code>org/bukkit/plugin/java/JavaPlugin&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>onLoad&lt;/code>もしくは&lt;code>onEnable&lt;/code>にインジェクション&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="リバースエンジニアリングについて">リバースエンジニアリングについて&lt;/h3>
+&lt;p>やはり難読化されています。&lt;/p>
+&lt;p>今回記事で取り扱っているものは、
+JADXで解析できたうち、mainメソッドから簡単に追えた範囲のみです。&lt;/p>
+&lt;h2 id="被害を防ぐために">被害を防ぐために&lt;/h2>
+&lt;p>今回のマルウェアは
+&lt;a class="link" href="https://github.com/OpticFusion1/MCAntiMalware" target="_blank" rel="noopener"
+>MCAntiMalware&lt;/a>
+で検知可能でした。
+また、自己増殖をするため、ファイルのハッシュを厳格にチェックする機構や、
+厳しいACLと監査ログがあれば、同じように被害を防げた可能性があります。&lt;/p></description></item><item><title>Kea DHCPをSamba ADDCのDDNSとHot-standby HAで構築した話</title><link>https://blog.mkarakiapps.com/p/20221229-keadhcp/</link><pubDate>Thu, 29 Dec 2022 03:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-keadhcp/</guid><description>&lt;h2 id="前提">前提&lt;/h2>
 &lt;ul>
 &lt;li>Ubuntu 22.04&lt;/li>
 &lt;li>Kea 2.2.0&lt;/li>
@@ -110,12 +271,18 @@ samba-tool group addmembers DnsAdmins dhcpduser
 &lt;li>2022/12/29 02:00: 当該障害がクリティカルなセキュリティ事故であることが判明&lt;/li>
 &lt;li>2022/12/30 10:56: 当該サーバが復活し、当初のエラーが出なくなっている可能性があることが発覚&lt;br>
 これに伴い、VirusTotal, Any.Runの結果を記事内に追記&lt;/li>
+&lt;li>2022/12/31 02:00: 感染していた場合でも、エラー無しでサーバが正常に動作することが判明&lt;/li>
 &lt;/ul>
 &lt;h2 id="はじめに">はじめに&lt;/h2>
 &lt;p>本記事ではプラグインファイル・Paperバイナリに対して感染した&lt;code>Updater.class&lt;/code>について取り扱う。&lt;/p>
 &lt;p>それ以外の項目については、
 &lt;a class="link" href="https://ljskatt.no/analysis/updater_class/" target="_blank" rel="noopener"
 >こちらの記事(英語)&lt;/a>が参考になると思われる。&lt;/p>
+&lt;p>また、実際に感染したサーバを実行した際の動作について
+&lt;a class="link" href="https://app.any.run/tasks/4ce2e325-fff6-48c3-8a3f-04e59e998137" target="_blank" rel="noopener"
+>Any.Run&lt;/a>
+で実験を行っている。
+そちらも見ていただけると、本記事と別途記述している2記事についてもよくご理解いただけるのではないかと思う。&lt;/p>
 &lt;h2 id="エントリーポイントの汚染">エントリーポイントの汚染&lt;/h2>
 &lt;p>複数の&lt;code>main&lt;/code>メソッドにおいて&lt;code>Updater.init()&lt;/code>を呼び出すコードが発見されている。&lt;/p>
 &lt;p>また、コードとして&lt;/p>
@@ -153,16 +320,17 @@ samba-tool group addmembers DnsAdmins dhcpduser
 &lt;li>リソース内の&lt;code>/plugin-config.bin&lt;/code>から&lt;code>IJMZR7mQs8faH0sBuSYr8g==&lt;/code>をロード&lt;/li>
 &lt;li>&lt;code>ttp:// files &amp;lt;dot&amp;gt; skyrage &amp;lt;dot&amp;gt; de/mvd&lt;/code>から&lt;code>jar&lt;/code>ファイルをを&lt;code>.log&lt;/code>として保存
 (&lt;a class="link" href="https://www.virustotal.com/gui/file/a98cb11c4779fa8b5d81986b2b8e22b1b03e3cce579c2b7b209814cb7e446bfe" target="_blank" rel="noopener"
->VirusTotal&lt;/a>)&lt;/li>
+>VirusTotal&lt;/a>,
+&lt;a class="link" href="20221231-updater-class-dotlog.md" >詳細記事&lt;/a>)&lt;/li>
+&lt;li>1もしくは2でロードした値を&lt;code>-Dgnu&lt;/code>に代入し、ダウンロードしたバイナリを実行&lt;/li>
 &lt;li>&lt;code>ttp:// files &amp;lt;dot&amp;gt; skyrage &amp;lt;dot&amp;gt; de/update&lt;/code>からzip形式のファイルをダウンロード
-(
-&lt;a class="link" href="https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7" target="_blank" rel="noopener"
+(&lt;a class="link" href="https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7" target="_blank" rel="noopener"
 >VirusTotal&lt;/a>,
 &lt;a class="link" href="https://app.any.run/tasks/7accb28d-a771-4353-bbc6-bf7647c59c47" target="_blank" rel="noopener"
->Any.Run&lt;/a>
-)&lt;/li>
+>Any.Run&lt;/a>,
+&lt;a class="link" href="20221231-updater-class-update" >詳細記事&lt;/a>)&lt;/li>
 &lt;li>ダウンロードしたファイルを加工（詳細は割愛）&lt;/li>
-&lt;li>1もしくは2でロードした値を&lt;code>-Dgnu&lt;/code>に代入し、ダウンロードしたバイナリを実行&lt;/li>
+&lt;li>ダウンロードしたファイルを実行&lt;/li>
 &lt;/ol>
 &lt;h2 id="追跡">追跡&lt;/h2>
 &lt;h3 id="whois">Whois&lt;/h3>
