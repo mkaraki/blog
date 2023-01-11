@@ -1,4 +1,144 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 31 Dec 2022 16:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Updater.classマルウェアの本体部分の考察</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</link><pubDate>Sat, 31 Dec 2022 16:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</guid><description>&lt;p>この記事は&lt;code>Updater.class&lt;/code>ファイルがダウンロードする
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>個人的なFortiの設定</title><link>https://blog.mkarakiapps.com/p/20230111-forti-settings/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230111-forti-settings/</guid><description>&lt;p>この記事では、他の環境にも転用が効きそうなFortiGateの設定を記述します。&lt;/p>
+&lt;p>基本的に私が使っているFortiGateに合わせて随時更新していくと思います。&lt;/p>
+&lt;h2 id="前提">前提&lt;/h2>
+&lt;ul>
+&lt;li>FortiGate 50E&lt;/li>
+&lt;li>FortiOS 6.2.12&lt;/li>
+&lt;/ul>
+&lt;h2 id="更新履歴">更新履歴&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>バージョン&lt;/th>
+&lt;th>日時&lt;/th>
+&lt;th>内容&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>初版&lt;/td>
+&lt;td>2023-01-11&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="security-fablic">Security Fablic&lt;/h2>
+&lt;h3 id="settings">Settings&lt;/h3>
+&lt;p>Cloud Loggingを有効に設定、
+頻度は&lt;code>Realtime&lt;/code>を選択&lt;/p>
+&lt;h3 id="fabric-connectors">Fabric Connectors&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://cert.pl/" target="_blank" rel="noopener"
+>CERT Polska&lt;/a>の&lt;a class="link" href="https://cert.pl/en/posts/2020/03/malicious_domains/" target="_blank" rel="noopener"
+>List of malicious domains&lt;/a>を1440秒ごとに受信&lt;/li>
+&lt;li>&lt;a class="link" href="https://feodotracker.abuse.ch/" target="_blank" rel="noopener"
+>Feodo Tracker&lt;/a>の&lt;code>Botnet C2 Indicators Of Compromise (IOCs)&lt;/code>の過去30日分の物を利用&lt;/li>
+&lt;/ul>
+&lt;h2 id="policy--objects">Policy &amp;amp; Objects&lt;/h2>
+&lt;h3 id="ipv4-policy">IPv4 Policy&lt;/h3>
+&lt;p>先頭に&lt;/p>
+&lt;ul>
+&lt;li>Feodo Trackerリストからの通信をDROP (Logあり)&lt;/li>
+&lt;li>Feodo Trackerリストへの通信をDROP (Logあり)&lt;/li>
+&lt;/ul>
+&lt;p>を追加&lt;/p>
+&lt;h2 id="security-profiles">Security Profiles&lt;/h2>
+&lt;h3 id="antivirus">AntiVirus&lt;/h3>
+&lt;ul>
+&lt;li>Detect Viruses: Block&lt;/li>
+&lt;li>Inspected Protocols: すべてOn&lt;/li>
+&lt;li>APT Protection Options: すべてOn
+&lt;ul>
+&lt;li>Original File Destination: お好みで (私はDiscard)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="web-filter">Web Filter&lt;/h3>
+&lt;ul>
+&lt;li>FortiGard category based filter: お好みで (ライセンスがない場合はOff)&lt;/li>
+&lt;li>File Filter
+&lt;ul>
+&lt;li>Log: On&lt;/li>
+&lt;li>Scan Archived Contents: On&lt;/li>
+&lt;li>List:
+&lt;ul>
+&lt;li>Deny password protected
+&lt;ul>
+&lt;li>Protocols: HTTP + FTP&lt;/li>
+&lt;li>File types: 7z, rar, zip&lt;/li>
+&lt;li>Action: Block&lt;/li>
+&lt;li>Direction: Incoming&lt;/li>
+&lt;li>Match Password Protected Files: On&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Search Engines: お好みで&lt;/li>
+&lt;li>Static URL Filter
+&lt;ul>
+&lt;li>Block invalid URLs: On&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="dns-filter">DNS Filter&lt;/h3>
+&lt;ul>
+&lt;li>FortiGuard category based filter
+&lt;ul>
+&lt;li>Remote Categoriesに&lt;a class="link" href="#fablic-connectors" >Fabric Connectors&lt;/a>で指定した定義があるのでブロック&lt;/li>
+&lt;li>それ以外はお好みで、個人的には
+&lt;ul>
+&lt;li>Malicious Websites: Block&lt;/li>
+&lt;li>Phishing: Block&lt;/li>
+&lt;li>Spam URLS: Block&lt;/li>
+&lt;li>Dynamic DNS: Monitor&lt;/li>
+&lt;li>Newly Observed Domain: Monitor&lt;/li>
+&lt;li>Newly Registerd Domain: Monitor&lt;/li>
+&lt;li>Unrated: Monitor&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Static Domain Filter
+&lt;ul>
+&lt;li>External IP Block Lists: &lt;a class="link" href="#fablic-connectors" >Fabric Connectors&lt;/a>で指定した定義があるのでブロック&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Options
+&lt;ul>
+&lt;li>Allow DNS requests when a rating error occurs: お好みで (私はOm)&lt;/li>
+&lt;li>Log all DNS queries and responses: On&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="application-control">Application Control&lt;/h3>
+&lt;ul>
+&lt;li>Categories: ProxyとP2Pをブロック、それ以外はMonitor&lt;/li>
+&lt;li>Options
+&lt;ul>
+&lt;li>Allow and Log DNS Traffic: Yes&lt;/li>
+&lt;li>QUIC: Block&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="intrusion-prevention">Intrusion Prevention&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Obfuscated.JavaScript.Access&lt;/code>: Allow, Disable Logging&lt;/li>
+&lt;li>Seveity 3-5: Block, Log&lt;/li>
+&lt;li>Seveity 2: Default, Log&lt;/li>
+&lt;li>Scan Outgoing Connections to Botnet Sites: ライセンスがあるならBlock&lt;/li>
+&lt;/ul>
+&lt;h3 id="email-filter">Email Filter&lt;/h3>
+&lt;ul>
+&lt;li>Enable Spam Detection and Filtering: On&lt;/li>
+&lt;li>Span Detection by Protocol: お好みで&lt;/li>
+&lt;li>FortiGuard Spam Filtering: すべてOn&lt;/li>
+&lt;li>Local Spam Filtering: Black White List以外On&lt;/li>
+&lt;li>File Filter: すべてOn&lt;/li>
+&lt;/ul>
+&lt;h3 id="sslssh-inspection">SSL/SSH Inspection&lt;/h3>
+&lt;p>別で記事を用意します。&lt;/p></description></item><item><title>Updater.classマルウェアの本体部分の考察</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</link><pubDate>Sat, 31 Dec 2022 16:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</guid><description>&lt;p>この記事は&lt;code>Updater.class&lt;/code>ファイルがダウンロードする
 &lt;code>kernel-certs-debug4917.log&lt;/code>ファイルを簡単にのぞき見を行い、
 考察を行った。&lt;/p>
 &lt;h2 id="はじめに">はじめに&lt;/h2>
