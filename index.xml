@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>個人的なFortiの設定</title><link>https://blog.mkarakiapps.com/p/20230111-forti-settings/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230111-forti-settings/</guid><description>&lt;p>この記事では、他の環境にも転用が効きそうなFortiGateの設定を記述します。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 17 Jan 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>FortiGateの購入を考えている人へ</title><link>https://blog.mkarakiapps.com/p/20230117-buyforti/</link><pubDate>Tue, 17 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230117-buyforti/</guid><description>&lt;p>この記事では、FortiGateを購入しようか迷っている人向けに、
+様々な代替品や自宅ネットに向いているかどうかについて記述します。&lt;/p>
+&lt;h2 id="代替案">代替案&lt;/h2>
+&lt;p>FortiGateは多くの場合4kからご購入いただけます。
+もし、コンピュータやVMハイパーバイザをお持ちの場合は実際の使用感をお試しいただけます。&lt;/p>
+&lt;h3 id="sophos-firewall-home-edition">Sophos Firewall Home Edition&lt;/h3>
+&lt;p>Sophos社はイギリスのセキュリティソフトウェア・ハードウェアベンダです。&lt;/p>
+&lt;p>Sophosは無償ツールとして、
+&lt;a class="link" href="https://www.sophos.com/ja-jp/free-tools/sophos-xg-firewall-home-edition" target="_blank" rel="noopener"
+>Sophos Firewall Home Edition&lt;/a>を提供しています。&lt;/p>
+&lt;p>システム要件は高いですが、UTMアプライアンスを購入する前に試す感覚で利用してみるといいでしょう。&lt;/p>
+&lt;h3 id="fortigate-vm">FortiGate-VM&lt;/h3>
+&lt;p>FortiGate-VMはFortiGateのVMイメージ版です。
+VMのため、ハードウェアアクセラレーションが利用できませんが、使用感を確認する用途では十分です。&lt;/p>
+&lt;p>FortiGate-VMは優勝製品ですが、&lt;a class="link" href="https://www.fortinet.com/jp/demo-center/fortigate-vm-demo" target="_blank" rel="noopener"
+>製品デモ&lt;/a>が存在します。
+実機を導入する前に一度使ってみるとよいでしょう。&lt;/p>
+&lt;h2 id="fortigateの選び方">FortiGateの選び方&lt;/h2>
+&lt;h3 id="製品名の見方">製品名の見方&lt;/h3>
+&lt;p>FortiGate製品の製品名は基本、下記のフォーマットで記述されています。&lt;/p>
+&lt;pre tabindex="0">&lt;code>FortiGate nnX
+FortiGate: シリーズ名
+nn: 任意の数字 多くの場合、2-4桁
+X : アルファベット1文字
+&lt;/code>&lt;/pre>&lt;p>&lt;code>X&lt;/code>は世代を表します。2023/01/17時点では&lt;code>F&lt;/code>が最新世代です。&lt;/p>
+&lt;p>&lt;code>nn&lt;/code>は機種の世代内での優位性を表します。
+多くの場合、数字が大きくなれば上位機種になります。
+また、1桁目は多くの場合、機能が追加されたものを表します。
+例えばFortiWifiシリーズの50EとFWF-51Eは、内部ストレージの有無が異なります。
+(&lt;a class="link" href="https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_FortiWiFi_50E_Series.pdf" target="_blank" rel="noopener"
+>Data Sheet&lt;/a>)&lt;/p>
+&lt;p>FortiWifiシリーズは、FortiGateにWi-Fiアクセスポイント機能が追加されたものです。&lt;/p>
+&lt;h3 id="製品の選び方">製品の選び方&lt;/h3>
+&lt;h4 id="osサポートで選ぶ">OSサポートで選ぶ&lt;/h4>
+&lt;p>FortiGate製品は同一世代の場合でもサポート内容が異なる場合があります。
+例えば、50Eと60Eは同一世代ですが、50EはOSが6.2まで対応なのに対し、60Eは現状最新版である7.2に対応しています。
+(&lt;a class="link" href="https://gold.nvc.co.jp/fortinet/OS/ros/platform.html" target="_blank" rel="noopener"
+>参考&lt;/a>)&lt;/p>
+&lt;p>この問題は顕著に影響し、50EのOSの最終サポートは2023/9/28ですが、60Eは2026/9/30まで行われ、
+もし次期OSにも対応するのであればこの期限はさらに伸びます。
+(&lt;a class="link" href="https://gold.nvc.co.jp/fortinet/OS/os_lifecycle/" target="_blank" rel="noopener"
+>参考&lt;/a>)&lt;/p>
+&lt;h4 id="追加された機能で選ぶ">追加された機能で選ぶ&lt;/h4>
+&lt;p>OSサポートは追加された機能に顕著に影響します。&lt;/p>
+&lt;p>例えば、&lt;a class="link" href="https://docs.fortinet.com/document/fortigate/6.4.0/new-features/322815/map-e-support-6-4-1" target="_blank" rel="noopener"
+>MAP-Eサポート&lt;/a>などは6.4以降であり、
+50Eは対象外
+(&lt;a class="link" href="https://www.ntt.com/content/dam/nttcom/hq/jp/business/services/network/internet-connect/ocn-business/option/v-access-ipoe/pdf/bocn_vc_router.pdf" target="_blank" rel="noopener"
+>参照&lt;/a>)
+になります。&lt;/p>
+&lt;h4 id="基本機能で選ぶ">基本機能で選ぶ&lt;/h4>
+&lt;p>基本的な機能は各&lt;a class="link" href="https://www.fortinet.com/jp/resources/datasheets" target="_blank" rel="noopener"
+>FortiGateのデータシート&lt;/a>を参照してください。&lt;/p>
+&lt;p>また、OSごとに&lt;a class="link" href="https://docs.fortinet.com/document/fortigate/7.2.1/fortios-feature-platform-matrix" target="_blank" rel="noopener"
+>Feature Platform Matrix&lt;/a>が公開されています。
+こちらを参照することで、各製品の大まかな機能や制限を確認することができます。&lt;/p>
+&lt;h4 id="性能で選ぶ">性能で選ぶ&lt;/h4>
+&lt;p>基本的な性能はは各&lt;a class="link" href="https://www.fortinet.com/jp/resources/datasheets" target="_blank" rel="noopener"
+>FortiGateのデータシート&lt;/a>を参照してください。&lt;/p>
+&lt;p>例として、当環境では50EはSSLインスペクションを行うと、80Mbps-100Mbpsほどのスループットを記録します。&lt;/p>
+&lt;h4 id="お持ちのforti製品との連携で選ぶ">お持ちのForti製品との連携で選ぶ&lt;/h4>
+&lt;p>FortiGateは同じFortinet社の製品と強い連携が可能です。&lt;/p>
+&lt;p>例えば、FortiAnalyzerをお持ちの場合、
+公式ドキュメントの&lt;a class="link" href="https://docs.fortinet.com/document/fortianalyzer/7.2.0/compatibility-with-fortios" target="_blank" rel="noopener"
+>Compatibility with FortiOS&lt;/a>セクションを確認し、
+お持ちのFortiGateがどのFortiOSに対応しているか確認してください。&lt;/p>
+&lt;h2 id="fortigateでセキュリティ上の恩恵を受けることができるか調べる">FortiGateでセキュリティ上の恩恵を受けることができるか調べる&lt;/h2>
+&lt;p>FortiGate 50Eの場合、確認できた限り下記の通信を監視することができます。&lt;/p>
+&lt;ul>
+&lt;li>特定のSSL通信
+&lt;ul>
+&lt;li>SSL通信の中身 (CA証明書のインストールが必要)&lt;/li>
+&lt;li>SSL証明書&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>中身のインスペクションが可能
+&lt;ul>
+&lt;li>HTTP&lt;/li>
+&lt;li>SMTP&lt;/li>
+&lt;li>POP3&lt;/li>
+&lt;li>IMAP&lt;/li>
+&lt;li>MAPI&lt;/li>
+&lt;li>FTP&lt;/li>
+&lt;li>CIFS&lt;/li>
+&lt;li>DNS (53)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>通信があったことの確認・ブロックが可能
+&lt;ul>
+&lt;li>Application Signaturesに登録されている通信&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>また、QUICなどの対応していないプロトコルの通信も存在します。&lt;/p>
+&lt;p>これ以降は、特記すべき点が存在する機能について記述します。
+また、各機能は基本ライセンス無しで運用できますが、定義ファイルの更新にはライセンスが必要です。&lt;/p>
+&lt;h3 id="sslインスペクション">SSLインスペクション&lt;/h3>
+&lt;p>SSLインスペクションを行う際は、基本的にCAルート証明書のインストールが求められます。
+また、Androidなどの一部OSや製品はSSLインスペクション状態で一部機能が正常に動きません。&lt;/p>
+&lt;p>そのため、AndroidやGoogle HomeなどのデバイスはSSL証明書インスペクションへの切り替えが必要です。&lt;/p>
+&lt;p>SSLインスペクションにライセンスは必要ありません。&lt;/p>
+&lt;p>QUICなど、インスペクションできない通信も存在します。&lt;/p>
+&lt;h3 id="antivirus">AntiVirus&lt;/h3>
+&lt;p>マルウェアのHashを読ませることで、ライセンス無しでAntiVirus機能が利用できますが、
+本体に保存できるHashの数を考えると実用的ではありません。&lt;/p>
+&lt;h3 id="web-filter">Web Filter&lt;/h3>
+&lt;p>Web Filter機能はライセンス無しで利用できますが、
+FortiGuard category based filterがオンの場合はすべての通信がブロックされます。&lt;/p>
+&lt;p>YouTubeチャンネル制限はFortiOS 6.2.12では現状利用できません。&lt;/p>
+&lt;p>また、File Filterにおいて、動作状況が確認できないフィルター設定が存在します。&lt;/p>
+&lt;h3 id="dns-filter">DNS Filter&lt;/h3>
+&lt;p>DNS Filter機能はライセンス無しで利用できますが、
+FortiGuard category based filterは利用できない可能性があります。&lt;/p>
+&lt;h2 id="fortigate所有の注意点">FortiGate所有の注意点&lt;/h2>
+&lt;p>FortiGateを所有される際は、
+上記のセキュリティ機能の特記事項に加え、
+下記の点について十分注意してください。&lt;/p>
+&lt;h3 id="ファームウェア">ファームウェア&lt;/h3>
+&lt;p>FortiGateではライセンス契約を行っていない場合、
+正規の方法でファームウェアを取得できません。&lt;/p>
+&lt;h3 id="脆弱性">脆弱性&lt;/h3>
+&lt;p>FortiGateはUTMシェア1位という立場上、
+セキュリティ脆弱性が多く発見されています。&lt;/p>
+&lt;p>VPN機能などを利用するうえでFortiGateに外部からアクセスできるようにする場合、
+FortiGateのファームウェアを最新のものにするなど、セキュリティ対策を怠らないでください。&lt;/p>
+&lt;h2 id="おわりに">おわりに&lt;/h2>
+&lt;p>筆者はFortiGate 50Eのオーナーですが、FortiGateはライセンスがあって輝きます。&lt;/p>
+&lt;p>しかし、ライセンスが無くても十分輝ける余地を持っている良い子です。
+(あと、かっこいい)&lt;/p>
+&lt;p>購入前にこの記事をよくご確認いただき、
+幸せなインターネットライフをぜひFortiGateとお過ごしください。&lt;/p></description></item><item><title>個人的なFortiの設定</title><link>https://blog.mkarakiapps.com/p/20230111-forti-settings/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230111-forti-settings/</guid><description>&lt;p>この記事では、他の環境にも転用が効きそうなFortiGateの設定を記述します。&lt;/p>
 &lt;p>基本的に私が使っているFortiGateに合わせて随時更新していくと思います。&lt;/p>
 &lt;h2 id="前提">前提&lt;/h2>
 &lt;ul>
