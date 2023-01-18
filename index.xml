@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 17 Jan 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>FortiGateの購入を考えている人へ</title><link>https://blog.mkarakiapps.com/p/20230117-buyforti/</link><pubDate>Tue, 17 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230117-buyforti/</guid><description>&lt;p>この記事では、FortiGateを購入しようか迷っている人向けに、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>pfSenseを透過ファイアウォールとして設定する</title><link>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</guid><description>&lt;p>普段はFortinetに魂を売っている筆者ではあるが、
+さすがに各VMホストに導入するためだけにFortiGate-VMを購入していては破産するため、
+pfSenseでお手軽ファイアウォールをするために透過ファイアウォールの設定を行う。&lt;/p>
+&lt;p>pfSenseは簡単に透過ファイアウォールを設定することができないので、
+将来の私向けのメモとして記録を残す。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>pfSense 2.6.0&lt;/li>
+&lt;/ul>
+&lt;h2 id="手順">手順&lt;/h2>
+&lt;h3 id="インストールwanlan設定">インストール・WAN/LAN設定&lt;/h3>
+&lt;p>インストール後にWAN/LAN設定がある、
+後々のACL記述でWAN/LANの概念が存在するのため、
+VMの外をWAN、VM内をLANとした。&lt;/p>
+&lt;h3 id="ipアドレス割り当て">IPアドレス割り当て&lt;/h3>
+&lt;p>WEB UIにアクセスするためにWAN/LANのどちらか好きな方にIPアドレスを割り当てる。&lt;/p>
+&lt;p>ここで設定した値は後程消すことになるので、ある程度適当でも構わない。&lt;/p>
+&lt;p>また、使わないインターフェースはアドレス設定を空白で入力し、
+アドレス無しで設定すると幸せになれるかもしれない。&lt;/p>
+&lt;h3 id="webuiへのアクセス初期設定">WebUIへのアクセス・初期設定&lt;/h3>
+&lt;p>&lt;code>admin:pfsense&lt;/code>でアクセスできる。
+初期設定は適当に済ませるとよい。&lt;/p>
+&lt;p>WAN側から設定画面にアクセスしたい場合はShellから、&lt;/p>
+&lt;pre tabindex="0">&lt;code>pfctl -d
+&lt;/code>&lt;/pre>&lt;p>でファイアウォールを一時無効化できる。&lt;/p>
+&lt;p>設定値は基本的に今後も使うが、
+IPアドレス設定はどうせ消すため、適当でよい。&lt;/p>
+&lt;h3 id="bridgeを作る">Bridgeを作る&lt;/h3>
+&lt;p>Web UIで&lt;code>Interfaces -&amp;gt; Assignments -&amp;gt; Bridges -&amp;gt; Add&lt;/code>からBridgeを作り、
+WANとLANを追加する。&lt;/p>
+&lt;p>&lt;code>System -&amp;gt; Advanced -&amp;gt; System Tunables&lt;/code>から設定を開き、
+&lt;code>net.link.bridge.pfil_bridge&lt;/code>を&lt;code>1&lt;/code>にする。&lt;/p>
+&lt;p>&lt;code>Interface -&amp;gt; Assignments&lt;/code>から、
+&lt;code>BRIDGE0&lt;/code>をAddし、&lt;code>OPT1&lt;/code>を作る。&lt;/p>
+&lt;h3 id="natをオフにする">NATをオフにする&lt;/h3>
+&lt;p>NATは不要なので、
+&lt;code>Firewall -&amp;gt; NAT -&amp;gt; Outbound&lt;/code>で設定に入り、
+&lt;code>Disable Outbound NAT rule generation&lt;/code>を指定する。&lt;/p>
+&lt;h3 id="ipアドレスを設定する">IPアドレスを設定する&lt;/h3>
+&lt;p>WANとLANの&lt;code>IPv4/6 Configuration Type&lt;/code>をそれぞれNoneに設定する。&lt;/p>
+&lt;p>OPT1にIPv4/IPv6アドレスを最適な値に指定する。&lt;/p>
+&lt;p>OPT1はおそらくWANとLANをWeb UIから削除した後にCLIで設定するとよいだろう。&lt;/p>
+&lt;h2 id="ルールの書き方">ルールの書き方&lt;/h2>
+&lt;p>ファイアウォールルールでは、LAN・WAN・OPT1をすべて利用できる。&lt;/p>
+&lt;p>そのため、最低限様々な通信を通したい場合、
+すべてのセクションにおいてとりあえずAllow allをするとよいだろう。&lt;/p></description></item><item><title>FortiGateの購入を考えている人へ</title><link>https://blog.mkarakiapps.com/p/20230117-buyforti/</link><pubDate>Tue, 17 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230117-buyforti/</guid><description>&lt;p>この記事では、FortiGateを購入しようか迷っている人向けに、
 様々な代替品や自宅ネットに向いているかどうかについて記述します。&lt;/p>
 &lt;h2 id="代替案">代替案&lt;/h2>
 &lt;p>FortiGateは多くの場合4kからご購入いただけます。
