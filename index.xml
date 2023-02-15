@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>pfSenseを透過ファイアウォールとして設定する</title><link>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</guid><description>&lt;p>普段はFortinetに魂を売っている筆者ではあるが、
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 16 Feb 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>WindowsをSSLインスペクション環境で利用する</title><link>https://blog.mkarakiapps.com/p/20230216-winsslbump/</link><pubDate>Thu, 16 Feb 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230216-winsslbump/</guid><description>&lt;p>メモ記事です。
+私が困難に直面し次第、追記をします。
+IssueとかPR投げてもらえれば反映するかもしれません。&lt;/p>
+&lt;h2 id="python">Python&lt;/h2>
+&lt;p>pipを使いWindowsの証明書を利用できるようにするパッケージを入れる。
+現状、&lt;a class="link" href="https://pypi.org/project/requests/" target="_blank" rel="noopener"
+>requests&lt;/a>で動作確認済み。
+venv先にもインストールする必要がある。&lt;/p>
+&lt;p>pip自体もSSLを利用するため、明示的にいくつかのホストをTrustedさせている。&lt;/p>
+&lt;pre tabindex="0">&lt;code>pip install pip-system-certs --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org
+&lt;/code>&lt;/pre></description></item><item><title>pfSenseを透過ファイアウォールとして設定する</title><link>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</guid><description>&lt;p>普段はFortinetに魂を売っている筆者ではあるが、
 さすがに各VMホストに導入するためだけにFortiGate-VMを購入していては破産するため、
 pfSenseでお手軽ファイアウォールをするために透過ファイアウォールの設定を行う。&lt;/p>
 &lt;p>pfSenseは簡単に透過ファイアウォールを設定することができないので、
