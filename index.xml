@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 16 Feb 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>WindowsをSSLインスペクション環境で利用する</title><link>https://blog.mkarakiapps.com/p/20230216-winsslbump/</link><pubDate>Thu, 16 Feb 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230216-winsslbump/</guid><description>&lt;p>メモ記事です。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mkarakiのブログ</title><link>https://blog.mkarakiapps.com/</link><description>Recent content on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/index.xml" rel="self" type="application/rss+xml"/><item><title>CDのオフセット・ギャップ情報</title><link>https://blog.mkarakiapps.com/p/20230306-drive/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230306-drive/</guid><description>&lt;p>　信憑性はないものと思ってください。&lt;/p>
+&lt;p>　一部データは&lt;a class="link" href="https://web.archive.org/web/20200202221757/http://yss.la.coocan.jp/eac/eac3.htm" target="_blank" rel="noopener"
+>CD-R実験室&lt;/a>の物を利用しています。
+CD-R実験室をもとにしているデータはGap Sourceに&lt;code>CD-R&lt;/code>と記載しています。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Model (Version)&lt;/th>
+&lt;th>Gap Source&lt;/th>
+&lt;th>Read&lt;/th>
+&lt;th>Write&lt;/th>
+&lt;th>Gap Detection Method A&lt;/th>
+&lt;th>Method B&lt;/th>
+&lt;th>Method C&lt;/th>
+&lt;th>Tested CD&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>LG BH16NS48 (1.02)&lt;/td>
+&lt;td>AccurateRip-30;CD-R&lt;/td>
+&lt;td>-24&lt;/td>
+&lt;td>+24&lt;/td>
+&lt;td>48s&lt;/td>
+&lt;td>30s&lt;/td>
+&lt;td>19s&lt;/td>
+&lt;td>4580606043541(Disk2)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TSSTcorp TS-H353B&lt;/td>
+&lt;td>AccurateRip-30&lt;/td>
+&lt;td>-24&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>21s&lt;/td>
+&lt;td>58s&lt;/td>
+&lt;td>56s&lt;/td>
+&lt;td>4580606043541(Disk3)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>WindowsをSSLインスペクション環境で利用する</title><link>https://blog.mkarakiapps.com/p/20230216-winsslbump/</link><pubDate>Thu, 16 Feb 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230216-winsslbump/</guid><description>&lt;p>メモ記事です。
 私が困難に直面し次第、追記をします。
 IssueとかPR投げてもらえれば反映するかもしれません。&lt;/p>
 &lt;h2 id="python">Python&lt;/h2>
