@@ -47,7 +47,16 @@ IssueとかPR投げてもらえれば反映するかもしれません。&lt;/p>
 venv先にもインストールする必要がある。&lt;/p>
 &lt;p>pip自体もSSLを利用するため、明示的にいくつかのホストをTrustedさせている。&lt;/p>
 &lt;pre tabindex="0">&lt;code>pip install pip-system-certs --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org
-&lt;/code>&lt;/pre></description></item><item><title>pfSenseを透過ファイアウォールとして設定する</title><link>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</guid><description>&lt;p>普段はFortinetに魂を売っている筆者ではあるが、
+&lt;/code>&lt;/pre>&lt;h2 id="php">PHP&lt;/h2>
+&lt;p>&lt;code>php.ini&lt;/code>の&lt;code>[curl]&lt;/code>と&lt;code>[openssl]&lt;/code>セクションに記述します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[curl]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">curl.cainfo&lt;/span> &lt;span class="o">=&lt;/span>&lt;span class="s">c:\fortigate.pem&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">[openssl]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">openssl.cafile&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">c:\fortigate.pem&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>動作確認は&lt;code>php -a&lt;/code>で&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">curl_init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://ifconfig.io&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>などでいいと思います。&lt;/p></description></item><item><title>pfSenseを透過ファイアウォールとして設定する</title><link>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</guid><description>&lt;p>普段はFortinetに魂を売っている筆者ではあるが、
 さすがに各VMホストに導入するためだけにFortiGate-VMを購入していては破産するため、
 pfSenseでお手軽ファイアウォールをするために透過ファイアウォールの設定を行う。&lt;/p>
 &lt;p>pfSenseは簡単に透過ファイアウォールを設定することができないので、
