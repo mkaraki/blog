@@ -9,7 +9,7 @@ summaryLength: 50
 
 enableGitInfo: true
 
-disqusShortname: mkarakiblog
+# disqusShortname: mkarakiblog
 
 # GA Tracking ID
 googleAnalytics: UA-145365019-1
@@ -49,8 +49,8 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
-        provider: disqus
+        enabled: false
+        # provider: disqus
 
     widgets:
         enabled:
