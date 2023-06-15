@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>USBメモリ on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/usb%E3%83%A1%E3%83%A2%E3%83%AA/</link><description>Recent content in USBメモリ on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/usb%E3%83%A1%E3%83%A2%E3%83%AA/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows 10をUSBメモリなどに手動でインストールする方法</title><link>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</guid><description>まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>USBメモリ on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/usb%E3%83%A1%E3%83%A2%E3%83%AA/</link><description>Recent content in USBメモリ on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/usb%E3%83%A1%E3%83%A2%E3%83%AA/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows 10をUSBメモリなどに手動でインストールする方法</title><link>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</guid><description>&lt;h1 id="まえがき">まえがき&lt;/h1>
+&lt;p>かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」という製品を作っていました。
+この製品は、WindowsをUSBに入れる事ができることを売りにしていたソフトで、私は全く使いませんでしたが一応持ってはいました。
+今回、SSDの代わりに低容量のUSBメモリを臨時で使いたいという問い合わせがあり、私なりに方法を探ったのでメモとして残します。&lt;/p>
+&lt;h1 id="注意">注意&lt;/h1>
+&lt;p>この記事で紹介する動作について、一切の責任を負いませんので予めご了承ください。
+もし、この記事を参考にし作業する際は、自己責任でお願いします。&lt;/p>
+&lt;h1 id="検証環境">検証環境&lt;/h1>
+&lt;ul>
+&lt;li>Windows 10 Home x64 (ビルド不明)&lt;/li>
+&lt;li>VMWare Workstation 16 Player&lt;/li>
+&lt;/ul>
+&lt;h1 id="手順">手順&lt;/h1>
+&lt;h2 id="パーティションの設定">パーティションの設定&lt;/h2>
+&lt;p>Windows 10の場合、基本的にパーティションは3つ生成されます。
+しかし、1つは回復領域であるため無視し、EFI用とシステム用の2つのみで構成しようと思います。&lt;/p>
+&lt;p>パーティションは以下のようになります。&lt;/p>
+&lt;ol>
+&lt;li>200MB-500MB程度 FAT32 Active&lt;/li>
+&lt;li>残りの容量 NTFS&lt;/li>
+&lt;/ol>
+&lt;p>設定方法は解説しませんがActiveにする方法として、&lt;code>diskpart&lt;/code>でパーティションを選択し&lt;code>active&lt;/code>コマンドを打つ方法があります。&lt;/p>
+&lt;p>設定する上で2つのパーティションにドライブレターが割り当てられている必要があります。ここから先の手順では、上からそれぞれ&lt;code>E:&lt;/code>と&lt;code>F:&lt;/code>が割り当てられているとします。&lt;/p>
+&lt;h2 id="イメージの展開">イメージの展開&lt;/h2>
+&lt;p>一般のキッティングにも使われているであろう&lt;code>Dism&lt;/code>を使います。事前にWindows 10のインストールメディア内の&lt;code>sources/install.esd&lt;/code>を抽出してください。
+此処から先の工程では、作業ディレクトリ内に抽出した&lt;code>install.esd&lt;/code>が存在し、アクセス権がある状態を想定し記載します。&lt;/p>
+&lt;h3 id="イメージidを調べる">イメージIDを調べる&lt;/h3>
+&lt;p>管理者権限のPowerShellもしくはコマンドプロンプトで次のコマンドを入力します。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-plaintext:PowerShell（管理者）" data-lang="plaintext:PowerShell（管理者）">&amp;gt; Dism /Get-WimInfo /WimFile:install.esd
+&lt;/code>&lt;/pre>&lt;p>希望するエディションのインデックスを覚えておいてください。
+此処から先では、&lt;code>Windows 10 Home（インデックス: 1）&lt;/code>をインストールする前提で記載していきます。&lt;/p>
+&lt;h3 id="イメージを展開する">イメージを展開する&lt;/h3>
+&lt;p>イメージを展開します。&lt;code>/Index:&lt;/code>と&lt;code>/ApplyDir:&lt;/code>は各自の環境に応じて変更してください。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-plaintext:PowerShell（管理者）" data-lang="plaintext:PowerShell（管理者）">&amp;gt; Dism /Apply-Image /ImageFile:install.esd /Index:1 /ApplyDir:F:\
+&lt;/code>&lt;/pre>&lt;h3 id="ブートローダーの設定">ブートローダーの設定&lt;/h3>
+&lt;p>&lt;code>bcdboot&lt;/code>を使用し、ブートローダーを設定します。各自で&lt;code>E:\Windows&lt;/code>、&lt;code>/l ja-JP&lt;/code>、&lt;code>/s E:&lt;/code>については読み替えてください。
+また、&lt;code>/l ja-JP&lt;/code>はなくても動くはずです。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-plaintext:PowerShell（管理者）" data-lang="plaintext:PowerShell（管理者）">&amp;gt; bcdboot F:\Windows /l ja-JP /s E: /f ALL
+&lt;/code>&lt;/pre>&lt;h3 id="設定oobe">設定（OOBE）&lt;/h3>
+&lt;p>あとはUSBメモリからブートし、普通に設定をしていくだけです。&lt;/p>
+&lt;h1 id="参考">参考&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a class="link" href="http://ohaohaoha.cocolog-nifty.com/blog/2015/08/windows-to-go-f.html" target="_blank" rel="noopener"
+>Windows To Goを作る: おはのおはなし&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di" target="_blank" rel="noopener"
+>BCDBoot のコマンド ライン オプション | Microsoft Docs&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

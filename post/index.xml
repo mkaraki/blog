@@ -1,1 +1,2177 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/post/</link><description>Recent content in Posts on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>CDのオフセット・ギャップ情報</title><link>https://blog.mkarakiapps.com/p/20230306-drive/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230306-drive/</guid><description>信憑性はないものと思ってください。 一部データはCD-R実験室の物を利用しています。 CD-R実験室をも</description></item><item><title>WindowsをSSLインスペクション環境で利用する</title><link>https://blog.mkarakiapps.com/p/20230216-winsslbump/</link><pubDate>Thu, 16 Feb 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230216-winsslbump/</guid><description>メモ記事です。 私が困難に直面し次第、追記をします。 IssueとかPR投げてもらえれば反映するかもしれ</description></item><item><title>pfSenseを透過ファイアウォールとして設定する</title><link>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</guid><description>普段はFortinetに魂を売っている筆者ではあるが、 さすがに各VMホストに導入するためだけにFor</description></item><item><title>FortiGateの購入を考えている人へ</title><link>https://blog.mkarakiapps.com/p/20230117-buyforti/</link><pubDate>Tue, 17 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230117-buyforti/</guid><description>この記事では、FortiGateを購入しようか迷っている人向けに、 様々な代替品や自宅ネットに向いてい</description></item><item><title>個人的なFortiの設定</title><link>https://blog.mkarakiapps.com/p/20230111-forti-settings/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230111-forti-settings/</guid><description>この記事では、他の環境にも転用が効きそうなFortiGateの設定を記述します。 基本的に私が使ってい</description></item><item><title>Updater.classマルウェアの本体部分の考察</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</link><pubDate>Sat, 31 Dec 2022 16:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</guid><description>この記事はUpdater.classファイルがダウンロードする kernel-certs-debug4</description></item><item><title>Updater.classマルウェアの自己増殖について</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-dotlog/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-dotlog/</guid><description>この記事ではリバースエンジニアリングというより自己増殖の過程をお見せします。 ここでいう.logファイ</description></item><item><title>Kea DHCPをSamba ADDCのDDNSとHot-standby HAで構築した話</title><link>https://blog.mkarakiapps.com/p/20221229-keadhcp/</link><pubDate>Thu, 29 Dec 2022 03:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-keadhcp/</guid><description>前提 Ubuntu 22.04 Kea 2.2.0 Kea DHCPをインストールする ISC公式が用意しているリポジトリからKeaをインストールし</description></item><item><title>マインクラフトにて観測されたUpdater.classマルウェアの検証</title><link>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</link><pubDate>Thu, 29 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</guid><description>当記事内には実際に攻撃者が利用したURLなどが無毒化した状態で記述されている。 もし開く場合は自己責任</description></item><item><title>分散化についていろいろ</title><link>https://blog.mkarakiapps.com/p/20221017-decentralized/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221017-decentralized/</guid><description>注意: Decentralizedを完全に誤解してそうな人の記事です。娯楽としてどうぞ 分散化＝インター</description></item><item><title>令和の世界でVAIO type Pを使う話</title><link>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</link><pubDate>Thu, 09 Jun 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</guid><description>VAIO type P (VGN-P70H)という謎のUMPCを買ったので令和の世界でまともに使えるようにいろいろと頑</description></item><item><title>日本国内に蔓延る営業ワードとしてのIPoEを撲滅したい話</title><link>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</guid><description>そもそも私もよく分かっていないが「IPoEは早い」などと洗脳されている友人を救うために書きました。 訂</description></item><item><title>Google Pixel Buds A-Seriesを買った話</title><link>https://blog.mkarakiapps.com/p/20211227-pixel-buds-a/</link><pubDate>Mon, 27 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211227-pixel-buds-a/</guid><description>初めてレビュー記事みたいなものを書きますが、 Pixel Buds A-Seriesを手に入れたので軽く使い勝手を書き連</description></item><item><title>謎の l.instagram.com ドメインが含まれているDMについて</title><link>https://blog.mkarakiapps.com/p/20211225-instagram-link/</link><pubDate>Sat, 25 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211225-instagram-link/</guid><description>今Twitterを騒がしているl.instagram.comドメインのメッセージですが、 先日このメッ</description></item><item><title>簡単なサービス紹介用のページテンプレートを作った話</title><link>https://blog.mkarakiapps.com/p/20211221-webtemplate/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211221-webtemplate/</guid><description>何かしらのサービス向けの簡単なテンプレートを作ったので紹介ページを書きます。 ライセンスは未定です （多</description></item><item><title>簡易的なメール受信のセキュリティ的な話</title><link>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</link><pubDate>Sun, 12 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</guid><description>普段私はメールサーバからのレポートやCron Daemonからのメールくらいしか受け取りませんが、 近頃</description></item><item><title>MAASの用語と設定のメモ</title><link>https://blog.mkarakiapps.com/p/20211204-maas-word/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211204-maas-word/</guid><description>MAASには複数の単位(Fabricなど)があります。 本体にも説明は記述されているのですが、自分があ</description></item><item><title>日本の公的個人認証サービスを利用したPDF署名とその受け入れ</title><link>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</link><pubDate>Thu, 02 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</guid><description>初めに 公的個人認証サービス(JPKI)は国および地方公共団体が共同で運営する地方公共団体情報システム</description></item><item><title>ご自宅統合認証システムを作った話</title><link>https://blog.mkarakiapps.com/p/20210801-homemade-federated-auth/</link><pubDate>Sun, 01 Aug 2021 03:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210801-homemade-federated-auth/</guid><description>この記事では自宅でLDAP, RADIUS, SAML IdPからなるかんたんな認証システムを作った話をします。 また、おまけ</description></item><item><title>無料で使えるインターネット関連サービス一覧</title><link>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</link><pubDate>Mon, 19 Jul 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</guid><description>この記事は別のサイトと連携している記事です。 常に金欠な私が見つけた無料でいい感じのサービスをメモがて</description></item><item><title>（今更）ブログをはじめました</title><link>https://blog.mkarakiapps.com/p/first-post/</link><pubDate>Sat, 22 May 2021 13:57:09 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/first-post/</guid><description>文字通りブログ環境を構築しました。 過去にQiitaに上げた記事のうちいくつかのコピーして上げています</description></item><item><title>Oracle Cloudのminimal UbuntuのInstanceで外からつながらない問題</title><link>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</link><pubDate>Fri, 05 Feb 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</guid><description>自分用のメモです。 環境 Oracle Cloudインスタンス Image: Canonical-Ubuntu-20.04-Minimal-2020.12.10-0 Shape: VM.Standard.E2.1.Micro 原因 iptablesのルールである -A INPUT -j REJECT --reject-with icmp-host-prohibited</description></item><item><title>Windows 10をUSBメモリなどに手動でインストールする方法</title><link>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</guid><description>まえがき かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」と</description></item><item><title>docomo らくらくホン F-02J 物理ボタンのキーコード一覧</title><link>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</link><pubDate>Fri, 13 Nov 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</guid><description>メモ用です 環境 データ 値 メーカー Fujitsu (docomo) 機種 F-02J Androidバージョン 5.1.1 ビルド番号 V28R066A 調べ方 Android API のonKey</description></item><item><title>Raspberry Pi上でUbuntu server 20.04を動かしてsshできるようにするまで</title><link>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</link><pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</guid><description>経緯 Raspbian環境が壊れたので新しく環境を用意しようとしたところ、私の大好きなUbuntuが使</description></item><item><title>PowerShellを使ってMinecraftのリソースを正式名でエクスポートする</title><link>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</link><pubDate>Thu, 06 Aug 2020 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</guid><description>最初に Minecraftはデフォルトリソースをハッシュ名にして保存しています。実際のリソース名とはJ</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/post/</link><description>Recent content in Posts on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>CDのオフセット・ギャップ情報</title><link>https://blog.mkarakiapps.com/p/20230306-drive/</link><pubDate>Mon, 06 Mar 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230306-drive/</guid><description>&lt;p>　信憑性はないものと思ってください。&lt;/p>
+&lt;p>　一部データは&lt;a class="link" href="https://web.archive.org/web/20200202221757/http://yss.la.coocan.jp/eac/eac3.htm" target="_blank" rel="noopener"
+>CD-R実験室&lt;/a>の物を利用しています。
+CD-R実験室をもとにしているデータはGap Sourceに&lt;code>CD-R&lt;/code>と記載しています。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Model (Version)&lt;/th>
+&lt;th>Gap Source&lt;/th>
+&lt;th>Read&lt;/th>
+&lt;th>Write&lt;/th>
+&lt;th>Gap Detection Method A&lt;/th>
+&lt;th>Method B&lt;/th>
+&lt;th>Method C&lt;/th>
+&lt;th>Tested CD&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>LG BH16NS48 (1.02)&lt;/td>
+&lt;td>AccurateRip-30;CD-R&lt;/td>
+&lt;td>-24&lt;/td>
+&lt;td>+24&lt;/td>
+&lt;td>48s&lt;/td>
+&lt;td>30s&lt;/td>
+&lt;td>19s&lt;/td>
+&lt;td>4580606043541(Disk2)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TSSTcorp TS-H353B&lt;/td>
+&lt;td>AccurateRip-30&lt;/td>
+&lt;td>-24&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>21s&lt;/td>
+&lt;td>58s&lt;/td>
+&lt;td>56s&lt;/td>
+&lt;td>4580606043541(Disk3)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>WindowsをSSLインスペクション環境で利用する</title><link>https://blog.mkarakiapps.com/p/20230216-winsslbump/</link><pubDate>Thu, 16 Feb 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230216-winsslbump/</guid><description>&lt;p>メモ記事です。
+私が困難に直面し次第、追記をします。
+IssueとかPR投げてもらえれば反映するかもしれません。&lt;/p>
+&lt;h2 id="python">Python&lt;/h2>
+&lt;p>pipを使いWindowsの証明書を利用できるようにするパッケージを入れる。
+現状、&lt;a class="link" href="https://pypi.org/project/requests/" target="_blank" rel="noopener"
+>requests&lt;/a>で動作確認済み。
+venv先にもインストールする必要がある。&lt;/p>
+&lt;p>pip自体もSSLを利用するため、明示的にいくつかのホストをTrustedさせている。&lt;/p>
+&lt;pre tabindex="0">&lt;code>pip install pip-system-certs --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org
+&lt;/code>&lt;/pre>&lt;h2 id="php">PHP&lt;/h2>
+&lt;p>&lt;code>php.ini&lt;/code>の&lt;code>[curl]&lt;/code>と&lt;code>[openssl]&lt;/code>セクションに記述します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[curl]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">curl.cainfo&lt;/span> &lt;span class="o">=&lt;/span>&lt;span class="s">c:\fortigate.pem&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">[openssl]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">openssl.cafile&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">c:\fortigate.pem&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>動作確認は&lt;code>php -a&lt;/code>で&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">curl_exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">curl_init&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://ifconfig.io&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>などでいいと思います。&lt;/p></description></item><item><title>pfSenseを透過ファイアウォールとして設定する</title><link>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230119-pfsense-transp/</guid><description>&lt;p>普段はFortinetに魂を売っている筆者ではあるが、
+さすがに各VMホストに導入するためだけにFortiGate-VMを購入していては破産するため、
+pfSenseでお手軽ファイアウォールをするために透過ファイアウォールの設定を行う。&lt;/p>
+&lt;p>pfSenseは簡単に透過ファイアウォールを設定することができないので、
+将来の私向けのメモとして記録を残す。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>pfSense 2.6.0&lt;/li>
+&lt;/ul>
+&lt;h2 id="手順">手順&lt;/h2>
+&lt;h3 id="インストールwanlan設定">インストール・WAN/LAN設定&lt;/h3>
+&lt;p>インストール後にWAN/LAN設定がある、
+後々のACL記述でWAN/LANの概念が存在するのため、
+VMの外をWAN、VM内をLANとした。&lt;/p>
+&lt;h3 id="ipアドレス割り当て">IPアドレス割り当て&lt;/h3>
+&lt;p>WEB UIにアクセスするためにWAN/LANのどちらか好きな方にIPアドレスを割り当てる。&lt;/p>
+&lt;p>ここで設定した値は後程消すことになるので、ある程度適当でも構わない。&lt;/p>
+&lt;p>また、使わないインターフェースはアドレス設定を空白で入力し、
+アドレス無しで設定すると幸せになれるかもしれない。&lt;/p>
+&lt;h3 id="webuiへのアクセス初期設定">WebUIへのアクセス・初期設定&lt;/h3>
+&lt;p>&lt;code>admin:pfsense&lt;/code>でアクセスできる。
+初期設定は適当に済ませるとよい。&lt;/p>
+&lt;p>WAN側から設定画面にアクセスしたい場合はShellから、&lt;/p>
+&lt;pre tabindex="0">&lt;code>pfctl -d
+&lt;/code>&lt;/pre>&lt;p>でファイアウォールを一時無効化できる。&lt;/p>
+&lt;p>設定値は基本的に今後も使うが、
+IPアドレス設定はどうせ消すため、適当でよい。&lt;/p>
+&lt;h3 id="bridgeを作る">Bridgeを作る&lt;/h3>
+&lt;p>Web UIで&lt;code>Interfaces -&amp;gt; Assignments -&amp;gt; Bridges -&amp;gt; Add&lt;/code>からBridgeを作り、
+WANとLANを追加する。&lt;/p>
+&lt;p>&lt;code>System -&amp;gt; Advanced -&amp;gt; System Tunables&lt;/code>から設定を開き、
+&lt;code>net.link.bridge.pfil_bridge&lt;/code>を&lt;code>1&lt;/code>にする。&lt;/p>
+&lt;p>&lt;code>Interface -&amp;gt; Assignments&lt;/code>から、
+&lt;code>BRIDGE0&lt;/code>をAddし、&lt;code>OPT1&lt;/code>を作る。&lt;/p>
+&lt;h3 id="natをオフにする">NATをオフにする&lt;/h3>
+&lt;p>NATは不要なので、
+&lt;code>Firewall -&amp;gt; NAT -&amp;gt; Outbound&lt;/code>で設定に入り、
+&lt;code>Disable Outbound NAT rule generation&lt;/code>を指定する。&lt;/p>
+&lt;h3 id="ipアドレスを設定する">IPアドレスを設定する&lt;/h3>
+&lt;p>WANとLANの&lt;code>IPv4/6 Configuration Type&lt;/code>をそれぞれNoneに設定する。&lt;/p>
+&lt;p>OPT1にIPv4/IPv6アドレスを最適な値に指定する。&lt;/p>
+&lt;p>OPT1はおそらくWANとLANをWeb UIから削除した後にCLIで設定するとよいだろう。&lt;/p>
+&lt;h2 id="ルールの書き方">ルールの書き方&lt;/h2>
+&lt;p>ファイアウォールルールでは、LAN・WAN・OPT1をすべて利用できる。&lt;/p>
+&lt;p>そのため、最低限様々な通信を通したい場合、
+すべてのセクションにおいてとりあえずAllow allをするとよいだろう。&lt;/p></description></item><item><title>FortiGateの購入を考えている人へ</title><link>https://blog.mkarakiapps.com/p/20230117-buyforti/</link><pubDate>Tue, 17 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230117-buyforti/</guid><description>&lt;p>この記事では、FortiGateを購入しようか迷っている人向けに、
+様々な代替品や自宅ネットに向いているかどうかについて記述します。&lt;/p>
+&lt;h2 id="代替案">代替案&lt;/h2>
+&lt;p>FortiGateは多くの場合4kからご購入いただけます。
+もし、コンピュータやVMハイパーバイザをお持ちの場合は実際の使用感をお試しいただけます。&lt;/p>
+&lt;h3 id="sophos-firewall-home-edition">Sophos Firewall Home Edition&lt;/h3>
+&lt;p>Sophos社はイギリスのセキュリティソフトウェア・ハードウェアベンダです。&lt;/p>
+&lt;p>Sophosは無償ツールとして、
+&lt;a class="link" href="https://www.sophos.com/ja-jp/free-tools/sophos-xg-firewall-home-edition" target="_blank" rel="noopener"
+>Sophos Firewall Home Edition&lt;/a>を提供しています。&lt;/p>
+&lt;p>システム要件は高いですが、UTMアプライアンスを購入する前に試す感覚で利用してみるといいでしょう。&lt;/p>
+&lt;h3 id="fortigate-vm">FortiGate-VM&lt;/h3>
+&lt;p>FortiGate-VMはFortiGateのVMイメージ版です。
+VMのため、ハードウェアアクセラレーションが利用できませんが、使用感を確認する用途では十分です。&lt;/p>
+&lt;p>FortiGate-VMは優勝製品ですが、&lt;a class="link" href="https://www.fortinet.com/jp/demo-center/fortigate-vm-demo" target="_blank" rel="noopener"
+>製品デモ&lt;/a>が存在します。
+実機を導入する前に一度使ってみるとよいでしょう。&lt;/p>
+&lt;h2 id="fortigateの選び方">FortiGateの選び方&lt;/h2>
+&lt;h3 id="製品名の見方">製品名の見方&lt;/h3>
+&lt;p>FortiGate製品の製品名は基本、下記のフォーマットで記述されています。&lt;/p>
+&lt;pre tabindex="0">&lt;code>FortiGate nnX
+FortiGate: シリーズ名
+nn: 任意の数字 多くの場合、2-4桁
+X : アルファベット1文字
+&lt;/code>&lt;/pre>&lt;p>&lt;code>X&lt;/code>は世代を表します。2023/01/17時点では&lt;code>F&lt;/code>が最新世代です。&lt;/p>
+&lt;p>&lt;code>nn&lt;/code>は機種の世代内での優位性を表します。
+多くの場合、数字が大きくなれば上位機種になります。
+また、1桁目は多くの場合、機能が追加されたものを表します。
+例えばFortiWifiシリーズの50EとFWF-51Eは、内部ストレージの有無が異なります。
+(&lt;a class="link" href="https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_FortiWiFi_50E_Series.pdf" target="_blank" rel="noopener"
+>Data Sheet&lt;/a>)&lt;/p>
+&lt;p>FortiWifiシリーズは、FortiGateにWi-Fiアクセスポイント機能が追加されたものです。&lt;/p>
+&lt;h3 id="製品の選び方">製品の選び方&lt;/h3>
+&lt;h4 id="osサポートで選ぶ">OSサポートで選ぶ&lt;/h4>
+&lt;p>FortiGate製品は同一世代の場合でもサポート内容が異なる場合があります。
+例えば、50Eと60Eは同一世代ですが、50EはOSが6.2まで対応なのに対し、60Eは現状最新版である7.2に対応しています。
+(&lt;a class="link" href="https://gold.nvc.co.jp/fortinet/OS/ros/platform.html" target="_blank" rel="noopener"
+>参考&lt;/a>)&lt;/p>
+&lt;p>この問題は顕著に影響し、50EのOSの最終サポートは2023/9/28ですが、60Eは2026/9/30まで行われ、
+もし次期OSにも対応するのであればこの期限はさらに伸びます。
+(&lt;a class="link" href="https://gold.nvc.co.jp/fortinet/OS/os_lifecycle/" target="_blank" rel="noopener"
+>参考&lt;/a>)&lt;/p>
+&lt;h4 id="追加された機能で選ぶ">追加された機能で選ぶ&lt;/h4>
+&lt;p>OSサポートは追加された機能に顕著に影響します。&lt;/p>
+&lt;p>例えば、&lt;a class="link" href="https://docs.fortinet.com/document/fortigate/6.4.0/new-features/322815/map-e-support-6-4-1" target="_blank" rel="noopener"
+>MAP-Eサポート&lt;/a>などは6.4以降であり、
+50Eは対象外
+(&lt;a class="link" href="https://www.ntt.com/content/dam/nttcom/hq/jp/business/services/network/internet-connect/ocn-business/option/v-access-ipoe/pdf/bocn_vc_router.pdf" target="_blank" rel="noopener"
+>参照&lt;/a>)
+になります。&lt;/p>
+&lt;h4 id="基本機能で選ぶ">基本機能で選ぶ&lt;/h4>
+&lt;p>基本的な機能は各&lt;a class="link" href="https://www.fortinet.com/jp/resources/datasheets" target="_blank" rel="noopener"
+>FortiGateのデータシート&lt;/a>を参照してください。&lt;/p>
+&lt;p>また、OSごとに&lt;a class="link" href="https://docs.fortinet.com/document/fortigate/7.2.1/fortios-feature-platform-matrix" target="_blank" rel="noopener"
+>Feature Platform Matrix&lt;/a>が公開されています。
+こちらを参照することで、各製品の大まかな機能や制限を確認することができます。&lt;/p>
+&lt;h4 id="性能で選ぶ">性能で選ぶ&lt;/h4>
+&lt;p>基本的な性能はは各&lt;a class="link" href="https://www.fortinet.com/jp/resources/datasheets" target="_blank" rel="noopener"
+>FortiGateのデータシート&lt;/a>を参照してください。&lt;/p>
+&lt;p>例として、当環境では50EはSSLインスペクションを行うと、80Mbps-100Mbpsほどのスループットを記録します。&lt;/p>
+&lt;h4 id="お持ちのforti製品との連携で選ぶ">お持ちのForti製品との連携で選ぶ&lt;/h4>
+&lt;p>FortiGateは同じFortinet社の製品と強い連携が可能です。&lt;/p>
+&lt;p>例えば、FortiAnalyzerをお持ちの場合、
+公式ドキュメントの&lt;a class="link" href="https://docs.fortinet.com/document/fortianalyzer/7.2.0/compatibility-with-fortios" target="_blank" rel="noopener"
+>Compatibility with FortiOS&lt;/a>セクションを確認し、
+お持ちのFortiGateがどのFortiOSに対応しているか確認してください。&lt;/p>
+&lt;h2 id="fortigateでセキュリティ上の恩恵を受けることができるか調べる">FortiGateでセキュリティ上の恩恵を受けることができるか調べる&lt;/h2>
+&lt;p>FortiGate 50Eの場合、確認できた限り下記の通信を監視することができます。&lt;/p>
+&lt;ul>
+&lt;li>特定のSSL通信
+&lt;ul>
+&lt;li>SSL通信の中身 (CA証明書のインストールが必要)&lt;/li>
+&lt;li>SSL証明書&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>中身のインスペクションが可能
+&lt;ul>
+&lt;li>HTTP&lt;/li>
+&lt;li>SMTP&lt;/li>
+&lt;li>POP3&lt;/li>
+&lt;li>IMAP&lt;/li>
+&lt;li>MAPI&lt;/li>
+&lt;li>FTP&lt;/li>
+&lt;li>CIFS&lt;/li>
+&lt;li>DNS (53)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>通信があったことの確認・ブロックが可能
+&lt;ul>
+&lt;li>Application Signaturesに登録されている通信&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>また、QUICなどの対応していないプロトコルの通信も存在します。&lt;/p>
+&lt;p>これ以降は、特記すべき点が存在する機能について記述します。
+また、各機能は基本ライセンス無しで運用できますが、定義ファイルの更新にはライセンスが必要です。&lt;/p>
+&lt;h3 id="sslインスペクション">SSLインスペクション&lt;/h3>
+&lt;p>SSLインスペクションを行う際は、基本的にCAルート証明書のインストールが求められます。
+また、Androidなどの一部OSや製品はSSLインスペクション状態で一部機能が正常に動きません。&lt;/p>
+&lt;p>そのため、AndroidやGoogle HomeなどのデバイスはSSL証明書インスペクションへの切り替えが必要です。&lt;/p>
+&lt;p>SSLインスペクションにライセンスは必要ありません。&lt;/p>
+&lt;p>QUICなど、インスペクションできない通信も存在します。&lt;/p>
+&lt;h3 id="antivirus">AntiVirus&lt;/h3>
+&lt;p>マルウェアのHashを読ませることで、ライセンス無しでAntiVirus機能が利用できますが、
+本体に保存できるHashの数を考えると実用的ではありません。&lt;/p>
+&lt;h3 id="web-filter">Web Filter&lt;/h3>
+&lt;p>Web Filter機能はライセンス無しで利用できますが、
+FortiGuard category based filterがオンの場合はすべての通信がブロックされます。&lt;/p>
+&lt;p>YouTubeチャンネル制限はFortiOS 6.2.12では現状利用できません。&lt;/p>
+&lt;p>また、File Filterにおいて、動作状況が確認できないフィルター設定が存在します。&lt;/p>
+&lt;h3 id="dns-filter">DNS Filter&lt;/h3>
+&lt;p>DNS Filter機能はライセンス無しで利用できますが、
+FortiGuard category based filterは利用できない可能性があります。&lt;/p>
+&lt;h2 id="fortigate所有の注意点">FortiGate所有の注意点&lt;/h2>
+&lt;p>FortiGateを所有される際は、
+上記のセキュリティ機能の特記事項に加え、
+下記の点について十分注意してください。&lt;/p>
+&lt;h3 id="ファームウェア">ファームウェア&lt;/h3>
+&lt;p>FortiGateではライセンス契約を行っていない場合、
+正規の方法でファームウェアを取得できません。&lt;/p>
+&lt;h3 id="脆弱性">脆弱性&lt;/h3>
+&lt;p>FortiGateはUTMシェア1位という立場上、
+セキュリティ脆弱性が多く発見されています。&lt;/p>
+&lt;p>VPN機能などを利用するうえでFortiGateに外部からアクセスできるようにする場合、
+FortiGateのファームウェアを最新のものにするなど、セキュリティ対策を怠らないでください。&lt;/p>
+&lt;h2 id="おわりに">おわりに&lt;/h2>
+&lt;p>筆者はFortiGate 50Eのオーナーですが、FortiGateはライセンスがあって輝きます。&lt;/p>
+&lt;p>しかし、ライセンスが無くても十分輝ける余地を持っている良い子です。
+(あと、かっこいい)&lt;/p>
+&lt;p>購入前にこの記事をよくご確認いただき、
+幸せなインターネットライフをぜひFortiGateとお過ごしください。&lt;/p></description></item><item><title>個人的なFortiの設定</title><link>https://blog.mkarakiapps.com/p/20230111-forti-settings/</link><pubDate>Wed, 11 Jan 2023 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20230111-forti-settings/</guid><description>&lt;p>この記事では、他の環境にも転用が効きそうなFortiGateの設定を記述します。&lt;/p>
+&lt;p>基本的に私が使っているFortiGateに合わせて随時更新していくと思います。&lt;/p>
+&lt;h2 id="前提">前提&lt;/h2>
+&lt;ul>
+&lt;li>FortiGate 50E&lt;/li>
+&lt;li>FortiOS 6.2.12&lt;/li>
+&lt;/ul>
+&lt;h2 id="更新履歴">更新履歴&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>日時&lt;/th>
+&lt;th>内容&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>2023-01-11&lt;/td>
+&lt;td>初版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="security-fablic">Security Fablic&lt;/h2>
+&lt;h3 id="settings">Settings&lt;/h3>
+&lt;p>Cloud Loggingを有効に設定、
+頻度は&lt;code>Realtime&lt;/code>を選択&lt;/p>
+&lt;h3 id="fabric-connectors">Fabric Connectors&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://cert.pl/" target="_blank" rel="noopener"
+>CERT Polska&lt;/a>の&lt;a class="link" href="https://cert.pl/en/posts/2020/03/malicious_domains/" target="_blank" rel="noopener"
+>List of malicious domains&lt;/a>を1440秒ごとに受信&lt;/li>
+&lt;li>&lt;a class="link" href="https://feodotracker.abuse.ch/" target="_blank" rel="noopener"
+>Feodo Tracker&lt;/a>の&lt;code>Botnet C2 Indicators Of Compromise (IOCs)&lt;/code>の過去30日分の物を利用&lt;/li>
+&lt;/ul>
+&lt;h2 id="policy--objects">Policy &amp;amp; Objects&lt;/h2>
+&lt;h3 id="ipv4-policy">IPv4 Policy&lt;/h3>
+&lt;p>先頭に&lt;/p>
+&lt;ul>
+&lt;li>Feodo Trackerリストからの通信をDROP (Logあり)&lt;/li>
+&lt;li>Feodo Trackerリストへの通信をDROP (Logあり)&lt;/li>
+&lt;/ul>
+&lt;p>を追加&lt;/p>
+&lt;h2 id="security-profiles">Security Profiles&lt;/h2>
+&lt;h3 id="antivirus">AntiVirus&lt;/h3>
+&lt;ul>
+&lt;li>Detect Viruses: Block&lt;/li>
+&lt;li>Inspected Protocols: すべてOn&lt;/li>
+&lt;li>APT Protection Options: すべてOn
+&lt;ul>
+&lt;li>Original File Destination: お好みで (私はDiscard)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="web-filter">Web Filter&lt;/h3>
+&lt;ul>
+&lt;li>FortiGard category based filter: お好みで (ライセンスがない場合はOff)&lt;/li>
+&lt;li>File Filter
+&lt;ul>
+&lt;li>Log: On&lt;/li>
+&lt;li>Scan Archived Contents: On&lt;/li>
+&lt;li>List:
+&lt;ul>
+&lt;li>Deny password protected
+&lt;ul>
+&lt;li>Protocols: HTTP + FTP&lt;/li>
+&lt;li>File types: 7z, rar, zip&lt;/li>
+&lt;li>Action: Block&lt;/li>
+&lt;li>Direction: Incoming&lt;/li>
+&lt;li>Match Password Protected Files: On&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Search Engines: お好みで&lt;/li>
+&lt;li>Static URL Filter
+&lt;ul>
+&lt;li>Block invalid URLs: On&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="dns-filter">DNS Filter&lt;/h3>
+&lt;ul>
+&lt;li>FortiGuard category based filter
+&lt;ul>
+&lt;li>Remote Categoriesに&lt;a class="link" href="#fablic-connectors" >Fabric Connectors&lt;/a>で指定した定義があるのでブロック&lt;/li>
+&lt;li>それ以外はお好みで、個人的には
+&lt;ul>
+&lt;li>Malicious Websites: Block&lt;/li>
+&lt;li>Phishing: Block&lt;/li>
+&lt;li>Spam URLS: Block&lt;/li>
+&lt;li>Dynamic DNS: Monitor&lt;/li>
+&lt;li>Newly Observed Domain: Monitor&lt;/li>
+&lt;li>Newly Registerd Domain: Monitor&lt;/li>
+&lt;li>Unrated: Monitor&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Static Domain Filter
+&lt;ul>
+&lt;li>External IP Block Lists: &lt;a class="link" href="#fablic-connectors" >Fabric Connectors&lt;/a>で指定した定義があるのでブロック&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Options
+&lt;ul>
+&lt;li>Allow DNS requests when a rating error occurs: お好みで (私はOm)&lt;/li>
+&lt;li>Log all DNS queries and responses: On&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="application-control">Application Control&lt;/h3>
+&lt;ul>
+&lt;li>Categories: ProxyとP2Pをブロック、それ以外はMonitor&lt;/li>
+&lt;li>Options
+&lt;ul>
+&lt;li>Allow and Log DNS Traffic: Yes&lt;/li>
+&lt;li>QUIC: Block&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="intrusion-prevention">Intrusion Prevention&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Obfuscated.JavaScript.Access&lt;/code>: Allow, Disable Logging&lt;/li>
+&lt;li>Seveity 3-5: Block, Log&lt;/li>
+&lt;li>Seveity 2: Default, Log&lt;/li>
+&lt;li>Scan Outgoing Connections to Botnet Sites: ライセンスがあるならBlock&lt;/li>
+&lt;/ul>
+&lt;h3 id="email-filter">Email Filter&lt;/h3>
+&lt;ul>
+&lt;li>Enable Spam Detection and Filtering: On&lt;/li>
+&lt;li>Span Detection by Protocol: お好みで&lt;/li>
+&lt;li>FortiGuard Spam Filtering: すべてOn&lt;/li>
+&lt;li>Local Spam Filtering: Black White List以外On&lt;/li>
+&lt;li>File Filter: すべてOn&lt;/li>
+&lt;/ul>
+&lt;h3 id="sslssh-inspection">SSL/SSH Inspection&lt;/h3>
+&lt;p>別で記事を用意します。&lt;/p></description></item><item><title>Updater.classマルウェアの本体部分の考察</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</link><pubDate>Sat, 31 Dec 2022 16:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-update/</guid><description>&lt;p>この記事は&lt;code>Updater.class&lt;/code>ファイルがダウンロードする
+&lt;code>kernel-certs-debug4917.log&lt;/code>ファイルを簡単にのぞき見を行い、
+考察を行った。&lt;/p>
+&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>筆者は専門家では無く、
+リバースエンジニアリングを隅々まで行ったわけではない。
+本記事内には見当違いな場所もあると思われる。&lt;/p>
+&lt;h2 id="外部との通信">外部との通信&lt;/h2>
+&lt;p>URLは踏めないようにしているが無害化は行っていない。
+間違ってアクセスしないように十分注意すること。&lt;/p>
+&lt;p>このプログラムは下記と接続を行う:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>http://t23e7v6uz8idz87ehugwq.skyrage.de/version&lt;/code>&lt;/li>
+&lt;li>&lt;code>http://t23e7v6uz8idz87ehugwq.skyrage.de/qqqqqqqqq&lt;/code>&lt;/li>
+&lt;li>&lt;code>ssl://qw3e1ee12e9hzheu9h1912hew1sh12uw9.skyrage.de:17929&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>実際の通信内容は&lt;a class="link" href="https://app.any.run/tasks/7accb28d-a771-4353-bbc6-bf7647c59c47" target="_blank" rel="noopener"
+>Any.Run&lt;/a>から
+pcap
+をダウンロードできるためそれを見ていただいたほうが良いとは思うが、
+&lt;code>qqqqqqqqq&lt;/code>はjarファイル
+(&lt;a class="link" href="https://www.virustotal.com/gui/file/9cf6f6698d6e5d7f2c97bedfb67429422269e0dfe677f3b10c99919e81d7642a" target="_blank" rel="noopener"
+>VirusTotal&lt;/a>)
+で、&lt;code>version&lt;/code>は数値データ
+(&lt;code>921&lt;/code>)
+の入ったテキストファイルであった。&lt;/p>
+&lt;h3 id="ssl通信について">ssl通信について&lt;/h3>
+&lt;p>SSL通信であるため中の通信は覗けなかったが、
+プログラムを確認した知人がいうには独自仕様の通信ではないかとの意見があった。&lt;/p>
+&lt;p>サーバ側の証明書は下記のものが利用されていた。&lt;/p>
+&lt;pre tabindex="0">&lt;code>&amp;gt; openssl x509 -in key.crt -text -noout
+Certificate:
+Data:
+Version: 3 (0x2)
+Serial Number:
+26:aa:65:34:32:16:cf:c8:08:16:02:73:56:b8:4f:13:d8:73:77:7f
+Signature Algorithm: sha256WithRSAEncryption
+Issuer: C = AU, ST = Some-State, O = Internet Widgits Pty Ltd
+Validity
+Not Before: Jul 18 16:25:40 2022 GMT
+Not After : Jul 15 16:25:40 2032 GMT
+Subject: C = AU, ST = Some-State, O = Internet Widgits Pty Ltd
+Subject Public Key Info:
+Public Key Algorithm: rsaEncryption
+RSA Public-Key: (2048 bit)
+Modulus:
+00:ab:5a:5d:ae:36:ed:5f:21:43:a3:32:c3:a7:66:
+4b:43:97:4a:ee:61:c2:d2:30:2d:13:4e:02:a3:8d:
+1b:89:4e:13:15:be:4b:d6:82:7f:44:ae:3d:4a:a7:
+b1:50:5a:f2:6a:76:a6:55:f9:1a:1e:84:de:e5:a8:
+56:60:8b:40:11:21:bb:dc:79:56:f9:fc:b7:7b:28:
+ca:16:a6:37:cf:a4:4e:a6:de:d6:07:6c:8b:88:20:
+df:b0:3b:69:70:43:a2:46:fe:2d:76:63:bb:2b:bf:
+97:bb:03:1f:1c:a3:46:3e:9d:40:c8:21:61:98:4f:
+ce:95:84:b0:35:f2:da:8d:1d:ef:7c:9d:ec:a9:61:
+ce:8d:b0:f8:50:bd:8a:69:b3:66:80:e6:31:10:b1:
+b4:00:c2:51:0e:e7:30:d9:34:c7:26:38:07:50:50:
+75:82:a3:e6:97:56:e6:26:ef:5f:0d:d3:bc:7c:61:
+2f:f4:d6:55:96:3e:a0:ed:c4:19:ee:42:aa:7d:f1:
+2b:43:e2:20:4a:5c:31:99:d0:84:a5:82:30:3f:ca:
+42:84:94:3d:ac:3f:eb:a1:ac:81:c5:02:d0:cd:ee:
+83:99:a8:7d:26:74:a6:65:e0:16:6f:81:5d:f7:64:
+8a:fe:ed:3f:cc:08:06:4c:a7:b3:1b:b4:7d:da:7b:
+17:33
+Exponent: 65537 (0x10001)
+X509v3 extensions:
+X509v3 Subject Key Identifier:
+50:D7:07:2A:09:4A:78:A7:FF:88:45:84:6F:B5:42:BC:DF:C1:51:6C
+X509v3 Authority Key Identifier:
+keyid:50:D7:07:2A:09:4A:78:A7:FF:88:45:84:6F:B5:42:BC:DF:C1:51:6C
+X509v3 Basic Constraints: critical
+CA:TRUE
+Signature Algorithm: sha256WithRSAEncryption
+0a:d3:f9:c6:20:ad:69:c7:44:42:ae:95:5c:bb:4a:b5:47:ba:
+98:03:e2:20:a0:8c:cc:fb:77:15:dc:ac:4d:be:f4:5c:05:38:
+ed:a3:87:b5:15:2d:8d:b6:a6:00:8b:76:f7:82:71:ae:af:7e:
+01:36:cf:6b:27:cd:f5:06:3e:c3:54:13:a4:a0:07:50:00:e6:
+46:98:20:41:bf:32:ae:c9:42:56:81:f5:e2:07:e1:d7:7d:52:
+20:e4:81:a6:df:f9:4c:06:ef:a0:fd:7e:0a:ec:a6:4e:bc:ed:
+03:42:1f:d4:cb:e9:79:b9:b4:d3:9f:8d:1b:58:52:d2:b1:d2:
+94:02:8b:ed:07:43:18:3e:c8:65:c5:dd:cc:64:a5:23:99:a9:
+44:f8:5f:3f:6e:2a:fe:9f:4c:e3:26:d5:19:27:51:a7:7a:d6:
+77:9d:11:b3:4f:a0:90:1a:6b:c6:de:c8:6f:f6:33:83:4c:3b:
+11:8f:1b:11:3e:0a:07:15:5e:5e:43:ce:4e:70:e5:90:cf:84:
+b7:43:ff:03:fe:fd:6e:fb:ee:fb:1a:ec:7e:17:ec:20:36:cc:
+87:5c:a3:57:21:5b:29:9e:71:d9:aa:50:f6:a7:ed:57:97:7b:
+8b:34:2a:8d:64:79:9b:eb:f7:89:52:39:95:17:8c:f1:3a:a9:
+46:da:a0:a7
+&lt;/code>&lt;/pre>&lt;p>自己署名されたものであり、CAが設定されていない。&lt;/p>
+&lt;p>&lt;code>ST = Some-State&lt;/code>となっているところはおそらく詰めが甘かった部分ではないかと思う。&lt;/p>
+&lt;p>そして、おそらくこの通信がこのプログラムのキーとなる部分ではないかと考える。&lt;/p>
+&lt;h2 id="被害を抑える方法">被害を抑える方法&lt;/h2>
+&lt;p>今回のプログラムが実行された際の被害を抑える方法としては、&lt;/p>
+&lt;ul>
+&lt;li>サーバがアクセスするFQDN, IPをホワイトリスト制にする
+&lt;ul>
+&lt;li>DNSなどでそもそも引っかからないようにする&lt;/li>
+&lt;li>指定されたDNS以外への通信をリジェクトする&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>SSL通信をすべてInspectし、CA証明書のチェックも強制する
+&lt;ul>
+&lt;li>FortiGateのライセンスがない機材でも、
+当該の設定を導入したところ通信がクローズされるようになった&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>などが考えられる。&lt;/p>
+&lt;p>また、現状&lt;a class="link" href="https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7/detection" target="_blank" rel="noopener"
+>主要な商用エンドポイントセキュリティソフトでの検知が可能&lt;/a>であるため、
+サーバ上に商用のエンドポイントセキュリティを入れ、定期的なスキャンを掛けることでも早期発見につながった可能性がある。&lt;/p></description></item><item><title>Updater.classマルウェアの自己増殖について</title><link>https://blog.mkarakiapps.com/p/20221231-updater-class-dotlog/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221231-updater-class-dotlog/</guid><description>&lt;p>この記事ではリバースエンジニアリングというより自己増殖の過程をお見せします。&lt;/p>
+&lt;p>ここでいう&lt;code>.log&lt;/code>ファイルは
+&lt;a class="link" href="https://www.virustotal.com/gui/file/a98cb11c4779fa8b5d81986b2b8e22b1b03e3cce579c2b7b209814cb7e446bfe" target="_blank" rel="noopener"
+>VirusTotal上のこちら&lt;/a>のファイルの事を指します。&lt;/p>
+&lt;h2 id="検証環境">検証環境&lt;/h2>
+&lt;ul>
+&lt;li>Docker&lt;/li>
+&lt;li>mcr.microsoft.com/openjdk/jdk:17-ubuntu&lt;/li>
+&lt;/ul>
+&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>実際にサーバアプリケーションを使いプラグインを感染させた挙動は、
+&lt;a class="link" href="https://app.any.run/tasks/4ce2e325-fff6-48c3-8a3f-04e59e998137" target="_blank" rel="noopener"
+>Any.Run&lt;/a>でご確認いただけます。&lt;/p>
+&lt;p>&lt;a class="link" href="https://gist.github.com/mkaraki/15edaf485ec215d3e2ebd6b60559c52d" target="_blank" rel="noopener"
+>実際に実行した際のログ&lt;/a>
+はGistに張っておきます。
+空のZipファイルを入れていた関係でエラーだらけですが、
+書き換え対象のファイルは判別できるかと思います。&lt;/p>
+&lt;p>筆者はセキュリティ専門家ではありません。
+見当違いなことを言っている箇所が多いと思います。&lt;/p>
+&lt;h2 id="挙動">挙動&lt;/h2>
+&lt;p>挙動はとてもシンプルです。
+HDD内のすべての&lt;code>jar&lt;/code>ファイルに対して、変更を試みます。
+ファイルを直接writeでオープンするのではなく、
+同じディレクトリ内に&lt;code>.tmp&lt;/code>で終わるファイルを作ってからそれを上書きコピーして保存を行うため、Any.Run上では上書き扱いの警告が出ていません。&lt;/p>
+&lt;h3 id="プラグイン別の実装">プラグイン別の実装&lt;/h3>
+&lt;p>完全にコードを読んだわけではありませんが、
+少なくとも下記をincludeしているものに対しては特殊な書き換えを行うようです。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>net/labymod/api/LabyModAddon&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>onEnable&lt;/code>に対し、書き換えを実施&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>net/md_5/bungee/api/plugin/Plugin&lt;/code>,&lt;br>
+&lt;code>org/bukkit/plugin/java/JavaPlugin&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>onLoad&lt;/code>もしくは&lt;code>onEnable&lt;/code>にインジェクション&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="リバースエンジニアリングについて">リバースエンジニアリングについて&lt;/h3>
+&lt;p>やはり難読化されています。&lt;/p>
+&lt;p>今回記事で取り扱っているものは、
+JADXで解析できたうち、mainメソッドから簡単に追えた範囲のみです。&lt;/p>
+&lt;h2 id="被害を防ぐために">被害を防ぐために&lt;/h2>
+&lt;p>今回のマルウェアは
+&lt;a class="link" href="https://github.com/OpticFusion1/MCAntiMalware" target="_blank" rel="noopener"
+>MCAntiMalware&lt;/a>
+で検知可能でした。
+また、自己増殖をするため、ファイルのハッシュを厳格にチェックする機構や、
+厳しいACLと監査ログがあれば、同じように被害を防げた可能性があります。&lt;/p></description></item><item><title>Kea DHCPをSamba ADDCのDDNSとHot-standby HAで構築した話</title><link>https://blog.mkarakiapps.com/p/20221229-keadhcp/</link><pubDate>Thu, 29 Dec 2022 03:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-keadhcp/</guid><description>&lt;h2 id="前提">前提&lt;/h2>
+&lt;ul>
+&lt;li>Ubuntu 22.04&lt;/li>
+&lt;li>Kea 2.2.0&lt;/li>
+&lt;/ul>
+&lt;h2 id="kea-dhcpをインストールする">Kea DHCPをインストールする&lt;/h2>
+&lt;p>ISC公式が用意しているリポジトリからKeaをインストールしてください。&lt;/p>
+&lt;p>2022/12/26日時点で、
+&lt;a class="link" href="https://cloudsmith.io/~isc/repos/" target="_blank" rel="noopener"
+>https://cloudsmith.io/~isc/repos/&lt;/a>
+で公開されており、
+最新バージョンである2.2.0は&lt;a class="link" href="https://cloudsmith.io/~isc/repos/kea-2-2/setup/#formats-deb" target="_blank" rel="noopener"
+>こちら&lt;/a>からアクセスできます。&lt;/p>
+&lt;h2 id="samba-ad-dcと連携させる">Samba AD DCと連携させる&lt;/h2>
+&lt;p>Samba AD DCのDNS機能を使い、DDNS風の動作をさせる例です。&lt;/p>
+&lt;h3 id="設定スクリプトの準備">設定スクリプトの準備&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/mkaraki/kea-dhcp-and-samba-ad-dns/blob/master/dhcp-dyndns.sh" target="_blank" rel="noopener"
+>dhcp-dyndns.sh&lt;/a>
+を
+&lt;code>/etc/kea/kea-dhcp-dyndns.sh&lt;/code>
+に保存してください。&lt;/p>
+&lt;p>また、スクリプト内の設定を必要に応じて変更してください。&lt;/p>
+&lt;h3 id="hooks-librariesの設定をする">hooks librariesの設定をする&lt;/h3>
+&lt;p>下記のような設定を投入してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;hooks-libraries&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;library&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/usr/lib/x86_64-linux-gnu/kea/hooks/libdhcp_run_script.so&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;parameters&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/etc/kea/kea-dhcp-dyndns.sh&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;sync&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ドメインに参加させる">ドメインに参加させる&lt;/h3>
+&lt;h4 id="必要パッケージをインストールする">必要パッケージをインストールする&lt;/h4>
+&lt;pre tabindex="0">&lt;code>apt install winbind krb5-user samba
+&lt;/code>&lt;/pre>&lt;p>&lt;code>net&lt;/code>コマンドが実行できれば成功です。&lt;/p>
+&lt;h4 id="smbconfを記述する">&lt;code>smb.conf&lt;/code>を記述する&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ini" data-lang="ini">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[global]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">kerberos method&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">secrets and keytab
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> realm = YOUR.DOMAIN.EXAMPLE.COM
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> workgroup = YOUR
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s"> security = ads&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="参加コマンドを打つ">参加コマンドを打つ&lt;/h4>
+&lt;p>Administratorユーザで参加する場合は下記のコマンドで参加できます。&lt;/p>
+&lt;pre tabindex="0">&lt;code>net ads join -U Administrators
+&lt;/code>&lt;/pre>&lt;h4 id="dns編集ユーザを作る">DNS編集ユーザを作る&lt;/h4>
+&lt;p>パスワードは利用しないのでランダムで設定。&lt;/p>
+&lt;p>ユーザ名と説明文はお好みで。&lt;/p>
+&lt;pre tabindex="0">&lt;code>samba-tool user create dhcpduser --random-password --description=&amp;#39;Unprivileged user for DNS updates via ISC DHCP server&amp;#39;
+samba-tool user setexpiry dhcpduser --noexpiry
+samba-tool group addmembers DnsAdmins dhcpduser
+&lt;/code>&lt;/pre>&lt;h4 id="keytabを出力">keytabを出力&lt;/h4>
+&lt;p>Samba AD DCが動いているマシン上で下記のコマンドを実行し、
+&lt;code>dhcpduser.keytab&lt;/code>
+を入手します。&lt;/p>
+&lt;pre tabindex="0">&lt;code>samba-tool domain exportkeytab --principal=dhcpduser@YOUR.DOMAIN.EXAMPLE.COM dhcpduser.keytab
+&lt;/code>&lt;/pre>&lt;p>入手したkeytabファイルはDHCPサーバの&lt;code>/etc/dhcpduser.keytab&lt;/code>にコピーしてください。&lt;/p>
+&lt;p>権限の設定を忘れずに行ってください。&lt;/p>
+&lt;h2 id="ha構成を作る">HA構成を作る&lt;/h2>
+&lt;h3 id="前提パッケージをインストールする">前提パッケージをインストールする&lt;/h3>
+&lt;pre tabindex="0">&lt;code>apt install isc-kea-ctrl-agent
+&lt;/code>&lt;/pre>&lt;h3 id="リモート接続設定を変更する">リモート接続設定を変更する&lt;/h3>
+&lt;p>&lt;code>/etc/kea/kea-ctrl-agent.conf&lt;/code>を編集します。&lt;/p>
+&lt;p>&lt;code>http-host&lt;/code>を&lt;code>0.0.0.0&lt;/code>（もしくは適切な値）に変更してください。&lt;/p>
+&lt;h3 id="ha設定を追加する">HA設定を追加する&lt;/h3>
+&lt;p>下記の設定を適宜変更して投入する。&lt;/p>
+&lt;p>&lt;code>libdhcp_lease_cmds&lt;/code>を入れないと正常に動かない（リース情報を共有できない）ので注意。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;hooks-libraries&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;library&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/usr/lib/x86_64-linux-gnu/kea/hooks/libdhcp_lease_cmds.so&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;parameters&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;library&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;/usr/lib/x86_64-linux-gnu/kea/hooks/libdhcp_ha.so&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;parameters&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;high-availability&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;this-server-name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;dhcp01&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;mode&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;load-balancing&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;heartbeat-delay&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;max-response-delay&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;max-ack-delay&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;max-unacked-clients&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;peers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;dhcp01&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://17.0.1.1:8000/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;role&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;primary&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;auto-failover&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;dhcp02&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://17.0.2.1:8000/&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;role&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;secondary&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;auto-failover&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>マインクラフトにて観測されたUpdater.classマルウェアの検証</title><link>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</link><pubDate>Thu, 29 Dec 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221229-updater-class-malware/</guid><description>&lt;p>当記事内には実際に攻撃者が利用したURLなどが無毒化した状態で記述されている。
+もし開く場合は自己責任で。&lt;/p>
+&lt;h2 id="時系列">時系列&lt;/h2>
+&lt;ul>
+&lt;li>2022/12/27 10:18: サーバが正常に起動していない現象を観測&lt;/li>
+&lt;li>サーバ管理担当者がサーバを再起動&lt;/li>
+&lt;li>&lt;code>java.net.NoRouteToHostException: No route to host&lt;/code>エラーを観測&lt;/li>
+&lt;li>レンタルサーバ事業者にネットワーク設備の点検を依頼&lt;/li>
+&lt;li>2022/12/27 10:30: レンタルサーバ事業者から、障害が発生していない報告を受ける&lt;/li>
+&lt;li>マルウェア検査アプリケーションでマルウェアを発見&lt;/li>
+&lt;li>2022/12/28 10:35: 障害の復旧作業に筆者が合流&lt;/li>
+&lt;li>2022/12/29 02:00: 当該障害がクリティカルなセキュリティ事故であることが判明&lt;/li>
+&lt;li>2022/12/30 10:56: 当該サーバが復活し、当初のエラーが出なくなっている可能性があることが発覚&lt;br>
+これに伴い、VirusTotal, Any.Runの結果を記事内に追記&lt;/li>
+&lt;li>2022/12/31 02:00: 感染していた場合でも、エラー無しでサーバが正常に動作することが判明&lt;/li>
+&lt;/ul>
+&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>本記事ではプラグインファイル・Paperバイナリに対して感染した&lt;code>Updater.class&lt;/code>について取り扱う。&lt;/p>
+&lt;p>それ以外の項目については、
+&lt;a class="link" href="https://ljskatt.no/analysis/updater_class/" target="_blank" rel="noopener"
+>こちらの記事(英語)&lt;/a>が参考になると思われる。&lt;/p>
+&lt;p>また、実際に感染したサーバを実行した際の動作について
+&lt;a class="link" href="https://app.any.run/tasks/4ce2e325-fff6-48c3-8a3f-04e59e998137" target="_blank" rel="noopener"
+>Any.Run&lt;/a>
+で実験を行っている。
+そちらも見ていただけると、本記事と別途記述している2記事についてもよくご理解いただけるのではないかと思う。&lt;/p>
+&lt;h2 id="エントリーポイントの汚染">エントリーポイントの汚染&lt;/h2>
+&lt;p>複数の&lt;code>main&lt;/code>メソッドにおいて&lt;code>Updater.init()&lt;/code>を呼び出すコードが発見されている。&lt;/p>
+&lt;p>また、コードとして&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-java" data-lang="java">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="kt">void&lt;/span> &lt;span class="nf">main&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">arrstring&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Updater&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="na">init&lt;/span>&lt;span class="o">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">String&lt;/span>&lt;span class="o">[]&lt;/span> &lt;span class="n">args&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>のように変更されており、
+引数が編集されていることで書き換え済みか認識しているのではないかと考察した。&lt;/p>
+&lt;p>また、CFRでの解析において&lt;code>Updater&lt;/code>クラスが認識出来ていなかったが、
+おそらく&lt;code>Updater.class&lt;/code>ファイルに不正な値を入力することで、
+解析アプリケーションをまともに動かせなくする目的があったのではないかと考える。&lt;/p>
+&lt;h2 id="updaterinitの挙動">&lt;code>Updater.init()&lt;/code>の挙動&lt;/h2>
+&lt;p>リバースエンジニアリングした全文は
+&lt;a class="link" href="https://gist.github.com/mkaraki/ea7c4a483cdb78bbdf0dd2cff8cac54a#file-00_updateclass-malware-decompiled-20221229-java" target="_blank" rel="noopener"
+>こちら&lt;/a>
+を参照していただきたい。&lt;/p>
+&lt;p>また、筆者が必要に応じてアノテーションを付けたファイルは
+&lt;a class="link" href="https://gist.github.com/mkaraki/ea7c4a483cdb78bbdf0dd2cff8cac54a#file-01_updateclass-malware-decompiled-annotated-20221229-java" target="_blank" rel="noopener"
+>こちら&lt;/a>
+から利用できる。&lt;/p>
+&lt;h3 id="前提バイナリのロード">前提バイナリのロード&lt;/h3>
+&lt;p>&lt;code>Updater.class&lt;/code>では
+最初に&lt;code>java.io.tmpdir&lt;/code>内の
+&lt;code>kernel-certs-debug4917.log&lt;/code>というファイルに対して
+&lt;code>File&lt;/code>オブジェクトを生成する。&lt;/p>
+&lt;p>もし、すでに&lt;code>kernel-certs-debug4917.log&lt;/code>ファイルが存在しているのであれば、
+当該ファイルを&lt;code>java&lt;/code>もしくは&lt;code>javaw.exe&lt;/code>で実行する。&lt;/p>
+&lt;p>拡張子は&lt;code>.log&lt;/code>であり、いかにも一般的なファイルに擬態させているが、中身は&lt;code>jar&lt;/code>ファイルである。&lt;/p>
+&lt;h3 id="バイナリのダウンロード">バイナリのダウンロード&lt;/h3>
+&lt;p>もし&lt;code>kernel-certs-debug4917.log&lt;/code>が存在しない場合、次の動作が行われる。&lt;/p>
+&lt;ol>
+&lt;li>初期値として&lt;code>0Prpx2ekKWc=&lt;/code>をロード&lt;/li>
+&lt;li>リソース内の&lt;code>/plugin-config.bin&lt;/code>から&lt;code>IJMZR7mQs8faH0sBuSYr8g==&lt;/code>をロード&lt;/li>
+&lt;li>&lt;code>ttp:// files &amp;lt;dot&amp;gt; skyrage &amp;lt;dot&amp;gt; de/mvd&lt;/code>から&lt;code>jar&lt;/code>ファイルをを&lt;code>.log&lt;/code>として保存
+(&lt;a class="link" href="https://www.virustotal.com/gui/file/a98cb11c4779fa8b5d81986b2b8e22b1b03e3cce579c2b7b209814cb7e446bfe" target="_blank" rel="noopener"
+>VirusTotal&lt;/a>,
+&lt;a class="link" href="../20221231-updater-class-dotlog" >詳細記事&lt;/a>)&lt;/li>
+&lt;li>1もしくは2でロードした値を&lt;code>-Dgnu&lt;/code>に代入し、ダウンロードしたバイナリを実行&lt;/li>
+&lt;li>&lt;code>ttp:// files &amp;lt;dot&amp;gt; skyrage &amp;lt;dot&amp;gt; de/update&lt;/code>からzip形式のファイルをダウンロード
+(&lt;a class="link" href="https://www.virustotal.com/gui/file/753579034abcffedd35f0fd9f3eac771b6f63d743194f9c6c2a64fe49db218b7" target="_blank" rel="noopener"
+>VirusTotal&lt;/a>,
+&lt;a class="link" href="https://app.any.run/tasks/7accb28d-a771-4353-bbc6-bf7647c59c47" target="_blank" rel="noopener"
+>Any.Run&lt;/a>,
+&lt;a class="link" href="../20221231-updater-class-update" >詳細記事&lt;/a>)&lt;/li>
+&lt;li>ダウンロードしたファイルを加工（詳細は割愛）&lt;/li>
+&lt;li>ダウンロードしたファイルを実行&lt;/li>
+&lt;/ol>
+&lt;h2 id="追跡">追跡&lt;/h2>
+&lt;h3 id="whois">Whois&lt;/h3>
+&lt;p>Whoisの最終変更は下記のとおりである。&lt;/p>
+&lt;pre tabindex="0">&lt;code>Changed: 2021-07-12T21:50:02+02:00
+&lt;/code>&lt;/pre>&lt;p>また、ネームサーバはCloudflareの物が利用されていたようだ。&lt;/p>
+&lt;h2 id="当該マルウェアについて本チームの考察">当該マルウェアについて本チームの考察&lt;/h2>
+&lt;p>共同で研究を行った のふれむ氏 の調べたところによると、
+当該マルウェアは2022年の8月ごろから発見されていると見て良いのではないかと思われる。&lt;/p>
+&lt;p>当チームが観測したバージョンは、
+おそらく2022/12/27日時点でCloudflare側が規約違反もしくはFreeプランの制限超過で
+Proxyを解除し、それによりCloudflare以外からの通信を拒否していたサーバにアクセスできなくなったことで
+&lt;code>No route to host&lt;/code>がエラーとして出るようになり、発覚に至ったと考えられる。&lt;/p>
+&lt;p>また、今回感染したファイルは
+&lt;a class="link" href="https://github.com/OpticFusion1/MCAntiMalware" target="_blank" rel="noopener"
+>MCAntiMalware&lt;/a>
+と
+&lt;a class="link" href="https://www.virustotal.com/gui/file/20559b330a363cbb4246c7376575319eae926b28801b1d815e5ec7ed24385e90" target="_blank" rel="noopener"
+>Kasperskyのウイルス対策ソフトウェアで検出が可能だった&lt;/a>
+ようである。&lt;/p>
+&lt;p>Pluginを導入する前に
+&lt;a class="link" href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener"
+>Virus Total&lt;/a>
+などで検査するだけでも十分防げた可能性は高い。&lt;/p>
+&lt;h2 id="当該のマルウェアに関する他の記事">当該のマルウェアに関する他の記事&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://ljskatt.no/analysis/updater_class/" target="_blank" rel="noopener"
+>https://ljskatt.no/analysis/updater_class/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.spigotmc.org/threads/1-19-1-fatal-error-converting-plugin-updater-class.567801/" target="_blank" rel="noopener"
+>https://www.spigotmc.org/threads/1-19-1-fatal-error-converting-plugin-updater-class.567801/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://goli-carft.com/minecraft-malware-announcement/" target="_blank" rel="noopener"
+>https://goli-carft.com/minecraft-malware-announcement/&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>分散化についていろいろ</title><link>https://blog.mkarakiapps.com/p/20221017-decentralized/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20221017-decentralized/</guid><description>&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong> Decentralizedを完全に誤解してそうな人の記事です。娯楽としてどうぞ&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="分散化インターネット初期">分散化＝インターネット初期&lt;/h2>
+&lt;p>そもそも、インターネット初期にはインターネットサービスの覇権企業など存在せず、
+各大学や一部の企業・個人が自らサーバを構築して運用していた。&lt;/p>
+&lt;p>これは、中央集権から遠く離れたものだと考えられる。&lt;/p>
+&lt;h2 id="現代のインターネットに必須な中央集権">現代のインターネットに必須な中央集権&lt;/h2>
+&lt;p>現在のインターネットの運用に必要な企業・団体は多く存在する。&lt;/p>
+&lt;p>Tier 1プロバイダは各国との接続においてファイバーなどの維持を業務にしていたりするし、
+ICANNなどはDNSの実運用上の必須団体といっても差支えないであろう。&lt;/p>
+&lt;p>ほかにも、RIPE NCCなどのIPアドレス・ASN管理団体も、
+インターネットをインターネットとして運用するうえで必須の団体・企業といえるであろう。&lt;/p>
+&lt;h2 id="self-hostedとfoss">Self-hostedとFOSS&lt;/h2>
+&lt;p>もし中央集権的なインターネットから脱出したいなら、
+Self-hostedとFOSSが重要なキーワードになるかもしれない。&lt;/p>
+&lt;p>Self-hostedとは自らサーバや環境を用意しサービスを提供することを指す。&lt;/p>
+&lt;p>FOSSは無料でオープンなソフトウェアを指し、
+多くの場合オープンソースソフトウェアを指すワードである。&lt;/p>
+&lt;h3 id="なぜfossがリストにいるのか">なぜFOSSがリストにいるのか&lt;/h3>
+&lt;p>正直、Self-hostedだけあれば十分である。
+しかし、そのサービスを長く使いたいのであれば、
+特定の個人・法人に開発が一任されるプロプライエタリなソフトウェアではなく、
+やる気さえあれば自分でプログラムをより良い方向へ持っていけるOSSを使うとよいだろう。&lt;/p>
+&lt;h2 id="self-hostedで中央集権から脱出する">Self-hostedで中央集権から脱出する&lt;/h2>
+&lt;p>Self-hostedなサービスで中央集権から脱出するには次の点を考える必要がある。&lt;/p>
+&lt;ul>
+&lt;li>2台以上のサーバを複数の国にまたいで設置する
+&lt;ul>
+&lt;li>特定の国の予測不能なインターネット障害・遮断への対抗&lt;/li>
+&lt;li>ISP・IP管理団体の分散&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://ja.wikipedia.org/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%AC%E3%83%99%E3%83%AB%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3" target="_blank" rel="noopener"
+>gTLD&lt;/a>を購入する
+&lt;ul>
+&lt;li>gTLDを取得することによって当該ドメインの管理団体がICANNのみになる&lt;/li>
+&lt;li>ここを一般ユーザを置いていかずに中央集権から分離させることはできなさそう？&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>できるだけSSL/TLSなどで暗号化する
+&lt;ul>
+&lt;li>現代でサービスを運用する場合は必須です&lt;/li>
+&lt;li>できるだけバージョンが新しいものを利用しましょう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>ソフトウェアはLTSもしくは最新のものを利用する
+&lt;ul>
+&lt;li>LTSが好ましい&lt;/li>
+&lt;li>決して古いソフトウェアを使い続けないようにしましょう&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ソフトウェアの例">ソフトウェアの例&lt;/h2>
+&lt;h3 id="メール">メール&lt;/h3>
+&lt;h4 id="modoboa">Modoboa&lt;/h4>
+&lt;p>&lt;a class="link" href="https://modoboa.org" target="_blank" rel="noopener"
+>Modoboa&lt;/a>はオールインワンのメールサーバソリューションである。&lt;/p>
+&lt;p>オープンソースであり、ある程度のセキュリティ設定もやってくれるらしい。&lt;/p>
+&lt;p>実際に運用する際には&lt;a class="link" href="https://www.postfix.org/" target="_blank" rel="noopener"
+>Postfix&lt;/a>などでModoboaホストと接続できなくてもメールがDropしない仕組みを作るのは必須である。&lt;/p>
+&lt;h3 id="オンラインファイルストレージ">オンラインファイルストレージ&lt;/h3>
+&lt;h4 id="nextcloud">Nextcloud&lt;/h4>
+&lt;p>&lt;a class="link" href="https://nextcloud.com/" target="_blank" rel="noopener"
+>Nextcloud&lt;/a>は何でもありのグループウェアである。&lt;/p>
+&lt;p>先に紹介した&lt;a class="link" href="#modoboa" >Modoboa&lt;/a>のメールをこのソフトウェアから閲覧することもできる。&lt;/p>
+&lt;p>また、カレンダーや連絡先も共有できるほか、チャットや通話も可能である。&lt;/p>
+&lt;h3 id="連絡先カレンダー">連絡先・カレンダー&lt;/h3>
+&lt;h4 id="nextcloud-別で紹介">Nextcloud (別で紹介)&lt;/h4>
+&lt;p>&lt;a class="link" href="#nextcloud" >Nextcloud&lt;/a>で紹介している。&lt;/p>
+&lt;h3 id="チャット">チャット&lt;/h3>
+&lt;h4 id="element">Element&lt;/h4>
+&lt;p>&lt;a class="link" href="https://element.io/" target="_blank" rel="noopener"
+>Element&lt;/a>はチャットソフトウェアとして&lt;a class="link" href="https://matrix.org/" target="_blank" rel="noopener"
+>Matrix&lt;/a>という公開されたプロトコルを使用しているソフトウェア。&lt;/p>
+&lt;p>詳しいわけではないので詳しい紹介はしないが、いかにもDecentralizedな感じの設計だと思う。&lt;/p>
+&lt;h4 id="mattermost">Mattermost&lt;/h4>
+&lt;p>&lt;a class="link" href="https://mattermost.com/" target="_blank" rel="noopener"
+>Mattermost&lt;/a>は完全なオープンソース製品ではないが、
+最低限チャットソフトウェアに欲しい機能は無料で提供してくれる。&lt;/p>
+&lt;p>UIはSlackに近く、Teamという概念でSlackのように複数ワークスペース作ることもでき、
+個人・企業問わず便利なソフトウェアである。&lt;/p>
+&lt;h3 id="通話">通話&lt;/h3>
+&lt;h4 id="jitsi">Jitsi&lt;/h4>
+&lt;p>&lt;a class="link" href="https://jitsi.org/jitsi-meet/" target="_blank" rel="noopener"
+>Jitsi&lt;/a>はオープンソースのビデオ通話ソフト。&lt;/p>
+&lt;p>有名なWebで完結するビデオ通話ソフトウェアと同じように利用できる。&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>ここに書いてあるようなサービスを社内だけでも運用すると、
+インターネットが発展するにあたってなぜ中央集権が必須となっていったのかよくわかる。&lt;/p></description></item><item><title>令和の世界でVAIO type Pを使う話</title><link>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</link><pubDate>Thu, 09 Jun 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220609-vaio-type-p/</guid><description>&lt;p>&lt;a class="link" href="https://www.sony.jp/vaio/products/P/" target="_blank" rel="noopener"
+>VAIO type P (VGN-P70H)&lt;/a>という謎のUMPCを買ったので令和の世界でまともに使えるようにいろいろと頑張った話。&lt;/p>
+&lt;h2 id="os">OS&lt;/h2>
+&lt;p>さすがにWindows VistaやWindows 7を使うわけにはいかないのでWindows 10を入れるかLinuxを入れようと思います。&lt;/p>
+&lt;p>今回は&lt;a class="link" href="https://www.debian.org/" target="_blank" rel="noopener"
+>Debian&lt;/a> 11とXfceを入れました。&lt;/p>
+&lt;p>&lt;a class="link" href="https://gihyo.jp/admin/serial/01/ubuntu-recipe/0057?page=1" target="_blank" rel="noopener"
+>gihyo.jpの記事&lt;/a>を見てめんどくさい作業が必要かとおびえていましたが、
+標準のままでも特に問題なく動くようです。&lt;/p>
+&lt;h3 id="xfceを入れた理由">Xfceを入れた理由&lt;/h3>
+&lt;p>最初はLXDEを入れようとしましたが、ソフトウェアでrfkillが働き、
+rfkillをインストールして毎回unblockしないといけないという謎の現象が起きたのでその次に軽そうなXfceを入れました。&lt;/p>
+&lt;h3 id="pulseaudio問題">PulseAudio問題&lt;/h3>
+&lt;p>様々な記事においてDebian系OSでPulse Audioを使うと音飛びするという現象が報告されており、
+私も同じ現象に悩まされたのでPulseAudioをアンインストールしました。&lt;/p>
+&lt;h3 id="バックライト問題">バックライト問題&lt;/h3>
+&lt;p>Xfceの問題なのかVAIO type Pとの相性問題なのかバックライト系があまりいい感じに動きません。&lt;/p>
+&lt;p>今のところ&lt;/p>
+&lt;ul>
+&lt;li>しばらく放置して画面が暗転した後の操作でバックライトが設定値ではなく最大になる&lt;/li>
+&lt;li>再起動のたびにバックライト最大になる&lt;/li>
+&lt;li>定期的にXfceが再起動してバックライトが最大になる&lt;/li>
+&lt;/ul>
+&lt;p>これらの問題があります。
+また、Xfce側ではどうやらバックライトの設定はもとのままというように認識しているらしく、
+バックライトの明るさバーと実際の設定値が一致しません。&lt;/p>
+&lt;p>多分Xfce側がVAIO type Pに対応できてないだけだと思います。&lt;/p>
+&lt;h3 id="xfceが勝手に再起動する問題">Xfceが勝手に再起動する問題&lt;/h3>
+&lt;p>その名の通りです。
+セッションは引き継がれるのでそう見えてるだけかもしれませんが、
+毎回画面ロック＋バックライト最大になるのでつらいところです。&lt;/p>
+&lt;h2 id="ハードウェアのアップグレード">ハードウェアのアップグレード&lt;/h2>
+&lt;h3 id="ssd">SSD&lt;/h3>
+&lt;p>私はまだ換装していませんが、SSD化（フラッシュ化）するのはかなりありだと思います。&lt;/p>
+&lt;p>そもそも、フラッシュ化しないと安心して持ち運びできないですよね。&lt;/p>
+&lt;h3 id="バッテリ">バッテリ&lt;/h3>
+&lt;p>VGP-VPL15という純正のLサイズバッテリがあります。&lt;/p>
+&lt;p>今いい感じの出品がないので買えませんが、近日中に手に入れたいですね。&lt;/p>
+&lt;h2 id="用途">用途&lt;/h2>
+&lt;p>もともとRDPクライアント用として買いましたが、かなりいい感じです。&lt;/p>
+&lt;p>今のところWireGuardでVPNを張ってFreeRDPでリモート接続してます。
+FreeRDPだとalsaを直接呼び出せるので&lt;a class="link" href="#PulseAudio%e5%95%8f%e9%a1%8c" >PulseAudio問題&lt;/a>も回避できます。&lt;/p>
+&lt;p>USBシリアルケーブルと&lt;code>cu&lt;/code>コマンドでシリアル通信で管理するタイプのルータの設定用マシンとしても使えます。&lt;/p>
+&lt;p>個人的には大満足です。&lt;/p>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://lovely910.com/2019/12/30/%E4%BB%A4%E5%92%8C%E5%85%83%E5%B9%B4%E5%8D%81%E4%BA%8C%E6%9C%88%E3%80%80manjaro-linux%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9Fvaio-typep%E3%81%AE%E3%81%9D/" target="_blank" rel="noopener"
+>https://lovely910.com/2019/12/30/%E4%BB%A4%E5%92%8C%E5%85%83%E5%B9%B4%E5%8D%81%E4%BA%8C%E6%9C%88%E3%80%80manjaro-linux%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%9Fvaio-typep%E3%81%AE%E3%81%9D/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://gihyo.jp/admin/serial/01/ubuntu-recipe/0057?page=1" target="_blank" rel="noopener"
+>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0057?page=1&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>日本国内に蔓延る営業ワードとしてのIPoEを撲滅したい話</title><link>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</link><pubDate>Tue, 08 Feb 2022 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20220208-ipoe-is-not-ipoe/</guid><description>&lt;p>そもそも私もよく分かっていないが「IPoEは早い」などと洗脳されている友人を救うために書きました。&lt;/p>
+&lt;p>訂正等ありましたら&lt;a class="link" href="https://github.com/mkaraki/blog/blob/main/content/post/20220208-ipoe-is-not-ipoe.md" target="_blank" rel="noopener"
+>ここ&lt;/a>からお気軽にIssueやPull Request送ってください。&lt;/p>
+&lt;h2 id="本来のipoe">本来のIPoE&lt;/h2>
+&lt;p>そもそも、NTT契約において「フレッツ・v6オプション（&lt;a class="link" href="https://flets.com/v6option/" target="_blank" rel="noopener"
+>東&lt;/a>, &lt;a class="link" href="https://flets-w.com/opt/v6option/" target="_blank" rel="noopener"
+>西&lt;/a>）」
+契約状態であれば、IPoEとしての接続が可能です。&lt;/p>
+&lt;p>IPoEとはInternet Protocol (NGNの場合はIPv6)をEthernet (フレッツの場合は光ファイバに変換される)に通すだけで、
+これ単体ではIPv6のみが利用可能になります。
+（また、NTT自体はプロバイダとしての役割を持っていないため、
+インターネットに向けたIPv6通信にはVNEに契約し、VNE保有のIPv6アドレスを受け取れるようにする必要性があります）&lt;/p>
+&lt;pre tabindex="0">&lt;code>________________________________
+| | | |
+| Ethernet | IPv6 | Content |
+|__________|______|____________|
+&lt;/code>&lt;/pre>&lt;p>図にするとこんな感じ&lt;/p>
+&lt;p>これは、PPPoE時代から存在するシステムで、PPPoEはIPv4のみの対応（例外あり）であり、
+これにIPv6を新たに提供するために導入されたものです（多分）。&lt;/p>
+&lt;p>しかし、これではIPv4が利用できません。&lt;/p>
+&lt;p>具体的に言うと、&lt;a class="link" href="https://www.yahoo.co.jp/" target="_blank" rel="noopener"
+>Yahoo! JAPAN&lt;/a>や&lt;a class="link" href="https://github.com" target="_blank" rel="noopener"
+>GitHub&lt;/a>などの
+&lt;strong>ほぼすべての&lt;/strong> Webサービスに接続できなくなります。&lt;/p>
+&lt;h3 id="pppoe">PPPoE&lt;/h3>
+&lt;p>IPv4の接続性が無いと困りますから、IPv4の接続は別で確保する必要があります。&lt;/p>
+&lt;p>（正確にはPPPoEを利用した通信が先ですが、）PPPoEではIPv4接続性（一部はIPv6も対応）を提供します。
+PPPoEはIPoE上で動作するのではなく、Ethernet（光回線）上でPPPの通信を行います。&lt;/p>
+&lt;p>PPPの通信はIPv4を内包します。&lt;/p>
+&lt;pre tabindex="0">&lt;code>_____________________________________
+| | | | |
+| Ethernet | PPP | IPv4 | Content |
+|__________|_____|______|____________|
+&lt;/code>&lt;/pre>&lt;p>こんな感じ。&lt;/p>
+&lt;h4 id="pppoeが遅いと言われる理由">PPPoEが遅いと言われる理由&lt;/h4>
+&lt;p>営業マンやブログはPPPoEが遅いと言います。&lt;/p>
+&lt;p>これは、PPPoEの通信にはプロバイダ側設備に行く前に一度NTT側設備を経由しますが、
+その機材が昨今のトラヒック増加から処理が追いついていないことに起因します。&lt;/p>
+&lt;p>つまり、人口が少ない街などではPPPoEが遅いという現象は&lt;strong>発生しません&lt;/strong>。&lt;/p>
+&lt;h2 id="営業マンが言うipoe">営業マンが言うIPoE&lt;/h2>
+&lt;p>都市圏では人口の増加によりNTT側設備が悲鳴を上げ、PPPoEでの通信に限界が出てきました。&lt;/p>
+&lt;p>そこで現れたのが営業マンがIPoEなどと読んでいる技術です。
+実情的にはIPv4 over IPv6となります。&lt;/p>
+&lt;p>これは、これまでPPPoEを使っていたIPv4の通信をIPv6上に載せてインターネットに羽ばたかせます。&lt;/p>
+&lt;pre tabindex="0">&lt;code>______________________________________
+| | | | |
+| Ethernet | IPv6 | IPv4 | Content |
+|__________|______|______|____________|
+&lt;/code>&lt;/pre>&lt;p>図にするとこんな感じ。相手に到達する際は送信時のEthernetとIPv6が取っ払われます。&lt;/p>
+&lt;p>技術的には&lt;/p>
+&lt;ul>
+&lt;li>MAP-E&lt;/li>
+&lt;li>DS-ite&lt;/li>
+&lt;/ul>
+&lt;p>になり、代表的なサービスとして&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.jpne.co.jp/service/v6plus/" target="_blank" rel="noopener"
+>v6プラス&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.ntt.com/business/services/network/internet-connect/ocn-business/option/v-access-ipoe.html" target="_blank" rel="noopener"
+>OCN バーチャルコネクトサービス&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.mfeed.ad.jp/transix/overview.html" target="_blank" rel="noopener"
+>Transix&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>などがあります。&lt;/p>
+&lt;p>また、MAP-Eでは1IPを複数契約で共有するので、IPv4アドレスを節約することが出来ます。&lt;/p>
+&lt;h3 id="で早いの">で、早いの?&lt;/h3>
+&lt;p>結論を言えば、人口の多い都会においてPPPoEより早くなる場合があります。&lt;/p>
+&lt;p>しかし、人口の少ない田舎や、PPPoE利用者の少ない地域においてはPPPoEのほうが早くなるでしょう。&lt;/p>
+&lt;p>そもそも、IPoE方式では一部のサービスが利用できなくなる場合がありますので、
+大前提としてPPPoEでの速度低下が著しい場合に試してみるのが賢い方法と言えます。&lt;/p>
+&lt;h2 id="参考文献">参考文献&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.janog.gr.jp/meeting/janog42/application/files/8015/3238/7118/janog42-IPoE-vne_toyama.pdf" target="_blank" rel="noopener"
+>https://www.janog.gr.jp/meeting/janog42/application/files/8015/3238/7118/janog42-IPoE-vne_toyama.pdf&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://biz.nuro.jp/column/004.html" target="_blank" rel="noopener"
+>PPPoEが遅い理由とは？また、IPoEとの違い、メリット・デメリットを解説&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Google Pixel Buds A-Seriesを買った話</title><link>https://blog.mkarakiapps.com/p/20211227-pixel-buds-a/</link><pubDate>Mon, 27 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211227-pixel-buds-a/</guid><description>&lt;p>初めてレビュー記事みたいなものを書きますが、
+&lt;a class="link" href="https://store.google.com/jp/product/pixel_buds_a_series" target="_blank" rel="noopener"
+>Pixel Buds A-Series&lt;/a>を手に入れたので軽く使い勝手を書き連ねていきます。&lt;/p>
+&lt;h2 id="もともとは乗り換え用">もともとは乗り換え用&lt;/h2>
+&lt;p>もともとは&lt;a class="link" href="https://www.sony.jp/xperia-smart-products/products/XEA20/" target="_blank" rel="noopener"
+>Xperia Ear Duo&lt;/a>と
+&lt;a class="link" href="https://www.bose.co.jp/ja_jp/support/products/bose_headphones_support/bose_in_ear_headphones_support/soundsport-free-wireless.html" target="_blank" rel="noopener"
+>SoundSport Free wireless headphones&lt;/a>
+の乗り換え用で買ったものです。&lt;/p>
+&lt;p>ついでに、&lt;a class="link" href="https://www.sony.jp/headphone/products/MDR-EX750BT/" target="_blank" rel="noopener"
+>h.ear in Wireless&lt;/a>の代替として使えたらいいなという考えでした。&lt;/p>
+&lt;p>値段差が3分の1くらいのものなので正直期待はしていませんでしたが、
+結論から言うと１万円でこれはかなりありな製品だったのではと思います。&lt;/p>
+&lt;h2 id="音の感じ方">音の感じ方&lt;/h2>
+&lt;p>私の耳は音質の差を聞き取れるほど良い耳ではないので感じ方だけ。&lt;/p>
+&lt;p>SoundSport Freeや初代h.ear in Wirelessでは「音楽に包まれている」という感覚でしたが、
+こちらは「音楽を聴いている」という感覚です。&lt;/p>
+&lt;p>悪いことではないですが音楽に浸りたいのであればBoseやSonyのお高めのイヤホンを買うべきでしょう。&lt;/p>
+&lt;p>雰囲気はXperia Ear Duoの音をもっといい感じにしたものです。&lt;/p>
+&lt;h2 id="遮音性">遮音性&lt;/h2>
+&lt;p>ノイズキャンセリングや外音取り込みはついていません。&lt;/p>
+&lt;p>しかし、音として入ってくるのは大まかな音で会話内容はわからないレベルには遮音性はあります。&lt;/p>
+&lt;p>個人的には遮音性が高すぎるため、
+会話がイヤホンを取り外さずにできるように外音取り込み機能はあったほうがよかったかなと思いました。
+別に音質求めないので通話用のマイクで適当に実装してほしかったと思います。&lt;/p>
+&lt;h2 id="通知アシスタント機能">通知・アシスタント機能&lt;/h2>
+&lt;p>通知機能はとても便利です。&lt;/p>
+&lt;p>しかし、Xperia Earシリーズと違い、特定アプリからの通知が来た際にベルが鳴る形です。&lt;/p>
+&lt;p>この状態で本体のタッチパネルを長押しすると通知を読み上げてくれます。&lt;/p>
+&lt;h2 id="音量の自動調整">音量の自動調整&lt;/h2>
+&lt;p>音量調整機能ですが、Xperia Earの場合、相対的に現在の音量から調整してきますが、
+Pixel Budsは絶対値で合わせているのではないかと思うほど音量を上げてきます。&lt;/p>
+&lt;h2 id="pixelとの連携">Pixelとの連携&lt;/h2>
+&lt;p>Pixelシリーズとの連携は最強です。&lt;/p>
+&lt;p>端末設定から本体の設定をできるので普通に便利です。&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>Androidユーザでしたら、普通にありな選択だと思いました。&lt;/p>
+&lt;p>個人的には片耳利用の際にどっちの耳でも聞けるのはよかったです。&lt;/p></description></item><item><title>謎の l.instagram.com ドメインが含まれているDMについて</title><link>https://blog.mkarakiapps.com/p/20211225-instagram-link/</link><pubDate>Sat, 25 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211225-instagram-link/</guid><description>&lt;p>今Twitterを騒がしている&lt;code>l.instagram.com&lt;/code>ドメインのメッセージですが、
+先日このメッセージが来たので、これの正体について少し探ろうと思います。&lt;/p>
+&lt;p>この記事内では無害化した複数のリンクを記述しているがもし除く場合は自己責任でどうぞ。&lt;/p>
+&lt;h2 id="届いたメッセージ">届いたメッセージ&lt;/h2>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/147385322-6fca6ec3-89bd-46df-ae4a-24e863c63b5b.png"
+loading="lazy"
+alt="image"
+>&lt;/p>
+&lt;p>リンク(無害化済み):&lt;/p>
+&lt;pre tabindex="0">&lt;code>https:// l [dot] instagram [dot] com /?[My Twitter ID]_41_4559965334=e208e6be6eb9bf297853619e7cbeeeb5&amp;amp;e=ATO57b9Db1Mn3Ux88bPC-yAhRTW3Y4c9jBdUr86_sREpA1AL0RtYnjrvhw3WWJked-hV2C2V&amp;amp;s=1&amp;amp;s=1&amp;amp;u=http:// business [dot] instagram [dot] com /micro_site/url/?event_type=click&amp;amp;site=igb&amp;amp;destination=https%3A%2F%2Fwww.facebook.com%2Fads%2Fig_redirect%2F%3Fd%3DAd-9UUpXVqVLNUx_LYaKZeKek5oYlWjoEdXwzKgPbUE9qRpf4p77ahkKJVJ0kuzPpFtsCo6iNW3tiZLDTY2LPR4xCa63d0ycYdTB4uq9n11GSU2h81N4csFuuiw8b0crQB08jWUYW08n1cc2LujG0j00JXW6R7_-_xEeAwWPs56HHv7PQhgj6ktkhSEU5AhwI8vAMSgikxz8VtJ4JiQRzIjL%26a%3D1%26hash%3DAd9_0TyBjc1n8sHe
+&lt;/code>&lt;/pre>&lt;p>わかる人にはわかると思いますが、&lt;code>l.instagram.com&lt;/code>ドメインはTwitterなどで使われているような&lt;code>t.co&lt;/code>ドメインのような役割を持っています。&lt;/p>
+&lt;p>つまり、これは別サイトへのリンクになっているようです。&lt;/p>
+&lt;p>&lt;a class="link" href="https://web-omusubi.com/blog/omusubi79.html" target="_blank" rel="noopener"
+>ソース&lt;/a>&lt;/p>
+&lt;h2 id="このメッセージのリンク先">このメッセージのリンク先&lt;/h2>
+&lt;p>最終的には&lt;code>https:// m [dot] ztney [dot] com /#BST&lt;/code>に飛ばされます。&lt;/p>
+&lt;p>流れとしては&lt;/p>
+&lt;ol>
+&lt;li>t.coからLocationヘッダで&lt;code>http://l.instagram.com&lt;/code>に飛ぶ&lt;/li>
+&lt;li>そのまま307, Locationヘッダで&lt;code>https://l.instagram.com&lt;/code>に飛ぶ&lt;/li>
+&lt;li>JavaScriptまたはrefreshタグで下記に飛ぶ&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>https:// business [dot] instagram [dot] com /micro_site/url/?event_type=click&amp;amp;site=igb&amp;amp;destination=https://www.facebook.com/ads/ig_redirect/?d=Ad-9UUpXVqVLNUx_LYaKZeKek5oYlWjoEdXwzKgPbUE9qRpf4p77ahkKJVJ0kuzPpFtsCo6iNW3tiZLDTY2LPR4xCa63d0ycYdTB4uq9n11GSU2h81N4csFuuiw8b0crQB08jWUYW08n1cc2LujG0j00JXW6R7_-_xEeAwWPs56HHv7PQhgj6ktkhSEU5AhwI8vAMSgikxz8VtJ4JiQRzIjL&amp;amp;a=1&amp;amp;hash=Ad9_0TyBjc1n8sHe
+&lt;/code>&lt;/pre>&lt;ol start="4">
+&lt;li>302, Locationタグで下記に飛ぶ&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>https:// www [dot] facebook [dot] com /ads/ig_redirect/?d=Ad-9UUpXVqVLNUx_LYaKZeKek5oYlWjoEdXwzKgPbUE9qRpf4p77ahkKJVJ0kuzPpFtsCo6iNW3tiZLDTY2LPR4xCa63d0ycYdTB4uq9n11GSU2h81N4csFuuiw8b0crQB08jWUYW08n1cc2LujG0j00JXW6R7_-_xEeAwWPs56HHv7PQhgj6ktkhSEU5AhwI8vAMSgikxz8VtJ4JiQRzIjL&amp;amp;a=1&amp;amp;hash=Ad9_0TyBjc1n8sHe
+&lt;/code>&lt;/pre>&lt;ol start="5">
+&lt;li>302, Locationタグで&lt;code>http:// bartinkizogrenciyurdu [dot] com /STALK&lt;/code>に飛ぶ&lt;/li>
+&lt;li>307, Locationタグで&lt;code>https&lt;/code>に飛ぶ&lt;/li>
+&lt;li>5,6の流れをURL末端に&lt;code>/&lt;/code>を入れて実施&lt;/li>
+&lt;li>302, Locationで&lt;code>https://m [dot] ztney [dot] com/_BST_&lt;/code>に飛ぶ&lt;/li>
+&lt;li>いろいろあって&lt;code>https:// m [dot] ztney [dot] com /#BST&lt;/code>に飛ぶ（理由がわからんかった）&lt;/li>
+&lt;/ol>
+&lt;p>このリンクはよくできていて、&lt;code>t.co&lt;/code>を経由していないと(ほかにも条件はありそうですが)&lt;a class="link" href="https://business.instagram.com/" target="_blank" rel="noopener"
+>Instagram business&lt;/a>に飛ばされます。&lt;/p>
+&lt;h2 id="log-in-with-twitterの挙動">LOG IN WITH TWITTERの挙動&lt;/h2>
+&lt;p>最終的にはTwitterのアプリケーション連携に行くが、途中の流れは下記のようになる。&lt;/p>
+&lt;ol>
+&lt;li>ボタンは&lt;code>https://m [dot] ztney [dot] com/gir&lt;/code>に飛ぶ&lt;/li>
+&lt;li>302, Locationで&lt;code>https://www [dot] twitbu [dot] com/web/bridge.php?ref=ztney&lt;/code>に飛ぶ&lt;/li>
+&lt;li>ランダムなトークンを設定した状態で、302でTwitterの連携画面に&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>oauth_token&lt;/code>の値が毎回変更されているのが個人的には面白かった。
+連携アプリケーション名はランダムで変更されているようだ。&lt;/p>
+&lt;p>連携画面はこんな感じ。
+&lt;img src="https://user-images.githubusercontent.com/26180919/147386075-4a528ae5-6673-4326-a715-a28b857eccff.png"
+loading="lazy"
+alt="image"
+>&lt;/p>
+&lt;p>&lt;del>たれか暇な人API制限かかるまでアカウント登録してみてくれないかな…&lt;/del>&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>こういうの調べるの楽しい！&lt;/p></description></item><item><title>簡単なサービス紹介用のページテンプレートを作った話</title><link>https://blog.mkarakiapps.com/p/20211221-webtemplate/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211221-webtemplate/</guid><description>&lt;p>何かしらのサービス向けの簡単なテンプレートを作ったので紹介ページを書きます。&lt;/p>
+&lt;p>ライセンスは未定です
+（多分MITにしてHTMLとCSSに書くと思う）&lt;/p>
+&lt;h2 id="見た目">見た目&lt;/h2>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/146897964-0677a0df-b1e5-4a67-ad80-25b1da076677.png"
+loading="lazy"
+alt="Simple One Page Template"
+>&lt;/p>
+&lt;p>こんな感じのテンプレートです。&lt;/p>
+&lt;p>全画面使って少しの情報を載せるスタイルのページが複数ページ分含まれます。&lt;/p>
+&lt;p>一応、&lt;a class="link" href="https://mkarakiapps.com/simple-one-page-template/" target="_blank" rel="noopener"
+>ここ&lt;/a>からフルのデモページを見ることができます。&lt;/p>
+&lt;h2 id="使った技術">使った技術&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/necolas/normalize.css" target="_blank" rel="noopener"
+>normalize.css&lt;/a>と&lt;a class="link" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener"
+>Bootstrap Icons&lt;/a>を利用しました。&lt;/p>
+&lt;p>Bootstrap Iconsは下向き矢印のためだけに使ったので別のやつに置き換えたいなと思っています。&lt;/p>
+&lt;p>また、デモページの画像用に&lt;a class="link" href="https://picsum.photos/" target="_blank" rel="noopener"
+>Lorem Picsum&lt;/a>を利用してます。
+このサービス、ランダムに指定した解像度の画像を持ってきてくれるのでかなり重宝しています&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>とりあえずお気持ちでサービスの紹介ページやノリで取ったドメインのWebページなどにご利用されてみてはいかがでしょうか。&lt;/p>
+&lt;p>作例をコメント欄に貼っていただければ私が見に行くかもしれません。&lt;/p></description></item><item><title>簡易的なメール受信のセキュリティ的な話</title><link>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</link><pubDate>Sun, 12 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</guid><description>&lt;p>普段私はメールサーバからのレポートやCron Daemonからのメールくらいしか受け取りませんが、
+近頃人間からメールを受け取る機会が増えたのでセキュリティについて語ろうと思います。&lt;/p>
+&lt;h2 id="ppapとは">PPAPとは&lt;/h2>
+&lt;p>Japanese Mail Cultureといえば&lt;a class="link" href="https://ja.wikipedia.org/wiki/PPAP_%28%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%29" target="_blank" rel="noopener"
+>PPAP&lt;/a>でしょう。&lt;/p>
+&lt;blockquote>
+&lt;p>Password付きZIPファイルを送ります、Passwordを送ります、Angoka（暗号化）Protocol（プロトコル）&lt;/p>
+&lt;p>JIPDEC, &lt;a class="link" href="https://www.jaipa.or.jp/event/isp_mtg/asahikawa_190912-13/190913-3.pdf" target="_blank" rel="noopener"
+>くたばれPPAP！ ～メールにファイルを添付する習慣を変えるところから始める働き方改革～&lt;/a> より&lt;/p>
+&lt;/blockquote>
+&lt;p>日本企業においてはマナーなどと形容される謎文化です。&lt;/p>
+&lt;p>この文化の難点はただ一つ、パスワード付きzipファイルはセキュリティを通り抜ける点です。&lt;/p>
+&lt;p>試しに、&lt;a class="link" href="https://www.7-zip.org/" target="_blank" rel="noopener"
+>7-Zip&lt;/a>などのツールで適当にパスワード付きzipを作って&lt;a class="link" href="https://www.virustotal.com/" target="_blank" rel="noopener"
+>Virus Total&lt;/a>あたりに投げてみてください。
+普段なら賛否両論なソフトウェアもあっという間に安全なファイルに早変わりします。&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/145703763-2b50090f-6719-4ca1-8a3a-59f727e9e7bf.png"
+loading="lazy"
+alt="やばいファイル"
+>&lt;br>
+生の状態のやばいファイル&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/145703728-98402092-af08-4bb3-8542-c612fa99b791.png"
+loading="lazy"
+alt="PPAPされたやばいファイル"
+>&lt;br>
+PPAPされたやばいファイル&lt;/p>
+&lt;p>ちなみに、今回スキャンに掛けた&lt;a class="link" href="https://shinolocker.com/" target="_blank" rel="noopener"
+>ShinoLocker&lt;/a>はランサムウェアと同じ動作をするテスト用シミュレータです。
+もし本物のランサムウェアが現場のセキュリティをかいくぐって職場に入り込んだら…ぞっとしますよね。&lt;/p>
+&lt;p>実際にEmotetの感染経路にPPAPが存在します。(&lt;a class="link" href="https://www.ipa.go.jp/security/announce/20191202.html" target="_blank" rel="noopener"
+>IPAの記事&lt;/a>)&lt;/p>
+&lt;h3 id="ppap撲滅派の動き">PPAP撲滅派の動き&lt;/h3>
+&lt;p>PPAPは百害あって一利なしの存在です。&lt;/p>
+&lt;p>人によっては誤送信防止という人もいるかもしれませんが、
+パスワードをすぐに送る時点で誤送信防止かは怪しいですし、
+そもそもパスワード付きzipのパスワードは簡易的なものが多く、総当たり可能な桁数であることがほとんどです。&lt;/p>
+&lt;p>例えば&lt;a class="link" href="https://www.iij.ad.jp/" target="_blank" rel="noopener"
+>IIJ&lt;/a>は&lt;a class="link" href="https://www.iij.ad.jp/ppap/" target="_blank" rel="noopener"
+>パスワード付きzipファイルが添付されたメールを受信サーバ側で破棄する運用に変更されました&lt;/a>。&lt;/p>
+&lt;p>これを受け、私個人や、団体としてもPPAPを施されたメールをすべてブロックするか、
+相手にZipファイルのハッシュ値を電話で確認するなどの手法でセキュリティ対策としています。&lt;/p>
+&lt;h2 id="spfdkim">SPF/DKIM&lt;/h2>
+&lt;p>SPF/DKIMは発信者特定の技術です。
+双方の違いは&lt;a class="link" href="https://sendgrid.kke.co.jp/blog/?p=10121" target="_blank" rel="noopener"
+>SendGridが出している記事&lt;/a>がとても参考になります。&lt;/p>
+&lt;p>これらを設定していない企業からのメールは本当にそのメールが当該企業から来たものなのかを判定することが難しいため、
+一度電話やSMSなどの連絡手段を用いてメールが本人から送られたものなのかを確認する運用をしています。&lt;/p>
+&lt;p>注意点として、SPFレコードが設定されてるメールの場合、メールの転送を行うとFAILになります。
+DKIMはこのような問題が起きないため、DKIMも必ず設定し、SPFはSOFTFAILにすることをお勧めしています。&lt;/p>
+&lt;p>また、DMARCを設定することによって、自社ドメインを騙ったメールが送信されているかを簡単に確認することができるので、設定をお勧めします。&lt;/p>
+&lt;h2 id="文面">文面&lt;/h2>
+&lt;p>最後は送信者に対する忠告の意が大きいです。&lt;/p>
+&lt;p>Gmailなどのメールプロバイダでは文面でメールをブロックする場合があるそうです。&lt;/p>
+&lt;p>例えばハートが使われていたり、&lt;code>? 、 。&lt;/code>が多用されていたりなど、
+どう考えてもビジネスメールとして相応しくないメールは迷惑メールボックス行きになります。&lt;/p>
+&lt;p>また、直接的な金銭の要求なども迷惑メールボックス行きになります。&lt;/p>
+&lt;p>確かに、現代では個人同士のやり取りにメールを利用することは少なくなりましたし、
+このフィルターは妥当に思えますが、親しい間柄のビジネスメールでは未だありそうなケースです。
+送信者の方はご注意ください。&lt;/p></description></item><item><title>MAASの用語と設定のメモ</title><link>https://blog.mkarakiapps.com/p/20211204-maas-word/</link><pubDate>Sat, 04 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211204-maas-word/</guid><description>&lt;p>MAASには複数の単位(&lt;code>Fabric&lt;/code>など)があります。
+本体にも説明は記述されているのですが、自分があとで見返しやすい様にメモにします。&lt;/p>
+&lt;p>ここで書いていることはすべて私の想像です。&lt;/p>
+&lt;h2 id="availability-zones">Availability zones&lt;/h2>
+&lt;p>場所で区切った単位。&lt;/p>
+&lt;p>例:&lt;/p>
+&lt;ul>
+&lt;li>東京データセンター&lt;/li>
+&lt;li>大阪データセンター&lt;/li>
+&lt;/ul>
+&lt;p>など?&lt;/p>
+&lt;h2 id="subnet---space">Subnet -&amp;gt; Space&lt;/h2>
+&lt;p>SpaceはphpIPAMでいうL2 Domainを指します。&lt;/p>
+&lt;p>Spaceが違う場合、普通はVLANは通せません。&lt;/p>
+&lt;p>同一のインテリジェントスイッチにつながっていないLANケーブルの集合体であると思います。&lt;/p>
+&lt;h2 id="subnet---fabric">Subnet -&amp;gt; Fabric&lt;/h2>
+&lt;p>よくわからない&lt;/p>
+&lt;h2 id="resource-pool">Resource Pool&lt;/h2>
+&lt;p>リソースを管理する際に利用する単位&lt;/p>
+&lt;h2 id="controller">Controller&lt;/h2>
+&lt;p>&lt;img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"
+loading="lazy"
+alt="システム図"
+>&lt;br>
+Image from: &lt;a class="link" href="https://maas.io/docs/snap/2.9/ui/controllers" target="_blank" rel="noopener"
+>https://maas.io/docs/snap/2.9/ui/controllers&lt;/a>&lt;/p>
+&lt;h3 id="rack-controller">Rack Controller&lt;/h3>
+&lt;p>DHCPやPXE、IPMI管理などを提供するサーバ&lt;/p>
+&lt;h3 id="region-controller">Region Controller&lt;/h3>
+&lt;p>DNSやWebUIなどを提供するサーバ&lt;/p></description></item><item><title>日本の公的個人認証サービスを利用したPDF署名とその受け入れ</title><link>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</link><pubDate>Thu, 02 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>公的個人認証サービス(JPKI)&lt;/a>は国および地方公共団体が共同で運営する&lt;a class="link" href="https://www.j-lis.go.jp/" target="_blank" rel="noopener"
+>地方公共団体情報システム機構&lt;/a>の提供するサービスである。&lt;/p>
+&lt;p>この記事では2021/12/02時点でのこのサービスとマイナンバーカードを利用したPDF署名とその受け入れについて記述するため、今後この記事の内容が利用できなくなる可能性も存在する。&lt;/p>
+&lt;p>マイナンバーに関する法律は多くあり、それらを遵守したうえで本ページを参考にしていただきたい。この記事が必ずにも現在の法律に&lt;strong>適応しているわけではない&lt;/strong>ことを留意したうえで閲覧していただきたい。&lt;/p>
+&lt;h2 id="署名により記録される情報">署名により記録される情報&lt;/h2>
+&lt;p>署名をすることにより、下記の個人情報がPDFファイルに記載される。&lt;/p>
+&lt;ul>
+&lt;li>氏名&lt;/li>
+&lt;li>マイナンバー上に記述されている都道府県及び市町村&lt;/li>
+&lt;/ul>
+&lt;p>上記情報を渡したくない相手に対しては署名したファイルを送信しないことを強く推奨する。&lt;/p>
+&lt;h2 id="サードパーティ製のソフトウェアを利用して署名する">サードパーティ製のソフトウェアを利用して署名する&lt;/h2>
+&lt;p>公式的に署名する方法は&lt;a class="link" href="https://www.touki-kyoutaku-online.moj.go.jp/cautions/security/pdf_sign_inst.html" target="_blank" rel="noopener"
+>PDF署名プラグイン&lt;/a>を利用する方法が&lt;a class="link" href="https://www.moj.go.jp/" target="_blank" rel="noopener"
+>法務省&lt;/a>(&lt;a class="link" href="https://www.touki-kyoutaku-online.moj.go.jp/" target="_blank" rel="noopener"
+>登記ねっと 供託ねっと&lt;/a>)から提供されている。
+しかし、この方法では&lt;a class="link" href="https://www.adobe.com/" target="_blank" rel="noopener"
+>Adobe Inc.&lt;/a>の&lt;a class="link" href="https://www.adobe.com/acrobat.html" target="_blank" rel="noopener"
+>Adobe Acrobat&lt;/a>が必要であり、個人では敷居が高い。(無料版の&lt;a class="link" href="https://www.adobe.com/acrobat/pdf-reader.html" target="_blank" rel="noopener"
+>Adobe Acrobat Reader&lt;/a>では署名の検証のみ可能)&lt;/p>
+&lt;p>今回は有志の方が開発した&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>JPKI PDF SIGNER&lt;/a>(無料)を利用する。&lt;/p>
+&lt;h3 id="事前準備">事前準備&lt;/h3>
+&lt;p>あらかじめカードリーダのドライバをインストールしておく必要がある。&lt;/p>
+&lt;h3 id="利用者クライアントソフトのインストール">利用者クライアントソフトのインストール&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>JPKI&lt;/a>の提供する&lt;a class="link" href="https://www.jpki.go.jp/download/index.html" target="_blank" rel="noopener"
+>利用者クライアントソフト&lt;/a>をダウンロードし、インストールする必要がある。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong>
+WindowsのロケールはJapaneseである必要性がある。この設定がされていない場合インストーラや本体ソフトウェアが動作しない。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="jpki-pdf-signerのダウンロード">JPKI PDF SIGNERのダウンロード&lt;/h3>
+&lt;p>先に説明した通り、&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>JPKI PDF SIGNER&lt;/a>は有志の開発したマイナンバー用のPDF署名ソフトウェアである。&lt;/p>
+&lt;p>もし第三者の作成したソフトウェアに不信感を感じる場合、&lt;a class="link" href="https://ja.osdn.net/projects/jpki/" target="_blank" rel="noopener"
+>OSDNページ&lt;/a>からソースコードをダウンロードし、ユーザ側で検証とビルドを行うことを推奨する。&lt;/p>
+&lt;p>このアプリケーションにインストーラは存在しない。&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>公式ページ&lt;/a>からzipファイルをダウンロードし、各自で解凍して利用する。&lt;/p>
+&lt;h3 id="署名を行う">署名を行う&lt;/h3>
+&lt;p>&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>公式サイト&lt;/a>に操作方法が記述されているので説明は不要であると思うが念のために記述する。&lt;/p>
+&lt;h4 id="印影を利用しない署名">印影を利用しない署名&lt;/h4>
+&lt;p>JPKI PDF SIGNERでPDFファイルを開き、右側メニューの&lt;code>印影なしで電子署名する&lt;/code>をクリックする。
+マイナンバーカードがコンピュータに認識されていれば&lt;a class="link" href="https://www.e-tax.nta.go.jp/toiawase/qa/kanbenka/27.htm" target="_blank" rel="noopener"
+>公的個人認証　署名用パスワード&lt;/a>の入力が求められる。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong>
+&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>JPKI&lt;/a>のサイトでは、「署名用電子証明書のパスワードを5回間違えるとロックされ、市区町村窓口でのロック解除が必要となる。」とアナウンスされている。&lt;/p>
+&lt;p>詳細は&lt;a class="link" href="https://www.jpki.go.jp/procedure/password.html" target="_blank" rel="noopener"
+>パスワードの失念&lt;/a>を参照のこと。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="署名された文章の受け入れ">署名された文章の受け入れ&lt;/h2>
+&lt;p>署名の検証には&lt;a class="link" href="https://www.adobe.com/" target="_blank" rel="noopener"
+>Adobe Inc.&lt;/a>の&lt;a class="link" href="https://www.adobe.com/acrobat/pdf-reader.html" target="_blank" rel="noopener"
+>Adobe Acrobat Reader&lt;/a>(無料)を利用する。&lt;/p>
+&lt;h3 id="adobe-acrobat-readerのインストール">Adobe Acrobat Readerのインストール&lt;/h3>
+&lt;p>&lt;a class="link" href="https://helpx.adobe.com/jp/acrobat/kb/cq101423182.html" target="_blank" rel="noopener"
+>公式インストールマニュアル&lt;/a>を参考に&lt;a class="link" href="https://www.adobe.com/acrobat/pdf-reader.html" target="_blank" rel="noopener"
+>Adobe Acrobat Reader&lt;/a>をインストールする。&lt;/p>
+&lt;h3 id="ルート証明書のダウンロード">ルート証明書のダウンロード&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>JPKI&lt;/a>サイトからルート証明書をダウンロードする。&lt;/p>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://www.jpki.go.jp/ca/index.html" target="_blank" rel="noopener"
+>認証局の運営&lt;/a>ページにアクセスする。&lt;/li>
+&lt;li>画面左メニューから&lt;a class="link" href="https://www.jpki.go.jp/ca/ca_rules3.html" target="_blank" rel="noopener"
+>署名用認証局の運営に関する情報&lt;/a>を開く&lt;/li>
+&lt;li>&lt;code>署名用認証局の自己署名証明書&lt;/code>を選択しダウンロードする。&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong>
+署名用認証局の自己署名証明書は存在するすべての証明書をダウンロードし追加すること。
+これは、マイナンバー(証明書)発行時期により利用されているルート証明書が異なるためである。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="ルート証明書の追加">ルート証明書の追加&lt;/h3>
+&lt;p>悲しいことにAdobe Acrobat ReaderにはJPKIで利用されている署名用認証局の自己署名証明書は信頼リストに追加されていない。
+そのため、手動で信頼リストに追加する必要がある。&lt;/p>
+&lt;p>下記に手順を示す&lt;/p>
+&lt;ol>
+&lt;li>Acrobat Readerを開きウィンドウ上部のメニューバーから&lt;code>編集&lt;/code>-&amp;gt;&lt;code>環境設定&lt;/code>と進む&lt;/li>
+&lt;li>設定画面左側のメニューから&lt;code>署名&lt;/code>を選択&lt;/li>
+&lt;li>&lt;code>IDと信頼済み証明書&lt;/code>メニューを開く&lt;/li>
+&lt;li>ウィンドウ左メニューから&lt;code>信頼済み証明書&lt;/code>を選択&lt;/li>
+&lt;li>画面上部の&lt;img src="https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png"
+loading="lazy"
+alt="取り込み"
+>を選択&lt;/li>
+&lt;li>新規ウィンドウ上側リスト右の参照を選択&lt;/li>
+&lt;li>ダウンロードしたルート証明書を選択&lt;/li>
+&lt;li>複数のルート証明書をダウンロードした場合は手順&lt;code>6.&lt;/code>から別の証明書を読み込む&lt;/li>
+&lt;li>ウィンドウ下の取り込みボタンを選択&lt;/li>
+&lt;li>Acrobat Readerを再起動する&lt;/li>
+&lt;li>再度手順&lt;code>4.&lt;/code>まで進める&lt;/li>
+&lt;li>&lt;code>公的個人認証サービス署名用, 地方公共団体情報システム機構&lt;/code>から始まる証明書を1つずつ選択し、&lt;img src="https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png"
+loading="lazy"
+alt="信頼性を編集"
+>ボタンを選択する&lt;/li>
+&lt;li>&lt;code>この証明書を信頼済みのルートとして使用&lt;/code>にチェックを入れ、画面下&lt;code>OK&lt;/code>をクリックする&lt;/li>
+&lt;li>2つ以上追加した場合は手順&lt;code>12.&lt;/code>に戻りすべての証明書に実施する&lt;/li>
+&lt;li>再度Acrobat Readerを再起動する&lt;/li>
+&lt;/ol>
+&lt;p>以上でルート証明書が信頼リストに追加される。&lt;/p>
+&lt;h3 id="署名を検証する">署名を検証する&lt;/h3>
+&lt;p>Acrobat Readerで検証したいファイルを開く。&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png"
+loading="lazy"
+alt="署名済みであり、すべての署名が有効です。"
+>&lt;br>
+の表示が出れば問題ない。&lt;/p>
+&lt;h4 id="署名者を確認する">署名者を確認する&lt;/h4>
+&lt;p>&lt;a class="link" href="#%e7%bd%b2%e5%90%8d%e3%82%92%e6%a4%9c%e8%a8%bc%e3%81%99%e3%82%8b" >署名を検証する&lt;/a>セクションで出たアラートにある&lt;code>署名パネル&lt;/code>ボタンを選択する&lt;/p>
+&lt;ul>
+&lt;li>署名者を確認したい署名を開き、&lt;code>署名の詳細&lt;/code>を開くと署名者の氏名が表示される。&lt;/li>
+&lt;li>上状態で&lt;code>証明書の詳細…&lt;/code>をクリックすると証明書の情報を確認でき、ここで市町村のデータなどが閲覧できる。&lt;/li>
+&lt;/ul></description></item><item><title>ご自宅統合認証システムを作った話</title><link>https://blog.mkarakiapps.com/p/20210801-homemade-federated-auth/</link><pubDate>Sun, 01 Aug 2021 03:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210801-homemade-federated-auth/</guid><description>&lt;p>この記事では自宅でLDAP, RADIUS, SAML IdPからなるかんたんな認証システムを作った話をします。
+また、おまけとしてRADIUSでインターネット利用状況の取得をした話も書きます。&lt;/p>
+&lt;p>今回もメモ要素が強いです。
+間違いなどは報告いただけると助かります。&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;ul>
+&lt;li>Ubuntu 20.04&lt;/li>
+&lt;li>hoge.example.com をホスト名に設定&lt;/li>
+&lt;li>example.com をドメインとして利用&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>注意:&lt;/strong> この記事ではSuffixなどの書き換え指示を書きません。ご自身で読み替えてください。&lt;/p>
+&lt;h2 id="ldap">LDAP&lt;/h2>
+&lt;h3 id="ホスト名の設定">ホスト名の設定&lt;/h3>
+&lt;p>この手順はスキップすることも出来ますが、統合認証システムのみを動かすホストであれば設定しておいて損はないと思います。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo hostnamectl set-hostname hoge.example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>また、&lt;code>/etc/hosts&lt;/code>にある旧ホスト名も設定し直してください。&lt;/p>
+&lt;h3 id="slapd-ldap-utilsのインストール">slapd, ldap-utilsのインストール&lt;/h3>
+&lt;p>必要に応じて&lt;code>sudo apt update&lt;/code>を行ってください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install slapd ldap-utils
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>途中で管理者パスワードを設定するように言われるので、思うがままにパスワードを設定してください。&lt;/p>
+&lt;blockquote>
+&lt;p>管理者アカウントは初期状態で &lt;code>cn=admin,dc=example,dc=com&lt;/code> となります。&lt;br>
+ドメイン名を読み替え、メモをしておくことを推奨します&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="ホスト名の設定をスキップした場合">ホスト名の設定をスキップした場合。&lt;/h4>
+&lt;p>ホスト名の設定を行わなかった場合、下記のコマンドを使うことにより手動でドメインの設定を行うことが出来ます。&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo dpkg-reconfigure slapd
+&lt;/code>&lt;/pre>&lt;p>設定値は下記の通りです&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">Name&lt;/th>
+&lt;th style="text-align:left">Value&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Omit OpenLDAP &amp;hellip;&lt;/td>
+&lt;td style="text-align:left">No&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DNS domain name&lt;/td>
+&lt;td style="text-align:left">ホスト名のドメイン部（hoge.example.com =&amp;gt; example.com）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Organization name&lt;/td>
+&lt;td style="text-align:left">上と同じ&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Administrator Password&lt;/td>
+&lt;td style="text-align:left">管理者パスワード&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>以降の設定はデフォルト値を利用してください。&lt;/p>
+&lt;h3 id="ldapにユーザグループ用のouを追加">LDAPにユーザ・グループ用のOUを追加&lt;/h3>
+&lt;p>&lt;code>base.ldif&lt;/code>ファイルを作り、下記の内容を書き込んでください。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-ldif" data-lang="ldif">dn: ou=people,dc=example,dc=com
+objectClass: organizationalUnit
+ou: people
+dn: ou=groups,dc=example,dc=com
+objectClass: organizationalUnit
+ou: groups
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ldapadd -x -D cn=admin,dc=example,dc=com -W -f base.ldif&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Enter LDAP Password: &amp;lt;管理者パスワードを入力&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="openldapでレプリケーションを設定する">OpenLDAPでレプリケーションを設定する。&lt;/h3>
+&lt;h4 id="プロバイダーサーバ-マスターの設定">プロバイダーサーバ (マスター)の設定&lt;/h4>
+&lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述します。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-ldif" data-lang="ldif">dn: cn=module,cn=config
+objectClass: olcModuleList
+cn: module
+olcModulePath: /usr/lib/ldap
+olcModuleLoad: syncprov.la
+dn: olcOverlay=syncprov,olcDatabase={1}mdb,cn=config
+objectClass: olcOverlayConfig
+objectClass: olcSyncProvConfig
+olcOverlay: syncprov
+olcSpSessionLog: 100
+&lt;/code>&lt;/pre>&lt;p>下記のコマンドで適用します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="コンシューマーサーバ-スレーブの設定">コンシューマーサーバ (スレーブ)の設定&lt;/h4>
+&lt;p>&lt;a class="link" href="#%e3%83%9b%e3%82%b9%e3%83%88%e5%90%8d%e3%81%ae%e8%a8%ad%e5%ae%9a" >ホスト名の設定&lt;/a>と&lt;a class="link" href="#slapd,-ldap-utils%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" >slapd, ldap-utilsのインストール&lt;/a>まで行ってください。&lt;/p>
+&lt;p>&lt;code>sync.ldif&lt;/code>のようなファイルを作り、下記の内容を記述してください。（項目はそれぞれ読み替えてください）&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-ldif" data-lang="ldif">dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=001
+provider=ldap://hoge.example.com:389/
+bindmethod=simple
+binddn=&amp;#34;cn=admin,dc=example,dc=com&amp;#34;
+credentials=adminpassword
+searchbase=&amp;#34;dc=example,dc=com&amp;#34;
+scope=sub
+schemachecking=on
+type=refreshAndPersist
+retry=&amp;#34;30 5 300 3&amp;#34;
+interval=00:00:01:00
+&lt;/code>&lt;/pre>&lt;p>&lt;code>olcSyncRepl&lt;/code>の詳細&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>provider&lt;/code> 同期先LDAP&lt;/li>
+&lt;li>&lt;code>binddn&lt;/code> 管理者ユーザ名&lt;/li>
+&lt;li>&lt;code>credentials&lt;/code> 管理者パスワード&lt;/li>
+&lt;li>&lt;code>searchbase&lt;/code> 同期するDN (ドメイン名が良いと思われる)&lt;/li>
+&lt;li>&lt;code>retry&lt;/code> 失敗時のリトライ動作 (&lt;code>[&amp;lt;retry interval&amp;gt; &amp;lt;# of retries&amp;gt;]+&lt;/code>)&lt;/li>
+&lt;li>&lt;code>interval&lt;/code> 同期間隔 (&lt;code>dd:hh:mm:ss&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;p>詳細は&lt;a class="link" href="https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl" target="_blank" rel="noopener"
+>LDAP Administrator&amp;rsquo;s Guide&lt;/a>を参照&lt;/p>
+&lt;p>下記のコマンドで適用します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo ldapadd -Y EXTERNAL -H ldapi:/// -f sync.ldif
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ldap-account-manager">LDAP Account Manager&lt;/h2>
+&lt;h3 id="ldap-account-managerのインストール">LDAP Account Managerのインストール&lt;/h3>
+&lt;p>まず、Apache2とPHPをインストールします。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install apache2 php php-cgi libapache2-mod-php php-mbstring php-common php-pear
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>PHPを有効化します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo a2enconf php7.4-cgi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo systemctl reload apache2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>LDAP Account Managerをインストールします。&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ sudo apt -y install ldap-account-manager
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>注意:&lt;/strong> インストール時はすべてのホストからの通信を受けるようになっています。
+&lt;code>/etc/apache2/conf-enabled/ldap-account-manager.conf&lt;/code>を編集し、アクセス可能ホストを絞ることを強く推奨します。&lt;/p>
+&lt;p>関連の設定が終わったらApache2を再起動します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo systemctl restart apache2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ldap-account-managerの初期設定">LDAP Account Managerの初期設定&lt;/h3>
+&lt;p>画像無しでは解説がとても難しいので別の解説サイトを提示します。&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=8" target="_blank" rel="noopener"
+>Ubuntu 20.04 LTS : OpenLDAP : LDAP Account Manager 設定 : Server World&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.server-world.info" target="_blank" rel="noopener"
+>Server World&lt;/a> はOS毎に様々なサービスの設定方法を提示しているサイトです。
+日本語でわかりやすく書いてありますので、なにか作りたいものがある場合は一度ここを参照してみることをおすすめします。&lt;/p>
+&lt;h3 id="wpa2-enterpriseなどのms-chap認証を行いたい場合">WPA2 EnterpriseなどのMS-CHAP認証を行いたい場合&lt;/h3>
+&lt;p>&lt;strong>本来設定すべきではありませんが&lt;/strong>、MS-CHAP認証を利用したい場合はパスワードを平文で保管する必要があります。&lt;/p>
+&lt;p>&lt;code>Server Settings &amp;gt; Module settings &amp;gt; Unix &amp;gt; Options &amp;gt; Password hash type&lt;/code>
+を&lt;code>PLAIN&lt;/code>に設定してください。&lt;/p>
+&lt;h2 id="freeradius">FreeRADIUS&lt;/h2>
+&lt;h3 id="freeradiusのインストール">FreeRADIUSのインストール&lt;/h3>
+&lt;p>ここではLDAPと連携したRADIUSに必要なパッケージをインストールします。
+利用状況や課金管理は別の項で解説します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install freeradius freeradius-ldap freeradius-utils
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="freeradiusとldapの連携設定">FreeRADIUSとLDAPの連携設定&lt;/h3>
+&lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
+&lt;p>まず、&lt;code>users&lt;/code>を編集し、LDAP認証に対応させます。
+下のコードを追記してください。
+また、それ以外のコードはコメントアウトしても構いません。&lt;/p>
+&lt;pre tabindex="0">&lt;code>DEFAULT Auth-Type = LDAP
+Fall-Through = 1
+&lt;/code>&lt;/pre>&lt;p>次にldapのmodを有効化します。&lt;/p>
+&lt;pre tabindex="0">&lt;code>$ sudo ln -s /etc/freeradius/3.0/mods-available/ldap /etc/freeradius/3.0/mods-enabled/ldap
+&lt;/code>&lt;/pre>&lt;p>&lt;code>mods-enabled/ldap&lt;/code>を編集し、LDAP接続先を設定します。&lt;/p>
+&lt;ul>
+&lt;li>19行目あたり &lt;code>server = ''&lt;/code>でサーバを設定します&lt;/li>
+&lt;li>28行目あたり &lt;code>identity = ''&lt;/code>に管理者アカウントを設定します&lt;/li>
+&lt;li>29行目あたり &lt;code>password = ''&lt;/code>に管理者パスワードを設定します&lt;/li>
+&lt;li>33行目あたり &lt;code>base_dn = ''&lt;/code>に検索対象のDNを設定します。
+この記事通りの設定の場合、&lt;code>ou=people,dc=example,dc=com&lt;/code>となります。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>sites-enabled/default&lt;/code>と&lt;code>sites-enabled/inner-tunnel&lt;/code>を編集し、ldapを有効にします。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>authorize&lt;/code>セクション内の&lt;code>ldap&lt;/code>のコメントアウトを外します&lt;/li>
+&lt;li>&lt;code>authenticate&lt;/code>セクション内の&lt;code>Auth-Type LDAP&lt;/code>セクションのコメントアウトをすべて外します&lt;/li>
+&lt;li>&amp;lsquo;post-auth&amp;rsquo;セクションの&lt;code>ldap&lt;/code>のコメントアウトを外します&lt;/li>
+&lt;/ul>
+&lt;p>以上で連携設定は完了です。
+必要に応じてClientを設定してください。
+すべての設定が終わったらFreeRADIUSを再起動して設定を読み込ませてください。&lt;/p>
+&lt;h3 id="freeradiusでeap-peapms-chapv2を設定する">FreeRADIUSでEAP-PEAP/MS-CHAPv2を設定する&lt;/h3>
+&lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
+&lt;h4 id="eap用の証明書を生成">EAP用の証明書を生成&lt;/h4>
+&lt;p>私は&lt;a class="link" href="https://letsencrypt.org/" target="_blank" rel="noopener"
+>Let&amp;rsquo;s Encrypt&lt;/a>を利用しました。
+注意点として、証明書ファイルの所有者を&lt;code>freerad:freerad&lt;/code>に設定しておかないとFreeRADIUSから読み込めなくなります。&lt;/p>
+&lt;h4 id="freeradiusの設定">FreeRADIUSの設定&lt;/h4>
+&lt;p>&lt;code>mods-enabled/eap&lt;/code>を編集します。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>eap&lt;/code>セクション&lt;code>default_eap_type&lt;/code>を&lt;code>peap&lt;/code>に設定&lt;/li>
+&lt;li>&lt;code>eap&lt;/code>セクション内&lt;code>peap&lt;/code>セクションの&lt;code>use_tunneled_reply&lt;/code>を&lt;code>yes&lt;/code>に&lt;/li>
+&lt;li>&lt;code>eap&lt;/code>セクション内&lt;code>tls-config til-common&lt;/code>セクションの下記の項目を変更してください。
+&lt;ul>
+&lt;li>&lt;code>private_key_password&lt;/code> 秘密鍵のパスワードを指定します。Let&amp;rsquo;s encryptの場合は無視して大丈夫です。&lt;/li>
+&lt;li>&lt;code>private_key_file&lt;/code> 秘密鍵のファイルを指定してください。Let&amp;rsquo;s encryptでは&lt;code>privkey.pem&lt;/code>が該当します。&lt;/li>
+&lt;li>&lt;code>certificate_file&lt;/code> 証明書ファイルを指定してください。 Let&amp;rsquo;s encryptでは&lt;code>fullchain.pem&lt;/code>が該当します。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="注意事項">注意事項&lt;/h4>
+&lt;p>MS-CHAPv2で認証をする際は、LDAP側に平文でパスワードが保管されている必要があります。
+パスワードの取り扱いには十分注意してください。&lt;/p>
+&lt;h3 id="freeradius側でrealmに応じてvlanを切り替える">FreeRADIUS側でRealmに応じてVlanを切り替える&lt;/h3>
+&lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
+&lt;p>&lt;code>proxy.conf&lt;/code>にRealmを設定します。
+設定値にstripを付けることで、LDAP側に問い合わせるユーザ名からRealm部を削除します。&lt;/p>
+&lt;pre tabindex="0">&lt;code>realm hoge.fuga {
+strip
+}
+&lt;/code>&lt;/pre>&lt;p>&lt;code>users&lt;/code>に付与したいVLANを記述します。同じ方法でその他のAttributeも付与できます。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"># Realmが一致している場合にVLANを割り振る
+DEFAULT Realm == &amp;#34;hoge.fuga&amp;#34;
+Tunnel-Type = 13,
+Tunnel-Medium-Type = 6,
+Tunnel-Private-Group-Id = 100
+# ユーザ名とRealmが一致している場合にVLANを割り振る
+DEFAULT User-Name == &amp;#34;user@hoge.fuga&amp;#34;
+Tunnel-Type = 13,
+Tunnel-Medium-Type = 6,
+Tunnel-Private-Group-Id = 100
+&lt;/code>&lt;/pre>&lt;h4 id="課金システムで表示されるユーザ名を一致させたい">課金システムで表示されるユーザ名を一致させたい&lt;/h4>
+&lt;pre tabindex="0">&lt;code class="language-conf" data-lang="conf"> User-Name = &amp;#34;user&amp;#34;,
+&lt;/code>&lt;/pre>&lt;p>を&lt;code>DEFAULT&lt;/code>行の下に挿入してください。&lt;/p>
+&lt;h3 id="radiusで課金管理-accounting-を行う">RADIUSで課金管理 (Accounting) を行う&lt;/h3>
+&lt;h4 id="mysqlを設定する">MySQLを設定する&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install mysql-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>必要に応じて&lt;code>sudo mysql_secure_installation&lt;/code>を使い設定を行ってください。
+今回は完全に閉鎖された空間で利用することを前提にこの設定を行いません。&lt;/p>
+&lt;p>もし、rootパスワードを設定した場合、記事内の&lt;code>mysql -u root&lt;/code>を&lt;code>mysql -u root -p&lt;/code>に読み替えてください。&lt;/p>
+&lt;p>&lt;code>sudo mysql -u root&lt;/code>でMySQLに入り以下のSQLを投入してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DATABASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GRANT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ALL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radius&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">localhost&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">IDENTIFIED&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;radius&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">FLUSH&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">PRIVILEGES&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">QUIT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注意:&lt;/strong> 今回のインストール例ではRADIUS用アカウントのパスワードを&lt;code>radius&lt;/code>に設定しています。
+これは非常に脆弱なパスワードであり、強固なパスワードに設定し直すことを強く推奨します。&lt;/p>
+&lt;p>Root権限で下記のコマンドを実行します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># mysql -u root radius &amp;lt; /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>下記の内容でsqlファイルを作成し、上記の方法でradiusデータベースに適応させてください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">DROP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">TABLE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">radacct&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">radacctid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">21&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">auto_increment&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">groupname&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">realm&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">nasportid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">nasporttype&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctupdatetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">datetime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">unsigned&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctauthentic&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">connectinfo_start&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">connectinfo_stop&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctinputoctets&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctoutputoctets&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">bigint&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">calledstationid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">callingstationid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">50&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">acctterminatecause&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">servicetype&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedprotocol&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">44&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">45&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NOT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nb">varchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">NULL&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">PRIMARY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">radacctid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">UNIQUE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctuniqueid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipaddress&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipv6address&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedipv6prefix&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">framedinterfaceid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">delegatedipv6prefix&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctsessionid&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctsessiontime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctinterval&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">KEY&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">INDEX&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">bulk_close&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">acctstoptime&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">nasipaddress&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">acctstarttime&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ENGINE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">INNODB&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>情報:&lt;/strong> 私がインストールを試みた際は、&lt;code>/etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql&lt;/code>に不具合があり、&lt;a class="link" href="https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql" target="_blank" rel="noopener"
+>GitHubに存在する正しいスキーマ&lt;/a>を適用し、間違っているテーブルを削除しました。&lt;br>
+この不具合は一時的なものであると考えられるため、記事の閲覧時にこの手順が必要ない可能性が高いです。
+また、今回修正したのは最低限課金情報取得に必要なテーブルであり、その他のテーブルにも不具合がある可能性があります。&lt;br>
+不具合があった場合はFreeRADIUSを終了させ、&lt;code>sudo freeradius -X&lt;/code>を実行し、エラーを確認してください。&lt;/p>
+&lt;h4 id="freeradiusをmysqlに対応させる">FreeRADIUSをMySQLに対応させる&lt;/h4>
+&lt;p>この項ではファイル名先頭の&lt;code>/etc/freeradius/3.0/&lt;/code>を省略して記述します。&lt;/p>
+&lt;p>sql関係のパッケージをインストールします。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install freeradius-mysql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>次に、sqlのmodを有効化します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-enabled/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>mods-enabled/sql&lt;/code>を編集し、SQL接続情報を記述します。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>sql&lt;/code>セクションの&lt;code>dialect&lt;/code>を&lt;code>mysql&lt;/code>に設定&lt;/li>
+&lt;li>&lt;code>sql&lt;/code>セクションの&lt;code>driver&lt;/code>を&lt;code>rlm_sql_${dialect}&lt;/code>に設定&lt;/li>
+&lt;li>&lt;code>sql&lt;/code>セクジョン下の&lt;code>mysql&lt;/code>セクションに存在する&lt;code>tls&lt;/code>セクション全体をコメントアウト&lt;/li>
+&lt;li>&lt;code>sql&lt;/code>セクションの&lt;code>server&lt;/code>, &lt;code>port&lt;/code>を必要に応じて変更&lt;/li>
+&lt;li>&lt;code>sql&lt;/code>セクションの&lt;code>login&lt;/code>, &lt;code>password&lt;/code>を前の項で設定したユーザ名、パスワードに設定&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>sites-enabled/default&lt;/code>を編集し、課金情報をMySQLに保管する設定にします。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>accounting&lt;/code>セクション内の&lt;code>sql&lt;/code>をコメントアウトします&lt;/li>
+&lt;/ul>
+&lt;h4 id="daloradiusをインストールする">daloRADIUSをインストールする&lt;/h4>
+&lt;p>今回daloRADIUSは課金情報確認の為だけにインストールします。&lt;/p>
+&lt;p>前提パッケージをインストールします。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install php libapache2-mod-php php-&lt;span class="o">{&lt;/span>gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl&lt;span class="o">}&lt;/span> unzip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>daloRADIUSをダウンロードし、&lt;code>/var/www/html&lt;/code>に展開します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ wget https://github.com/lirantal/daloradius/archive/master.zip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ unzip master.zip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo mv daloradius-master /var/www/html/daloradius
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>MySQLに必要なテーブルを挿入します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/fr2-mysql-daloradius-and-freeradius.sql
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo mysql -u root radius &amp;lt; /var/www/html/daloradius/contrib/db/mysql-daloradius.sql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/var/www/html/daloradius/library/daloradius.conf.php&lt;/code>を編集し、MySQLへのアクセス情報を設定します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_HOST&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;localhost&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># MySQLのホストを設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_PORT&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;3306&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># MySQLのポートを設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_USER&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># ユーザ名を設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_PASS&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># パスワードを設定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nv">$configValues&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;CONFIG_DB_NAME&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;radius&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># データベース名を設定
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>これでdaloRADIUSのインストールは終了です。
+初期パスワードは&lt;code>radius&lt;/code>です。&lt;/p>
+&lt;h2 id="saml-idp">SAML IdP&lt;/h2>
+&lt;p>SimpleSAMLphpを利用し、SAML IdPを行います。&lt;br>
+RSAのSSL証明書が必要になります。私は&lt;a class="link" href="https://letsencrypt.org/" target="_blank" rel="noopener"
+>Let&amp;rsquo;s encrypt&lt;/a>を使いました。&lt;/p>
+&lt;h3 id="simplesamlidpをインストール">SimpleSAMLIdPをインストール&lt;/h3>
+&lt;p>下記のコマンドでインストールと有効化を行います。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo apt -y install simplesamlphp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo a2enconf simplesamlphp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$ sudo service apache2 restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="simplesamlidpを設定">SimpleSAMLIdPを設定&lt;/h3>
+&lt;p>&lt;code>/var/lib/simplesamlphp/secrets.inc.php&lt;/code>を編集し、管理者パスワードを設定します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;auth.adminpassword&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;password&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$config&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;secretsalt&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;SALT&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// この項目は初期状態にしておくべきです。
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/usr/share/simplesamlphp/config/config.php&lt;/code>を編集し、設定を行います。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 前略
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;admin.protectindexpage&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// ログインしていないとサーバ情報が見れないようにする
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;admin.protectmetadata&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 同上
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 中略
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;enable.saml20-idp&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SAML2.0 IdPを有効化
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 後略
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>/usr/share/simplesamlphp/config/authsources.php&lt;/code>を編集し、LDAPへの接続情報を記述します。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 前略
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;example-ldap&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span> &lt;span class="c1">// `example-ldap` はお好みで変更可能です
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;ldap:LDAP&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;hostname&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;ldap://hoge.example.com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;enable_tls&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;timeout&amp;#39;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;port&amp;#39;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">389&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;attributes&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;dnpattern&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;uid=%username%,ou=people,dc=example,dc=com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 検索対象のDNと検索パターンを指定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// 入力されたユーザ名が`%username%`に入る。uid=やcn=として検索パターンを指定できる。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.enable&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;search.base&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;ou=people,dc=example,dc=com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 検索対象DN
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.attributes&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;uid&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;mail&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="c1">// 検索対象の属性
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;search.username&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;search.password&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 後略
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>かなりコンフィグを省略しましたが、概ねこの様になっていれば大丈夫です。&lt;/p>
+&lt;p>次に&lt;code>/usr/share/simplesamlphp/config/metadata/saml20-idp-hosted.php&lt;/code>を編集してIdPの設定を行います。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-php" data-lang="php">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;?&lt;/span>&lt;span class="nx">php&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$metadata&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;__DYNAMIC:1__&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * The hostname for this IdP. This makes it possible to run multiple
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * IdPs from the same configuration. &amp;#39;__DEFAULT__&amp;#39; means that this one
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * should be used by default.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;host&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;__DEFAULT__&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * The private key and certificate to use when signing responses.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * These are stored in the cert-directory.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;privatekey&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;/usr/share/simplesamlphp/config/privkey.pem&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SSL秘密鍵
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;certificate&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;/usr/share/simplesamlphp/config/fullchain.pem&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// SSL証明書
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * The authentication source which should be used to authenticate the
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * * user. This must match one of the entries in config/authsources.php.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;auth&amp;#39;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s1">&amp;#39;example-ldap&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 先程`example-ldap`を書き換えた場合はこちらも書き換えてください。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>この後はSPを&lt;code>/usr/share/simplesamlphp/config/metadata/saml20-sp-remote.php&lt;/code>に記述し、IdPの情報をSPに登録する処理になりますが、この記事では取り扱いません。&lt;/p>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/" target="_blank" rel="noopener"
+>https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://qiita.com/cffnpwr/items/be903005e291d0ece514" target="_blank" rel="noopener"
+>https://qiita.com/cffnpwr/items/be903005e291d0ece514&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=1" target="_blank" rel="noopener"
+>https://www.server-world.info/query?os=Ubuntu_20.04&amp;p=openldap&amp;f=1&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=8" target="_blank" rel="noopener"
+>https://www.server-world.info/query?os=Ubuntu_20.04&amp;p=openldap&amp;f=8&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://computingforgeeks.com/how-to-install-freeradius-and-daloradius-on-ubuntu/" target="_blank" rel="noopener"
+>https://computingforgeeks.com/how-to-install-freeradius-and-daloradius-on-ubuntu/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://qiita.com/bashaway/items/c96a2b14c46acd8cdc40" target="_blank" rel="noopener"
+>https://qiita.com/bashaway/items/c96a2b14c46acd8cdc40&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.casleyconsulting.co.jp/blog/engineer/230/" target="_blank" rel="noopener"
+>https://www.casleyconsulting.co.jp/blog/engineer/230/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://mx.eduroam.jp/docs/conf-freeradius.html" target="_blank" rel="noopener"
+>http://mx.eduroam.jp/docs/conf-freeradius.html&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="http://networklab.sub.jp/lab/network/wifi/201502/476/" target="_blank" rel="noopener"
+>http://networklab.sub.jp/lab/network/wifi/201502/476/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.nii.ac.jp/openforum/upload/20190529PM_Auth_03_Suenaga.pdf" target="_blank" rel="noopener"
+>https://www.nii.ac.jp/openforum/upload/20190529PM_Auth_03_Suenaga.pdf&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://techexpert.tips/ja/freeradius-ja/ubuntu-linux%E3%81%A7%E3%81%AEmysql%E7%B5%B1%E5%90%88%E3%81%A8freeradius%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" target="_blank" rel="noopener"
+>https://techexpert.tips/ja/freeradius-ja/ubuntu-linux%E3%81%A7%E3%81%AEmysql%E7%B5%B1%E5%90%88%E3%81%A8freeradius%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql" target="_blank" rel="noopener"
+>https://github.com/FreeRADIUS/freeradius-server/blob/master/raddb/mods-config/sql/main/mysql/schema.sql&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.server-world.info/query?os=Ubuntu_20.04&amp;amp;p=openldap&amp;amp;f=6" target="_blank" rel="noopener"
+>https://www.server-world.info/query?os=Ubuntu_20.04&amp;p=openldap&amp;f=6&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl" target="_blank" rel="noopener"
+>https://www.openldap.org/doc/admin25/slapdconfig.html#syncrepl&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.secioss.co.jp/simplesamlphp%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6ad%E8%AA%8D%E8%A8%BC%E3%81%99%E3%82%8Bsaml-idp%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/" target="_blank" rel="noopener"
+>https://www.secioss.co.jp/simplesamlphp%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6ad%E8%AA%8D%E8%A8%BC%E3%81%99%E3%82%8Bsaml-idp%E3%82%92%E4%BD%9C%E3%82%8D%E3%81%86/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://simplesamlphp.org/docs/stable/ldap:ldap" target="_blank" rel="noopener"
+>https://simplesamlphp.org/docs/stable/ldap:ldap&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://simplesamlphp.org/docs/stable/simplesamlphp-idp" target="_blank" rel="noopener"
+>https://simplesamlphp.org/docs/stable/simplesamlphp-idp&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>無料で使えるインターネット関連サービス一覧</title><link>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</link><pubDate>Mon, 19 Jul 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210720-free-inet-services/</guid><description>&lt;p>この記事は別のサイトと連携している記事です。&lt;/p>
+&lt;p>常に金欠な私が見つけた無料でいい感じのサービスをメモがてら書いていきます。&lt;/p>
+&lt;h2 id="認証系">認証系&lt;/h2>
+&lt;h3 id="jumpcloudhttpsjumpcloudcom">&lt;a class="link" href="https://jumpcloud.com/" target="_blank" rel="noopener"
+>JumpCloud&lt;/a>&lt;/h3>
+&lt;p>　認証系サービスとしてかなり優秀で、10ユーザまでLDAPやRADIUSが使え、独自の認証連携ソフトウェア上で10デバイスまで無料でほぼフル機能がついています。おまけに最初の10日間は24時間365日チャットサポートが有るという素晴らしい待遇。&lt;/p>
+&lt;p>　サポートを実際に私も受けましたが、画面共有をしながら状況の確認を行っていただき、かなり親切で丁寧な印象を受けました。また、どうやら10日を超えてもフォームでサポートを受けれる気がします。（未確認）&lt;/p>
+&lt;p>　ご自宅 WPA2 EnterpriseやZabbix LDAPなどをやってみたい方は一度試してみてもいいと思います。&lt;/p>
+&lt;h3 id="azure-active-directoryhttpsazuremicrosoftcomja-jpservicesactive-directory">&lt;a class="link" href="https://azure.microsoft.com/ja-jp/services/active-directory/" target="_blank" rel="noopener"
+>Azure Active Directory&lt;/a>&lt;/h3>
+&lt;p>　こちらはSSOとActive Directoryにおいてかなり優秀なシステムです。ローカルのActive Directoryと連携できるAzure AD Connectも無料で使える上、Windows 10 Proなどで使えるAzure ADログインに対応しています（当たり前の話ですが）。いつの間にかSSOも無制限になっており、ユーザもある程度入れられたと記憶しています（具体的な数を調べられなかった）&lt;/p>
+&lt;p>　JumpCloudと連携することでJumpCloud側の制限である10ユーザまでRadiusやLDAPを利用できるようになります。&lt;/p>
+&lt;h3 id="cloudflare-accesshttpswwwcloudflarecomja-jpteamsaccess">&lt;a class="link" href="https://www.cloudflare.com/ja-jp/teams/access/" target="_blank" rel="noopener"
+>Cloudflare Access&lt;/a>&lt;/h3>
+&lt;p>　自分がホストしているWebサービスなどにアクセスする際にメールアドレス認証やSSOをかませる事ができるサービスです。&lt;/p>
+&lt;p>　例えばGrafanaのWebコンソールにアクセスできるユーザを先に紹介しているAzure ADなどで制限することが出来ます。アクセス元はCloudflareのIP扱いになるので、それだけをファイアウォールで許可することである程度安全な環境を作ることが出来ます（ただし、監視などの通信についてはよく考える必要性がありますが）&lt;/p>
+&lt;h2 id="cdn">CDN&lt;/h2>
+&lt;h3 id="cloudflarehttpswwwcloudflarecom">&lt;a class="link" href="https://www.cloudflare.com/" target="_blank" rel="noopener"
+>Cloudflare&lt;/a>&lt;/h3>
+&lt;p>　定番ですが一応紹介しておきます。CDNとして使えますし、IPv6やIPv4非対応ホストにそれぞれのIPを作ってあげる用途で使うことも一応可能です。また、SSL非対応のホストに外見だけSSLを渡すことも出来ます（Cloudflareとホスト間の通信は暗号化されないので注意）&lt;/p>
+&lt;h2 id="vps">VPS&lt;/h2>
+&lt;h3 id="oracle-cloud-free-tier---compute-vmhttpswwworaclecomjpcloudfree">&lt;a class="link" href="https://www.oracle.com/jp/cloud/free/" target="_blank" rel="noopener"
+>Oracle Cloud Free Tier - Compute VM&lt;/a>&lt;/h3>
+&lt;p>　1/8 OCPUと1GBメモリを搭載している2つのVMを使えます。私はここにVPNとZabbixを置いています。かなり快適ですし、これが無料なのは信じられないレベルです。&lt;/p>
+&lt;h2 id="web-server">Web Server&lt;/h2>
+&lt;h3 id="github-pageshttpspagesgithubcom">&lt;a class="link" href="https://pages.github.com/" target="_blank" rel="noopener"
+>GitHub Pages&lt;/a>&lt;/h3>
+&lt;p>　GitHubが提供する静的サイト限定のサービスです。標準でJekyllに対応している他、GitHub Actionsと合わせることでHugoなどのビルドも自動化出来ます。&lt;/p>
+&lt;p>　SSLや独自ドメイン（サブドメイン含む）に対応していますが、ホストするコンテンツが1GB以内である、1ヶ月に100GBまで、1時間に10ビルドまでなどの制限があるそうです。（&lt;a class="link" href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#usage-limits" target="_blank" rel="noopener"
+>About GitHub Pages - GitHub Docs&lt;/a>）&lt;/p>
+&lt;h3 id="xreahttpswwwxreacom">&lt;a class="link" href="https://www.xrea.com/" target="_blank" rel="noopener"
+>XREA&lt;/a>&lt;/h3>
+&lt;p>　GMOが提供するレンタルサーバです。スペックは下記の通り。&lt;/p>
+&lt;ul>
+&lt;li>1GB のストレージ&lt;/li>
+&lt;li>マルチドメイン（10個）&lt;/li>
+&lt;li>1GB/Day の転送量&lt;/li>
+&lt;li>WordPress利用可能&lt;/li>
+&lt;li>チャットサポート&lt;/li>
+&lt;li>CGI/SSI/Perl/PHP/Ruby対応&lt;/li>
+&lt;li>SSL対応（独自、Let&amp;rsquo;s encrypt）&lt;/li>
+&lt;li>&lt;strong>広告が表示されます&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>　また、メインではないのでしょうが、一応100個までメールアドレスを発行できるため、メールサーバとしても使えます。一日あたり1,000通もメールをメールを送ることは無いでしょうから十分だと思っています。&lt;/p>
+&lt;h3 id="starserver-freehttpswwwstarnejpfree">&lt;a class="link" href="https://www.star.ne.jp/free/" target="_blank" rel="noopener"
+>StarServer Free&lt;/a>&lt;/h3>
+&lt;p>　Netowlの提供するレンタルサーバです。プランは下記のとおりです。&lt;/p>
+&lt;ul>
+&lt;li>2GB 広告無し&lt;/li>
+&lt;li>4GB&lt;/li>
+&lt;li>2GB PHP, MySQL(50MB)&lt;/li>
+&lt;/ul>
+&lt;p>　一番上のプラン以外はスマートフォンアクセス時にのみ広告が表示されます。難点として、SSL非対応です。また、ドメインを1つ追加できると謳っていますが、TLDにかなり厳しい制限があり、それ以外を利用するには有料プランにしなければならないとのこと。&lt;/p>
+&lt;p>　個人的には静的なサイトを2GBプランを使ってCloudflareを噛ませて公開するのに丁度いいと思っています。&lt;/p>
+&lt;h3 id="xfreehttpswwwxfreenejp">&lt;a class="link" href="https://www.xfree.ne.jp/" target="_blank" rel="noopener"
+>XFREE&lt;/a>&lt;/h3>
+&lt;p>　Xserverが提供するレンタルサーバです。プランは下記の通り。&lt;/p>
+&lt;ul>
+&lt;li>1GB 広告無し（条件付き）&lt;/li>
+&lt;li>1GB PHP, MySQL(50MB)&lt;/li>
+&lt;li>2GB WordPress (DB: 100MB)&lt;/li>
+&lt;/ul>
+&lt;p>　一番上のプランは3ヶ月以上ファイルを変更する動作をしていない場合に広告表示、それ以外は常時のようです。独自のドメインは10個とのことですが、私が試した限りStarServer Freeと同じようにリストに無いTLDを持つドメインは追加できません。こちらもSSL非対応です。&lt;/p>
+&lt;p>　使い道としてはStarServer Freeと同じ感じになると思います。&lt;/p>
+&lt;h2 id="dns">DNS&lt;/h2>
+&lt;h3 id="cloudflarehttpswwwcloudflarecom-1">&lt;a class="link" href="https://www.cloudflare.com/" target="_blank" rel="noopener"
+>Cloudflare&lt;/a>&lt;/h3>
+&lt;p>　Webが関連するところにはだいたい現れるであろうCloudflareです。DNSツールとしてかなり使いやすく、対応しているサービスをホストするのであればIPを隠す事もできます。&lt;/p>
+&lt;p>　アカウントの共有機能を使って大きなプロジェクトのDNSを複数人で管理したり、APIを使って動作を自動化したりも可能です（応用してDDNSのような使い方もできます）&lt;/p>
+&lt;p>　対応しているドメインであればDNSSECなどのセキュリティ機能もありますし、格安の&lt;a class="link" href="https://www.cloudflare.com/ja-jp/products/registrar/" target="_blank" rel="noopener"
+>Cloudflare Registrar&lt;/a>が利用可能な場合は、何も考えずにここに載せてもいいと思っています。&lt;/p>
+&lt;h3 id="hurricane-electric-free-dns-managementhttpsdnshenet">&lt;a class="link" href="https://dns.he.net/" target="_blank" rel="noopener"
+>Hurricane Electric Free DNS Management&lt;/a>&lt;/h3>
+&lt;p>　Hurricane Electricが提供しているDNSです。DDNSに対応しているサービスで、かなりわかりやすい部類だと思います。DNS機能としては細かい制限がありますがクリティカルなものは無かったと思います。&lt;/p>
+&lt;h2 id="email-forward">Email Forward&lt;/h2>
+&lt;h3 id="improvmxhttpsimprovmxcom">&lt;a class="link" href="https://improvmx.com/" target="_blank" rel="noopener"
+>ImprovMX&lt;/a>&lt;/h3>
+&lt;p>　特定のドメインに来たメールすべてを特定のアドレスに転送できる凄い奴です。制限として、独自に転送先を変更できるアドレスは25個までであることと、10Mbまでの添付ファイルまでしか受け付けてくれないことがあります。&lt;/p>
+&lt;h2 id="email-delivery">Email Delivery&lt;/h2>
+&lt;h3 id="mailjethttpswwwmailjetcom">&lt;a class="link" href="https://www.mailjet.com/" target="_blank" rel="noopener"
+>Mailjet&lt;/a>&lt;/h3>
+&lt;p>　メールの送信サービスです。独自ドメインなどからメールを送信したい場合にとても重宝します（私はZabbixのアラートに使っています）。1日に200通までしか送れませんが、そこまで使うことはないと思います。（というか、1日にアラート200件来たら諦めてサーバの電源引っこ抜く）&lt;/p>
+&lt;p>　APIを使ってメール送信もできるので、様々なサービスと連携ができそうです。&lt;/p>
+&lt;h2 id="vpn">VPN&lt;/h2>
+&lt;h3 id="tailscalehttpstailscalecom">&lt;a class="link" href="https://tailscale.com/" target="_blank" rel="noopener"
+>Tailscale&lt;/a>&lt;/h3>
+&lt;p>　外向きの通信が通れば大体使えるすごいやつです。無料版だと20デバイスまで接続できるとのこと。（私が初めて見たときには100だった気がする）サブネットルーティングなどが使えるためかなり便利なサービスです。（しかし、現在無料で使えるサービスにかなりの制限がかかっているので、Oracle CloudにSoftEther VPN置いたほうが良さそうと思ったり…）&lt;/p>
+&lt;h3 id="vpn-azurehttpwwwvpnazurenetja">&lt;a class="link" href="http://www.vpnazure.net/ja/" target="_blank" rel="noopener"
+>VPN Azure&lt;/a>&lt;/h3>
+&lt;p>　SoftEther VPNに置いて、NAPTやファイアウォール超えをするときにとても重宝するサービスです。前提としてSoftEther VPN Serverを建てる必要がありますが、Oracle Cloudの無料枠などに置くと完全無料でいい感じのVPNが作れます。注意点として、内部に用意する仮想ネットワークはv6非対応です。L2 VPNではv6をつかうことが出来ます。&lt;/p></description></item><item><title>（今更）ブログをはじめました</title><link>https://blog.mkarakiapps.com/p/first-post/</link><pubDate>Sat, 22 May 2021 13:57:09 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/first-post/</guid><description>&lt;p>文字通りブログ環境を構築しました。 過去にQiitaに上げた記事のうちいくつかのコピーして上げています。&lt;/p></description></item><item><title>Oracle Cloudのminimal UbuntuのInstanceで外からつながらない問題</title><link>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</link><pubDate>Fri, 05 Feb 2021 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20210206-oraclecloud-ubuntu-inbound-firewall/</guid><description>&lt;p>自分用のメモです。&lt;/p>
+&lt;h1 id="環境">環境&lt;/h1>
+&lt;ul>
+&lt;li>Oracle Cloudインスタンス&lt;/li>
+&lt;li>Image: Canonical-Ubuntu-20.04-Minimal-2020.12.10-0&lt;/li>
+&lt;li>Shape: VM.Standard.E2.1.Micro&lt;/li>
+&lt;/ul>
+&lt;h1 id="原因">原因&lt;/h1>
+&lt;p>iptablesのルールである&lt;/p>
+&lt;pre tabindex="0">&lt;code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
+&lt;/code>&lt;/pre>&lt;h1 id="解決策">解決策&lt;/h1>
+&lt;pre tabindex="0">&lt;code>/etc/iptables/rules.v4
+&lt;/code>&lt;/pre>&lt;p>の17行目にある&lt;/p>
+&lt;pre tabindex="0">&lt;code>-A INPUT -j REJECT --reject-with icmp-host-prohibited
+&lt;/code>&lt;/pre>&lt;p>をコメントアウトして再起動。（すべてのポートが晒されるので注意）&lt;/p></description></item><item><title>Windows 10をUSBメモリなどに手動でインストールする方法</title><link>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201227-win10-on-usb/</guid><description>&lt;h1 id="まえがき">まえがき&lt;/h1>
+&lt;p>かなり前の話になりますが、株式会社アーク情報システムということろが「BOOT革命/USB」という製品を作っていました。
+この製品は、WindowsをUSBに入れる事ができることを売りにしていたソフトで、私は全く使いませんでしたが一応持ってはいました。
+今回、SSDの代わりに低容量のUSBメモリを臨時で使いたいという問い合わせがあり、私なりに方法を探ったのでメモとして残します。&lt;/p>
+&lt;h1 id="注意">注意&lt;/h1>
+&lt;p>この記事で紹介する動作について、一切の責任を負いませんので予めご了承ください。
+もし、この記事を参考にし作業する際は、自己責任でお願いします。&lt;/p>
+&lt;h1 id="検証環境">検証環境&lt;/h1>
+&lt;ul>
+&lt;li>Windows 10 Home x64 (ビルド不明)&lt;/li>
+&lt;li>VMWare Workstation 16 Player&lt;/li>
+&lt;/ul>
+&lt;h1 id="手順">手順&lt;/h1>
+&lt;h2 id="パーティションの設定">パーティションの設定&lt;/h2>
+&lt;p>Windows 10の場合、基本的にパーティションは3つ生成されます。
+しかし、1つは回復領域であるため無視し、EFI用とシステム用の2つのみで構成しようと思います。&lt;/p>
+&lt;p>パーティションは以下のようになります。&lt;/p>
+&lt;ol>
+&lt;li>200MB-500MB程度 FAT32 Active&lt;/li>
+&lt;li>残りの容量 NTFS&lt;/li>
+&lt;/ol>
+&lt;p>設定方法は解説しませんがActiveにする方法として、&lt;code>diskpart&lt;/code>でパーティションを選択し&lt;code>active&lt;/code>コマンドを打つ方法があります。&lt;/p>
+&lt;p>設定する上で2つのパーティションにドライブレターが割り当てられている必要があります。ここから先の手順では、上からそれぞれ&lt;code>E:&lt;/code>と&lt;code>F:&lt;/code>が割り当てられているとします。&lt;/p>
+&lt;h2 id="イメージの展開">イメージの展開&lt;/h2>
+&lt;p>一般のキッティングにも使われているであろう&lt;code>Dism&lt;/code>を使います。事前にWindows 10のインストールメディア内の&lt;code>sources/install.esd&lt;/code>を抽出してください。
+此処から先の工程では、作業ディレクトリ内に抽出した&lt;code>install.esd&lt;/code>が存在し、アクセス権がある状態を想定し記載します。&lt;/p>
+&lt;h3 id="イメージidを調べる">イメージIDを調べる&lt;/h3>
+&lt;p>管理者権限のPowerShellもしくはコマンドプロンプトで次のコマンドを入力します。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-plaintext:PowerShell（管理者）" data-lang="plaintext:PowerShell（管理者）">&amp;gt; Dism /Get-WimInfo /WimFile:install.esd
+&lt;/code>&lt;/pre>&lt;p>希望するエディションのインデックスを覚えておいてください。
+此処から先では、&lt;code>Windows 10 Home（インデックス: 1）&lt;/code>をインストールする前提で記載していきます。&lt;/p>
+&lt;h3 id="イメージを展開する">イメージを展開する&lt;/h3>
+&lt;p>イメージを展開します。&lt;code>/Index:&lt;/code>と&lt;code>/ApplyDir:&lt;/code>は各自の環境に応じて変更してください。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-plaintext:PowerShell（管理者）" data-lang="plaintext:PowerShell（管理者）">&amp;gt; Dism /Apply-Image /ImageFile:install.esd /Index:1 /ApplyDir:F:\
+&lt;/code>&lt;/pre>&lt;h3 id="ブートローダーの設定">ブートローダーの設定&lt;/h3>
+&lt;p>&lt;code>bcdboot&lt;/code>を使用し、ブートローダーを設定します。各自で&lt;code>E:\Windows&lt;/code>、&lt;code>/l ja-JP&lt;/code>、&lt;code>/s E:&lt;/code>については読み替えてください。
+また、&lt;code>/l ja-JP&lt;/code>はなくても動くはずです。&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-plaintext:PowerShell（管理者）" data-lang="plaintext:PowerShell（管理者）">&amp;gt; bcdboot F:\Windows /l ja-JP /s E: /f ALL
+&lt;/code>&lt;/pre>&lt;h3 id="設定oobe">設定（OOBE）&lt;/h3>
+&lt;p>あとはUSBメモリからブートし、普通に設定をしていくだけです。&lt;/p>
+&lt;h1 id="参考">参考&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a class="link" href="http://ohaohaoha.cocolog-nifty.com/blog/2015/08/windows-to-go-f.html" target="_blank" rel="noopener"
+>Windows To Goを作る: おはのおはなし&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di" target="_blank" rel="noopener"
+>BCDBoot のコマンド ライン オプション | Microsoft Docs&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>docomo らくらくホン F-02J 物理ボタンのキーコード一覧</title><link>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</link><pubDate>Fri, 13 Nov 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</guid><description>&lt;p>メモ用です&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">データ&lt;/th>
+&lt;th style="text-align:left">値&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">メーカー&lt;/td>
+&lt;td style="text-align:left">Fujitsu (docomo)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">機種&lt;/td>
+&lt;td style="text-align:left">F-02J&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Androidバージョン&lt;/td>
+&lt;td style="text-align:left">5.1.1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">ビルド番号&lt;/td>
+&lt;td style="text-align:left">V28R066A&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="調べ方">調べ方&lt;/h2>
+&lt;p>Android API の&lt;code>onKeyDown&lt;/code>メソッド引数&lt;code>keyCode&lt;/code>を参照&lt;/p>
+&lt;h1 id="実測値">実測値&lt;/h1>
+&lt;h2 id="ダイヤルパッド">ダイヤルパッド&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">1&lt;/td>
+&lt;td style="text-align:left">8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;td style="text-align:left">9&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">3&lt;/td>
+&lt;td style="text-align:left">10&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">4&lt;/td>
+&lt;td style="text-align:left">11&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">5&lt;/td>
+&lt;td style="text-align:left">12&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">6&lt;/td>
+&lt;td style="text-align:left">13&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">7&lt;/td>
+&lt;td style="text-align:left">14&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">8&lt;/td>
+&lt;td style="text-align:left">15&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">9&lt;/td>
+&lt;td style="text-align:left">16&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">*&lt;/td>
+&lt;td style="text-align:left">17&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">0&lt;/td>
+&lt;td style="text-align:left">7&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">#&lt;/td>
+&lt;td style="text-align:left">18&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="ワンタッチダイアル">ワンタッチダイアル&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">１&lt;/td>
+&lt;td style="text-align:left">96&lt;/td>
+&lt;td style="text-align:left">外部アプリケーションのポインタ切り替えにも利用（無効化不可）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">２&lt;/td>
+&lt;td style="text-align:left">97&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">３&lt;/td>
+&lt;td style="text-align:left">98&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="方向サブメニューキー">方向・サブメニューキー&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">↑&lt;/td>
+&lt;td style="text-align:left">19&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">↓&lt;/td>
+&lt;td style="text-align:left">20&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">←&lt;/td>
+&lt;td style="text-align:left">21&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">→&lt;/td>
+&lt;td style="text-align:left">22&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">決定&lt;/td>
+&lt;td style="text-align:left">23&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">メニュー&lt;/td>
+&lt;td style="text-align:left">131&lt;/td>
+&lt;td style="text-align:left">Androidの機能に割り当てられている可能性あり（詳細不明）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">電話帳&lt;/td>
+&lt;td style="text-align:left">132&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="発信戻る">発信・戻る&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">発信&lt;/td>
+&lt;td style="text-align:left">5&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">戻る&lt;/td>
+&lt;td style="text-align:left">4&lt;/td>
+&lt;td style="text-align:left">AndroidのBackボタンに割り当て&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">切断&lt;/td>
+&lt;td style="text-align:left">-&lt;/td>
+&lt;td style="text-align:left">不明（アプリケーションの終了になっているため）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="本体下部ファンクションボタン">本体下部ファンクションボタン&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">使い方&lt;/td>
+&lt;td style="text-align:left">104&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">らくらくサイト&lt;/td>
+&lt;td style="text-align:left">105&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">カメラ&lt;/td>
+&lt;td style="text-align:left">103&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="サイドボタン">サイドボタン&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">読み上げ&lt;/td>
+&lt;td style="text-align:left">102&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">+&lt;/td>
+&lt;td style="text-align:left">24&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">-&lt;/td>
+&lt;td style="text-align:left">25&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="ワンタッチブザー">ワンタッチブザー&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">ワンタッチブザー&lt;/td>
+&lt;td style="text-align:left">83&lt;/td>
+&lt;td style="text-align:left">（引き抜き時のみ。引き抜き状態では画面が隠される）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Raspberry Pi上でUbuntu server 20.04を動かしてsshできるようにするまで</title><link>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</link><pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</guid><description>&lt;h1 id="経緯">経緯&lt;/h1>
+&lt;p>Raspbian環境が壊れたので新しく環境を用意しようとしたところ、私の大好きなUbuntuが使えることを知りました。しかし、インストールからsshできるまでかなりの時間を割かなければならなかったので、ここにメモがてら書き留めることにしました。&lt;/p>
+&lt;h1 id="イメージ焼き">イメージ焼き&lt;/h1>
+&lt;p>特に難しいことはないです。&lt;a class="link" href="https://ubuntu.com/download/raspberry-pi" target="_blank" rel="noopener"
+>Install Ubuntu Server on a Raspberry Pi 2, 3 or 4 | Ubuntu&lt;/a> から使いたいRaspberry Pi向けのイメージをダウンロードしてください。
+その際、zipではなくxzで圧縮されていますので、Windowsユーザーの方は7zipなどを使ってください。&lt;/p>
+&lt;h1 id="起動">起動&lt;/h1>
+&lt;p>初期パスワードだけ注意してください。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>ユーザー名&lt;/th>
+&lt;th>パスワード&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ubuntu&lt;/td>
+&lt;td>ubuntu&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>その際、パスワードの変更を求められます。もう一度初期パスワードの入力をしなければならないのでご注意ください。&lt;/p>
+&lt;h1 id="openssh-serverの設定">openssh-serverの設定&lt;/h1>
+&lt;p>openssh-serverはインストールされていますが、hostkeyが設定されていません。
+次のコマンドを使ってhostkeyを自動生成させてください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo dpkg-reconfigure openssh-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>生成出来たらopenssh-serverを再起動してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo service ssh restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="参考">参考&lt;/h1>
+&lt;ul>
+&lt;li>Ubuntu 20.04 LTS Server を Raspberry Pi 4 にインストール - Qiita, &lt;a class="link" href="https://qiita.com/azumabashi/items/182f365cf7405156788c" target="_blank" rel="noopener"
+>https://qiita.com/azumabashi/items/182f365cf7405156788c&lt;/a> 2020.10.10 参照.&lt;/li>
+&lt;li>How To: Ubuntu / Debian Linux Regenerate OpenSSH Host Keys - nixCraft, &lt;a class="link" href="https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/" target="_blank" rel="noopener"
+>https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/&lt;/a> 2020.10.10 参照.&lt;/li>
+&lt;/ul></description></item><item><title>PowerShellを使ってMinecraftのリソースを正式名でエクスポートする</title><link>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</link><pubDate>Thu, 06 Aug 2020 15:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/p/20200807-minecraft-export-resname-with-powershell/</guid><description>&lt;h1 id="最初に">最初に&lt;/h1>
+&lt;p>Minecraftはデフォルトリソースをハッシュ名にして保存しています。実際のリソース名とはJSONファイルを使用して関連付けています。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;objects&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;resource1.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1234&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;resource2.png&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>&lt;span class="nt">&amp;#34;hash&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5678&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>このような形でハッシュとリソース名を対応付けています。これをリソース名にしてエクスポートしようという試みです。&lt;/p>
+&lt;h1 id="対応環境">対応環境&lt;/h1>
+&lt;p>Minecraft 1.16とPowerShell 5.1で実行できることを確認しました。また、オープンソース版のPowerShellでも実行できると思われます。&lt;/p>
+&lt;p>&lt;strong>最低限の検証しかしていません。&lt;/strong>&lt;/p>
+&lt;h1 id="実際のコード">実際のコード&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\objects&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/objectsまでのフルパス&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$listjson&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\indexes\1.16.json&amp;#34;&lt;/span> &lt;span class="c"># .minecraftフォルダ内のassets/indexes内の任意のバージョン名のJSONファイルまでのフルパス&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Owner\AppData\Roaming\.minecraft\assets\extracted&amp;#34;&lt;/span> &lt;span class="c"># エクスポート先フォルダのフルパス&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># ===================&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$json&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Get-Content&lt;/span> &lt;span class="nv">$listjson&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$list&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">ConvertFrom-Json&lt;/span> &lt;span class="n">-InputObject&lt;/span> &lt;span class="nv">$json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">foreach&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$r&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">psobject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Properties&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$fname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$r&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$afname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">objects&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nv">$fname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">hash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mf">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$from&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$objects_dir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$hash_dirname&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$afname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$to&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$exportdir&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="s1">&amp;#39;\&amp;#39;&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="nv">$fname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$destdir&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Split-Path&lt;/span> &lt;span class="nv">$to&lt;/span> &lt;span class="n">-Parent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(!(&lt;/span>&lt;span class="nb">Test-Path&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$destdir&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nv">$0_&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">New-Item&lt;/span> &lt;span class="nv">$destdir&lt;/span> &lt;span class="n">-Type&lt;/span> &lt;span class="n">Directory&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Copy-Item&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="nv">$from&lt;/span> &lt;span class="n">-Destination&lt;/span> &lt;span class="nv">$to&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>汚いコードですが概ねこのような形です。先頭の３行(改行含め４行)を書き換えて利用してください。&lt;/p>
+&lt;h1 id="注意点解説">注意点・解説&lt;/h1>
+&lt;p>　先ほども説明した通り、JSONでリストが作られています。そのため、&lt;code>ConvertFrom-Json&lt;/code>で簡単に読み込むことができました。しかし、いくつか注意点があります。&lt;/p>
+&lt;h2 id="powershell-51ではjsonをhashtableにできない">PowerShell 5.1ではJSONをHashtableにできない&lt;/h2>
+&lt;p>　Windows 10に標準搭載されているPowerShellは&lt;code>-AsHashtable&lt;/code>オプションに対応していません。そのため、&lt;code>PSCustomObject&lt;/code>で出力されたオブジェクト名をそのまま取得することができません。
+　これを解決するために、foreach文では&lt;code>psobject.Properties&lt;/code>を取得したいオブジェクトにつけることによって、プロパティのデータをforeachにかけています。
+　これによって取得したオブジェクト名をそのまま埋め込み、&lt;code>$list.objects.$fname.hash&lt;/code>とすることによってPSCustomObjectのままでデータを取得しています。&lt;/p>
+&lt;h2 id="ファイルコピー時に親ディレクトリがない">ファイルコピー時に親ディレクトリがない&lt;/h2>
+&lt;p>　PowerShellの&lt;code>Copy-Item&lt;/code>コマンドレットは親ディレクトリを自動的に作ることはできません。そのため、&lt;code>Split-Path $to -Parent&lt;/code>で親ディレクトリを取得し、当該ディレクトリがなかった場合は、新しくディレクトリを作成しています。&lt;/p>
+&lt;h2 id="ディレクトリ作成時のログ">ディレクトリ作成時のログ&lt;/h2>
+&lt;p>&lt;code>New-Item&lt;/code>コマンドレットを使用すると、実行時に結果としてディレクトリの詳細データを出力します。しかし、今回は邪魔なだけなので、&lt;code>$0_&lt;/code>変数に結果を代入させることによって表示をなくしています。&lt;/p></description></item></channel></rss>

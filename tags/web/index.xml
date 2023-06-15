@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/web/</link><description>Recent content in Web on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>簡単なサービス紹介用のページテンプレートを作った話</title><link>https://blog.mkarakiapps.com/p/20211221-webtemplate/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211221-webtemplate/</guid><description>何かしらのサービス向けの簡単なテンプレートを作ったので紹介ページを書きます。 ライセンスは未定です （多</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/web/</link><description>Recent content in Web on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 21 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>簡単なサービス紹介用のページテンプレートを作った話</title><link>https://blog.mkarakiapps.com/p/20211221-webtemplate/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211221-webtemplate/</guid><description>&lt;p>何かしらのサービス向けの簡単なテンプレートを作ったので紹介ページを書きます。&lt;/p>
+&lt;p>ライセンスは未定です
+（多分MITにしてHTMLとCSSに書くと思う）&lt;/p>
+&lt;h2 id="見た目">見た目&lt;/h2>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/146897964-0677a0df-b1e5-4a67-ad80-25b1da076677.png"
+loading="lazy"
+alt="Simple One Page Template"
+>&lt;/p>
+&lt;p>こんな感じのテンプレートです。&lt;/p>
+&lt;p>全画面使って少しの情報を載せるスタイルのページが複数ページ分含まれます。&lt;/p>
+&lt;p>一応、&lt;a class="link" href="https://mkarakiapps.com/simple-one-page-template/" target="_blank" rel="noopener"
+>ここ&lt;/a>からフルのデモページを見ることができます。&lt;/p>
+&lt;h2 id="使った技術">使った技術&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/necolas/normalize.css" target="_blank" rel="noopener"
+>normalize.css&lt;/a>と&lt;a class="link" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener"
+>Bootstrap Icons&lt;/a>を利用しました。&lt;/p>
+&lt;p>Bootstrap Iconsは下向き矢印のためだけに使ったので別のやつに置き換えたいなと思っています。&lt;/p>
+&lt;p>また、デモページの画像用に&lt;a class="link" href="https://picsum.photos/" target="_blank" rel="noopener"
+>Lorem Picsum&lt;/a>を利用してます。
+このサービス、ランダムに指定した解像度の画像を持ってきてくれるのでかなり重宝しています&lt;/p>
+&lt;h2 id="最後に">最後に&lt;/h2>
+&lt;p>とりあえずお気持ちでサービスの紹介ページやノリで取ったドメインのWebページなどにご利用されてみてはいかがでしょうか。&lt;/p>
+&lt;p>作例をコメント欄に貼っていただければ私が見に行くかもしれません。&lt;/p></description></item></channel></rss>

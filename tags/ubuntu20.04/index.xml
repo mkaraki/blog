@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ubuntu20.04 on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/ubuntu20.04/</link><description>Recent content in ubuntu20.04 on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/ubuntu20.04/index.xml" rel="self" type="application/rss+xml"/><item><title>Raspberry Pi上でUbuntu server 20.04を動かしてsshできるようにするまで</title><link>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</link><pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</guid><description>経緯 Raspbian環境が壊れたので新しく環境を用意しようとしたところ、私の大好きなUbuntuが使</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ubuntu20.04 on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/ubuntu20.04/</link><description>Recent content in ubuntu20.04 on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/ubuntu20.04/index.xml" rel="self" type="application/rss+xml"/><item><title>Raspberry Pi上でUbuntu server 20.04を動かしてsshできるようにするまで</title><link>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</link><pubDate>Sat, 10 Oct 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20201010-ubuntuserver-on-rpi/</guid><description>&lt;h1 id="経緯">経緯&lt;/h1>
+&lt;p>Raspbian環境が壊れたので新しく環境を用意しようとしたところ、私の大好きなUbuntuが使えることを知りました。しかし、インストールからsshできるまでかなりの時間を割かなければならなかったので、ここにメモがてら書き留めることにしました。&lt;/p>
+&lt;h1 id="イメージ焼き">イメージ焼き&lt;/h1>
+&lt;p>特に難しいことはないです。&lt;a class="link" href="https://ubuntu.com/download/raspberry-pi" target="_blank" rel="noopener"
+>Install Ubuntu Server on a Raspberry Pi 2, 3 or 4 | Ubuntu&lt;/a> から使いたいRaspberry Pi向けのイメージをダウンロードしてください。
+その際、zipではなくxzで圧縮されていますので、Windowsユーザーの方は7zipなどを使ってください。&lt;/p>
+&lt;h1 id="起動">起動&lt;/h1>
+&lt;p>初期パスワードだけ注意してください。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>ユーザー名&lt;/th>
+&lt;th>パスワード&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ubuntu&lt;/td>
+&lt;td>ubuntu&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>その際、パスワードの変更を求められます。もう一度初期パスワードの入力をしなければならないのでご注意ください。&lt;/p>
+&lt;h1 id="openssh-serverの設定">openssh-serverの設定&lt;/h1>
+&lt;p>openssh-serverはインストールされていますが、hostkeyが設定されていません。
+次のコマンドを使ってhostkeyを自動生成させてください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo dpkg-reconfigure openssh-server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>生成出来たらopenssh-serverを再起動してください。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">$ sudo service ssh restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="参考">参考&lt;/h1>
+&lt;ul>
+&lt;li>Ubuntu 20.04 LTS Server を Raspberry Pi 4 にインストール - Qiita, &lt;a class="link" href="https://qiita.com/azumabashi/items/182f365cf7405156788c" target="_blank" rel="noopener"
+>https://qiita.com/azumabashi/items/182f365cf7405156788c&lt;/a> 2020.10.10 参照.&lt;/li>
+&lt;li>How To: Ubuntu / Debian Linux Regenerate OpenSSH Host Keys - nixCraft, &lt;a class="link" href="https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/" target="_blank" rel="noopener"
+>https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/&lt;/a> 2020.10.10 参照.&lt;/li>
+&lt;/ul></description></item></channel></rss>

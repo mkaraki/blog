@@ -1,1 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mail on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/mail/</link><description>Recent content in Mail on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 12 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/mail/index.xml" rel="self" type="application/rss+xml"/><item><title>簡易的なメール受信のセキュリティ的な話</title><link>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</link><pubDate>Sun, 12 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</guid><description>普段私はメールサーバからのレポートやCron Daemonからのメールくらいしか受け取りませんが、 近頃</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mail on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/mail/</link><description>Recent content in Mail on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sun, 12 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/mail/index.xml" rel="self" type="application/rss+xml"/><item><title>簡易的なメール受信のセキュリティ的な話</title><link>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</link><pubDate>Sun, 12 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211212-mailsecurity/</guid><description>&lt;p>普段私はメールサーバからのレポートやCron Daemonからのメールくらいしか受け取りませんが、
+近頃人間からメールを受け取る機会が増えたのでセキュリティについて語ろうと思います。&lt;/p>
+&lt;h2 id="ppapとは">PPAPとは&lt;/h2>
+&lt;p>Japanese Mail Cultureといえば&lt;a class="link" href="https://ja.wikipedia.org/wiki/PPAP_%28%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%29" target="_blank" rel="noopener"
+>PPAP&lt;/a>でしょう。&lt;/p>
+&lt;blockquote>
+&lt;p>Password付きZIPファイルを送ります、Passwordを送ります、Angoka（暗号化）Protocol（プロトコル）&lt;/p>
+&lt;p>JIPDEC, &lt;a class="link" href="https://www.jaipa.or.jp/event/isp_mtg/asahikawa_190912-13/190913-3.pdf" target="_blank" rel="noopener"
+>くたばれPPAP！ ～メールにファイルを添付する習慣を変えるところから始める働き方改革～&lt;/a> より&lt;/p>
+&lt;/blockquote>
+&lt;p>日本企業においてはマナーなどと形容される謎文化です。&lt;/p>
+&lt;p>この文化の難点はただ一つ、パスワード付きzipファイルはセキュリティを通り抜ける点です。&lt;/p>
+&lt;p>試しに、&lt;a class="link" href="https://www.7-zip.org/" target="_blank" rel="noopener"
+>7-Zip&lt;/a>などのツールで適当にパスワード付きzipを作って&lt;a class="link" href="https://www.virustotal.com/" target="_blank" rel="noopener"
+>Virus Total&lt;/a>あたりに投げてみてください。
+普段なら賛否両論なソフトウェアもあっという間に安全なファイルに早変わりします。&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/145703763-2b50090f-6719-4ca1-8a3a-59f727e9e7bf.png"
+loading="lazy"
+alt="やばいファイル"
+>&lt;br>
+生の状態のやばいファイル&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/145703728-98402092-af08-4bb3-8542-c612fa99b791.png"
+loading="lazy"
+alt="PPAPされたやばいファイル"
+>&lt;br>
+PPAPされたやばいファイル&lt;/p>
+&lt;p>ちなみに、今回スキャンに掛けた&lt;a class="link" href="https://shinolocker.com/" target="_blank" rel="noopener"
+>ShinoLocker&lt;/a>はランサムウェアと同じ動作をするテスト用シミュレータです。
+もし本物のランサムウェアが現場のセキュリティをかいくぐって職場に入り込んだら…ぞっとしますよね。&lt;/p>
+&lt;p>実際にEmotetの感染経路にPPAPが存在します。(&lt;a class="link" href="https://www.ipa.go.jp/security/announce/20191202.html" target="_blank" rel="noopener"
+>IPAの記事&lt;/a>)&lt;/p>
+&lt;h3 id="ppap撲滅派の動き">PPAP撲滅派の動き&lt;/h3>
+&lt;p>PPAPは百害あって一利なしの存在です。&lt;/p>
+&lt;p>人によっては誤送信防止という人もいるかもしれませんが、
+パスワードをすぐに送る時点で誤送信防止かは怪しいですし、
+そもそもパスワード付きzipのパスワードは簡易的なものが多く、総当たり可能な桁数であることがほとんどです。&lt;/p>
+&lt;p>例えば&lt;a class="link" href="https://www.iij.ad.jp/" target="_blank" rel="noopener"
+>IIJ&lt;/a>は&lt;a class="link" href="https://www.iij.ad.jp/ppap/" target="_blank" rel="noopener"
+>パスワード付きzipファイルが添付されたメールを受信サーバ側で破棄する運用に変更されました&lt;/a>。&lt;/p>
+&lt;p>これを受け、私個人や、団体としてもPPAPを施されたメールをすべてブロックするか、
+相手にZipファイルのハッシュ値を電話で確認するなどの手法でセキュリティ対策としています。&lt;/p>
+&lt;h2 id="spfdkim">SPF/DKIM&lt;/h2>
+&lt;p>SPF/DKIMは発信者特定の技術です。
+双方の違いは&lt;a class="link" href="https://sendgrid.kke.co.jp/blog/?p=10121" target="_blank" rel="noopener"
+>SendGridが出している記事&lt;/a>がとても参考になります。&lt;/p>
+&lt;p>これらを設定していない企業からのメールは本当にそのメールが当該企業から来たものなのかを判定することが難しいため、
+一度電話やSMSなどの連絡手段を用いてメールが本人から送られたものなのかを確認する運用をしています。&lt;/p>
+&lt;p>注意点として、SPFレコードが設定されてるメールの場合、メールの転送を行うとFAILになります。
+DKIMはこのような問題が起きないため、DKIMも必ず設定し、SPFはSOFTFAILにすることをお勧めしています。&lt;/p>
+&lt;p>また、DMARCを設定することによって、自社ドメインを騙ったメールが送信されているかを簡単に確認することができるので、設定をお勧めします。&lt;/p>
+&lt;h2 id="文面">文面&lt;/h2>
+&lt;p>最後は送信者に対する忠告の意が大きいです。&lt;/p>
+&lt;p>Gmailなどのメールプロバイダでは文面でメールをブロックする場合があるそうです。&lt;/p>
+&lt;p>例えばハートが使われていたり、&lt;code>? 、 。&lt;/code>が多用されていたりなど、
+どう考えてもビジネスメールとして相応しくないメールは迷惑メールボックス行きになります。&lt;/p>
+&lt;p>また、直接的な金銭の要求なども迷惑メールボックス行きになります。&lt;/p>
+&lt;p>確かに、現代では個人同士のやり取りにメールを利用することは少なくなりましたし、
+このフィルターは妥当に思えますが、親しい間柄のビジネスメールでは未だありそうなケースです。
+送信者の方はご注意ください。&lt;/p></description></item></channel></rss>

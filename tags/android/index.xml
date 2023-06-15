@@ -1,1 +1,262 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/android/</link><description>Recent content in Android on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>docomo らくらくホン F-02J 物理ボタンのキーコード一覧</title><link>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</link><pubDate>Fri, 13 Nov 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</guid><description>メモ用です 環境 データ 値 メーカー Fujitsu (docomo) 機種 F-02J Androidバージョン 5.1.1 ビルド番号 V28R066A 調べ方 Android API のonKey</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/android/</link><description>Recent content in Android on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>docomo らくらくホン F-02J 物理ボタンのキーコード一覧</title><link>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</link><pubDate>Fri, 13 Nov 2020 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/docomo-f02j-button-keycodes/</guid><description>&lt;p>メモ用です&lt;/p>
+&lt;h2 id="環境">環境&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">データ&lt;/th>
+&lt;th style="text-align:left">値&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">メーカー&lt;/td>
+&lt;td style="text-align:left">Fujitsu (docomo)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">機種&lt;/td>
+&lt;td style="text-align:left">F-02J&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Androidバージョン&lt;/td>
+&lt;td style="text-align:left">5.1.1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">ビルド番号&lt;/td>
+&lt;td style="text-align:left">V28R066A&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="調べ方">調べ方&lt;/h2>
+&lt;p>Android API の&lt;code>onKeyDown&lt;/code>メソッド引数&lt;code>keyCode&lt;/code>を参照&lt;/p>
+&lt;h1 id="実測値">実測値&lt;/h1>
+&lt;h2 id="ダイヤルパッド">ダイヤルパッド&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">1&lt;/td>
+&lt;td style="text-align:left">8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;td style="text-align:left">9&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">3&lt;/td>
+&lt;td style="text-align:left">10&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">4&lt;/td>
+&lt;td style="text-align:left">11&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">5&lt;/td>
+&lt;td style="text-align:left">12&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">6&lt;/td>
+&lt;td style="text-align:left">13&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">7&lt;/td>
+&lt;td style="text-align:left">14&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">8&lt;/td>
+&lt;td style="text-align:left">15&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">9&lt;/td>
+&lt;td style="text-align:left">16&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">*&lt;/td>
+&lt;td style="text-align:left">17&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">0&lt;/td>
+&lt;td style="text-align:left">7&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">#&lt;/td>
+&lt;td style="text-align:left">18&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="ワンタッチダイアル">ワンタッチダイアル&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">１&lt;/td>
+&lt;td style="text-align:left">96&lt;/td>
+&lt;td style="text-align:left">外部アプリケーションのポインタ切り替えにも利用（無効化不可）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">２&lt;/td>
+&lt;td style="text-align:left">97&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">３&lt;/td>
+&lt;td style="text-align:left">98&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="方向サブメニューキー">方向・サブメニューキー&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">↑&lt;/td>
+&lt;td style="text-align:left">19&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">↓&lt;/td>
+&lt;td style="text-align:left">20&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">←&lt;/td>
+&lt;td style="text-align:left">21&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">→&lt;/td>
+&lt;td style="text-align:left">22&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">決定&lt;/td>
+&lt;td style="text-align:left">23&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">メニュー&lt;/td>
+&lt;td style="text-align:left">131&lt;/td>
+&lt;td style="text-align:left">Androidの機能に割り当てられている可能性あり（詳細不明）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">電話帳&lt;/td>
+&lt;td style="text-align:left">132&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="発信戻る">発信・戻る&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">発信&lt;/td>
+&lt;td style="text-align:left">5&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">戻る&lt;/td>
+&lt;td style="text-align:left">4&lt;/td>
+&lt;td style="text-align:left">AndroidのBackボタンに割り当て&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">切断&lt;/td>
+&lt;td style="text-align:left">-&lt;/td>
+&lt;td style="text-align:left">不明（アプリケーションの終了になっているため）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="本体下部ファンクションボタン">本体下部ファンクションボタン&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">使い方&lt;/td>
+&lt;td style="text-align:left">104&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">らくらくサイト&lt;/td>
+&lt;td style="text-align:left">105&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">カメラ&lt;/td>
+&lt;td style="text-align:left">103&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="サイドボタン">サイドボタン&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">読み上げ&lt;/td>
+&lt;td style="text-align:left">102&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">+&lt;/td>
+&lt;td style="text-align:left">24&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">-&lt;/td>
+&lt;td style="text-align:left">25&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="ワンタッチブザー">ワンタッチブザー&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">表示キー&lt;/th>
+&lt;th style="text-align:left">キーコード&lt;/th>
+&lt;th style="text-align:left">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">ワンタッチブザー&lt;/td>
+&lt;td style="text-align:left">83&lt;/td>
+&lt;td style="text-align:left">（引き抜き時のみ。引き抜き状態では画面が隠される）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item></channel></rss>

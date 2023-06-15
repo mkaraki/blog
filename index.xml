@@ -990,10 +990,10 @@ Pixel Budsは絶対値で合わせているのではないかと思うほど音�
 先日このメッセージが来たので、これの正体について少し探ろうと思います。&lt;/p>
 &lt;p>この記事内では無害化した複数のリンクを記述しているがもし除く場合は自己責任でどうぞ。&lt;/p>
 &lt;h2 id="届いたメッセージ">届いたメッセージ&lt;/h2>
-&lt;p>&lt;a href="https://user-images.githubusercontent.com/26180919/147385322-6fca6ec3-89bd-46df-ae4a-24e863c63b5b.png" >
-&lt;img src="https://user-images.githubusercontent.com/26180919/147385322-6fca6ec3-89bd-46df-ae4a-24e863c63b5b.png"
-loading="lazy" alt="image" >
-&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/147385322-6fca6ec3-89bd-46df-ae4a-24e863c63b5b.png"
+loading="lazy"
+alt="image"
+>&lt;/p>
 &lt;p>リンク(無害化済み):&lt;/p>
 &lt;pre tabindex="0">&lt;code>https:// l [dot] instagram [dot] com /?[My Twitter ID]_41_4559965334=e208e6be6eb9bf297853619e7cbeeeb5&amp;amp;e=ATO57b9Db1Mn3Ux88bPC-yAhRTW3Y4c9jBdUr86_sREpA1AL0RtYnjrvhw3WWJked-hV2C2V&amp;amp;s=1&amp;amp;s=1&amp;amp;u=http:// business [dot] instagram [dot] com /micro_site/url/?event_type=click&amp;amp;site=igb&amp;amp;destination=https%3A%2F%2Fwww.facebook.com%2Fads%2Fig_redirect%2F%3Fd%3DAd-9UUpXVqVLNUx_LYaKZeKek5oYlWjoEdXwzKgPbUE9qRpf4p77ahkKJVJ0kuzPpFtsCo6iNW3tiZLDTY2LPR4xCa63d0ycYdTB4uq9n11GSU2h81N4csFuuiw8b0crQB08jWUYW08n1cc2LujG0j00JXW6R7_-_xEeAwWPs56HHv7PQhgj6ktkhSEU5AhwI8vAMSgikxz8VtJ4JiQRzIjL%26a%3D1%26hash%3DAd9_0TyBjc1n8sHe
 &lt;/code>&lt;/pre>&lt;p>わかる人にはわかると思いますが、&lt;code>l.instagram.com&lt;/code>ドメインはTwitterなどで使われているような&lt;code>t.co&lt;/code>ドメインのような役割を持っています。&lt;/p>
@@ -1032,20 +1032,20 @@ loading="lazy" alt="image" >
 &lt;p>&lt;code>oauth_token&lt;/code>の値が毎回変更されているのが個人的には面白かった。
 連携アプリケーション名はランダムで変更されているようだ。&lt;/p>
 &lt;p>連携画面はこんな感じ。
-&lt;a href="https://user-images.githubusercontent.com/26180919/147386075-4a528ae5-6673-4326-a715-a28b857eccff.png" >
 &lt;img src="https://user-images.githubusercontent.com/26180919/147386075-4a528ae5-6673-4326-a715-a28b857eccff.png"
-loading="lazy" alt="image" >
-&lt;/a>&lt;/p>
+loading="lazy"
+alt="image"
+>&lt;/p>
 &lt;p>&lt;del>たれか暇な人API制限かかるまでアカウント登録してみてくれないかな…&lt;/del>&lt;/p>
 &lt;h2 id="最後に">最後に&lt;/h2>
 &lt;p>こういうの調べるの楽しい！&lt;/p></description></item><item><title>簡単なサービス紹介用のページテンプレートを作った話</title><link>https://blog.mkarakiapps.com/p/20211221-webtemplate/</link><pubDate>Tue, 21 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211221-webtemplate/</guid><description>&lt;p>何かしらのサービス向けの簡単なテンプレートを作ったので紹介ページを書きます。&lt;/p>
 &lt;p>ライセンスは未定です
 （多分MITにしてHTMLとCSSに書くと思う）&lt;/p>
 &lt;h2 id="見た目">見た目&lt;/h2>
-&lt;p>&lt;a href="https://user-images.githubusercontent.com/26180919/146897964-0677a0df-b1e5-4a67-ad80-25b1da076677.png" >
-&lt;img src="https://user-images.githubusercontent.com/26180919/146897964-0677a0df-b1e5-4a67-ad80-25b1da076677.png"
-loading="lazy" alt="Simple One Page Template" >
-&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/146897964-0677a0df-b1e5-4a67-ad80-25b1da076677.png"
+loading="lazy"
+alt="Simple One Page Template"
+>&lt;/p>
 &lt;p>こんな感じのテンプレートです。&lt;/p>
 &lt;p>全画面使って少しの情報を載せるスタイルのページが複数ページ分含まれます。&lt;/p>
 &lt;p>一応、&lt;a class="link" href="https://mkarakiapps.com/simple-one-page-template/" target="_blank" rel="noopener"
@@ -1076,15 +1076,15 @@ loading="lazy" alt="Simple One Page Template" >
 >7-Zip&lt;/a>などのツールで適当にパスワード付きzipを作って&lt;a class="link" href="https://www.virustotal.com/" target="_blank" rel="noopener"
 >Virus Total&lt;/a>あたりに投げてみてください。
 普段なら賛否両論なソフトウェアもあっという間に安全なファイルに早変わりします。&lt;/p>
-&lt;p>&lt;a href="https://user-images.githubusercontent.com/26180919/145703763-2b50090f-6719-4ca1-8a3a-59f727e9e7bf.png" >
-&lt;img src="https://user-images.githubusercontent.com/26180919/145703763-2b50090f-6719-4ca1-8a3a-59f727e9e7bf.png"
-loading="lazy" alt="やばいファイル" >
-&lt;/a>&lt;br>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/145703763-2b50090f-6719-4ca1-8a3a-59f727e9e7bf.png"
+loading="lazy"
+alt="やばいファイル"
+>&lt;br>
 生の状態のやばいファイル&lt;/p>
-&lt;p>&lt;a href="https://user-images.githubusercontent.com/26180919/145703728-98402092-af08-4bb3-8542-c612fa99b791.png" >
-&lt;img src="https://user-images.githubusercontent.com/26180919/145703728-98402092-af08-4bb3-8542-c612fa99b791.png"
-loading="lazy" alt="PPAPされたやばいファイル" >
-&lt;/a>&lt;br>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/145703728-98402092-af08-4bb3-8542-c612fa99b791.png"
+loading="lazy"
+alt="PPAPされたやばいファイル"
+>&lt;br>
 PPAPされたやばいファイル&lt;/p>
 &lt;p>ちなみに、今回スキャンに掛けた&lt;a class="link" href="https://shinolocker.com/" target="_blank" rel="noopener"
 >ShinoLocker&lt;/a>はランサムウェアと同じ動作をするテスト用シミュレータです。
@@ -1138,10 +1138,10 @@ DKIMはこのような問題が起きないため、DKIMも必ず設定し、SPF
 &lt;h2 id="resource-pool">Resource Pool&lt;/h2>
 &lt;p>リソースを管理する際に利用する単位&lt;/p>
 &lt;h2 id="controller">Controller&lt;/h2>
-&lt;p>&lt;a href="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg" >
-&lt;img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"
-loading="lazy" alt="システム図" >
-&lt;/a>&lt;br>
+&lt;p>&lt;img src="https://discourse.maas.io/uploads/default/original/1X/02a7ca58b989c67c74421b9d5e0c8b32907a2de1.jpeg"
+loading="lazy"
+alt="システム図"
+>&lt;br>
 Image from: &lt;a class="link" href="https://maas.io/docs/snap/2.9/ui/controllers" target="_blank" rel="noopener"
 >https://maas.io/docs/snap/2.9/ui/controllers&lt;/a>&lt;/p>
 &lt;h3 id="rack-controller">Rack Controller&lt;/h3>
@@ -1234,20 +1234,20 @@ WindowsのロケールはJapaneseである必要性がある。この設定が�
 &lt;li>設定画面左側のメニューから&lt;code>署名&lt;/code>を選択&lt;/li>
 &lt;li>&lt;code>IDと信頼済み証明書&lt;/code>メニューを開く&lt;/li>
 &lt;li>ウィンドウ左メニューから&lt;code>信頼済み証明書&lt;/code>を選択&lt;/li>
-&lt;li>画面上部の&lt;a href="https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png" >
-&lt;img src="https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png"
-loading="lazy" alt="取り込み" >
-&lt;/a>を選択&lt;/li>
+&lt;li>画面上部の&lt;img src="https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png"
+loading="lazy"
+alt="取り込み"
+>を選択&lt;/li>
 &lt;li>新規ウィンドウ上側リスト右の参照を選択&lt;/li>
 &lt;li>ダウンロードしたルート証明書を選択&lt;/li>
 &lt;li>複数のルート証明書をダウンロードした場合は手順&lt;code>6.&lt;/code>から別の証明書を読み込む&lt;/li>
 &lt;li>ウィンドウ下の取り込みボタンを選択&lt;/li>
 &lt;li>Acrobat Readerを再起動する&lt;/li>
 &lt;li>再度手順&lt;code>4.&lt;/code>まで進める&lt;/li>
-&lt;li>&lt;code>公的個人認証サービス署名用, 地方公共団体情報システム機構&lt;/code>から始まる証明書を1つずつ選択し、&lt;a href="https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png" >
-&lt;img src="https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png"
-loading="lazy" alt="信頼性を編集" >
-&lt;/a>ボタンを選択する&lt;/li>
+&lt;li>&lt;code>公的個人認証サービス署名用, 地方公共団体情報システム機構&lt;/code>から始まる証明書を1つずつ選択し、&lt;img src="https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png"
+loading="lazy"
+alt="信頼性を編集"
+>ボタンを選択する&lt;/li>
 &lt;li>&lt;code>この証明書を信頼済みのルートとして使用&lt;/code>にチェックを入れ、画面下&lt;code>OK&lt;/code>をクリックする&lt;/li>
 &lt;li>2つ以上追加した場合は手順&lt;code>12.&lt;/code>に戻りすべての証明書に実施する&lt;/li>
 &lt;li>再度Acrobat Readerを再起動する&lt;/li>
@@ -1255,10 +1255,10 @@ loading="lazy" alt="信頼性を編集" >
 &lt;p>以上でルート証明書が信頼リストに追加される。&lt;/p>
 &lt;h3 id="署名を検証する">署名を検証する&lt;/h3>
 &lt;p>Acrobat Readerで検証したいファイルを開く。&lt;/p>
-&lt;p>&lt;a href="https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png" >
-&lt;img src="https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png"
-loading="lazy" alt="署名済みであり、すべての署名が有効です。" >
-&lt;/a>&lt;br>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png"
+loading="lazy"
+alt="署名済みであり、すべての署名が有効です。"
+>&lt;br>
 の表示が出れば問題ない。&lt;/p>
 &lt;h4 id="署名者を確認する">署名者を確認する&lt;/h4>
 &lt;p>&lt;a class="link" href="#%e7%bd%b2%e5%90%8d%e3%82%92%e6%a4%9c%e8%a8%bc%e3%81%99%e3%82%8b" >署名を検証する&lt;/a>セクションで出たアラートにある&lt;code>署名パネル&lt;/code>ボタンを選択する&lt;/p>
@@ -2174,4 +2174,34 @@ RSAのSSL証明書が必要になります。私は&lt;a class="link" href="http
 &lt;h2 id="ファイルコピー時に親ディレクトリがない">ファイルコピー時に親ディレクトリがない&lt;/h2>
 &lt;p>　PowerShellの&lt;code>Copy-Item&lt;/code>コマンドレットは親ディレクトリを自動的に作ることはできません。そのため、&lt;code>Split-Path $to -Parent&lt;/code>で親ディレクトリを取得し、当該ディレクトリがなかった場合は、新しくディレクトリを作成しています。&lt;/p>
 &lt;h2 id="ディレクトリ作成時のログ">ディレクトリ作成時のログ&lt;/h2>
-&lt;p>&lt;code>New-Item&lt;/code>コマンドレットを使用すると、実行時に結果としてディレクトリの詳細データを出力します。しかし、今回は邪魔なだけなので、&lt;code>$0_&lt;/code>変数に結果を代入させることによって表示をなくしています。&lt;/p></description></item></channel></rss>
+&lt;p>&lt;code>New-Item&lt;/code>コマンドレットを使用すると、実行時に結果としてディレクトリの詳細データを出力します。しかし、今回は邪魔なだけなので、&lt;code>$0_&lt;/code>変数に結果を代入させることによって表示をなくしています。&lt;/p></description></item><item><title>Archives</title><link>https://blog.mkarakiapps.com/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/archives/</guid><description/></item><item><title>Privacy Policy</title><link>https://blog.mkarakiapps.com/privacy-policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.mkarakiapps.com/privacy-policy/</guid><description>&lt;p>当ブログのプライバシーポリシー・免責事項を次の通り記載します。&lt;/p>
+&lt;h2 id="個人情報の利用目的">個人情報の利用目的&lt;/h2>
+&lt;p>当ブログでは、お問い合わせ時やコメント時に、名前（ハンドルネーム）、メールアドレス等の個人情報をご登録いただく場合がございます。&lt;/p>
+&lt;p>これらの個人情報は質問に対する回答や必要な情報を電子メールなどをでご連絡する場合に利用させていただくものであり、個人情報をご提供いただく際の目的以外では利用いたしません。&lt;/p>
+&lt;h2 id="個人情報の第三者への開示">個人情報の第三者への開示&lt;/h2>
+&lt;p>取得した個人情報は適切に管理し、以下に該当する場合を除いて第三者に開示することはありません。&lt;/p>
+&lt;p>・本人の同意が得られた場合
+・法令により開示が求められた場合&lt;/p>
+&lt;h2 id="cookieの使用">Cookieの使用&lt;/h2>
+&lt;p>当ブログでは、広告配信やアクセス解析のためにCookieを使用しています&lt;/p>
+&lt;p>Cookieによりブラウザを識別していますが、特定の個人の識別はできない状態で匿名性が保たれています。&lt;/p>
+&lt;p>Cookieの使用を望まない場合、ブラウザからCookieを無効に設定できます。&lt;/p>
+&lt;h2 id="広告配信サービス">広告配信サービス&lt;/h2>
+&lt;p>当ブログでは、第三者配信の広告サービスを利用して広告を掲載しています。&lt;/p>
+&lt;p>第三者配信事業者は、ユーザーの興味に応じたパーソナライズ広告を表示するためにCookieを使用しています。&lt;/p>
+&lt;p>パーソナライズ広告は、&lt;a class="link" href="https://www.google.com/settings/ads" target="_blank" rel="noopener"
+>広告設定&lt;/a>で無効にできます。&lt;/p>
+&lt;h2 id="アクセス解析ツール">アクセス解析ツール&lt;/h2>
+&lt;p>当ブログでは、Googleアナリティクス, Clarity, Cloudflare Insightsによりアクセス情報を解析しています。&lt;/p>
+&lt;p>アクセス情報の解析にはCookieを使用しています。また、アクセス情報の収集はCookieを無効にすることで拒否できます。&lt;/p>
+&lt;p>各社の個人情報の取り扱いについては、それぞのホームページをご覧ください。&lt;/p>
+&lt;h2 id="免責事項">免責事項&lt;/h2>
+&lt;p>当ブログは、掲載内容によって生じた損害に対する一切の責任を負いません。&lt;/p>
+&lt;p>各コンテンツでは、できる限り正確な情報提供を心がけておりますが、正確性や安全性を保証するものではありません。&lt;/p>
+&lt;p>また、リンク先の他サイトで提供される情報・サービスについても、責任を負いかねますのでご了承ください。&lt;/p>
+&lt;h2 id="著作権">著作権&lt;/h2>
+&lt;p>当ブログに掲載されている文章・画像の著作権は、運営者に帰属しています。&lt;/p>
+&lt;p>法的に認められている引用の範囲を超えて、無断で転載することを禁止します。&lt;/p>
+&lt;h2 id="プライバシーポリシーの変更">プライバシーポリシーの変更&lt;/h2>
+&lt;p>当ブログは、個人情報に関して適用される日本の法令を遵守するとともに、本プライバシーポリシーの内容を適宜見直して改善に努めます。&lt;/p>
+&lt;p>修正された最新のプライバシーポリシーは常に本ページにて開示されます。&lt;/p></description></item></channel></rss>

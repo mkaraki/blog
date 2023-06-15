@@ -1,1 +1,119 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PDF on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/pdf/</link><description>Recent content in PDF on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/pdf/index.xml" rel="self" type="application/rss+xml"/><item><title>日本の公的個人認証サービスを利用したPDF署名とその受け入れ</title><link>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</link><pubDate>Thu, 02 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</guid><description>初めに 公的個人認証サービス(JPKI)は国および地方公共団体が共同で運営する地方公共団体情報システム</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PDF on mkarakiのブログ</title><link>https://blog.mkarakiapps.com/tags/pdf/</link><description>Recent content in PDF on mkarakiのブログ</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://blog.mkarakiapps.com/tags/pdf/index.xml" rel="self" type="application/rss+xml"/><item><title>日本の公的個人認証サービスを利用したPDF署名とその受け入れ</title><link>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</link><pubDate>Thu, 02 Dec 2021 00:00:00 +0900</pubDate><guid>https://blog.mkarakiapps.com/p/20211202-jpki-sign/</guid><description>&lt;h2 id="初めに">初めに&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>公的個人認証サービス(JPKI)&lt;/a>は国および地方公共団体が共同で運営する&lt;a class="link" href="https://www.j-lis.go.jp/" target="_blank" rel="noopener"
+>地方公共団体情報システム機構&lt;/a>の提供するサービスである。&lt;/p>
+&lt;p>この記事では2021/12/02時点でのこのサービスとマイナンバーカードを利用したPDF署名とその受け入れについて記述するため、今後この記事の内容が利用できなくなる可能性も存在する。&lt;/p>
+&lt;p>マイナンバーに関する法律は多くあり、それらを遵守したうえで本ページを参考にしていただきたい。この記事が必ずにも現在の法律に&lt;strong>適応しているわけではない&lt;/strong>ことを留意したうえで閲覧していただきたい。&lt;/p>
+&lt;h2 id="署名により記録される情報">署名により記録される情報&lt;/h2>
+&lt;p>署名をすることにより、下記の個人情報がPDFファイルに記載される。&lt;/p>
+&lt;ul>
+&lt;li>氏名&lt;/li>
+&lt;li>マイナンバー上に記述されている都道府県及び市町村&lt;/li>
+&lt;/ul>
+&lt;p>上記情報を渡したくない相手に対しては署名したファイルを送信しないことを強く推奨する。&lt;/p>
+&lt;h2 id="サードパーティ製のソフトウェアを利用して署名する">サードパーティ製のソフトウェアを利用して署名する&lt;/h2>
+&lt;p>公式的に署名する方法は&lt;a class="link" href="https://www.touki-kyoutaku-online.moj.go.jp/cautions/security/pdf_sign_inst.html" target="_blank" rel="noopener"
+>PDF署名プラグイン&lt;/a>を利用する方法が&lt;a class="link" href="https://www.moj.go.jp/" target="_blank" rel="noopener"
+>法務省&lt;/a>(&lt;a class="link" href="https://www.touki-kyoutaku-online.moj.go.jp/" target="_blank" rel="noopener"
+>登記ねっと 供託ねっと&lt;/a>)から提供されている。
+しかし、この方法では&lt;a class="link" href="https://www.adobe.com/" target="_blank" rel="noopener"
+>Adobe Inc.&lt;/a>の&lt;a class="link" href="https://www.adobe.com/acrobat.html" target="_blank" rel="noopener"
+>Adobe Acrobat&lt;/a>が必要であり、個人では敷居が高い。(無料版の&lt;a class="link" href="https://www.adobe.com/acrobat/pdf-reader.html" target="_blank" rel="noopener"
+>Adobe Acrobat Reader&lt;/a>では署名の検証のみ可能)&lt;/p>
+&lt;p>今回は有志の方が開発した&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>JPKI PDF SIGNER&lt;/a>(無料)を利用する。&lt;/p>
+&lt;h3 id="事前準備">事前準備&lt;/h3>
+&lt;p>あらかじめカードリーダのドライバをインストールしておく必要がある。&lt;/p>
+&lt;h3 id="利用者クライアントソフトのインストール">利用者クライアントソフトのインストール&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>JPKI&lt;/a>の提供する&lt;a class="link" href="https://www.jpki.go.jp/download/index.html" target="_blank" rel="noopener"
+>利用者クライアントソフト&lt;/a>をダウンロードし、インストールする必要がある。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong>
+WindowsのロケールはJapaneseである必要性がある。この設定がされていない場合インストーラや本体ソフトウェアが動作しない。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="jpki-pdf-signerのダウンロード">JPKI PDF SIGNERのダウンロード&lt;/h3>
+&lt;p>先に説明した通り、&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>JPKI PDF SIGNER&lt;/a>は有志の開発したマイナンバー用のPDF署名ソフトウェアである。&lt;/p>
+&lt;p>もし第三者の作成したソフトウェアに不信感を感じる場合、&lt;a class="link" href="https://ja.osdn.net/projects/jpki/" target="_blank" rel="noopener"
+>OSDNページ&lt;/a>からソースコードをダウンロードし、ユーザ側で検証とビルドを行うことを推奨する。&lt;/p>
+&lt;p>このアプリケーションにインストーラは存在しない。&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>公式ページ&lt;/a>からzipファイルをダウンロードし、各自で解凍して利用する。&lt;/p>
+&lt;h3 id="署名を行う">署名を行う&lt;/h3>
+&lt;p>&lt;a class="link" href="https://jpki.osdn.jp/" target="_blank" rel="noopener"
+>公式サイト&lt;/a>に操作方法が記述されているので説明は不要であると思うが念のために記述する。&lt;/p>
+&lt;h4 id="印影を利用しない署名">印影を利用しない署名&lt;/h4>
+&lt;p>JPKI PDF SIGNERでPDFファイルを開き、右側メニューの&lt;code>印影なしで電子署名する&lt;/code>をクリックする。
+マイナンバーカードがコンピュータに認識されていれば&lt;a class="link" href="https://www.e-tax.nta.go.jp/toiawase/qa/kanbenka/27.htm" target="_blank" rel="noopener"
+>公的個人認証　署名用パスワード&lt;/a>の入力が求められる。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong>
+&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>JPKI&lt;/a>のサイトでは、「署名用電子証明書のパスワードを5回間違えるとロックされ、市区町村窓口でのロック解除が必要となる。」とアナウンスされている。&lt;/p>
+&lt;p>詳細は&lt;a class="link" href="https://www.jpki.go.jp/procedure/password.html" target="_blank" rel="noopener"
+>パスワードの失念&lt;/a>を参照のこと。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="署名された文章の受け入れ">署名された文章の受け入れ&lt;/h2>
+&lt;p>署名の検証には&lt;a class="link" href="https://www.adobe.com/" target="_blank" rel="noopener"
+>Adobe Inc.&lt;/a>の&lt;a class="link" href="https://www.adobe.com/acrobat/pdf-reader.html" target="_blank" rel="noopener"
+>Adobe Acrobat Reader&lt;/a>(無料)を利用する。&lt;/p>
+&lt;h3 id="adobe-acrobat-readerのインストール">Adobe Acrobat Readerのインストール&lt;/h3>
+&lt;p>&lt;a class="link" href="https://helpx.adobe.com/jp/acrobat/kb/cq101423182.html" target="_blank" rel="noopener"
+>公式インストールマニュアル&lt;/a>を参考に&lt;a class="link" href="https://www.adobe.com/acrobat/pdf-reader.html" target="_blank" rel="noopener"
+>Adobe Acrobat Reader&lt;/a>をインストールする。&lt;/p>
+&lt;h3 id="ルート証明書のダウンロード">ルート証明書のダウンロード&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.jpki.go.jp" target="_blank" rel="noopener"
+>JPKI&lt;/a>サイトからルート証明書をダウンロードする。&lt;/p>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://www.jpki.go.jp/ca/index.html" target="_blank" rel="noopener"
+>認証局の運営&lt;/a>ページにアクセスする。&lt;/li>
+&lt;li>画面左メニューから&lt;a class="link" href="https://www.jpki.go.jp/ca/ca_rules3.html" target="_blank" rel="noopener"
+>署名用認証局の運営に関する情報&lt;/a>を開く&lt;/li>
+&lt;li>&lt;code>署名用認証局の自己署名証明書&lt;/code>を選択しダウンロードする。&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>&lt;strong>注意:&lt;/strong>
+署名用認証局の自己署名証明書は存在するすべての証明書をダウンロードし追加すること。
+これは、マイナンバー(証明書)発行時期により利用されているルート証明書が異なるためである。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="ルート証明書の追加">ルート証明書の追加&lt;/h3>
+&lt;p>悲しいことにAdobe Acrobat ReaderにはJPKIで利用されている署名用認証局の自己署名証明書は信頼リストに追加されていない。
+そのため、手動で信頼リストに追加する必要がある。&lt;/p>
+&lt;p>下記に手順を示す&lt;/p>
+&lt;ol>
+&lt;li>Acrobat Readerを開きウィンドウ上部のメニューバーから&lt;code>編集&lt;/code>-&amp;gt;&lt;code>環境設定&lt;/code>と進む&lt;/li>
+&lt;li>設定画面左側のメニューから&lt;code>署名&lt;/code>を選択&lt;/li>
+&lt;li>&lt;code>IDと信頼済み証明書&lt;/code>メニューを開く&lt;/li>
+&lt;li>ウィンドウ左メニューから&lt;code>信頼済み証明書&lt;/code>を選択&lt;/li>
+&lt;li>画面上部の&lt;img src="https://user-images.githubusercontent.com/26180919/144451492-feb927af-564f-4a08-a84c-84f49b491647.png"
+loading="lazy"
+alt="取り込み"
+>を選択&lt;/li>
+&lt;li>新規ウィンドウ上側リスト右の参照を選択&lt;/li>
+&lt;li>ダウンロードしたルート証明書を選択&lt;/li>
+&lt;li>複数のルート証明書をダウンロードした場合は手順&lt;code>6.&lt;/code>から別の証明書を読み込む&lt;/li>
+&lt;li>ウィンドウ下の取り込みボタンを選択&lt;/li>
+&lt;li>Acrobat Readerを再起動する&lt;/li>
+&lt;li>再度手順&lt;code>4.&lt;/code>まで進める&lt;/li>
+&lt;li>&lt;code>公的個人認証サービス署名用, 地方公共団体情報システム機構&lt;/code>から始まる証明書を1つずつ選択し、&lt;img src="https://user-images.githubusercontent.com/26180919/144453978-7a28b974-b635-4af8-9c6d-ed52da298023.png"
+loading="lazy"
+alt="信頼性を編集"
+>ボタンを選択する&lt;/li>
+&lt;li>&lt;code>この証明書を信頼済みのルートとして使用&lt;/code>にチェックを入れ、画面下&lt;code>OK&lt;/code>をクリックする&lt;/li>
+&lt;li>2つ以上追加した場合は手順&lt;code>12.&lt;/code>に戻りすべての証明書に実施する&lt;/li>
+&lt;li>再度Acrobat Readerを再起動する&lt;/li>
+&lt;/ol>
+&lt;p>以上でルート証明書が信頼リストに追加される。&lt;/p>
+&lt;h3 id="署名を検証する">署名を検証する&lt;/h3>
+&lt;p>Acrobat Readerで検証したいファイルを開く。&lt;/p>
+&lt;p>&lt;img src="https://user-images.githubusercontent.com/26180919/144454484-dcf3f6dc-fcef-4c5a-8265-ad1bb7e49c04.png"
+loading="lazy"
+alt="署名済みであり、すべての署名が有効です。"
+>&lt;br>
+の表示が出れば問題ない。&lt;/p>
+&lt;h4 id="署名者を確認する">署名者を確認する&lt;/h4>
+&lt;p>&lt;a class="link" href="#%e7%bd%b2%e5%90%8d%e3%82%92%e6%a4%9c%e8%a8%bc%e3%81%99%e3%82%8b" >署名を検証する&lt;/a>セクションで出たアラートにある&lt;code>署名パネル&lt;/code>ボタンを選択する&lt;/p>
+&lt;ul>
+&lt;li>署名者を確認したい署名を開き、&lt;code>署名の詳細&lt;/code>を開くと署名者の氏名が表示される。&lt;/li>
+&lt;li>上状態で&lt;code>証明書の詳細…&lt;/code>をクリックすると証明書の情報を確認でき、ここで市町村のデータなどが閲覧できる。&lt;/li>
+&lt;/ul></description></item></channel></rss>
