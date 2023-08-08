@@ -20,3 +20,22 @@ pip自体もSSLを利用するため、明示的にいくつかのホストをTr
 ```
 pip install pip-system-certs --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org
 ```
+
+## PHP
+
+`php.ini`の`[curl]`と`[openssl]`セクションに記述します。
+
+```ini
+[curl]
+curl.cainfo =c:\fortigate.pem
+
+[openssl]
+openssl.cafile=c:\fortigate.pem
+```
+
+動作確認は`php -a`で
+```php
+curl_exec(curl_init("https://ifconfig.io"));
+```
+
+などでいいと思います。
