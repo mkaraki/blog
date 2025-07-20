@@ -1,0 +1,51 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { Image } from 'astro:assets';
+
+const tags = await (async () => {
+    let tags: string[] = [];
+    const posts = await getCollection('blog');
+    posts.forEach(post => {
+        if (post.data.tags) {
+            post.data.tags.forEach(tag => {
+                if (!tags.includes(tag)) {
+                    tags.push(tag);
+                }
+            });
+        }
+    })
+    return tags;
+})();
+
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+        h2 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<Header />
+<main>
+    <h2>タグ一覧</h2>
+    <ul class="article-list">
+        {tags.map((tag) => (
+            <li>
+                <a href={`/tags/${tag}/`}>#{tag}</a>
+            </li>
+        ))}
+    </ul>
+</main>
+<Footer />
+</body>
+</html>
