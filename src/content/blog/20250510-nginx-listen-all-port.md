@@ -1,6 +1,7 @@
 ---
 title: nginxで全ポートをlistenする
 date: 2025-05-10T00:00:00+09:00
+updatedDate: 2025-09-08T00:00:00+09:00
 author: mkaraki
 slug: '20250510-nginx-listen-all-port'
 ---
@@ -8,6 +9,8 @@ slug: '20250510-nginx-listen-all-port'
 nginxで全ポートをlistenする方法です。
 実験がてら作ってみた方法ですから、実際にこのような事をしたい場合は、
 iptablesでREDIRECTする方が良いでしょう。
+
+この手法を取ると、システム全体でネットワーク接続を発生できなくなります。
 
 今回はどうしてもserver_portを利用したかったので、
 このような力業を利用しました。
