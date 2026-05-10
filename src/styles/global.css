@@ -157,6 +157,32 @@ article table {
 	}
 }
 
+div.pagination {
+	display: flex;
+	justify-content: center;
+}
+
+div.pagination > span {
+	display: inline-block;
+	margin: 5px;
+	border: 1px solid #999;
+	background-color: #eee;
+	padding: 5px;
+	width: 64px;
+}
+
+div.pagination > a {
+	display: inline-block;
+	margin: 5px;
+	background-color: #ddd;
+	color: black;
+	text-decoration: none;
+	border: 1px solid #777;
+	padding: 5px;
+	text-align: center;
+	width: 64px;
+}
+
 @media (prefers-color-scheme: dark) {
 	.astro-code,
 	.astro-code span {
