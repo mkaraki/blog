@@ -45,7 +45,44 @@ export default defineConfig({
         name: "blogPost",
         label: "Blog Posts",
         path: "src/content/blog",
+        format: 'md',
+        defaultItem: () => {
+          const now = new Date();
+          return {
+            date: now.toISOString(),
+            author: "mkaraki",
+            slug: `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}-`,
+          };
+        },
+        ui: {
+          allowedActions: {
+            create: true,
+            delete: true,
+            createNestedFolder: false,
+          },
+          filename: {
+            showFirst: true,
+            description: "Filename must be in the format YYYYMMDD-slug.md. Please match with the date and slug fields.",
+            readonly: true,
+            slugify: (values) => {
+              if (values.slug) {
+                return values.slug;
+              } else {
+                const now = new Date();
+                const safeTitle = values.title.replace(' ', '-').toLowerCase();
+                return `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}-${safeTitle}`;
+              }
+            },
+          },
+        },
         fields: [
+          {
+            type: "string",
+            name: "slug",
+            label: "Slug",
+            required: true,
+            description: "This become filename. Format: YYYYMMDD-slug. Must match with the date and title fields.",
+          },
           {
             type: "string",
             name: "title",
@@ -61,14 +98,17 @@ export default defineConfig({
             ui: {
               dateFormat: 'YYYY-MM-DD',
               timeFormat: "HH:mm",
-              parse: (value) => value && value.format('YYYY-MM-DD HH:mm'),
             },
           },
           {
-            type: "string",
-            name: "slug",
-            label: "Slug",
+            type: "datetime",
+            name: "updatedDate",
+            label: "Updated Date",
             required: false,
+            ui: {
+              dateFormat: 'YYYY-MM-DD',
+              timeFormat: "HH:mm",
+            },
           },
           {
             type: "string",
@@ -78,6 +118,12 @@ export default defineConfig({
             options: [
               'mkaraki'
             ],
+          },
+          {
+            type: "string",
+            name: "tags",
+            label: "Tags",
+            list: true,
           },
           {
             type: "rich-text",
