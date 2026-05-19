@@ -1,8 +1,8 @@
 allowBuilds:
-  better-sqlite3: set this to true or false
-  core-js: set this to true or false
+  better-sqlite3: true
+  core-js: true
   esbuild: true
-  protobufjs: set this to true or false
+  protobufjs: true
   sharp: true
 onlyBuiltDependencies:
   - esbuild
