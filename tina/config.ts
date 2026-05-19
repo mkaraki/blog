@@ -58,6 +58,9 @@ export default defineConfig({
             name: "date",
             label: "Date",
             required: true,
+            ui: {
+              timeFormat: "HH:mm"
+            },
           },
           {
             type: "string",
