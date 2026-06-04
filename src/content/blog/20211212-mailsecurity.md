@@ -24,10 +24,10 @@ Japanese Mail Cultureといえば[PPAP](https://ja.wikipedia.org/wiki/PPAP_(%E3%
 試しに、[7-Zip](https://www.7-zip.org/)などのツールで適当にパスワード付きzipを作って[Virus Total](https://www.virustotal.com/)あたりに投げてみてください。
 普段なら賛否両論なソフトウェアもあっという間に安全なファイルに早変わりします。
 
-![やばいファイル](https://user-images.githubusercontent.com/26180919/145703763-2b50090f-6719-4ca1-8a3a-59f727e9e7bf.png)  
+![やばいファイル](/media/20211212-mailsecurity/145703763-2b50090f-6719-4ca1-8a3a-59f727e9e7bf.png)  
 生の状態のやばいファイル
 
-![PPAPされたやばいファイル](https://user-images.githubusercontent.com/26180919/145703728-98402092-af08-4bb3-8542-c612fa99b791.png)  
+![PPAPされたやばいファイル](/media/20211212-mailsecurity/145703728-98402092-af08-4bb3-8542-c612fa99b791.png)  
 PPAPされたやばいファイル
 
 ちなみに、今回スキャンに掛けた[ShinoLocker](https://shinolocker.com/)はランサムウェアと同じ動作をするテスト用シミュレータです。
