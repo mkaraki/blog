@@ -13,7 +13,7 @@ slug: '20211221-webtemplate'
 （多分MITにしてHTMLとCSSに書くと思う）
 
 ## 見た目
-![Simple One Page Template](https://user-images.githubusercontent.com/26180919/146897964-0677a0df-b1e5-4a67-ad80-25b1da076677.png)
+![Simple One Page Template](/media/20211221-webtemplate/146897964-0677a0df-b1e5-4a67-ad80-25b1da076677.png)
 
 こんな感じのテンプレートです。
 

@@ -12,6 +12,7 @@
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "astro": "^6.3.3",
+    "sass": "^1.100.0",
     "tinacms": "^3.8.1"
   },
   "devDependencies": {
