@@ -2,6 +2,7 @@
 slug: 20260630-apple-container
 title: Apple containerを使ってみた
 date: 2026-06-30T11:00:35.749Z
+updatedDate: 2026-07-03T03:37:47.675Z
 author: mkaraki
 ---
 
