@@ -44,7 +44,12 @@ container run --rm -it -p 8080:8080 -v $(pwd)/books:/books:ro cbz-viewer:latest
 
 また、WSL containerと同様に、こちらもDocker Compose相当の機能を実装されていないようです。しかし、[apple/container #1736](https://github.com/apple/container/pull/1736)にパッチが上がっているので、もしかしたら近いうちに動かせるようになるかもしれません。
 
+## Cloudflare One Clientとの相性問題
+
+VMが53をBINDする為、`mDNSResponder`関係のエラーが出る場合があるとのこと。一度`container system stop`を行ってから、再接続しよう。Cloudflareのドキュメントによれば、再接続後に再度Container Systemを起動すれば動かせるらしいが、こちらは未検証。
+
 ## Ref
 
 * [pple/container: A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon.](https://github.com/apple/container)
 * [Add container-compose: docker-compose compatibility layer by demostenex · Pull Request #1736 · apple/container](https://github.com/apple/container/pull/1736)
+* [Client errors · Cloudflare One docs](https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/cloudflare-one-client/troubleshooting/client-errors/)
