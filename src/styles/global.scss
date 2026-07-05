@@ -77,7 +77,7 @@ header {
 }
 
 main {
-	max-width: 460px;
+	max-width: 60ch;
 	margin: 0 auto;
 	background-color: #fff;
 
@@ -211,4 +211,25 @@ div.pagination > a {
 		color: var(--shiki-dark) !important;
 		background-color: var(--shiki-dark-bg) !important;
 	}
+}
+
+div.share-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+div.share-container > div {
+	margin-right: 10px;
+}
+
+button.btn-share-generic {
+	height: 20px;
+	font-size: 12px;
+	background-color: lightblue;
+	border: 1px solid #999;
+	margin: 0;
+	padding: 1px 10px;
+	border-radius: 5px;
+	cursor: pointer;
 }
