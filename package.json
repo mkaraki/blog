@@ -13,7 +13,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.6",
     "sass": "^1.100.0",
-    "tinacms": "^3.8.1"
+    "tinacms": "^3.9.3"
   },
   "devDependencies": {
     "@tinacms/cli": "^2.4.3",
