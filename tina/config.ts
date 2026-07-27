@@ -82,6 +82,7 @@ export default defineConfig({
             label: "Slug",
             required: true,
             description: "This become filename. Format: YYYYMMDD-slug. Must match with the date and title fields.",
+            searchable: false,
           },
           {
             type: "string",
@@ -89,6 +90,7 @@ export default defineConfig({
             label: "Title",
             isTitle: true,
             required: true,
+            searchable: true,
           },
           {
             type: "datetime",
@@ -99,6 +101,7 @@ export default defineConfig({
               dateFormat: 'YYYY-MM-DD',
               timeFormat: "HH:mm",
             },
+            searchable: false,
           },
           {
             type: "datetime",
@@ -109,6 +112,7 @@ export default defineConfig({
               dateFormat: 'YYYY-MM-DD',
               timeFormat: "HH:mm",
             },
+            searchable: false,
           },
           {
             type: "string",
@@ -118,21 +122,32 @@ export default defineConfig({
             options: [
               'mkaraki'
             ],
+            searchable: false, // Always same person
           },
           {
             type: "string",
             name: "tags",
             label: "Tags",
             list: true,
+            searchable: false, // Not searchable for now
           },
           {
             type: "rich-text",
             name: "body",
             label: "Body",
             isBody: true,
+            searchable: true,
           },
         ],
       },
     ],
   },
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_SEARCH_TOKEN,
+      stopwordLanguages: ['jpn', 'eng'],
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100,
+  }
 });
