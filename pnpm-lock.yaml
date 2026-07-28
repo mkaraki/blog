@@ -1365,8 +1365,8 @@ packages:
     resolution: {integrity: sha512-7FNeNl8NCE7aINx7WXiKQrPYZWC/hvrTsmk6zmxbI7LTXE7hVek/n8AfVgpe2y82zl3w0HvCHN0bVKMBoJcC0w==}
     engines: {node: '>= 10.0.0'}
 
-  '@posthog/browser-common@0.2.1':
-    resolution: {integrity: sha512-FTVPsRw6GBKWvFwN26TNIQNNYPR9FsUj+B+CKhk/ht63IRzn4yYFtFOjcmW+bfXvNHuRADs6APbZ6Haz1kpoAw==}
+  '@posthog/browser-common@0.2.3':
+    resolution: {integrity: sha512-LJOUcBLLjFOqw6ZZsjrCuojliJHFU/GYeOV88T+lXyePXJQnxFzuAouDtwwHFHtoaaOjfQ0OvDMR7J468Nkomw==}
 
   '@posthog/core@1.45.1':
     resolution: {integrity: sha512-tLtvzomavb2PPWdGYKsusyIzIeL2Px47v348Smibkay7sMy/83TyPk+Ptsp2NdeOgJsbuwSxWkR2+XA0aSCAaA==}
@@ -4874,8 +4874,8 @@ packages:
     resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  posthog-js@1.407.2:
-    resolution: {integrity: sha512-5deTvXopn+NJWEmCUw8Ix/ms3cv2+60WJ73Vgbvu2wSkZY/FIj2uqAgCnq7IewGpGC+tH7CAbPYFzH6hw8eW1w==}
+  posthog-js@1.407.3:
+    resolution: {integrity: sha512-b9Kc7HVN6nh+xsh1JrcLYHv9bbYLwYUM9belJtNVUFZSJWWfFcZRJJP6L+KeanAeu2VxSFSpioVA39pjjolv4A==}
 
   posthog-node@5.46.1:
     resolution: {integrity: sha512-WjCqExq44pBdyg9MSsH6UAE0tNZ88p4aIuVFicgqhjf2Fbws6IhS4ioYUa4aBrbUPS9EDRXtBTtF5DpP1ml8Pw==}
@@ -7282,7 +7282,7 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.6.0
     optional: true
 
-  '@posthog/browser-common@0.2.1':
+  '@posthog/browser-common@0.2.3':
     dependencies:
       '@posthog/core': 1.45.1
       '@posthog/types': 1.398.0
@@ -11407,9 +11407,9 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  posthog-js@1.407.2:
+  posthog-js@1.407.3:
     dependencies:
-      '@posthog/browser-common': 0.2.1
+      '@posthog/browser-common': 0.2.3
       '@posthog/core': 1.45.1
       '@posthog/types': 1.398.0
       core-js: 3.49.0
@@ -12387,7 +12387,7 @@ snapshots:
       lucide-react: 0.424.0(react@18.3.1)
       mermaid: 11.16.0
       monaco-editor: 0.31.0
-      posthog-js: 1.407.2
+      posthog-js: 1.407.3
       prism-react-renderer: 2.4.1(react@18.3.1)
       prop-types: 15.7.2
       react: 18.3.1
@@ -12489,7 +12489,7 @@ snapshots:
       lucide-react: 0.424.0(react@18.3.1)
       mermaid: 11.16.0
       monaco-editor: 0.31.0
-      posthog-js: 1.407.2
+      posthog-js: 1.407.3
       prism-react-renderer: 2.4.1(react@18.3.1)
       prop-types: 15.7.2
       react: 18.3.1
